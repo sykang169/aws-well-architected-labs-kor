@@ -1,23 +1,22 @@
 ---
-title: "Cloudwatch Agent Manual Install"
+title: "Cloudwatch Agent 수동 설치"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
 pre: "<b>4. </b>"
 weight: 4
 ---
 
-1. We are now going to manually install the **CloudWatch agent** to start collecting memory data, to start let's go back to the **Amazon EC2 Dashboard**.
+1. 이제 수동으로 **CloudWatch agent** 설치한 후 메모리 데이타 수집을 시작할 것입니다.**Amazon EC2 Dashboard**로 갑니다.
 ![Images/MemInstall01.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall01.png)
 
-2. On the left bar, click on **Instances** and select the **EC2 Instance** with the *CloudWatchAgentServerRole* IAM role.
-![Images/MemInstall02.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall02.png)
+2. 왼쪽 메뉴 리스트 중 **Instances** 를 클릭하고 이전 스텝에 *CloudWatchAgentServerRole* IAM role을 연결한 EC2인스턴스를 클릭합니다. 상단의 **Connect**를 클릭합니다.
+![/images/war-cost/2cost-cloudwatch-agent.png](/images/war-cost/cloudwatch-agent-install.png)
 
-3. Connect into the EC2 Instance using the **browser-based SSH connection tool**.
-![Images/MemInstall03.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall03.png)
+3. 새로 뜬 대화창의 **browser-based SSH connection tool**를 클릭하고 User name에 `ec2-user` 그리고 Connect를 클릭합니다.
 ![Images/MemInstall04.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall04.png)
 ![Images/MemInstall05.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall05.png)
 
-4. Download the **Amazon Cloudwatch** agent package, the instructions below are for Amazon Linux, for other OS please check [here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html)
+4. **Amazon Cloudwatch** agent 패키지를 다운로드합니다. 해당 링크는 Amazon Linux를 위한 패키지이며, 다른 os는 [여기](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html)서 확인하세요.
 
 ```
 wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/AmazonCloudWatchAgent.zip
