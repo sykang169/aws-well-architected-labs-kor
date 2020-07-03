@@ -7,9 +7,10 @@ phases:
     commands:
       - java -version
       - gradle -version
-      - sudo yum -y groupinstall 'Development Tools'
-      - sudo yum -y install curl file git
-      - sudo yum -y install libxcrypt-compat # needed by Fedora 30 and up
+      - yum -y groupinstall 'Development Tools'
+      - yum -y install curl file git
+      - yum -y install libxcrypt-compat # needed by Fedora 30 and up
+      - 
       - brew install hugo
   build:
     commands:
