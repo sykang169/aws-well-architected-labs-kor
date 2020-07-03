@@ -1,0 +1,22 @@
+version: 0.2
+   
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+    commands:
+      - java -version
+      - gradle -version
+      - sudo yum -y groupinstall 'Development Tools'
+      - sudo yum -y install curl file git
+      - sudo yum -y install libxcrypt-compat # needed by Fedora 30 and up
+      - brew install hugo
+  build:
+    commands:
+      - hugo -d public 
+      - hugo deploy --target=s3
+artifacts:
+  files:
+    - 'public/*'
+  name: concurrencyworkshop-$(date +%Y-%m-%d) 
+   
