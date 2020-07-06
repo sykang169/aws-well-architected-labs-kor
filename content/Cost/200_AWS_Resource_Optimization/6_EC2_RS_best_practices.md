@@ -6,16 +6,18 @@ pre: "<b>6. </b>"
 weight: 6
 ---
 
-* **Start simple:** idle resources, non-critical development/QA and previous generation instances will require less testing hours and provide quick wins (The Amazon EC2 Launch time statistics can be used to identify instances that have been running longer than others and is a good statistic to sort your Amazon EC2 instances by).
 
-* **Right Size before performing a migration:** If you skip right sizing to save time, your migration speed might increase, but you will end up with higher cloud infrastructure spend for a potentially longer period of time. Instead, leverage the test and QA cycles during a migration exercise to test several instance types and families.  Also, take that opportunity to test different sizes and burstable instances like the “t” family.
+* **시작은 간단하게:** 유휴리소스는와 중요하지 않은 개발/QA 및 이전 세대 인스턴스의 비용절감은 식별하기 쉽고 테스트 빠르게 적용해볼 수 있습니다(Amazon EC2 시작시간 통계는 다른 인스턴스보다 오래 실행 된 인스턴스를 식별하는 데 사용될 수 있습니다).
 
-* **The best right sizing starts on day 1:** As you perform right sizing analysis, and ultimately rightsize resources, ensure any learnings are being shared across your organization and influencing the design of new workloads.
+* **마이그레이션을 진행하기 전에 올바른 크기를 먼저 식별하는게 좋습니다:** 시간을 절약하기 위해 올바른 크기 조정을 건너 뛰면 마이그레이션 속도가 증가 할 수는 있지만 잠재적으로 더 긴 시간 동안 더 많은 클라우드 인프라 지출이 발생할 가능성이 있습니다. 대신 마이그레이션 연습 중에 테스트 및 QA주기를 활용하여 여러 인스턴스 유형 및 제품군을 테스트하십시오. 또한 "t"제품군과 같이 다양한 크기와 버스트 가능한 인스턴스를 테스트 할 수있는 기회를 가지십시오.
 
-* **Measure Twice, Cut Once: Test, then test some more:** The last thing you want is for a new resource type to be uncapable of handling load, or functioning incorrectly.
+* **가장 적합한 올바른 크기를 적용하는 것은 Day 1부터 시작합니다:** 적절한 사이징 분석을 수행하고 궁극적으로 리소스의 규모를 적절하게 조정하면 모든 학습 내용이 조직 전체에서 공유되어 새로운 워크로드 설계 및 향후 마이그레이션에 큰 도움을 줄 수 있습니다.
 
-* **Test once and perform multiple right sizing:** Aggregate instances per autoscaling group and tags to scale right sizing activities.
+* **Measure Twice, Cut Once: Test, then test some more:** 우리가 찾아야하는 것은 새 자원 유형이 로드를 처리 할 수 없거나 잘못 작동하는 것입니다.
 
-* **Combine Reserved Instance or Savings Plans strategy with Right Sizing to maximize savings:** For Standard RIs and EC2 Instance SP: Perform your pricing model purchases after rightsizing and for Convertible RIs, exchange them after rightsizing. Compute Savings plan will automatically adjust the commitment for the new environment.
+* **Test once and perform multiple right sizing:** 자동 크기 조정 그룹 및 태그별 인스턴스를 집계하여 올바른 크기 조정 활동을 확장합니다.
 
-* **Ignore burstable instance families (T types):** These families are designed to typically run at low CPU percentages for significant periods of time and shouldn’t be part of the instance types being analyzed for rightsizing.
+* **예약 인스턴스 또는 세이빙플랜을 사용하여 적절한 크기와 결합하여 절약 효과를 극대화하십시오:** 표준 RI 및 EC2 인스턴스 SP의 경우 : 올바른 크기조절을 수행한 다음 적절한 구매모델을 선택하고, 컨버터블 RI를 사용하는 경우, 올바른 크기로 교환하세요. 컴퓨트 세이빙 플랜은 새로운 환경에 맞춰 자동으로 조정합니다.
+
+* **버스팅 가능한 인스턴트 타입은 무시하기(T types):** 이러한 제품군은 일반적으로 상당한 시간 동안 낮은 CPU 비율로 실행되도록 설계되었으며 올바른 크기를 찾기 위해 분석되는 인스턴스 유형은 아닙니다.
+

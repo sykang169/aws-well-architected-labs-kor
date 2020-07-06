@@ -22,5 +22,5 @@ weight: 3
 ![Images/MemInstall05.png](/Cost/200_AWS_Resource_Optimization/Images/MemInstall05.png)
 
 7. 인스턴스를 클릭하면 연결된 IAM role을 확인 하실 수 있습니다.
-![/images/war-cost/2cost-cloudwatch-agent.png](/images/war-cost/cost-cloudwatch-agent-check.png)
+![/images/war-cost/cost-cloudwatch-agent.png](/images/war-cost/cost-cloudwatch-agent-check.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "EC2 적정크기 찾기 (추가)"
+title: "EC2 적정크기 찾기 (확장)"
 #menutitle: "Lab #3"
 date: 2020-04-24T11:16:08-04:00
 chapter: false
