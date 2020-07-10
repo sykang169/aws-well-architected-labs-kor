@@ -4,7 +4,7 @@ title: "EC2 적정크기 찾기 (MEM)"
 date: 2020-04-24T11:16:08-04:00
 chapter: false
 weight: 7
-pre : "<b>4-3. </b>"
+pre : "<b>4-2. </b>"
 ---
 ## Authors
 - Jeff Kassel, AWS Technical Account Manager

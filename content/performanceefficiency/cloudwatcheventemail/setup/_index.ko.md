@@ -32,13 +32,14 @@ CloudWatch 콘솔 가기 : https://console.aws.amazon.com/cloudwatch/
 
 1. 이제 작업구성입니다. 기존에 생성되어있는 SNS topic을 연결할 수도 있습니다. 여기선 새로운 SNS topic을 생성하겠습니다. **경보 상태 트리거**의 **경보 상태**를 선택하고 **SNS 주제 선택**에서 **새 주제 생성**라디오 박스를 선택합니다. 그리고 **새 주제 생성**에 `Default_CloudWatch_Alarms_Topic`, **Email Endpoint**에 본인의 Email을 입력한 후 **Create topic** 버튼을 클릭합니다. 
     ![CloudwatchAlarm](/images/war/cloudwatch-create-topic.png#medium)
-
+1. **다음** 버튼을 클릭합니다.
 1. 마지막 이름 및 설명 추가에 아래와 같이 입력합니다.
     - **Alarm name** : `CloudWatch-CPU-Alarm`
     - **Alarm description - optional** : `for WAR workshop`
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm-fin.png#medium)
 
+1. ***알람생성 버튼**을 눌러 생성을 완료합니다. 
 1. 이제 기본적인 셋팅이 완료되었습니다. 
 
-[이제 EC2 Instance의 CPU사용율이 올라가면 어떤 변화가 있는지 확인해 보겠습니다.](/ko/performanceefficiency/cloudwatcheventemail/snstopic)
+[이제 EC2 Instance의 CPU사용율이 올라가면 어떤 변화가 있는지 확인해 보겠습니다.](/performanceefficiency/cloudwatcheventemail/snstopic)
  

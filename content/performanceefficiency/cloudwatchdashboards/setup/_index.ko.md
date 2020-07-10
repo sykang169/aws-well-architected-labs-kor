@@ -13,7 +13,7 @@ CloudFormation에서 생성한 WellArchitectedFrameworkLabsStack에서 생성된
     CloudFormation 콘솔로 가기 : https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2
 
 1. Output의 `ASGName`은 Auto scaling group의 이름입니다. `ALBName`는 Application Load Balancer의 이름입니다. 
-    CloudFormation 콘솔에서 WellArchitectedFrameworkLabsStack을 선택합니다. 
+    CloudFormation 콘솔에서 `MasterAccountStack`을 선택합니다. 
     ![CloudwatchDashboard](/images/war/cloudwatch-stack.png#medium)
 
     상단 탭의 Output을 선택한 후 `ASGName`과 `ALBName`의 값을 복사한 후 어딘가 적어놓습니다.   
@@ -56,5 +56,5 @@ CloudFormation에서 생성한 WellArchitectedFrameworkLabsStack에서 생성된
     ![CloudwatchDashboard](/images/war/cloudwatch-widget-fin.png#medium)
 
 
-[이제 CPU사용율의 변화를 사용자가 즉시 알 수 있도록 Cloudwatch 경보를 생성하겠습니다.](/ko/performanceefficiency/cloudwatcheventemail)
+[이제 CPU사용율의 변화를 사용자가 즉시 알 수 있도록 Cloudwatch 경보를 생성하겠습니다.](/performanceefficiency/cloudwatcheventemail)
  

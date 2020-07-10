@@ -30,5 +30,5 @@ Amazon SNS 콘솔 가기 : https://console.aws.amazon.com/sns/
 
 1. 경보 알람에 나의 휴대폰 번호 등록도 완료하였습니다. 이전의 Topics메뉴에서 `Default_CloudWatchAlarms_Topic`를 선택하면 해당 토픽과 연결된 email과 휴대폰 정보를 볼 수 있습니다. 
 
-[이제 EC2 Instance의 CPU사용율이 올라가면 어떤 변화가 있는지 확인해 보겠습니다.](/ko/performanceefficiency/cloudwatcheventemail/ec2)
+[이제 EC2 Instance의 CPU사용율이 올라가면 어떤 변화가 있는지 확인해 보겠습니다.](/performanceefficiency/cloudwatcheventemail/ec2)
  

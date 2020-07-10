@@ -24,5 +24,5 @@ CloudWatch 콘솔 가기 : https://console.aws.amazon.com/cloudwatch/
 
 1. 6 개 이상의 AWS 서비스를 사용하는 경우 기본 대시 보드 아래에는 자동 교차 서비스 대시 보드(Cross service dashboard)에 대한 링크가 있습니다. 교차 서비스 대시 보드에는 사용자 지정 대시 보드를 모니터링하거나 생성 할 지표를 선택할 필요없이 사용하는 모든 AWS 서비스의 주요 지표가 자동으로 표시됩니다. 이를 사용하여 해당 서비스에 대한 더 많은 주요 지표를 볼 수 있습니다. 6개 미만의 AWS 서비스를 사용하는 경우 교차 서비스 대시 보드가 이 페이지에 자동으로 표시됩니다.
 
-[이제 사용자가 원하는 데이터만 볼 수 있도록 커스텀 대시보드를 만드는 방법을 알아보겠습니다.](/ko/performanceefficiency/cloudwatchdashboards/setup)
+[이제 사용자가 원하는 데이터만 볼 수 있도록 커스텀 대시보드를 만드는 방법을 알아보겠습니다.](/performanceefficiency/cloudwatchdashboards/setup)
  

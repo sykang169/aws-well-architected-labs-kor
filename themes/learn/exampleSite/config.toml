@@ -20,11 +20,13 @@ defaultContentLanguageInSubdir= true
 home = [ "HTML", "RSS", "JSON"]
 
 [Languages]
-[Languages.ko]
-title = "Documentation for Hugo Learn Theme"
-weight = 1
-languageName = "한국어"
-
+  [Languages.ko]
+    title = "Documentation for Hugo Learn Theme"
+    weight = 1
+    languageName = "한국어"
+  [Languages.en]
+    weight = 2
+    languageName = "English"
 [[Languages.ko.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"

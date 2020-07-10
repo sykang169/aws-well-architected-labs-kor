@@ -13,7 +13,7 @@ hide: true
 {{% notice warning %}}
 이미 AWS 계정을 가지고 있다면 즉시 이 실습의 가이드를 따라 진행할 수 있으나, **계정이 없다면** 먼저 AWS 계정을 만들어야 합니다.
 {{% /notice %}}
-AWS 계정 생성 및 활성화 가이드는 다음 [링크](https://aws.amazon.com/ko/premiumsupport/knowledge-center/create-and-activate-aws-account/)를 참조하시기 바랍니다.  
+AWS 계정 생성 및 활성화 가이드는 다음 [링크](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)를 참조하시기 바랍니다.  
 
 {{% notice info %}}
 실습은 **us-west-2 (오레곤) 리전을 선택**합니다.  
@@ -62,6 +62,11 @@ CloudFormation 스택을 시작하려면, [Launch Stack 버튼](https://console.
 
 {{% button href="https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.template" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
 
+{{% notice warning %}}
+반드시 pem 키를 다운받아야합니다. EventEngine의 default key를 사용하지 마십시오.
+{{% /notice %}}
+
+
 스택 생성 단계에서 스택 이름을 입력하고 앞서 생성한 EC2 키 페어를 선택합니다. 그리고 나머지는 기본 값을 유지하고 마지막 단계에서 CloudFormation이 IAM 리소스를 생성할 때 커스텀 이름을 사용할 수 있게 
 
 Stackname에 `MasterAccountStack`을 입력합니다.
@@ -75,7 +80,7 @@ Workload Name에 `prod`를 입력합니다.
 스택 생성이 완료되면 AWS 계정에 실습을 실행하는 데 필요한 모든 기본 리소스가 준비 되어있습니다. **Outputs 탭**에서 **ALBAddress**, **DBDNS**가 표시됩니다.
 {{% /notice %}}
 
--[이제 워크샵을 진행해보도록 하겠습니다.](/ko/setup/cloud9) 
+-[이제 워크샵을 진행해보도록 하겠습니다.](/performanceefficiency) 
 
 
 

@@ -6,6 +6,10 @@ pre: "<b>5. </b>"
 weight: 5
 ---
 
+{{% notice warning %}}
+이 실습은 실제 사용 계정에서 진행 해보세요. 현재 Lab환경으로는 수행하실 수 없습니다.
+{{% /notice %}}
+
 {{% notice info %}}
 이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer, 권장 사항 (왼쪽 리스트) 섹션으로 이동하면됩니다.
 {{% /notice %}}
@@ -22,25 +26,25 @@ Amazon EC2 Resource Optimization은 추가 비용없이 AWS 비용 탐색기에�
 기본적으로 Amazon EC2 리소스 최적화는 권장사항을 제공하기 위해 메모리 데이터 포인트가 필요하지 않지만, 해당정보가 사용 가능한 경우 현재 최대 CPU 및 MEM사용률이 1% 에서 40% 사이 인 인스턴스에 대한 다운사이즈 권장사항 업데이트를 고려해야합니다. 다음 단계를 통해 이를 확인하십시오.
 
 1. **AWS Cost Explorer** 로 갑니다.
-![Images/ResourceOpt01.png](/Cost/200_AWS_Resource_Optimization/Images/ResourceOpt01.png)
+![Images/ResourceOpt01.png](/cost/200_aws_resource_optimization/Images/ResourceOpt01.png)
 
 2. 왼쪽 메뉴의 **Recommendations** 를 선택합니다.
-![Images/ResourceOpt2.png](/Cost/200_AWS_Resource_Optimization/Images/ResourceOpt02.png)
+![Images/ResourceOpt2.png](/cost/200_aws_resource_optimization/Images/ResourceOpt02.png)
 
 
 
 
 
 3. **Amazon EC2 Resource Optimization Recommendations**의 **View All**을 클릭합니다.
-![Images/ResourceOpt3.png](/Cost/200_AWS_Resource_Optimization/Images/ResourceOpt03.png)
+![Images/ResourceOpt3.png](/cost/200_aws_resource_optimization/Images/ResourceOpt03.png)
 
 Amazon EC2 리소스 최적화를 활성화하지 않은 경우, 활성화 한 시점부터 첫 번째 권장사항을 생성하는 데 최대 24시간이 걸릴 수 있습니다. 일반 또는 마스터(지불)계정만 사용 가능하며, 마스터(지불)계정이 설정 페이지(오른쪽 위)에서 특별히 금지하지 않는 한 기본적으로 연결된 계정과 마스터(지불)계정 모두 권한부여 권장사항에 접근 할 수 있습니다.
 
-![Images/ResourceOpt4.png](/Cost/200_AWS_Resource_Optimization/Images/ResourceOpt04.png)
+![Images/ResourceOpt4.png](/cost/200_aws_resource_optimization/Images/ResourceOpt04.png)
 
 4. Amazon EC2 리소스 최적화 권장사항을 활성화했다면, 권장사항(있는 경우)을 제공하는 화면이 표시됩니다. 자원 최적화 권장사항을 보려면 클릭하십시오.
 
-![Images/ResourceOpt5.png](/Cost/200_AWS_Resource_Optimization/Images/ResourceOpt05.png)
+![Images/ResourceOpt5.png](/cost/200_aws_resource_optimization/Images/ResourceOpt05.png)
 
 - **Optimization opportunities** – 사용가능한 권장사항
 - **Estimated monthly savings** – 제공된 각 권장사항과 관련된 예상 월별 절감액의 합계
@@ -54,7 +58,7 @@ Amazon EC2 리소스 최적화를 활성화하지 않은 경우, 활성화 한 �
 In the example below we have a recommendation to downsize the **t2.micro** (1vCPU *for a 2h 24m burst* and 1GB RAM) to a **t2.nano** (1vCPU *for a 1h 12m burst* and 0.5 GB RAM) and save $12 USD per year.
 
 아래 예에서는 **t2.micro**(1vCPU당 2시간24분 버스트 및 1GB RAM의)를 **t2.nano**(1vCPU당 1시간12분 버스트 및 0.5GB RAM)로 축소하고 연간 $12USD를 절약 할 것을 권장합니다.
-![Images/ResourceOpt06.png](/Cost/200_AWS_Resource_Optimization/Images/ResourceOpt06.png)
+![Images/ResourceOpt06.png](/cost/200_aws_resource_optimization/Images/ResourceOpt06.png)
 
 
 지난 14 일 동안이 인스턴스의 최대 CPU 사용률은 9%에 불과했으며,인스턴스는 86시간 동안 실행되었습니다. 그리고 모두 On-Demand 로 사용되었습니다. 사용 가능한 메모리 정보가 없으므로 Amazon EC2 Resource Optimization은 해당 데이터 포인트를 무시하고 t2.micro에서 사용 가능한 메모리의 절반인 t2.nano로 축소하는 것.을 권장합니다.
@@ -62,7 +66,7 @@ In the example below we have a recommendation to downsize the **t2.micro** (1vCP
 제안된 적정 크기 조정 옵션이 유효한지 테스트 할 땐 위험할 수도있고 시간이 낭비될 수도 있습니다. 방금 설치 한 CloudWatch 에이전트를 사용하면이 권장사항의 정확성을 향상시킬 수 있습니다.
 
 이 다른 예에서는 r5.8xlarge(32vCPU 및 256GB RAM)를 r5.4xlarge (16vCPU 및 128GB RAM)로 축소하고 연간 $2,412 USD를 절약 할 것을 권장합니다.
-![Images/ResourceOpt07.png](/Cost/200_AWS_Resource_Optimization/Images/ResourceOpt07.png)
+![Images/ResourceOpt07.png](/cost/200_aws_resource_optimization/Images/ResourceOpt07.png)
 
 이 경우 CPU 및 메모리 정보를 모두 사용할 수 있습니다. 최대 CPU 사용률은 21%이고 메모리는 5%에 ​​불과합니다. 따라서 크기 축소의 경우가 훨씬 강력하고 권장사항에 따라 새 인스턴스 크기의 CPU 및 메모리 사용률을 추정 할 수도 있습니다. 이는 CloudWatch의 과거 사용량 데이터를 기반으로 한 간단한 추정 일 뿐이므로 수정을 실행하기 전에 필요한 모든 부하 테스트를 수행하여 워크로드에 영향을 미치지 않도록해야합니다.
 

@@ -7,7 +7,7 @@ weight: 4
 ---
 
 1. 이제 수동으로 **CloudWatch agent** 설치한 후 메모리 데이타 수집을 시작할 것입니다.**Amazon EC2 Dashboard**로 갑니다.
-![Images/MemInstall01.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall01.png)
+![Images/MemInstall01.png](/cost/200_aws_resource_optimization/Images/AgentInstall01.png)
 
 2. `CloudWatchAgentServerRole` IAM role을 연결한 EC2인스턴스의 접속정보를 복사하겠습니다. IAM role을 연결한 인스턴스를 선택하고 Connect를 누릅니다.
 ![/images/war-cost/cloudwatch-agent-connect-ec2.png](/images/war-cost/cloudwatch-agent-connect-ec2.png)
@@ -53,8 +53,8 @@ scp -i ./warworkshopkey.pem warworkshopkey.pem ec2-user@ec2-3-210-197-135.comput
 ![/images/war-cost/cloudwatch-agent-bstionhost.png](/images/war-cost/cloudwatch-agent-bstionhost.png)
 
 9. 새로 뜬 대화창의 **browser-based SSH connection tool**를 클릭하고 User name에 `ec2-user` 그리고 Connect를 클릭합니다.
-![Images/MemInstall04.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall04.png)
-![Images/MemInstall05.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall05.png)
+![Images/MemInstall04.png](/cost/200_aws_resource_optimization/Images/AgentInstall04.png)
+![Images/MemInstall05.png](/cost/200_aws_resource_optimization/Images/AgentInstall05.png)
 
 10. Terminal에 ls를 입력하면 복사된 pem을 확인하실 수 있습니다. 
 ![/images/war-cost/cloudwatch-agent-bstionhost.png](/images/war-cost/cloudwatch-agent-pem.png)
@@ -68,7 +68,7 @@ scp -i ./warworkshopkey.pem warworkshopkey.pem ec2-user@ec2-3-210-197-135.comput
 wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/AmazonCloudWatchAgent.zip
 ```
 
-![Images/MemInstall06.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall06.png)
+![Images/MemInstall06.png](/cost/200_aws_resource_optimization/Images/AgentInstall06.png)
 
 13. install package의 압축을 해제합니다.
 
@@ -77,7 +77,7 @@ unzip AmazonCloudWatchAgent.zip
 sudo ./install.sh
 ```
 
-![Images/MemInstall07.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall07.png)
+![Images/MemInstall07.png](/cost/200_aws_resource_optimization/Images/AgentInstall07.png)
 
 14. AmazonCloudWatchAgent profile 구성
 
@@ -92,7 +92,7 @@ sudo ./install.sh
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
 ```
 
-![Images/MemInstall08.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall08.png)
+![Images/MemInstall08.png](/cost/200_aws_resource_optimization/Images/AgentInstall08.png)
 
 For this lab we want to keep the following structure:
 
@@ -155,18 +155,18 @@ The CloudWatch Agent config file should look like the following:
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
 ```
 
-![Images/MemInstall09.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall09.png)
+![Images/MemInstall09.png](/cost/200_aws_resource_optimization/Images/AgentInstall09.png)
 
 지표를 사용할 수있게되는 데 최대 5 분이 소요될 수 있습니다. 지표세션 아래의 **Amazon CloudWatch** 콘솔 페이지로 돌아가서 메모리 정보를 받고 있는지 확인하십시오.
 
 **CWAgent**를 클릭합니다:
-![Images/MemInstall10.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall10.png)
+![Images/MemInstall10.png](/cost/200_aws_resource_optimization/Images/AgentInstall10.png)
 
 **ImageID,InstanceID,InstanceType**를 클릭합니다:
-![Images/MemInstall11.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall11.png)
+![Images/MemInstall11.png](/cost/200_aws_resource_optimization/Images/AgentInstall11.png)
 
 리스트의 **Instance**를 선택합니다:
-![Images/MemInstall12.png](/Cost/200_AWS_Resource_Optimization/Images/AgentInstall12.png)
+![Images/MemInstall12.png](/cost/200_aws_resource_optimization/Images/AgentInstall12.png)
 
 이제 CloudWatch 에이전트 설치를 완료했으며 Amazon CloudWatch에서 해당 인스턴스의 메모리 사용률을 모니터링 할 수 있습니다.
 
