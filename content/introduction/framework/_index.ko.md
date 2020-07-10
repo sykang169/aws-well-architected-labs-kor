@@ -51,7 +51,7 @@ AWS Well-Architected Framework는 다음과 같이 구성되어 있습니다.
 
    
   
-- [ 그럼 이제 AWS Well Architected의 5가지 기반에 대하여 알아봅시다 ](/ko/introduction/pillar)
+- [ 그럼 이제 AWS Well Architected의 5가지 기반에 대하여 알아봅시다 ](/introduction/pillar)
 
 
 

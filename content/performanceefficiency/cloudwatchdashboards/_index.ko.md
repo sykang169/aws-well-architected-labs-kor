@@ -11,5 +11,5 @@ pre : "<b>3-1. </b>"
 ### 목표
 리소스가 예상대로 작동하는지 모니터링하기
     
-[실습을 시작해봅시다.](/ko/performanceefficiency/cloudwatchdashboards/default-dashboard:)
+[실습을 시작해봅시다.](/performanceefficiency/cloudwatchdashboards/default-dashboard)
  

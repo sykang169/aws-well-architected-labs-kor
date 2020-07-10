@@ -1,0 +1,33 @@
+{
+    "Resources": {
+        "CURmaster": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": {
+                    "Fn::Join": [
+                        "-",
+                        [
+                            "curmaster-war-workshop-",
+                            {
+                                "Ref": "AWS::AccountId"
+                            }
+                        ]
+                    ]
+                }
+            },
+            "UpdateReplacePolicy": "Delete",
+            "DeletionPolicy": "Delete"
+        }
+    },
+    "Outputs": {
+        "S3bucket": {
+            "Description": "The name of s3 bucket for CUR",
+            "Value": {
+                "Ref": "CURmaster"
+            },
+            "Export": {
+                "Name": "s3bucket"
+            }
+        }
+    }
+}

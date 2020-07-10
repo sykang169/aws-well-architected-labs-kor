@@ -11,5 +11,5 @@ pre: "<b>3-2. </b>"
 ### 목표
 CPU사용율 95% 이상시 사용자에게 e-mail 발송
     
-[실습을 시작해봅시다.](/ko/performanceefficiency/cloudwatchdashboards/default-dashboard:)
+[실습을 시작해봅시다.](/performanceefficiency/cloudwatcheventemail/setup)
  

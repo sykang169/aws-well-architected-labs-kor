@@ -42,6 +42,10 @@ EC2의 CPU사용량이 많아지면 Autoscaling Group은 자동으로 EC2 Instan
 1. 메일도 확인해봅니다. 이전에 등록한 email로 경보가 온것을 확인할 수 있습니다. 
     ![CloudwatchDashboard](/images/war/cloudwatch-alarm-mail.png)
     휴대폰 번호를 등록했다면 문자도 받으실 수 있습니다. 
+1. EC2 Dashboard로 가면 자동으로 확장되어있는 EC2도 확인하실 수 있습니다. 
+      ![CloudwatchAlarm](/images/war/cloudwatch-ec2-autoscaling.png#medium)
+
+1. loadtest창을 벗어나면 잠시후 2개로 줄어있는 인스턴스와 안정화되어있는 그래프를 확인하실 수 있습니다. 
 
 Cloudwatch를 활용하여 최적의 성능을 모니터링하세요. 시스템 성능은 시간이 지남에 따라 저하될 수 있습니다. 시스템 성능을 모니터링하여 성능 저하 상태를 식별하고 운영체제 또는 애플리케이션 부하와 같은 내부 또는 외부 요인을 해소하세요. 시스템성능의 변화를 확인할 수 있는 경보를 생성하세요. 
 

@@ -4,7 +4,7 @@ title: "EC2 적정크기 찾기"
 date: 2020-04-24T11:16:08-04:00
 chapter: false
 weight: 6
-pre : "<b>4-2. </b>"
+pre : "<b>4-1. </b>"
 ---
 ## Authors
 - Arthur Basbaum, AWS Cloud Economics
@@ -24,7 +24,6 @@ pre : "<b>4-2. </b>"
 추가적인 비용은 없습니다.
 
  ## 요구 권한
-- Log in as the Cost Optimization team, created in [AWS Account Setup]({{< ref "/Cost/100_1_AWS_Account_Setup" >}})
 - 참고 : 콘솔에는 추가 권한이 필요할 수 있으므로 실습 중에 권한 오류 메시지가 나타날 수 있습니다. 이러한 오류는 실습에 영향을 미치지 않으며 필요한 최소 권한 집합을 구현하여 보안 모범 사례를 따릅니다.
 
 ## Steps:

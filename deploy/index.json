@@ -1,0 +1,225 @@
+[
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/1_cloudwatch_intro/",
+	"title": "Amazon Cloudwatch에 대하여 알아보기",
+	"tags": [],
+	"description": "",
+	"content": "적정 크기 조정을 수행하는 첫 번째 단계는 현재 서비스 사용을 모니터링하고 분석하여 인스턴스 성능 및 사용 패턴에 대한 통찰력을 얻는 것입니다. 충분한 데이터를 수집하려면 최소 2 주 이상 (이상적으로는 1 개월 이상)의 성능을 관찰하여 워크로드와 사용량의 정점을 확인하십시오. 인스턴스 성능을 정의하는 가장 일반적인 지표는 vCPU 사용률, 메모리 사용률, 네트워크 사용률 및 디스크 사용률입니다.\n  Log into your AWS console via SSO, go to the Amazon CloudWatch service page:   Select EC2 under the Service Dashboard:   Observe the Service Dashboard and all of its different metrics, but focus on CPU Utilization and Network In and Out:   Select one of the EC2 resources by clicking on the little color icon to the left of the resource-id name:   Deselect the EC2 resource and now modify the time range on the top right, click custom and select the last 2 weeks:   Navigate to the CPU Utilization Average widget, click the three dots and launch the View in metrics page. Using the Graphed metrics section try to answer the following questions:\n   a. What is the instance with the highest CPU Average? b. What is the instance with the highest CPU Max? c. What is the instance with the lowest CPU Min?  "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/",
+	"title": "AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기",
+	"tags": [],
+	"description": "",
+	"content": "AAWS 리소스를 사용하려면 권한이 필요합니다. 이제 에이전트가 CloudWatch에 지표를 작성하는 데 필요한 권한을 부여하기 위해 IAM 역할을 생성합니다. Amazon은 해당 용도로만 사용 할 수 있는 CloudWatchAgentServerPolicy 및 CloudWatchAgentAdminPolicy라는 두 개의 기본 정책을 만들었습니다.\n  AWS Management Console로 로그인 한 다음 IAM console로 들어갑니다.   왼쪽 메뉴페이지에서 Roles을 선택하고 Create role을 클릭합니다.   Choose a use case 아래, EC2를 클릭합니다(EC2가 AWS Services를 호출하는 것을 허락). 그리고 Next: Permissions를 클릭합니다.   정책목록 중, CloudWatchAgentServerPolicy의 체크박스를 선택합니다. 검색창에 이름을 넣어서 검색하면 찾기 쉽습니다. Next: Tags를 클릭합니다:\n    태크(옵션)를 추가합니다. Next: Review클릭합니다.   Policies에 CloudWatchAgentServerPolicy가 있는지를 확인합니다. 그리고 role name에 CloudWatchAgentServerRole을 넣습니다. 필요하다면 description을 입력합니다. Create role을 클릭합니다.   role이 생성되었습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/2_resource_opt/",
+	"title": "Amazon EC2 리소스 최적화 Recommendations 사용",
+	"tags": [],
+	"description": "",
+	"content": " 참고:이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer의 권장 사항 섹션으로 이동하여 Amazon EC2 리소스 최적화를 활성화화세요.\n Amazon EC2 Resource Optimization은 추가비용 없이 AWS Cost Explorer에서 올바른 크기 조정 권장 사항을 제공합니다. 이러한 권장 사항은 계정, 리전 및 태그에서 유휴 상태이거나 사용률이 낮은 인스턴스를 식별합니다. 이러한 권장사항을 생성하기 위해 AWS는 기존 EC2리소스 사용량(Amazon CloudWatch 사용) 및 기존 예약공간을 분석하여 비용 절감기회를 찾아냅니다(예:유휴 인스턴스를 종료하거나 활성 인스턴스를 동일한 제품군/세대 내에서 더 저렴한 옵션으로 축소).\n  AWS Cost Explorer 로 가겠습니다.   왼쪽 메뉴바에서 Recommendations를 선택하세요.   Resource Optimization Recommendations 섹션의 View All을 클릭합니다.   Amazon EC2 리소스 최적화를 활성화하지 않은 경우 첫번째 권장사항을 생성하는 데 최대 24시간이 걸릴 수 있습니다. 일반 또는 billing계정(마스터계정)만 사용하도록 설정할 수 있으며 billing계정(마스터계정)이 설정 페이지(오른쪽 상단)에서 특별히 금지하지 않는 한 기본적으로 연결된 계정과 마스터계정 모두 Recommendations에 접근 할 수 있습니다. recommendations의 품질을 향상시키기 위해, AWS은 다른 디스크, 메모리 사용율 같은 지표(CloudWatch Agent 필요)를 수집할 수 있습니다. 모든 자원 지표는 익명으로 집계되며 AWS는 모델학습을 위해 이 자료들을 사용할 수 있습니다. 만약 지표 수집과 모델개선을 원치 않으시면 AWS support ticket을 제출할 수 있습니다..더 자세한 정보는 AWS Service Terms을 참고해주세요..\nAmazon EC2 리소스 최적화 권장 사항을 활성화했다고 가정하면 권장사항(있는 경우)을 제공하는 화면이 표시됩니다.    Optimization opportunities – 사용가능한 권장사항 Estimated monthly savings – 제공된 각 권장사항과 관련된 예상 월별 절감액의 합계 Estimated savings (%) – 권장사항의 인스턴스와 Amazon EC2 비용(온디맨드)과 비교하여 나타나는 절감액  필요에 따라 권장 사항을 필터링 할 수도 있습니다.\n나타난 recommendation들의 view 를 클릭하면 더 자세한 사항들을 볼 수 있습니다.:   "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/",
+	"title": "AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기",
+	"tags": [],
+	"description": "",
+	"content": "  Amazon EC2 Resource Optimization 레포트를 다운로드합니다:   Amazon EC2 리소스 최적화 권장 사항이없는 경우 아래 파일을 참조로 사용하십시오. Sample Amazon EC2 Resource Optimization file (.csv)\n  먼저 분석에서 너무 작거나 적은 시간 동안 만 실행 된 인스턴스를 제외하겠습니다.   참고 : 계정에서 활성화 한 비용할당태그 수에 따라 아래 스크린 샷과 기본 열 이름, 수식을 일치시키려는 열이 예제와 다를 수 있습니다.\nRecommended Action 열 오른쪽에 새 열을 삽입하십시오. 첫 번째 행은 TooSmall 열의 레이블입니다. 레이블 아래의 각 행에 다음 수식을 붙여 넣습니다.\n=IF(Q2\u0026lt;25,1,0) 이제 열 Q는 Recommended Instance Type 1 Estimated Savings이 됩니다.\n이 공식은 한 달에 $25 이상 (또는 $300/년) 이상을 제공하지 못하는 모든 EC2 인스턴스에 \u0026ldquo;1\u0026quot;을 표시합니다. 조직의 Recommended Instance Type 1 Estimated Savings에 대한 임계 값을 자유롭게 조정하십시오. 잠재적 절감 대신 인스턴스 제품군에 대해 분석을 수행하려는 경우 다음 공식을 사용하여 권장 사항에서 더 작은 인스턴스를 제외 할 수도 있습니다.\n=IF(N2=\u0026quot;Modify\u0026quot;,IF(SUMPRODUCT(--(NOT(ISERR(SEARCH({\u0026quot;nano\u0026quot;,\u0026quot;micro\u0026quot;,\u0026quot;small\u0026quot;,\u0026quot;medium\u0026quot;},D2)))))\u0026gt;0,\u0026quot;1\u0026quot;,\u0026quot;0\u0026quot;),\u0026quot;0\u0026quot;) 열 N은 Recommended Action 그리고 열 D는 Instance Type가 되야합니다.\n다음으로, 이전세대 (C4, M3 등)에 속하는 EC2 인스턴스에 플래그를 지정합니다. EC2의 적정크기 찾으면서도 사용가능한 최신세대의 타입을 쓸 수 있도록합니다. 새로운 EC2 세대는 성능이 우수하여 올바른 사이징 운동의 성공 변화를 증가 시키며 일반적으로 이전 세대보다 비용이 적게 들며 높은 비용대비 이점을 제공합니다.  새로운 열 Old Gen을 Instance Type 열의 오른쪽에 넣고 아래 공식을 붙여넣습니다:\n=IF(SUMPRODUCT(--(NOT(ISERR(SEARCH({\u0026quot;c4\u0026quot;,\u0026quot;c3\u0026quot;,\u0026quot;c1\u0026quot;,\u0026quot;m4\u0026quot;,\u0026quot;m3\u0026quot;,\u0026quot;m2\u0026quot;,\u0026quot;m1\u0026quot;,\u0026quot;r3\u0026quot;,\u0026quot;r4\u0026quot;,\u0026quot;i2\u0026quot;,\u0026quot;cr1\u0026quot;,\u0026quot;hs1\u0026quot;,\u0026quot;g2\u0026quot;},D2)))))\u0026gt;0,\u0026quot;1\u0026quot;,\u0026quot;0\u0026quot;) 열 D = Instance Type\n이제 recommendations을 복잡성 감소와 비용 절감을 기준으로 정렬 해 보겠습니다:  Minimum Effort: 최소로 필요한 절약 설정\n먼저 우리는 절약할만한 가치가 있는 것에 집중하겠습니다. 기준을 $100로 합니다. Recommended Instance Type 1 Estimated Savings의 number filter 를 100보다 크게 맞춥니다.\nGroup 1: 유휴 EC2 리소스 필터를 Recommended Action = \u0026ldquo;Terminate\u0026rdquo; 설정합니다. 데이타를 Recommended Instance Type 1 Estimated Savings = Largest to smallest정렬합니다.\nCPU 사용률이 1 % 미만인 유휴리소스 또는 인스턴스를 필터링합니다. 이러한 인스턴스는 보통 시작된 후 잊어버린 것이므로 이런곳에서 전체 온디맨드의 잠재적인 비용 절감을 나타낼 수 있습니다.\n필터링된 결과들은 해당 인스턴스의 어플리케이션 관리자들과 적정 사이즈에대한 토론을 시작하십시오;이러한 인스턴스가 시작된 이유를 이해하기 위해 조사를 수행하고 자원 소유자와 함께 사용상태를 검증하십시오. 그리고 가능하면 종료하십시오.\n이 실습에서 제공하는 CSV 파일을 사용하는 경우, 2,534 recommendations을 16개로 필터링하여 매월 $3,458를 절약 할 수 있습니다.\nGroup 2: 이전 세대 인스턴스 데이터를 Recommended Actions = “Modify”, OldGen = “1” 과 TooSmall = “0” 필터링 합니다. 데이터를 Recommended Instance Type 1 Projected CPU \u0026lt; 40% 필터링합니다. 데이터를 Recommended Instance Type 1 Estimated Savings = Largest to smallest 정렬합니다.\n이것은 이전 세대에 인스턴스 중 활용률이 낮은 리소스(\u0026lt;40 % CPU)에 중점을 두고 동일한 제품군(P 열)내에서 인스턴스 크기를 축소하거나 최신 세대로 현대화 할 수 있습니다.\n최신세대로 전환하려면 그룹 1에서 식별 된 인스턴스와 비교하여 추가 테스트 시간이 필요할 수 있지만 경우에 따라 비용 절감 및 성능을 극대화 할 수 있습니다.\n    Linux vs new gen Windows vs new gen  Linux vs new gen Windows vs new gen     c3.large $0.105/hr up 19% $0.188/hr up 5% m3.large $0.133/hr up 27% $0.259/hr up 27%   c4.large $0.100/hr up 15% $0.192/hr up 7% m4.large $0.100/hr up 4% $0.192/hr up 2%   c5.large $0.985/hr 0% $0.177/hr 0% m5.large $0.096/hr 0% $0.188/hr 0%    미국-버지니아 기준 (2019 년 11 월)\n이 실습에서 제공하는 올바른 크기 조정 CSV 파일을 사용하는 경우 2,534recomendations를 22개로로 줄이고 잠재적 절감 효과는 매월 *6,362입니다.\nGroup 3: 최신 세대 인스턴스 데이터를 Recommended Actions = “Modify” 과 OldGen = “0” 과 **TooSmall = “0”**로 필터링 하세요. Recommended Instance Type 1 Projected CPU \u0026lt; 40% 로 필터링 하세요. 데이터는 Recommended Instance Type 1 Estimated Savings = Largest to smallest로 정렬합니다.\n현재 가장 최신세대에서 활용률이 낮은 자원을 선택합니다. 잠재적으로 절약 할 수있는 항목을 기준으로 정렬하여 더 큰 절약을 할 수 있는 인스턴스의 우선순위를 정하는 것이 좋습니다.\n또한 다른 권장 인스턴스유형 (열 U에서 AD까지)을 확인하는 것을 잊지 마십시오: Amazon EC2 Resource Optimization은 각 권장사항 당 최대 3개의 인스턴스를 추천합니다. 먼저 보수적인 권장사항(첫번째), 그리고 그것보다 더 적극적이고 높은 절감 권장사항(두번째 및 세번째)입니다.\n이 실습에서 제공하는 올바른 크기 조정 CSV 파일을 사용하는 경우 2,534 개의 권장 사항을 22개로 잠재적 인 절감 효과를 월별 $4,879.56로 필터링됩니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/",
+	"title": "EC2인스턴스에 CloudWatch IAM role 연결하기",
+	"tags": [],
+	"description": "",
+	"content": "  이제 이전 스텝에서 생성한 IAM Role created 기존의 EC2인스턴스와 연결할 것입니다. Amazon EC2 Dashboard 로 가겠습니다..   왼쪽 메뉴에서 Instances를 클릭하세요.   검색창에 WellArchitectedLabsStack을 입력하여 오토스캐일링 그룹이 자동으로 생성한 2개의 인스턴스를 찾습니다. 그리고 하나를 선택한수 상단의 Action버튼을 클릭합니다. 그리고 Instance Settings -\u0026gt; Attach/Replace IAM Role 을 아래 그림과 같이 순서대로 클릭합니다.   IAM role의 드랍 박스 버튼을 클릭하여 이전에 생성한 CloudWatchAgentServerRole 역할을 검색 한 후 선택하고 Apply를 클릭합니다..   이제 EC2인스턴스에 CloudWatchAgentServerRole이 성공적으로 연결되었습니다.   인스턴스를 클릭하면 연결된 IAM role을 확인 하실 수 있습니다.   "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/",
+	"title": "Cloudwatch Agent 수동 설치",
+	"tags": [],
+	"description": "",
+	"content": "  이제 수동으로 CloudWatch agent 설치한 후 메모리 데이타 수집을 시작할 것입니다.Amazon EC2 Dashboard로 갑니다.   CloudWatchAgentServerRole IAM role을 연결한 EC2인스턴스의 접속정보를 복사하겠습니다. IAM role을 연결한 인스턴스를 선택하고 Connect를 누릅니다.   Connect to your instance 대화창에서 example에 있는 접속정보를 복사합니다.\n  이 정보는 bastionhost에서 접속할때 필요하니 어딘가 복사해 둡니다.\n  Loadbalancer와 연결된 EC2는 PrivateSubnet에 있기 때문에 VPC외부에서는 직접 접근이 불가능합니다. BastionHost를 이용해 EC2에 접근하도록 하겠습니다. EC2가 사용하는 pem 키를 bastionhost로 복사하겠습니다.\n  .pem 파일의 권한을 변경해야합니다. chmod 400 \u0026lt;path.pem\u0026gt; 을 입력하여 파일권한을 변경합니다.\n 아래 명령어를 터미널의 pem키가 있는 위치에서 입력합니다.  ssh -i \u0026lt;pem path\u0026gt; \u0026lt;pem filename\u0026gt; ec2-user@\u0026lt;bastionhost-public-dns\u0026gt;:~   pem-path : CloudFormation은 생성할때 만든 EC2 key pair .pem의 경로를 입력합니다.\n  pem-filename : 복사할 위치의 pem 파일의 이름을 입력합니다. (기존과 동일하게 입력합니다.)\n  bastionhost-public-dns : CloudFormation의 output을 클릭하면 bastionhostdns를 알 수 있습니다. 또는 ec2인스턴스의 bastionhost의 public dns를 확인하셔도 됩니다.\n  EC2 dashboard에서 찾기   Cloudformation output에서 찾기     예) 아래와 같은 형태로 입력하세요.\nscp -i ./warworkshopkey.pem warworkshopkey.pem ec2-user@ec2-3-210-197-135.compute-1.amazonaws.com:~  아래와 같이 메세지와 함께 업로드가 완료됩니다.   이제 EC2 Dashboard로 가서 왼쪽 메뉴 리스트 중 Instances 를 클릭하고 BastionHost이름의 EC2인스턴스를 클릭합니다. 상단의 Connect를 클릭합니다.   새로 뜬 대화창의 browser-based SSH connection tool를 클릭하고 User name에 ec2-user 그리고 Connect를 클릭합니다.   Terminal에 ls를 입력하면 복사된 pem을 확인하실 수 있습니다.   이제 아까 복사해둔 EC2의 접속정보를 붙여넣어 해당 EC2에 접속하도록하겠습니다. 터미널 쉘의 변경된 ec2-user의 ip를 확인할 수 있습니다. 이제 본격적으로 Cloudwatch-agent를 설치하도록 하겠습니다.   Amazon Cloudwatch agent 패키지를 다운로드합니다. 해당 링크는 Amazon Linux를 위한 패키지이며, 다른 os는 여기서 확인하세요.\n  wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/AmazonCloudWatchAgent.zip install package의 압축을 해제합니다.  unzip AmazonCloudWatchAgent.zip sudo ./install.sh AmazonCloudWatchAgent profile 구성  서버에서 CloudWatch 에이전트를 실행하기 전에 사용자 정의 지표를 포함하여 에이전트가 수집 할 지표 및 로그를 지정하는 JSON 파일 인 CloudWatch 에이전트 구성파일을 작성해야합니다. 마법사를 사용하거나 처음부터 직접 작성하여 만들 수 있습니다. 에이전트 구성 파일을 변경할 때마다 변경 사항을 적용하려면 에이전트를 다시 시작해야합니다.\n마법사는 AWS 자격증명 및 구성파일이있는 경우 사용할 자격증명 및 AWS 리전을 자동 검색 할 수 있습니다. 이러한 파일에 대한 자세한 내용은 AWS Systems Manager 사용 설명서 및 AAWS documentation page의 구성 및 자격증몇 파일을 참조하십시오.\n이제 선택한 EC2 인스턴스에서 아래 명령을 실행하여 CloudWatch 에이전트 구성 파일 마법사를 시작하겠습니다.\nsudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard For this lab we want to keep the following structure:\n   CloudWatch Agent Configutation File Wizard Parameter     On which OS are you planning to use the agent? 1. Linux   Are you using EC2 or On-Premises hosts? 1. EC2   Which user are you planning to run the agent? 2. cwagent   Do you want to turn on StatsD daemon? 2. No   Do you want to monitor metrics from CollectD? 2. No   Do you want to monitor any host metrics? 1. Yes   Do you want to monitor cpu metrics per core? 2. No   Do you want to add ec2 dimensions? 1. Yes   Would you like to collect your metrics at high resolution? 4. 60s   Which default metrics config do you want? 1. Basic   Are you satisfied with the above config? 1. Yes   Do you have any existing CloudWatch Log Agent? 2. No   Do you want to monitor any log files? 2. No   Do you want to store the config in the SSM parameter store? 2. No    The CloudWatch Agent config file should look like the following:\n{ \u0026quot;agent\u0026quot;: { \u0026quot;metrics_collection_interval\u0026quot;: 60, \u0026quot;run_as_user\u0026quot;: \u0026quot;cwagent\u0026quot; }, \u0026quot;metrics\u0026quot;: { \u0026quot;append_dimensions\u0026quot;: { \u0026quot;AutoScalingGroupName\u0026quot;: \u0026quot;${aws:AutoScalingGroupName}\u0026quot;, \u0026quot;ImageId\u0026quot;: \u0026quot;${aws:ImageId}\u0026quot;, \u0026quot;InstanceId\u0026quot;: \u0026quot;${aws:InstanceId}\u0026quot;, \u0026quot;InstanceType\u0026quot;: \u0026quot;${aws:InstanceType}\u0026quot; }, \u0026quot;metrics_collected\u0026quot;: { \u0026quot;disk\u0026quot;: { \u0026quot;measurement\u0026quot;: [ \u0026quot;used_percent\u0026quot; ], \u0026quot;metrics_collection_interval\u0026quot;: 60, \u0026quot;resources\u0026quot;: [ \u0026quot;*\u0026quot; ] }, \u0026quot;mem\u0026quot;: { \u0026quot;measurement\u0026quot;: [ \u0026quot;mem_used_percent\u0026quot; ], \u0026quot;metrics_collection_interval\u0026quot;: 60 } } } } CloudWatch Agent를 시작합니다.  sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s 지표를 사용할 수있게되는 데 최대 5 분이 소요될 수 있습니다. 지표세션 아래의 Amazon CloudWatch 콘솔 페이지로 돌아가서 메모리 정보를 받고 있는지 확인하십시오.\nCWAgent를 클릭합니다: ImageID,InstanceID,InstanceType를 클릭합니다: 리스트의 Instance를 선택합니다: 이제 CloudWatch 에이전트 설치를 완료했으며 Amazon CloudWatch에서 해당 인스턴스의 메모리 사용률을 모니터링 할 수 있습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/4_act_resource_opt/",
+	"title": "recommendations 조치",
+	"tags": [],
+	"description": "",
+	"content": "이 실습에서는 복잡성을 낮추고 높은 절감 권장사항을 식별하기 위해 올바른 크기 조정 권장 사항의 우선 순위를 지정하는 방법을 배웠습니다.우리는 처음에 $86,627의 잠재적 절감액으로 2,534 개의 권장 사항으로 시작했지만 전체 잠재적으로 최대 $14,699.56까지 절약 가능한 60 건을 식별했습니다.\n그룹1(유휴 자원)와 그룹2(이전 세대)는 적합한 크기조정 연습을 위한 복잡하지 경우입니다. 올바른 사이징을 위한 정기적인 프로세스를 진행하는 방법을 배우면 조직은 그룹3(현재/최신세대) 및 기타 사례에 신속하게 대처할 수 있습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/",
+	"title": "Amazon EC2 올바를 크기를 위한 모범사례",
+	"tags": [],
+	"description": "",
+	"content": "  시작은 간단하게: 유휴리소스는와 중요하지 않은 개발/QA 및 이전 세대 인스턴스의 비용절감은 식별하기 쉽고 테스트 빠르게 적용해볼 수 있습니다(Amazon EC2 시작시간 통계는 다른 인스턴스보다 오래 실행 된 인스턴스를 식별하는 데 사용될 수 있습니다).\n  마이그레이션을 진행하기 전에 올바른 크기를 먼저 식별하는게 좋습니다: 시간을 절약하기 위해 올바른 크기 조정을 건너 뛰면 마이그레이션 속도가 증가 할 수는 있지만 잠재적으로 더 긴 시간 동안 더 많은 클라우드 인프라 지출이 발생할 가능성이 있습니다. 대신 마이그레이션 연습 중에 테스트 및 QA주기를 활용하여 여러 인스턴스 유형 및 제품군을 테스트하십시오. 또한 \u0026ldquo;t\u0026quot;제품군과 같이 다양한 크기와 버스트 가능한 인스턴스를 테스트 할 수있는 기회를 가지십시오.\n  가장 적합한 올바른 크기를 적용하는 것은 Day 1부터 시작합니다: 적절한 사이징 분석을 수행하고 궁극적으로 리소스의 규모를 적절하게 조정하면 모든 학습 내용이 조직 전체에서 공유되어 새로운 워크로드 설계 및 향후 마이그레이션에 큰 도움을 줄 수 있습니다.\n  Measure Twice, Cut Once: Test, then test some more: 우리가 찾아야하는 것은 새 자원 유형이 로드를 처리 할 수 없거나 잘못 작동하는 것입니다.\n  Test once and perform multiple right sizing: 자동 크기 조정 그룹 및 태그별 인스턴스를 집계하여 올바른 크기 조정 활동을 확장합니다.\n  예약 인스턴스 또는 세이빙플랜을 사용하여 적절한 크기와 결합하여 절약 효과를 극대화하십시오: 표준 RI 및 EC2 인스턴스 SP의 경우 : 올바른 크기조절을 수행한 다음 적절한 구매모델을 선택하고, 컨버터블 RI를 사용하는 경우, 올바른 크기로 교환하세요. 컴퓨트 세이빙 플랜은 새로운 환경에 맞춰 자동으로 조정합니다.\n  버스팅 가능한 인스턴트 타입은 무시하기(T types): 이러한 제품군은 일반적으로 상당한 시간 동안 낮은 CPU 비율로 실행되도록 설계되었으며 올바른 크기를 찾기 위해 분석되는 인스턴스 유형은 아닙니다.\n  "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/",
+	"title": "업데이트 된 Amazon EC2 리소스 최적화 권장 사항",
+	"tags": [],
+	"description": "",
+	"content": " 이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer, 권장 사항 (왼쪽 리스트) 섹션으로 이동하면됩니다.\n 인스턴스에 CloudWatch 에이전트를 방금 설치 한 경우 Amazon EC2 Resource Optimization에서 업데이트 된 권장 사항을 제공하는 데 며칠이 걸릴 수 있으므로 첫 번째 확인 중에 메모리 데이터가 표시되지 않더라도 걱정하지 마십시오.\n CloudWatch에 메모리 데이터를 사용자 지정지표로 사용 했으므로 Amazon EC2 리소스 최적화 권장사항에 어떤 영향을 미치는지 확인하겠습니다.\nAmazon EC2 Resource Optimization은 추가 비용없이 AWS 비용 탐색기에서 적정크기 조정 권장사항을 제공합니다. 이러한 권장 사항은 계정, 리전 및 태그에서 유휴상태이거나 사용률이 낮은 인스턴스를 식별합니다. 이러한 권장사항을 생성하기 위해 AWS는 과거 EC2 리소스 사용량(Amazon CloudWatch를 사용, 최근 14 일)과 기존 예약자원의 기록을 분석하여 비용 절감기회를 식별합니다. 권장되는 조치에는 두 가지 유형이 있습니다. 인스턴스가 유휴상태(최대 CPU 사용률이 1%이하)인 경우 종료하거나 인스턴스 사용률이 낮을 경우 (최대 CPU 사용률이 1 %-40 %)다운사이즈를 권장합니다.\n기본적으로 Amazon EC2 리소스 최적화는 권장사항을 제공하기 위해 메모리 데이터 포인트가 필요하지 않지만, 해당정보가 사용 가능한 경우 현재 최대 CPU 및 MEM사용률이 1% 에서 40% 사이 인 인스턴스에 대한 다운사이즈 권장사항 업데이트를 고려해야합니다. 다음 단계를 통해 이를 확인하십시오.\n  AWS Cost Explorer 로 갑니다.   왼쪽 메뉴의 Recommendations 를 선택합니다.   Amazon EC2 Resource Optimization Recommendations의 View All을 클릭합니다.   Amazon EC2 리소스 최적화를 활성화하지 않은 경우, 활성화 한 시점부터 첫 번째 권장사항을 생성하는 데 최대 24시간이 걸릴 수 있습니다. 일반 또는 마스터(지불)계정만 사용 가능하며, 마스터(지불)계정이 설정 페이지(오른쪽 위)에서 특별히 금지하지 않는 한 기본적으로 연결된 계정과 마스터(지불)계정 모두 권한부여 권장사항에 접근 할 수 있습니다.\nAmazon EC2 리소스 최적화 권장사항을 활성화했다면, 권장사항(있는 경우)을 제공하는 화면이 표시됩니다. 자원 최적화 권장사항을 보려면 클릭하십시오.   Optimization opportunities – 사용가능한 권장사항 Estimated monthly savings – 제공된 각 권장사항과 관련된 예상 월별 절감액의 합계 Estimated savings (%) – 권장사항의 인스턴스와 Amazon EC2 비용(온디맨드)과 비교하여 나타나는 절감액  작업 유형별(유휴 및 낮은 사용율), 연결된계정, 지역 및 태그별로 권장 사항을 필터링 할 수도 있습니다.\nAmazon EC2 리소스 최적화 권장 사항 이해.  In the example below we have a recommendation to downsize the t2.micro (1vCPU for a 2h 24m burst and 1GB RAM) to a t2.nano (1vCPU for a 1h 12m burst and 0.5 GB RAM) and save $12 USD per year.\n아래 예에서는 t2.micro(1vCPU당 2시간24분 버스트 및 1GB RAM의)를 t2.nano(1vCPU당 1시간12분 버스트 및 0.5GB RAM)로 축소하고 연간 $12USD를 절약 할 것을 권장합니다. 지난 14 일 동안이 인스턴스의 최대 CPU 사용률은 9%에 불과했으며,인스턴스는 86시간 동안 실행되었습니다. 그리고 모두 On-Demand 로 사용되었습니다. 사용 가능한 메모리 정보가 없으므로 Amazon EC2 Resource Optimization은 해당 데이터 포인트를 무시하고 t2.micro에서 사용 가능한 메모리의 절반인 t2.nano로 축소하는 것.을 권장합니다.\n제안된 적정 크기 조정 옵션이 유효한지 테스트 할 땐 위험할 수도있고 시간이 낭비될 수도 있습니다. 방금 설치 한 CloudWatch 에이전트를 사용하면이 권장사항의 정확성을 향상시킬 수 있습니다.\n이 다른 예에서는 r5.8xlarge(32vCPU 및 256GB RAM)를 r5.4xlarge (16vCPU 및 128GB RAM)로 축소하고 연간 $2,412 USD를 절약 할 것을 권장합니다. 이 경우 CPU 및 메모리 정보를 모두 사용할 수 있습니다. 최대 CPU 사용률은 21%이고 메모리는 5%에 ​​불과합니다. 따라서 크기 축소의 경우가 훨씬 강력하고 권장사항에 따라 새 인스턴스 크기의 CPU 및 메모리 사용률을 추정 할 수도 있습니다. 이는 CloudWatch의 과거 사용량 데이터를 기반으로 한 간단한 추정 일 뿐이므로 수정을 실행하기 전에 필요한 모든 부하 테스트를 수행하여 워크로드에 영향을 미치지 않도록해야합니다.\n위에서 설명한 것처럼 Amazon EC2 리소스 최적화 로직은 지난 14 일 동안 최대 CPU 사용률이 1%에서 40% 사이 인 인스턴스를 축소하는 것이 좋습니다. 사용 가능한 메모리 정보가있는 경우 Amazon EC2 Resource Optimization은 이제 CPU 및 메모리 최대 활용률이 1 %에서 40% 사이 인 인스턴스의 크기를 줄이는 것을 고려합니다. 메모리 데이터를 사용할 수 있는 경우 유휴 권장사항이 영향을받지 않으므로 지난 14 일 동안 CPU utlization의 1%를 통과하지 못한 EC2 인스턴스는 자동으로 유휴 상태로 플래그가 지정됩니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/",
+	"title": "Amazon EC2 Right Sizing Best Practices",
+	"tags": [],
+	"description": "",
+	"content": "  시작은 간단하게: 유휴리소스는와 중요하지 않은 개발/QA 및 이전 세대 인스턴스의 비용절감은 식별하기 쉽고 테스트 빠르게 적용해볼 수 있습니다(Amazon EC2 시작시간 통계는 다른 인스턴스보다 오래 실행 된 인스턴스를 식별하는 데 사용될 수 있습니다).\n  마이그레이션을 진행하기 전에 올바른 크기를 먼저 식별하는게 좋습니다: 시간을 절약하기 위해 올바른 크기 조정을 건너 뛰면 마이그레이션 속도가 증가 할 수는 있지만 잠재적으로 더 긴 시간 동안 더 많은 클라우드 인프라 지출이 발생할 가능성이 있습니다. 대신 마이그레이션 연습 중에 테스트 및 QA주기를 활용하여 여러 인스턴스 유형 및 제품군을 테스트하십시오. 또한 \u0026ldquo;t\u0026quot;제품군과 같이 다양한 크기와 버스트 가능한 인스턴스를 테스트 할 수있는 기회를 가지십시오.\n  가장 적합한 올바른 크기를 적용하는 것은 Day 1부터 시작합니다: 적절한 사이징 분석을 수행하고 궁극적으로 리소스의 규모를 적절하게 조정하면 모든 학습 내용이 조직 전체에서 공유되어 새로운 워크로드 설계 및 향후 마이그레이션에 큰 도움을 줄 수 있습니다.\n  Measure Twice, Cut Once: Test, then test some more: 우리가 찾아야하는 것은 새 자원 유형이 로드를 처리 할 수 없거나 잘못 작동하는 것입니다.\n  Test once and perform multiple right sizing: 자동 크기 조정 그룹 및 태그별 인스턴스를 집계하여 올바른 크기 조정 활동을 확장합니다.\n  예약 인스턴스 또는 세이빙플랜을 사용하여 적절한 크기와 결합하여 절약 효과를 극대화하십시오: 표준 RI 및 EC2 인스턴스 SP의 경우 : 올바른 크기조절을 수행한 다음 적절한 구매모델을 선택하고, 컨버터블 RI를 사용하는 경우, 올바른 크기로 교환하세요. 컴퓨트 세이빙 플랜은 새로운 환경에 맞춰 자동으로 조정합니다.\n  버스팅 가능한 인스턴트 타입은 무시하기(T types): 이러한 제품군은 일반적으로 상당한 시간 동안 낮은 CPU 비율로 실행되도록 설계되었으며 올바른 크기를 찾기 위해 분석되는 인스턴스 유형은 아닙니다.\n  "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/6_tear_down/",
+	"title": "실습 종료",
+	"tags": [],
+	"description": "",
+	"content": "별도의 진행사항이 없습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/",
+	"title": "EC2 적정크기 찾기",
+	"tags": [],
+	"description": "",
+	"content": "Authors  Arthur Basbaum, AWS Cloud Economics +Seyong Kang  소개 이 실습에서는 Amazon CloudWatch 및 AWS 리소스 최적화에 대한 개요와 EC2 적정 크기를 위해 우선적으로 해야하는 방법에 대해 설명합니다.\n목표  Amazon CloudWatch에서 CPU, 네트워크 및 디스크 사용량과 같은 지표를 확인하는 방법 알아보기 AWS 리소스 최적화를 활성화 및 사용하고 EC2 적격 규모 권장 사항 받기 AWS Resource Optimization 보고서를 필터링하는 방법을 배우고 간단하고 고 비용을 줄일 수 있는 사례에 집중하는 방법.  준비 사항  마스터 계정의 루트 사용자 AWS Resource Optimizatio의 **AWS Cost Explorer \u0026gt; Recommendations*를 활성화 하세요. 추가적인 비용은 없습니다.  요구 권한  참고 : 콘솔에는 추가 권한이 필요할 수 있으므로 실습 중에 권한 오류 메시지가 나타날 수 있습니다. 이러한 오류는 실습에 영향을 미치지 않으며 필요한 최소 권한 집합을 구현하여 보안 모범 사례를 따릅니다.  Steps:  Amazon Cloudwatch에 대하여 알아보기   Amazon EC2 리소스 최적화 Recommendations 사용   AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기   recommendations 조치   Amazon EC2 올바를 크기를 위한 모범사례   실습 종료   "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/",
+	"title": "실습 종료",
+	"tags": [],
+	"description": "",
+	"content": " IAM role CloudWatchAgentServerRole을 삭제합니다.  "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/",
+	"title": "EC2 적정크기 찾기 (MEM)",
+	"tags": [],
+	"description": "",
+	"content": "Authors  Jeff Kassel, AWS Technical Account Manager Arthur Basbaum, AWS Cloud Economics +Seyong Kang  소개 이 실습에서는 CloudWatch 에이전트를 설치하여 메모리 사용률 (GB 소모량)을 수집하고 AWS Resource Optimization를 사용하여 EC2 올바른 크기 조정연습에 새로운 데이터 포인트가 어떻게 도움이 되는지 분석하는 단계를 안내합니다.\nGoals  Amazon CloudWatch에서 CPU, 네트워크 및 디스크 사용량과 같은 지표를 확인하는 방법 알아보기 Amazon CloudWatch에서 사용자 지정지표를 통해 메모리데이터를 설치 및 수집하는 방법에 대해 알아봅니다. AWS 리소스 최적화를 활성화하고 새로운 데이터 포인트(메모리)가 권장 사항에 미치는 영향을 관찰합니다.  준비사항  마스터 계정의 루트 사용자 AWS Resource Optimization의 at AWS Cost Explorer \u0026gt; Recommendations 을 활성화합니다.  권한 요구사항  마스터 계정의 루트 사용자 액세스  Steps:  AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기   EC2인스턴스에 CloudWatch IAM role 연결하기   Cloudwatch Agent 수동 설치   업데이트 된 Amazon EC2 리소스 최적화 권장 사항   Amazon EC2 Right Sizing Best Practices   실습 종료   a\n모범 사례 점검표  Amazon CloudWatch를 시작하고 EC2 인스턴스의 평균 CPU, 디스크 및 네트워크 사용량을 관찰하십시오 EC2 인스턴스에 CloudWatch 에이전트를 수동으로 설치하여 메모리 사용률을 추적합니다. 추가 데이터 포인트가있을 때 AWS 리소스 최적화에 미치는 영향을 관찰하십시오 (메모리 사용률)  "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/",
+	"title": "소개",
+	"tags": [],
+	"description": "",
+	"content": " 만약 Well Architected Framework에 대한 개념과 내용을 알고 있다면, 2단계(실습 환경 소개)로 넘어가세요.\n 당신은 다음 질문에 대답할 수 있나요? : “당신의 시스템은 잘 설계되어 있습니까??” AWS의 전문가들은 매일 고객과 함께 클라우드의 모범 사례를 활용하여 시스템을 설계합니다. 설계의 진화에 발맞춰 고객의 아키텍처에 더할 것과 뺄 것을 결정할 수 있도록 도와 드립니다. 그리고 고객이 이러한 시스템을 실제 환경에 배포하는 과정에서 해당 시스템의 성능 수준과 그러한 결정의 결과를 배우게 됩니다. AWS는 이렇게 얻은 교훈을 토대로 아키텍처가 AWS 모범 사례에 얼마나 잘 맞는지 평가할 수 있는 여러 가지 질문을 모은 AWS Well-Architected 프레임워크를 만들어 냈습니다.\n이 프레임워크는 현대의 클라우드 기반 시스템에 기대되는 품질과, 시스템을 평가하는 일관된 접근 방식을 제공합니다.\n AWS Well-Architected Framework는 무엇입니까?  "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/framework/",
+	"title": "AWS-Well-Architected Framework란?",
+	"tags": [],
+	"description": "",
+	"content": "AWS Well-Architected Framework는 다음과 같은 장점이 있습니다.  빌드와 배포속도의 향상 위험의 감소 또는 완화 정보에 근거한 결정 AWS 모범사례 제공   이 프레임워크는 매커니즘입니다. 매카니즘은 완벽하게 돌아가는 프로세스를 의미합니다. Well-Architected-Framework는 단순히 아키텍쳐를 개선하겠다는 의도를 가지고 질문을 하고 노력 하는 것 뿐만아니라, 규칙이나 프로세스의 준수여부를 확인하는 완벽한 메카니즘으로 대체하는 것을 의미합니다.\n클라우드의 서비스와 기능과 모범사례등을 학습하고, 아키택쳐가 가지고 있는 데이타를 측정한 뒤, 그것들을 적용하여 아키텍쳐를 향상시키는 완전하게 반복적으로 수행하는 과정을 거칩니다. 이 모든것은 프로세스화 되어 애플리케이션 전체 수명주기에 반복적으로 수행됩니다.\n AWS Well-Architected Framework의 구성요소 AWS Well-Architected Framework는 다음과 같이 구성되어 있습니다.\n  5가지 기반을 토대로합니다.\n 건물을 지을때 가장 중요한 것은 기초공사 입니다. 기초공사가 잘되어있으면 건물을 올릴 때 문제가 생기더라도 쉽게 무너지지않습니다. 기술솔루션을 설계할 때 운영우수성, 보안, 안정성, 성능효율성, 비용최적화 이렇게 다섯가지 토대를 간과하면 기대 및 요구에 충실한 시스템을 제작하기가 어려울 수 있습니다. 이러한 기반을 아키텍처에 녹여 내면 안정적이고 효율적인 시스템을 구축하는 데 도움이 되며, 또한 이를 바탕으로 기능적 요구 사항 등 설계의 다른 측면에 집중할 수 있게 됩니다.    설계 원칙\n  Well-Architected 프레임워크는 다음과 같은 여러 가지 일반 설계 원칙을 확립하여 우수한 클라우드 설계를 촉진합니다.\n 필요한 용량을 추측하지 말것 프로덕션 규모의 시스템을 테스트 할 것 아키텍쳐 실험을 쉽게 테스트 하기위해 자동화 할 것 아키텍쳐의 발전을 허용할 것 데이터를 사용하여 아키텍쳐를 구동할 것 게임데이를 통해 아키텍쳐를 향상시킬 것    기반별 설계 원칙은 기반과 관련된 실습을 진행하면서 각각 알아보도록하겠습니다.\n    질문\n AWS Well-Architected 프레임워크에는 특정 아키텍처와 클라우드 모범 사례가 얼마나 일치하는지 살펴볼 수 있는 몇 가지 기본 질문이 포함되어 있습니다. 이 프레임워크는 현대의 클라우드 기반 시스템에 기대되는 품질과 비교하여 시스템을 평가하는 일관된 접근 방식을 제공합니다. 아키텍처의 상태를 토대로, 프레임워크가 보다 효과적으로 이 품질에 도달할 수 있는 개선 사항을 제안합니다.     그럼 이제 AWS Well Architected의 5가지 기반에 대하여 알아봅시다   "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/pillar/",
+	"title": "AWS Well-Architected의 기반",
+	"tags": [],
+	"description": "",
+	"content": "AWS Well-Architected Framework는 운영우수성, 보안, 안정성, 성능효율성, 비용최적화 다섯가지 필라를 토대로 합니다.\n   기반이름 설명     운영우수성 비즈니스 가치를 제공하고 지원 프로세스 및 절차를 지속적으로 개선하기 위해 시스템을 실행 및 모니터링하는 기능   보안 위험 평가 및 완화 전략을 통해 정보, 시스템 및 자산을 보호하는 동시에 비즈니스 가치를 제공하는 능력입니다.   안정성 인프라 또는 서비스 장애를 복구하고, 수요에 따라 컴퓨팅 리소스를 탄력적으로 확보하고, 구성 오류나 일시적 네트워크 문제 같은 중단 사태를 완화할 수 있는 시스템의 능력입니다   성능효율성 컴퓨팅 리소스를 시스템 요구 사항에 맞게 효율적으로 사용하고, 수요 변화 및 기술 진화에 발맞춰 그러한 효율성을 유지하는 능력입니다.   비용최적화 불필요한 비용 또는 최선이 아닌 리소스 사용을 피하거나 제거하는 능력입니다.    이러한 비즈니스 의사결정에 따라 엔지니어링 우선 순위가 달라질 수 있습니다. 예를 들어 개발 환경에서는 안정성을 상쇄하여 비용을 줄이는 데 최적화할 수 있습니다. 미션 크리티컬 솔루션에서는 안정성을 최적화하는 대신 비용 증가를 기꺼이 감수할 수도 있습니다. 전자 상거래 솔루션이라면 고객 만족이 수익 증대로 이어질 수 있기 때문에 성능 우선순위를 높이기도 합니다. 보안 및 운영 우수성은 일반적으로 다른 기반과 절충 관계에 있지 않습니다.\n 그럼 각 기반별 실습을 진행해보도록하겠습니다.   "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/",
+	"title": "홈",
+	"tags": [],
+	"description": "",
+	"content": "Well Architected Labs  Introduction AWS(Amazon Web Services)는 고객이 클라우드에서 안정적이고 안전하면서도 효율적이고 경제적인 시스템을 설계할 수 있도록 하려면 아키텍처 모범 사례를 고객과 공유해야 한다는 점을 잘 알고 있습니다. 이러한 노력의 일환으로 개발된 AWS Well-Architected 프레임워크를 이용하면 AWS에서 시스템을 구축하면서 내리게 되는 결정의 장점과 단점을 이해할 수 있습니다. Well-Architected 시스템을 마련하면 사업의 성공 가능성이 대폭 높아질 것입니다.\n이 프레임 워크는 고객과 파트너가 아키텍쳐를 평가할 수 있는 일관적인 접근방식을 제공하며, 시간이 지남에 따라 어플리케이션의 요구에 따라 확장 할 수 있는 설계 구현을 돕는 가이드라인을 제공합니다.\n이 레포지토리는 아키텍처 모범사례를 사용학여 학습,측정, 구축하는데 도움이 되는 Hand-on-Lab 형태의 문서와 코드가 포함되어 있습니다. 실습은 입문을 위한 100레벨, 200/300레벨과 고급레벨의 400으로 분류됩니다.\nLicense Licensed under the Apache 2.0 and MITnoAttr License.\nCopyright 2018-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.\nLicensed under the Apache License, Version 2.0 (the \u0026ldquo;License\u0026rdquo;). You may not use this file except in compliance with the License. A copy of the License is located at\nhttps://aws.amazon.com/apache2.0/\nor in the \u0026ldquo;license\u0026rdquo; file accompanying this file. This file is distributed on an \u0026ldquo;AS IS\u0026rdquo; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n "
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/",
+	"title": "실습 환경 셋업",
+	"tags": [],
+	"description": "",
+	"content": " 다음 장에서 생성한 CloudFormation의 스택은 이 실습환경을 전부 포함하고 있습니다.\n 실습환경 사용 서비스    이름 설명     Amazon EC2 Amazon Elastic Compute Cloud(EC2)는 안전하고 크기 조정이 가능한 컴퓨팅 파워를 클라우드에서 제공하는 웹 서비스입니다. 개발자가 더 쉽게 웹 규모의 클라우드 컴퓨팅 작업을 할 수 있도록 설계되었습니다. Amazon EC2의 간단한 웹 서비스 인터페이스를 통해 간편하게 필요한 용량을 얻고 구성할 수 있습니다. 컴퓨팅 리소스에 대한 포괄적인 제어권을 제공하며, Amazon의 검증된 컴퓨팅 환경에서 실행할 수 있습니다.   Application Load Balancer 로드 밸런서는 클라이언트에 대한 단일 접점 역할을 수행합니다. 로드 밸런서는 여러 가용 영역에서 EC2 인스턴스 같은 여러 대상에 수신 애플리케이션 트래픽을 분산합니다. 이렇게 하면 애플리케이션의 가용성이 향상됩니다. 로드 밸런서에 하나 이상의 리스너를 추가할 수 있습니다.   Amazon RDS Amazon Relational Database Service(RDS)를 사용하면 클라우드에서 관계형 데이터베이스를 간편하게 설정, 운영 및 확장할 수 있습니다. 하드웨어 프로비저닝, 데이터베이스 설정, 패치 및 백업과 같은 시간 소모적인 관리 작업을 자동화하면서 비용 효율적이고 크기 조정 가능한 용량을 제공합니다. 사용자가 애플리케이션에 집중하여 애플리케이션에 필요한 빠른 성능, 고가용성, 보안 및 호환성을 제공할 수 있도록 지원합니다.   AWS Auto Scaling AWS Auto Scaling은 애플리케이션을 모니터링하고 용량을 자동으로 조정하여, 최대한 저렴한 비용으로 안정적이고 예측 가능한 성능을 유지합니다. AWS Auto Scaling을 사용하면 몇 분 만에 손쉽게 여러 서비스 전체에서 여러 리소스에 대해 애플리케이션 규모 조정을 설정할 수 있습니다.    -CloudFomration을 이용하여 실습환경을 셋팅해보겠습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/lab-setup-master/",
+	"title": "MASTER 계정 셋업",
+	"tags": [],
+	"description": "",
+	"content": "AWS 계정  중요: EventEngine을 사용한다면 바로 하단의 Cloudformation template부터 진행하세요.\n 이미 AWS 계정을 가지고 있다면 즉시 이 실습의 가이드를 따라 진행할 수 있으나, 계정이 없다면 먼저 AWS 계정을 만들어야 합니다.\n AWS 계정 생성 및 활성화 가이드는 다음 링크를 참조하시기 바랍니다.\n실습은 us-west-2 (오레곤) 리전을 선택합니다.\n IAM 사용자 AWS 계정을 생성했지만 직접 IAM 사용자를 생성하지 않은 경우, IAM 콘솔을 사용하여 IAM 사용자를 생성 할 수 있습니다. 다음 스텝에 따라 Administrator (관리자) 사용자를 생성합니다. 이미 관리자 사용자가 있다면, 다음 IAM 사용자 생성 작업을 건너 뜁니다.\n AWS 계정 이메일 주소와 비밀번호를 사용하여 AWS 계정의 Root 사용자로 IAM 콘솔 에 로그인 합니다. IAM 콘솔 왼쪽 메뉴 패널에서 Users (사용자)를 선택한 다음 Add user (사용자 추가)를 클릭합니다. User name (사용자 이름)은 Administrator로 입력합니다. AWS Management Console access 체크박스를 선택하고, Custom password를 선택한 다음 비빌번호를 입력합니다. Next: Permissions (다음: 권한)을 클릭합니다.  Attach existing policies directly (기존 정책 직접 연결)를 선택하고 AdministratorAccess 정책에 체크박스를 선택하고 Next: Tags (다음: 태그)를 클릭합니다.  Next: Review (다음: 검토)를 클릭합니다. Administrator 사용자에 AdministratorAccess 관리형 정책이 추가 된 것을 확인하고 Create user (사용자 만들기)를 클릭합니다. 이제 Root 사용자를 로그아웃하고 새로 생성한 Administrator 사용자로 로그인을 합니다. 다음 URL을 사용하여 로그인 할 수 있습니다.   https://\u0026lt;your_aws_account_id\u0026gt;.signin.aws.amazon.com/console/\n\u0026lt;your_aws_account_id\u0026gt;는 본인 AWS 계정의 고유 ID를 입력합니다. Root 사용자로는 해당 실습을 진행할 때 에러가 발생할 수 있습니다. 반드시 admin 유저 계정으로 로그인하여 진행하세요.\n  EC2 Key Pair CloudFormaton template을 사용하여 실습에 필요한 기본 환경을 구성하려면 Amazon EC2 키 페어를 제공해야 합니다. 이미 EC2 키 페어가 있는 경우 다음 작업을 건너 뜁니다.\n Administrator 사용자로 AWS 콘솔에 로그인 한 다음 EC2 콘솔로 이동합니다. 탐색 창의 Network \u0026amp; Security (네트워크 \u0026amp; 보안)에서 Key Pairs (키 페어)를 선택합니다. Create Key Pair (키 페어 생성)를 클릭합니다. Key pair name (키 페어 이름)에 새 key pair의 이름을 입력 한 다음 Create (생성)을 클릭합니다. .PEM 파일 형식의 Private Key (개인 키) 파일은 브라우저에서 자동으로 다운로드 됩니다. 개인 키는 다음 CloudFormation을 사용할 때 필요합니다.  CloudFormation Template  이 계정은 Master가 되는 계정을 위한 설정입니다.\n AWS CloudFormation에서는 클라우드 환경에서 AWS 및 타사 애플리케이션 리소스를 모델링하고 프로비저닝할 수 있도록 공용 언어를 제공합니다. AWS CloudFormation을 사용하면 프로그래밍 언어 또는 간단한 텍스트 파일을 사용하여 자동화되고 안전한 방식으로 모든 지역과 계정에 걸쳐 애플리케이션에 필요한 모든 리소스를 모델링 및 프로비저닝할 수 있습니다.\nAWS CodeQuality 실습에 필요한 AWS 리소스를 사전에 생성하기 위해 제공된CloudFormation template을 사용하여 CloudFormation stack을 생성합니다.\nCloudFormation 스택을 시작하려면, Launch Stack 버튼를 클릭해서 CloudFormation 콘솔로 이동합니다.\n중요: 이 탬플릿은 us-west-2 (오레곤)을 위해 만들어졌습니다.\n  Launch Stack  스택 생성 단계에서 스택 이름을 입력하고 앞서 생성한 EC2 키 페어를 선택합니다. 그리고 나머지는 기본 값을 유지하고 마지막 단계에서 CloudFormation이 IAM 리소스를 생성할 때 커스텀 이름을 사용할 수 있게\nStackname에 MasterAccountStack을 입력합니다. Workload Name에 prod를 입력합니다.\nAcknowledge 체크박스를 선택하고 Create stack (스택 생성)을 클릭합니다.\n스택 생성이 완료되면 AWS 계정에 실습을 실행하는 데 필요한 모든 기본 리소스가 준비 되어있습니다. Outputs 탭에서 ALBAddress, DBDNS가 표시됩니다.\n -이제 워크샵을 진행해보도록 하겠습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/",
+	"title": "성능효율성",
+	"tags": [],
+	"description": "",
+	"content": "이 리포지토리에는 아키텍처 모범 사례를 사용하여 학습, 측정 및 구축하는 데 도움이되는 실습 랩 형식의 설명서 및 코드가 포함되어 있습니다. 실습은 100 개 입문, 200/300 개 중간, 400 개 고급 레벨로 분류됩니다.\n성능 효율성에 대한 자세한 내용은 AWS Well-Architected 성능효율성 백서 또는 온라인 https://wa.aws.amazon.com/을 참조하십시오.\n이 실습은 워크로드 계정을 사용하여 진행합니다.\n Level 100: CloudWatch 대시보드를 사용하여 모니터링 하기\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/",
+	"title": "CloudWatch 대시보드를 사용하여 모니터링 하기",
+	"tags": [],
+	"description": "",
+	"content": "소개 이 실습에서는 모든 AWS 리소스의 상태 및 성능을 종합적으로 파악할 수 있도록 Amazon CloudWatch 대시 보드를 구성하는 과정을 안내합니다. 이를 통해 모니터링을 시작하고, 계정 및 리소스 기반 메트릭 및 경보 보기, 성능 관련 문제의 근본 원인을 쉽게 파악할 수 있습니다. AWS Well-Architected Framework의 성능효율성 Pillar를 읽고 더 많은 모범 사례를 찾을 수 있습니다. 이 실습에서 배우는 내용은 AWS Well-Architected Framework에 따라 워크로드를 보호하는 데 도움이됩니다.\n목표 리소스가 예상대로 작동하는지 모니터링하기\n실습을 시작해봅시다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/",
+	"title": "CPU 경보 알람",
+	"tags": [],
+	"description": "",
+	"content": "소개 이 실습에서는 AWS Management 콘솔을 사용해 CPU 사용량 경보를 생성합니다. 경보 상태가 OK에서 ALARM으로 변경될 때 Amazon SNS를 사용하여 이메일 메시지를 전송하는 CloudWatch 경보를 생성할 수 있습니다. EC2 인스턴스의 평균 CPU 사용률이 지정된 기간 동안 연속해서 지정된 임계값을 초과하면 경보 상태가 ALARM으로 바뀝니다.\n목표 CPU사용율 95% 이상시 사용자에게 e-mail 발송\n실습을 시작해봅시다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/",
+	"title": "비용최적화",
+	"tags": [],
+	"description": "",
+	"content": "소개  비용 최적화는 전체 수명주기 동안 시스템을 지속적으로 개선하고 개선하는 프로세스입니다. 이 실습을 사용하면 비용 최적화 모범 사례를 구현하고 워크로드가 제대로 아키텍처를 유지하는 방법에 대한 실질적인 경험을 얻을 수 있습니다.\n클라우드의 비용 최적화 모범 사례에 대한 자세한 내용은 AWS 콘솔의 Well-Architected 도구를 방문하여 AWS Well-Architected 비용 최적화 백서를 읽으십시오.\n시작하기-비용 최적화 기초  비용 최적화 과정의 첫 번째 단계는 계정을 올바르게 설정하고 비용 최적화에 사용할 수있는 도구와 데이터를 이해하는 것입니다. 이들은 비 기술적 역할을 포함하여 클라우드를 사용하는 모든 사람이 액세스 할 수있는 랩 모음입니다.\n기본 사항에는 계정 설정, AWS 결제 콘솔, AWS 예산, AWS 비용 탐색기, 예약 인스턴스 (RI), 비용 및 사용 보고서 (CUR), 비용 및 사용 현황 분석, 비용 및 사용 현황 시각화가 포함됩니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/default-dashboard/",
+	"title": "자동 대시보드 설정",
+	"tags": [],
+	"description": "",
+	"content": "CloudWatch 자동 대시보드를 살펴볼 것입니다:  Amazon CloudWatch는 DevOps 엔지니어, 개발자, SRE(사이트 안정성 엔지니어) 및 IT 관리자를 위해 구축된 모니터링 및 관찰 기능 서비스입니다. CloudWatch는 애플리케이션을 모니터링하고, 시스템 전반의 성능 변경 사항에 대응하며, 리소스 사용률을 최적화하고, 운영 상태에 대한 통합된 보기를 확보하는 데 필요한 데이터와 실행 가능한 통찰력을 제공합니다. CloudWatch는 로그, 지표 및 이벤트 형태로 모니터링 및 운영 데이터를 수집하여 AWS와 온프레미스 서버에서 실행되는 AWS 리소스, 애플리케이션 및 서비스에 대한 통합된 보기를 제공합니다. CloudWatch를 사용하여 환경에서 이상 동작을 감지하며, 경보를 설정하고, 로그와 지표를 나란히 시각화하며, 자동화된 작업을 수행하고, 문제를 해결하며, 통찰력을 확보하여 애플리케이션을 원활하게 실행할 수 있습니다.\nAmazon CloudWatch 자동 대시 보드를 사용하면 모든 AWS 리소스를 쉽게 모니터링 할 수 있으며 빠르게 시작할 수 있습니다. 계정 및 리소스 기반의 메트릭 및 경보보기를 탐색하고 성능 문제의 근본 원인을 쉽게 찾을 수 있습니다.\nCloudWatch 콘솔 가기 : https://console.aws.amazon.com/cloudwatch/\n  왼쪽 상단에는 계정에서 사용하는 AWS 서비스 목록과 해당 서비스의 경보 상태가 표시됩니다. 오른쪽 상단에는 사용하는 AWS 서비스 수에 따라 계정에 2 개 또는 4 개의 경보가 표시됩니다. 표시된 경보는 ALARM 상태이거나 가장 최근에 변경된 상태입니다. 이러한 알람을 통해 모든 서비스의 경보 상태와 가장 최근에 변경된 경보를 확인하여 AWS 서비스의 상태를 평가할 수 있습니다. 이를 통해 문제를 모니터링하고 신속하게 진단 할 수 있습니다.\n  왼쪽 메뉴 대시보드 하위에는 사용자가 생성한 Custom 대시 보드가 있습니다. 이는 사용자 지정 서비스 또는 애플리케이션에 대한 지표를 페이지에 추가하거나 가장 모니터링하려는 AWS 서비스에서 추가 주요 지표를 전달할 수있는 편리한 방법입니다. 자세한 설정방법은 다음 챕터에서 알아볼 것입니다.\n  6 개 이상의 AWS 서비스를 사용하는 경우 기본 대시 보드 아래에는 자동 교차 서비스 대시 보드(Cross service dashboard)에 대한 링크가 있습니다. 교차 서비스 대시 보드에는 사용자 지정 대시 보드를 모니터링하거나 생성 할 지표를 선택할 필요없이 사용하는 모든 AWS 서비스의 주요 지표가 자동으로 표시됩니다. 이를 사용하여 해당 서비스에 대한 더 많은 주요 지표를 볼 수 있습니다. 6개 미만의 AWS 서비스를 사용하는 경우 교차 서비스 대시 보드가 이 페이지에 자동으로 표시됩니다.\n  이제 사용자가 원하는 데이터만 볼 수 있도록 커스텀 대시보드를 만드는 방법을 알아보겠습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/setup/",
+	"title": "사용자 대시보드 설정",
+	"tags": [],
+	"description": "",
+	"content": "CloudWatch 사용자 대시보드 만들기  CloudFormation에서 생성한 WellArchitectedFrameworkLabsStack에서 생성된 인스턴스의 CPU사용량과 갯수를 측정 할 것입니다.\n  먼저 WellArchitectedFrameworkLabsStack의 Auto scaling group이 생성한 인스턴스의 CPU Utilization을 가져오기 위해 Auto scaling group의 이름이 필요하며 Load Balancer에 연결된 EC2의 갯수를 확인하기 위해선 Application Load Balancer의 이름이 필요합니다.\nCloudFormation 콘솔로 가기 : https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2\n  Output의 ASGName은 Auto scaling group의 이름입니다. ALBName는 Application Load Balancer의 이름입니다. CloudFormation 콘솔에서 WellArchitectedFrameworkLabsStack을 선택합니다. 상단 탭의 Output을 선택한 후 ASGName과 ALBName의 값을 복사한 후 어딘가 적어놓습니다.\n이제 CloudWatch에서 대시보드를 생성할 것입니다. CloudWatch 콜솔로 가기 : https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2\n  오른쪽 상단의 Dashboards를 선택합니다.   Create Dashboard 버튼을 클릭합니다.   Create new dashboard창의 dashboard name에 warworkshop-default를 입력하고 Create dashboard버튼을 클릭하여 기본 대쉬보드를 생성합니다.   이제 생성한 대시보드에서 EC2의 CPU사용울을 볼 수 있는 위젯을 추가할 것입니다. 시간의 흐름에 따른 CPU 사용율를 알아보기 쉽도록 라인형 그래프를 선택하고 Configure를 클릭합니다.   All metrics의 검색창에 이전에 복사해 놓은 Output의 ASGName의 값을 붙여넣습니다. 그리고 엔터를 누른 후 EC2 \u0026gt; By Auto Scaling Group를 선택합니다.   측정가능한 여러 Metric값이 나옵니다. 추후 필요한 값이 있다면 선택하셔서 확인하실 수 있습니다. 지금은 중 Metric Name이 CPUUtilization를 것을 선택합니다. 그리고 Create Widget버튼을 선택합니다.   대시보드 창에 CPUUtilization이 추가된것을 볼 수 있습니다. 이제 EC2의 instance 갯수를 확인하기위한 위젯을 추가해보도록 하겠습니다. 상단의 Add widget버튼을 클릭합니다.   EC2 instance의 갯수를 죽각적으로 알아보기 쉽도록 Number 타입를 사용하도록 하겠습니다. Number 타입을 선택한 후 Configure 버튼을 클릭합니다.   All metrics의 검색창에 이전에 복사해 놓은 Output의 ALBName 값을 붙여넣습니다. 그리고 엔터를 누른 후 Application Load Balancer 별, Target Group단위의 값을 측정하기 위해 ApplicationELB \u0026gt; Per AppELB, per TG Metrics를 선택합니다.   다양한 메트릭들이 나옵니다. 이 중 HealthyHostCount 값을 선택한 후 하단의 Create widget을 선택합니다.   이제 CPUUtilization과 Target Group에 생성된 Instance의 갯수를 확인할 수 있는 대시보드 생성이 완료 되었습니다. 현재는 매우 낮은 CPU사용율과 2개의 인스턴스가 띄워져 있는 것을 확인할 수 있습니다. 상단의 Save dashboard를 눌러 대시보드를 저장합니다.   이제 CPU사용율의 변화를 사용자가 즉시 알 수 있도록 Cloudwatch 경보를 생성하겠습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/",
+	"title": "사용자 경보 설정",
+	"tags": [],
+	"description": "",
+	"content": "CloudWatch 경보, 경보 생성을  CloudFormation에서 생성한 WellArchitectedFrameworkLabsStack에서 생성된 인스턴스의 CPU사용량과 갯수를 측정 할 것입니다.\nCloudWatch 콘솔 가기 : https://console.aws.amazon.com/cloudwatch/\n  왼쪽 탐생착에서 경보와 경보 생성을 선택합니다.   그래프의 지표 선택을 선택합니다.   EC2별 CPU사용율을 선택하기위해 검색창에 이전에 복사한 ASGName를 입력한 후 검색하고 EC2 \u0026gt; By Auto Scaling group를 선택합니다.   Metric이 CPUUtilization인 항목을 찾아 체크박스를 체크한 후 Select Metric버튼을 누릅니다.   지표 및 조건 지정 설정을 진행하겠습니다. 지표는 백분율을 이용하여 CPU가 90%이상 사용될 경우 경보를 생성할 예정입니다. 그래프의 통계 항목을 p90으로 변경합니다. 실제 사용하실 경우 다양항 측정기준이 있으니 원하시는 항목을 선택하시면 됩니다. 기간은 1분을 선택합니다. 1분마다 항목을 업데이트합니다.   조건의 입계값 유형은 정적으로, 보다 큼를 선택 한 후 \u0026hellip;보다에 95를 입력합니다. CPU사용율의 백분율이 95%이상 올라갈 경우 알람이 생성됩니다.   이제 하단의 다음을 선택합니다.\n  이제 작업구성입니다. 기존에 생성되어있는 SNS topic을 연결할 수도 있습니다. 여기선 새로운 SNS topic을 생성하겠습니다. 경보 상태 트리거의 경보 상태를 선택하고 SNS 주제 선택에서 새 주제 생성라디오 박스를 선택합니다. 그리고 새 주제 생성에 Default_CloudWatch_Alarms_Topic, Email Endpoint에 본인의 Email을 입력한 후 Create topic 버튼을 클릭합니다.   마지막 이름 및 설명 추가에 아래와 같이 입력합니다.\n Alarm name : CloudWatch-CPU-Alarm Alarm description - optional : for WAR workshop     이제 기본적인 셋팅이 완료되었습니다.\n  이제 EC2 Instance의 CPU사용율이 올라가면 어떤 변화가 있는지 확인해 보겠습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/snstopic/",
+	"title": "이메일 확인 및 전화번호 등록",
+	"tags": [],
+	"description": "",
+	"content": "SNS e-mail Confirm  SNS topic에서 연결한 email은 해당 계정에서 재승인을 해야 올바른 경고를 받을 수 있습니다. 이전 sns 셋팅할 때 입력한 email의 받은 편지함에서 ÀWS Notification이 보낸 메일을 찾으세요. 그리고 Confirm subription을 누르세요. 아래와 같은 화면이 나타나면서 구독이 완료됩니다. 이제 추가로 알람 발생시 휴대폰 문자를 보낼 수 있도록 SNS topic에 휴대폰 번호를 추가해보겠습니다.\nAmazon SNS 콘솔 가기 : https://console.aws.amazon.com/sns/\n  왼쪽 메뉴의 Topics을 선택합니다.\n  경보를 생성하면서 같이만든 SNS topic인 Default_CloudWatchAlarms_Topic을 선택합니다.   스크롤을 내리면 구독을 보면 알람을 생성할 때 등록한 email을 볼 수 있습니다. 이곳에서 구독 생성을 선택해 새로운 구독자를 추가할 수 있습니다.   구독생성의 Protocol을 SMS로 선택합니다. (이곳에서 다양한 프로토콜을 사용 할 수 있습니다.) 그리고 Endpoint에 본인의 휴대폰 번호를 입력합니다. (ex+821012345678) 그리고 하단의 구독 생성버튼을 클릭합니다.   경보 알람에 나의 휴대폰 번호 등록도 완료하였습니다. 이전의 Topics메뉴에서 Default_CloudWatchAlarms_Topic를 선택하면 해당 토픽과 연결된 email과 휴대폰 정보를 볼 수 있습니다.\n  이제 EC2 Instance의 CPU사용율이 올라가면 어떤 변화가 있는지 확인해 보겠습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/ec2/",
+	"title": "EC2 Loadtest 진행",
+	"tags": [],
+	"description": "",
+	"content": "EC2의 CPU사용량을 늘린 다음 대시보드를 확인할 것입니다:  EC2의 CPU사용량이 많아지면 Autoscaling Group은 자동으로 EC2 Instance 갯수를 증가시킵니다. 그리고 그 변화를 Cloudwatch의 대시보드에서 확인할 것입니다.\nApplication Load balancer를 통한 Web 접속   Cloudformation에서 만든 WellArchitectedFrameworkLabsStack의 Output에 Application Load balancer의 DNS주소가 있습니다.\nCloudFormation 콘솔로 가기 : https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2\n  실습 Setup에서 만든 WellArchitectedFrameworkLabsStack을 선택합니다.   Output의 ALBDNS 값이 Application load balancer의 DNS주소입니다. 상단 탭의 Output을 선택한 후 ALBDNS의 값을 복사한 후 웹 브라우저 주소창에 붙여넣습니다.   다음과 같은 화면을 볼 수 있습니다. 이 웹서버의 CPU사용률은 0%입니다. 상단의 Load test 버튼을 클릭하면 화면이 전환하면서 EC2의 CPU사용율이 100%로 올라갑니다. 이 화면을 벗어날때까지 CPU사용율은 내려가지 않을 것입니다.\n  CloudWatch 콘솔로 이동하여 이전에 만든 사용자 대시보드를 확인하겠습니다.\nCloudWatch 콘솔 가기 : https://console.aws.amazon.com/cloudwatch/\n  오른쪽 상단의 Dashboards를 선택합니다.   이전에 생성한 warworkshop-default를 선택합니다.   기본 대시보드의 모니터링 주기는 5분입니다.(이것은 설정에서 변경할 수 있습니다.) 5분 후 새로고침을 하면 100%를 향해 급격하게 변경된 CPUUtilization 래프를 보실 수 있습니다. 그리고 좀 더 시간이 지나면 Autoscaling group으로 4개까지 인스턴스가 확장되어있는 모습을 볼 수 있습니다.   메일도 확인해봅니다. 이전에 등록한 email로 경보가 온것을 확인할 수 있습니다. 휴대폰 번호를 등록했다면 문자도 받으실 수 있습니다.\n  Cloudwatch를 활용하여 최적의 성능을 모니터링하세요. 시스템 성능은 시간이 지남에 따라 저하될 수 있습니다. 시스템 성능을 모니터링하여 성능 저하 상태를 식별하고 운영체제 또는 애플리케이션 부하와 같은 내부 또는 외부 요인을 해소하세요. 시스템성능의 변화를 확인할 수 있는 경보를 생성하세요.\n 모범 사례: 성능 관련 지표 기록 Amazon CloudWatch, 타사 서비스 또는 자체 관리형 모니터링 도구를 사용하여 성능 관련 지표를 기록합니다. 예를 들어 데이터베이스 트랜잭션, 속도가 느린 쿼리, I/O 지연 시간, HTTP 요청 처리량, 서비스 지연 시간 또는 기타 주요 데이터를 기록할 수 있습니다.\n이벤트 또는 인시던트 발생 시의 지표 분석 이벤트나 인시던트에 대응하는 과정에서 모니터링 대시보드나 보고서를 사용해 이벤트/인시던트의 영향을 파악하고 진단합니다. 이러한 대시보드나 보고서에서는 필요한 수준의 성능을 제공하지 못하는 워크로드 부분을 파악할 수 있습니다.\n워크로드 성능 측정을 위한 KPI 설정 시스템이 예상한 성능을 제공하는지 여부를 나타내는 KPI를 파악합니다. 예를 들어 API 기반 워크로드는 전반적인 성능의 지표로 전체 응답 지연 시간을 사용할 수 있으며, 전자상거래 사이트는 구매 건 수를 KPI로 사용하도록 선택할 수 있습니다.\n모니터링을 사용하여 경보 기반 알림 생성 직접 정의한 성능 관련 KPI를 사용해 측정값이 예상 경계를 벗어나면 경보를 자동으로 생성하는 모니터링 시스템을 사용합니다.\n일정한 간격으로 지표 검토 주기적인 유지 관리의 일환으로 또는 이벤트나 인시던트 대응 과정에서 수집된 지표를 검토합니다. 이러한 검토를 진행하면 문제를 해결하는 데 반드시 필요했던 지표, 그리고 문제를 확인/해결/방지하는 데 도움이 되었던 지표(추적한 경우)를 파악할 수 있습니다.\n사전 모니터링 및 경보 생성 KPI를 모니터링 및 알림 시스템과 함께 사용하여 성능 관련 문제를 사전에 해결합니다. 가능한 경우 경보를 사용해 문제 해결을 위한 자동화된 작업을 트리거합니다. 그리고 자동으로 대응할 수 없는 경우에는 대응 가능한 구성 요소로 경보를 에스컬레이션합니다. 예를 들어 필요한 KPI 값을 예측하고 해당 값이 특정 임계값을 초과하는 경우 경보를 생성할 수 있는 시스템이나, KPI가 필요한 값의 범위를 벗어나는 경우 배포를 자동으로 중지하거나 롤백할 수 있는 도구로 경보를 에스컬레이션할 수 있습니다.\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/credits/",
+	"title": "credits",
+	"tags": [],
+	"description": "",
+	"content": "Sample  aws-samples  Tools  Hugo  제작: Seyong Kang\n"
+},
+{
+	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

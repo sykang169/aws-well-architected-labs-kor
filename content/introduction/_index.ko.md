@@ -21,4 +21,4 @@ AWS의 전문가들은 매일 고객과 함께 클라우드의 모범 사례를 
 
 이 프레임워크는 현대의 클라우드 기반 시스템에 기대되는 품질과, 시스템을 평가하는 일관된 접근 방식을 제공합니다. 
 
-- [AWS Well-Architected Framework는 무엇입니까?](/ko/introduction/framework)
+- [AWS Well-Architected Framework는 무엇입니까?](/introduction/framework)

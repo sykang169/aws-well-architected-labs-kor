@@ -10,21 +10,21 @@ AAWS 리소스를 사용하려면 권한이 필요합니다. 이제 에이전트
 
 
 1. **AWS Management Console**로 로그인 한 다음 **IAM console**로 들어갑니다.
-![Images/IAMrole01.png](/Cost/200_AWS_Resource_Optimization/Images/IAMrole01.png)
+![Images/IAMrole01.png](/cost/200_aws_resource_optimization/Images/IAMrole01.png)
 
 2. 왼쪽 메뉴페이지에서 **Roles**을 선택하고 **Create role**을 클릭합니다.
-![Images/IAMrole02.png](/Cost/200_AWS_Resource_Optimization/Images/IAMrole02.png)
+![Images/IAMrole02.png](/cost/200_aws_resource_optimization/Images/IAMrole02.png)
 
 3. **Choose a use case** 아래, **EC2**를 클릭합니다(EC2가 AWS Services를 호출하는 것을 허락). 그리고 **Next: Permissions**를 클릭합니다.
-![Images/IAMrole03.png](/Cost/200_AWS_Resource_Optimization/Images/IAMrole03.png)
+![Images/IAMrole03.png](/cost/200_aws_resource_optimization/Images/IAMrole03.png)
 
 4. 정책목록 중, `CloudWatchAgentServerPolicy`의 체크박스를 선택합니다. 검색창에 이름을 넣어서 검색하면 찾기 쉽습니다. **Next: Tags**를 클릭합니다:
-4. ![Images/IAMrole04.png](/Cost/200_AWS_Resource_Optimization/Images/IAMrole04.png)
+4. ![Images/IAMrole04.png](/cost/200_aws_resource_optimization/Images/IAMrole04.png)
 
-5. 태크(옵션)를 추가합니다. **Next: Review**클릭합니다.
-![Images/IAMrole05.png](/Cost/200_AWS_Resource_Optimization/Images/IAMrole05.png)
+5. 태그(옵션)를 추가합니다. **Next: Review**클릭합니다.
+![Images/IAMrole05.png](/cost/200_aws_resource_optimization/Images/IAMrole05.png)
 
 6. **Policies**에 **CloudWatchAgentServerPolicy**가 있는지를 확인합니다. 그리고 role name에 `CloudWatchAgentServerRole`을 넣습니다. 필요하다면 description을 입력합니다. **Create role**을 클릭합니다.
-![Images/IAMrole06.png](/Cost/200_AWS_Resource_Optimization/Images/IAMrole06.png)
+![Images/IAMrole06.png](/cost/200_aws_resource_optimization/Images/IAMrole06.png)
 
 role이 생성되었습니다.
