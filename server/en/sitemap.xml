@@ -32,48 +32,6 @@
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatchdashboards/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatchdashboards/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatcheventemail/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatcheventemail/"
-                />
-  </url>
-  
-  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"

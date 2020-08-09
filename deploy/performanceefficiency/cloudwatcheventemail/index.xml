@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CPU 경보 알람 on AWS Well-Architected Labs</title>
+    <title>CPU 경보 on AWS Well-Architected Labs</title>
     <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/</link>
-    <description>Recent content in CPU 경보 알람 on AWS Well-Architected Labs</description>
+    <description>Recent content in CPU 경보 on AWS Well-Architected Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     

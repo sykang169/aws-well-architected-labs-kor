@@ -17,8 +17,29 @@
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/1_cloudwatch_intro/</guid>
-      <description>적정 크기 조정을 수행하는 첫 번째 단계는 현재 서비스 사용을 모니터링하고 분석하여 인스턴스 성능 및 사용 패턴에 대한 통찰력을 얻는 것입니다. 충분한 데이터를 수집하려면 최소 2 주 이상 (이상적으로는 1 개월 이상)의 성능을 관찰하여 워크로드와 사용량의 정점을 확인하십시오. 인스턴스 성능을 정의하는 가장 일반적인 지표는 vCPU 사용률, 메모리 사용률, 네트워크 사용률 및 디스크 사용률입니다.
-  Log into your AWS console via SSO, go to the Amazon CloudWatch service page:   Select EC2 under the Service Dashboard:   Observe the Service Dashboard and all of its different metrics, but focus on CPU Utilization and Network In and Out:   Select one of the EC2 resources by clicking on the little color icon to the left of the resource-id name:   Deselect the EC2 resource and now modify the time range on the top right, click custom and select the last 2 weeks:   Navigate to the CPU Utilization Average widget, click the three dots and launch the View in metrics page.</description>
+      <description>이 실습은 실제 사용 계정에서 진행 해보세요. 현재 Lab환경으로는 수행하실 수 없습니다.
+ 적정 크기 조정을 수행하는 첫 번째 단계는 현재 서비스 사용을 모니터링하고 분석하여 인스턴스 성능 및 사용 패턴에 대한 통찰력을 얻는 것입니다. 충분한 데이터를 수집하려면 최소 2 주 이상 (이상적으로는 1 개월 이상)의 성능을 관찰하여 워크로드와 사용량의 정점을 확인하십시오. 인스턴스 성능을 정의하는 가장 일반적인 지표는 vCPU 사용률, 메모리 사용률, 네트워크 사용률 및 디스크 사용률입니다.
+  Log into your AWS console via SSO, go to the Amazon CloudWatch service page:   EC2의 Service Dashboard를 클릭합니다:   Service Dashboard 및 모든 다른 지표를 관찰하지만 CPU 사용률 및 네트워크 입출력에 중점을 둡니다.</description>
+    </item>
+    
+    <item>
+      <title>IAM access 설정</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/1_iam_access/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/1_iam_access/</guid>
+      <description>참고 :이 작업을 수행하려면 루트 계정 자격 증명을 사용하여 마스터 계정에 로그인해야합니다.
+ 루트 자격 증명을 사용하지 않고 청구 정보에 접근하려면 IAM 액세스를 활성화해야합니다. 이를 통해 루트가 아닌 다른 사용자가 마스터 계정의 청구 정보에 액세스 할 수 있습니다. 이 접근 방식은 각 사용자에게 개별 로그인 정보를 제공하며 각 사용자에게 계정 작업에 필요한 권한만 부여 할 수 있습니다. 예를 들어 재무 팀에 청구 정보에만 액세스 권한을 부여하고 계정의 다른 리소스는 접근 할 수 없도록 할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>소개</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/1_intro/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/1_intro/</guid>
+      <description>In the cloud, you can apply the same engineering discipline that you use for application code to your entire environment. You can define your entire workload (applications, infrastructure, etc.) as code and update it with code. You can script your operations procedures and automate their execution by triggering them in response to events. By performing operations as code, you limit human error and enable consistent execution of operations activities.
+클라우드에서는 애플리케이션 코드에 사용하는 것과 동일한 엔지니어링 원칙을 전체환경에 적용 할 수 있습니다.</description>
     </item>
     
     <item>
@@ -37,8 +58,19 @@
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/2_resource_opt/</guid>
-      <description>참고:이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer의 권장 사항 섹션으로 이동하여 Amazon EC2 리소스 최적화를 활성화화세요.
+      <description>이 실습은 실제 사용 계정에서 진행 해보세요. 현재 Lab환경으로는 수행하실 수 없습니다.
+ 참고:이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer의 권장 사항 섹션으로 이동하여 Amazon EC2 리소스 최적화를 활성화화세요.
  Amazon EC2 Resource Optimization은 추가비용 없이 AWS Cost Explorer에서 올바른 크기 조정 권장 사항을 제공합니다. 이러한 권장 사항은 계정, 리전 및 태그에서 유휴 상태이거나 사용률이 낮은 인스턴스를 식별합니다. 이러한 권장사항을 생성하기 위해 AWS는 기존 EC2리소스 사용량(Amazon CloudWatch 사용) 및 기존 예약공간을 분석하여 비용 절감기회를 찾아냅니다(예:유휴 인스턴스를 종료하거나 활성 인스턴스를 동일한 제품군/세대 내에서 더 저렴한 옵션으로 축소).</description>
+    </item>
+    
+    <item>
+      <title>계정 구조 만들기</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/2_account_structure/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/2_account_structure/</guid>
+      <description>AWS Organizations  AWS Organizations는 AWS의 워크로드가 증가하고 확장됨에 따라 환경을 중앙에서 관리하는 데 도움이 됩니다. 성장하는 스타트업이든, 대기업이든 관계없이 AWS Organizations를 활용하면 결제를 관리하고, 액세스, 규정 준수 및 보안을 제어하고, AWS 계정에서 리소스를 공유하는 일을 모두 중앙에서 손쉽게 처리할 수 있습니다.
+AWS Organizations를 사용하면 계정 생성을 자동화하고, 비즈니스 요구를 반영하도록 계정 그룹을 생성하고, 거버넌스를 위해 이러한 그룹에 정책을 적용할 수 있습니다. 또한 모든 AWS 계정에 대해 단일 결제 방법을 설정하여 결제 과정을 간소화할 수도 있습니다.</description>
     </item>
     
     <item>
@@ -47,9 +79,10 @@
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/</guid>
-      <description>Amazon EC2 Resource Optimization 레포트를 다운로드합니다:   Amazon EC2 리소스 최적화 권장 사항이없는 경우 아래 파일을 참조로 사용하십시오. Sample Amazon EC2 Resource Optimization file (.csv)
-  먼저 분석에서 너무 작거나 적은 시간 동안 만 실행 된 인스턴스를 제외하겠습니다.   참고 : 계정에서 활성화 한 비용할당태그 수에 따라 아래 스크린 샷과 기본 열 이름, 수식을 일치시키려는 열이 예제와 다를 수 있습니다.
-Recommended Action 열 오른쪽에 새 열을 삽입하십시오.</description>
+      <description>이 실습은 실제 사용 계정에서 진행 해보세요. 만약 없다면 아래의 샘플 자료를 가지고 진행하실 수 있습니다.
+ 이번 실습은 Cost Explorer에서 생성한 권장사항들을 가지고 어떻게 비용최적화를 진행할 수 있는지, 권장사항의 우선순위를 정해 실제 비용 최적화를 어떤 순서로 진행하는지를 알아봅니다.
+  Amazon EC2 Resource Optimization 레포트를 다운로드합니다:   Amazon EC2 리소스 최적화 권장 사항이없는 경우 아래 파일을 참조로 사용하십시오. Sample Amazon EC2 Resource Optimization file (.xlsx)
+  먼저 분석에서 너무 작거나 적은 시간 동안 만 실행 된 인스턴스를 제외하겠습니다.</description>
     </item>
     
     <item>
@@ -59,6 +92,26 @@ Recommended Action 열 오른쪽에 새 열을 삽입하십시오.</description>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</guid>
       <description>이제 이전 스텝에서 생성한 IAM Role created 기존의 EC2인스턴스와 연결할 것입니다. Amazon EC2 Dashboard 로 가겠습니다..   왼쪽 메뉴에서 Instances를 클릭하세요.   검색창에 WellArchitectedLabsStack을 입력하여 오토스캐일링 그룹이 자동으로 생성한 2개의 인스턴스를 찾습니다. 그리고 하나를 선택한수 상단의 Action버튼을 클릭합니다. 그리고 Instance Settings -&amp;gt; Attach/Replace IAM Role 을 아래 그림과 같이 순서대로 클릭합니다.   IAM role의 드랍 박스 버튼을 클릭하여 이전에 생성한 CloudWatchAgentServerRole 역할을 검색 한 후 선택하고 Apply를 클릭합니다.</description>
+    </item>
+    
+    <item>
+      <title>Single Sign On (SSO) 활성화</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/3_configure_sso/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/3_configure_sso/</guid>
+      <description>AWS Single Sign-On  AWS Single Sign-On(SSO)을 사용하면 여러 AWS 계정 및 비즈니스 애플리케이션에 대한 액세스를 중앙에서 손쉽게 관리하고 사용자에게 Single Sign-On 액세스를 제공하여 할당된 모든 계정 및 애플리케이션을 한 곳에서 액세스하도록 할 수 있습니다. AWS SSO를 사용하면 AWS Organizations의 모든 내 계정에 대한 액세스와 사용자 권한을 중앙에서 손쉽게 관리할 수 있습니다. AWS SSO는 계정에 필요한 모든 권한을 자동으로 구성하고 관리하므로 각 계정에서 추가로 설정할 필요가 없습니다. 일반적인 작업 기능을 기반으로 사용자 권한을 할당하고 특정 보안 요구 사항을 충족하도록 해당 권한을 사용자 지정할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title> 운영의 코드화를 사용한 Inventory Management</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/4_inventory_mgmt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/4_inventory_mgmt/</guid>
+      <description>Management Tools: Systems Manager AWS Systems Manager는 IT 운영을 가능하게하는 기능들을 모아놓은 서비스 입니다.
+EC2 인스턴스나 하이브리드 환경의 on-premises system 을 Systems Manager로 관리하기 위해서는 설정과 사전 조건이 있습니다.
+ 지원되는 운영 체제를 사용해야합니다  지원되는 운영 체제에는 Windows, Amazon Linux, Ubuntu Server, RHEL 및 CentOS 버전이 포함됩니다   SSM 에이전트가 설치되어 있어야합니다  윈도우 환경의 SSM 에이전트를 사용하는 경우는 PowerShell 3.0이상의 버전이 필요하고 낮은 버전의 경우는SSM documents를 확인해주세요.   EC2 인스턴스는 아웃 바운드 인터넷 액세스 권한이 있어야합니다  실습은 CloudFormation의 경우 EC2는 privatesubnet에 위치해있습니다.</description>
     </item>
     
     <item>
@@ -83,7 +136,17 @@ Recommended Action 열 오른쪽에 새 열을 삽입하십시오.</description>
     </item>
     
     <item>
-      <title>Amazon EC2 올바를 크기를 위한 모범사례</title>
+      <title>계정 구성 설정</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/4_account_settings/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/4_account_settings/</guid>
+      <description>계정 연락처가 최신 상태인지 확인하는 것은 중요합니다. 이를 통해 AWS는 필요한 경우 조직의 올바른 담당자에게 연락 할 수 있습니다. 중복성을 위해 여러 팀 구성원이 액세스 할 수있는 메일링 리스트 또는 공유 이메일을 사용하는 것이 좋습니다. 이메일 계정을 적극적으로 모니터링하십시오.
+  올바른 권한을 가진 마스터계정의 IAM사용자로 로그인을 한 후, 오른쪽 상단의 계정 이름을 선택하고, 메뉴의 My Account 를 클릭합니다:   스크롤을 내려 Alternate Contacts 의 Edit를 클릭합니다:   Billing, Operations 와 Security의 정보를 입력한 후 Update를 클릭합니다:   </description>
+    </item>
+    
+    <item>
+      <title>Amazon EC2 올바른 크기를 위한 모범사례</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
@@ -93,25 +156,65 @@ Recommended Action 열 오른쪽에 새 열을 삽입하십시오.</description>
     </item>
     
     <item>
+      <title>Patch Management</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/5_patch_mgmt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/5_patch_mgmt/</guid>
+      <description>Systems Manager: Patch Manager AWS Systems Manager Patch Manager automates the process of patching managed instances with security related updates.
+ NoteFor Linux-based instances, you can also install patches for non-security updates.
+ You can patch fleets of Amazon EC2 instances or your on-premises servers and virtual machines (VMs) by operating system type. This includes supported versions of Windows, Ubuntu Server, Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Amazon Linux.</description>
+    </item>
+    
+    <item>
+      <title>비용 및 사용 보고서(CUR) 설정</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/5_cur/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/5_cur/</guid>
+      <description>AWS 비용 및 사용 보고서란 무엇입니까?  AWS 비용 및 사용 보고서(AWS CUR)에는 사용 가능한 가장 포괄적인 비용 및 사용 데이터 집합이 포함되어 있습니다. 비용 및 사용 보고서를 사용하여 소유한 Amazon Simple Storage Service(Amazon S3) 버킷에 AWS 결제 보고서를 게시할 수 있습니다. 시간이나 월, 제품이나 제품 리소스, 또는 직접 정의한 태그를 기준으로 비용을 구분한 보고서를 받을 수 있습니다. AWS는 이 보고서를 하루에 한 번 CSV(쉼표로 분리된 값) 형식으로 버킷에 업데이트합니다. Microsoft Excel, Apache OpenOffice Calc와 같은 스프레드시트 소프트웨어를 사용하여 보고서를 보거나 애플리케이션에서 Amazon S3 API를 사용하여 액세스할 수 있습니다.</description>
+    </item>
+    
+    <item>
       <title>업데이트 된 Amazon EC2 리소스 최적화 권장 사항</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</guid>
-      <description>이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer, 권장 사항 (왼쪽 리스트) 섹션으로 이동하면됩니다.
+      <description>이 실습은 실제 사용 계정에서 진행 해보세요. 현재 Lab환경으로는 수행하실 수 없습니다.
+ 이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer, 권장 사항 (왼쪽 리스트) 섹션으로 이동하면됩니다.
  인스턴스에 CloudWatch 에이전트를 방금 설치 한 경우 Amazon EC2 Resource Optimization에서 업데이트 된 권장 사항을 제공하는 데 며칠이 걸릴 수 있으므로 첫 번째 확인 중에 메모리 데이터가 표시되지 않더라도 걱정하지 마십시오.
- CloudWatch에 메모리 데이터를 사용자 지정지표로 사용 했으므로 Amazon EC2 리소스 최적화 권장사항에 어떤 영향을 미치는지 확인하겠습니다.
-Amazon EC2 Resource Optimization은 추가 비용없이 AWS 비용 탐색기에서 적정크기 조정 권장사항을 제공합니다.</description>
+ CloudWatch에 메모리 데이터를 사용자 지정지표로 사용 했으므로 Amazon EC2 리소스 최적화 권장사항에 어떤 영향을 미치는지 확인하겠습니다.</description>
     </item>
     
     <item>
-      <title>Amazon EC2 Right Sizing Best Practices</title>
+      <title>AMAZON EC2 올바를 크기를 위한 모범사례</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</guid>
       <description>시작은 간단하게: 유휴리소스는와 중요하지 않은 개발/QA 및 이전 세대 인스턴스의 비용절감은 식별하기 쉽고 테스트 빠르게 적용해볼 수 있습니다(Amazon EC2 시작시간 통계는 다른 인스턴스보다 오래 실행 된 인스턴스를 식별하는 데 사용될 수 있습니다).
   마이그레이션을 진행하기 전에 올바른 크기를 먼저 식별하는게 좋습니다: 시간을 절약하기 위해 올바른 크기 조정을 건너 뛰면 마이그레이션 속도가 증가 할 수는 있지만 잠재적으로 더 긴 시간 동안 더 많은 클라우드 인프라 지출이 발생할 가능성이 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Amazon QuickSight 설정</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/6_quicksight/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/6_quicksight/</guid>
+      <description>이제 워크로드 계정의 사용자가 분석 및 대시보드를 만들 수 있도록 Amazon QuickSight를 설정할 것입니다.
+첫 QuickSight 설정   워크로드 계정의 IAM 사용자로 콘솔에 로그인합니다. 그리고 Amazon QuickSight 콘솔로 이동합니다:   이전에 QuickSight의 Sign up for QuickSight를 진행했다면, Setup QuickSight IAM Policy 으로 바로 건너 뛰어도 됩니다:   Standard 에디션을 선택하고 Continue를 클릭합니다:   CUR 파일이 있는 region을 선택합니다. QuickSight account name에 계정이름, Notification email address에 email을 입력합니다.</description>
+    </item>
+    
+    <item>
+      <title>Creating Maintenance Windows and Scheduling Automated Operations Activities</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/6_maintenance_windows/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/6_maintenance_windows/</guid>
+      <description>AWS Systems Manager: Maintenance Windows AWS Systems Manager Maintenance Windows let you define a schedule for when to perform potentially disruptive actions on your instances such as patching an operating system (OS), updating drivers, or installing software. Each Maintenance Window has a schedule, a duration, a set of registered targets, and a set of registered tasks. With Maintenance Windows, you can perform tasks like the following:
+ Installing applications, updating patches, installing or updating SSM Agent, or executing PowerShell commands and Linux shell scripts by using a Systems Manager Run Command task Building Amazon Machine Images (AMIs), boot-strapping software, and configuring instances by using Systems Manager Automation Executing AWS Lambda functions that trigger additional actions such as scanning your instances for patch updates Running AWS Step Function state machines to perform tasks such as removing an instance from an Elastic Load Balancing environment, patching the instance, and then adding the instance back to the Elastic Load Balancing environment   NoteTo register Step Function tasks you must use the AWS CLI.</description>
     </item>
     
     <item>
@@ -124,12 +227,62 @@ Amazon EC2 Resource Optimization은 추가 비용없이 AWS 비용 탐색기에�
     </item>
     
     <item>
+      <title>AWS Cost Explorer 활성화</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/7_cost_explorer/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/7_cost_explorer/</guid>
+      <description>AWS Cost Explorer는 시간에 따른 AWS 비용 및 사용량을 시각화, 분석 및 관리 할 수 있습니다. 이것은 계쩡에서 활성화 해야 사용 할 수 있습니다. 일단 활성화되면 모든 계정에 대해 활성화되고 IAM 정책을 통해 제어됩니다. 비용 탐색기의 기본 구성은 무료이지만 시간 단위로 사용하도록 설정하면 추가 비용이 발생합니다.- AWS Cost Management Pricing.
+  권한을 가진 IAM 사용자를 콘솔에 로그인하고 Billing 으로 갑니다:   왼쪽 메뉴에서 Cost Explorer를 선택합니다:   Enable Cost Explorer를 클릭합니다:   You will receive notification that Cost Explorer has been enabled, and data will be populated:</description>
+    </item>
+    
+    <item>
+      <title>Creating a Simple Notification Service Topic</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/7_create_sns_topic/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/7_create_sns_topic/</guid>
+      <description>Amazon Simple Notification Service (Amazon SNS) coordinates and manages the delivery or sending of messages to subscribing endpoints or clients. In Amazon SNS, there are two types of clients: publishers and subscribers. These are also referred to as producers and consumers. Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel. Subscribers (i.e., web servers, email addresses, Amazon SQS queues, AWS Lambda functions) consume or receive the message or notification over one of the supported protocols (i.</description>
+    </item>
+    
+    <item>
       <title>실습 종료</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</guid>
       <description> IAM role CloudWatchAgentServerRole을 삭제합니다.  </description>
+    </item>
+    
+    <item>
+      <title>AWS 생성 비용할당태그 활성화</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/8_cost_tags/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/8_cost_tags/</guid>
+      <description>AWS 생성 비용할당태그를 활성화하면 리소스 생성자 정보가 포함 된 비용 할당 태그가 생성됩니다. 이것은 생성 된 리소스에 자동으로 적용되며 리소스를 만든 사람에 따라 비용을 확인하고 할당 할 수 있습니다.
+  Master account 계정의 IAM사용자로 로그인한 후, Billing 콘솔로 갑니다:   왼쪽 메뉴의 Cost Allocation Tags를 클릭합니다:   Activate를 클릭하여 태그를 활성화 합니다:   이제 동작하는 것을 확인할 수 있습니다:   </description>
+    </item>
+    
+    <item>
+      <title>Removing Lab Resources</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/8_cleanup/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/8_cleanup/</guid>
+      <description>NoteWhen the lab is complete, remove the resources you created. Otherwise you will be charged for any resources that are not covered in the AWS Free Tier.
+ 7.1 Remove resources created with CloudFormation  Navigate to the CloudFormation dashboard at https://console.aws.amazon.com/cloudformation/:  Select your first stack. Choose Actions and choose delete stack. Select your second stack. Choose Actions and choose delete stack .   Navigate to Systems Manager console at https://console.</description>
+    </item>
+    
+    <item>
+      <title>Tear down</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/9_tear_down/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/9_tear_down/</guid>
+      <description>이제 모든 AWS 계정이 비용 최적화를 활성화하는 데 필요한 기본 단계를 다루었습니다. 이 실습에 대한 리소스를 제거하겠습니다.
+QuickSight구독 취소 아래 단계를 따라 QuickSight의 구독을 취소하세요.
+  Click on your profile icon in the top right, select Manage QuickSight:   Click on Account settings:   Cluck on Unsubscribe:   Review the notifications, click Unsubscribe:   </description>
     </item>
     
     <item>

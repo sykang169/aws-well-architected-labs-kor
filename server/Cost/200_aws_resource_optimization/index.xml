@@ -47,14 +47,14 @@
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</guid>
-      <description>이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer, 권장 사항 (왼쪽 리스트) 섹션으로 이동하면됩니다.
+      <description>이 실습은 실제 사용 계정에서 진행 해보세요. 현재 Lab환경으로는 수행하실 수 없습니다.
+ 이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer, 권장 사항 (왼쪽 리스트) 섹션으로 이동하면됩니다.
  인스턴스에 CloudWatch 에이전트를 방금 설치 한 경우 Amazon EC2 Resource Optimization에서 업데이트 된 권장 사항을 제공하는 데 며칠이 걸릴 수 있으므로 첫 번째 확인 중에 메모리 데이터가 표시되지 않더라도 걱정하지 마십시오.
- CloudWatch에 메모리 데이터를 사용자 지정지표로 사용 했으므로 Amazon EC2 리소스 최적화 권장사항에 어떤 영향을 미치는지 확인하겠습니다.
-Amazon EC2 Resource Optimization은 추가 비용없이 AWS 비용 탐색기에서 적정크기 조정 권장사항을 제공합니다.</description>
+ CloudWatch에 메모리 데이터를 사용자 지정지표로 사용 했으므로 Amazon EC2 리소스 최적화 권장사항에 어떤 영향을 미치는지 확인하겠습니다.</description>
     </item>
     
     <item>
-      <title>Amazon EC2 Right Sizing Best Practices</title>
+      <title>AMAZON EC2 올바를 크기를 위한 모범사례</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>100 - 인벤토리와 패치 관리 on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/</link>
+    <description>Recent content in 100 - 인벤토리와 패치 관리 on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate>
+    
+	<atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>소개</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/1_intro/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/1_intro/</guid>
+      <description>In the cloud, you can apply the same engineering discipline that you use for application code to your entire environment. You can define your entire workload (applications, infrastructure, etc.) as code and update it with code. You can script your operations procedures and automate their execution by triggering them in response to events. By performing operations as code, you limit human error and enable consistent execution of operations activities.
+클라우드에서는 애플리케이션 코드에 사용하는 것과 동일한 엔지니어링 원칙을 전체환경에 적용 할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title> 운영의 코드화를 사용한 Inventory Management</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/4_inventory_mgmt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/4_inventory_mgmt/</guid>
+      <description>Management Tools: Systems Manager AWS Systems Manager는 IT 운영을 가능하게하는 기능들을 모아놓은 서비스 입니다.
+EC2 인스턴스나 하이브리드 환경의 on-premises system 을 Systems Manager로 관리하기 위해서는 설정과 사전 조건이 있습니다.
+ 지원되는 운영 체제를 사용해야합니다  지원되는 운영 체제에는 Windows, Amazon Linux, Ubuntu Server, RHEL 및 CentOS 버전이 포함됩니다   SSM 에이전트가 설치되어 있어야합니다  윈도우 환경의 SSM 에이전트를 사용하는 경우는 PowerShell 3.0이상의 버전이 필요하고 낮은 버전의 경우는SSM documents를 확인해주세요.   EC2 인스턴스는 아웃 바운드 인터넷 액세스 권한이 있어야합니다  실습은 CloudFormation의 경우 EC2는 privatesubnet에 위치해있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Patch Management</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/5_patch_mgmt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/5_patch_mgmt/</guid>
+      <description>Systems Manager: Patch Manager AWS Systems Manager Patch Manager automates the process of patching managed instances with security related updates.
+ NoteFor Linux-based instances, you can also install patches for non-security updates.
+ You can patch fleets of Amazon EC2 instances or your on-premises servers and virtual machines (VMs) by operating system type. This includes supported versions of Windows, Ubuntu Server, Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Amazon Linux.</description>
+    </item>
+    
+    <item>
+      <title>Creating Maintenance Windows and Scheduling Automated Operations Activities</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/6_maintenance_windows/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/6_maintenance_windows/</guid>
+      <description>AWS Systems Manager: Maintenance Windows AWS Systems Manager Maintenance Windows let you define a schedule for when to perform potentially disruptive actions on your instances such as patching an operating system (OS), updating drivers, or installing software. Each Maintenance Window has a schedule, a duration, a set of registered targets, and a set of registered tasks. With Maintenance Windows, you can perform tasks like the following:
+ Installing applications, updating patches, installing or updating SSM Agent, or executing PowerShell commands and Linux shell scripts by using a Systems Manager Run Command task Building Amazon Machine Images (AMIs), boot-strapping software, and configuring instances by using Systems Manager Automation Executing AWS Lambda functions that trigger additional actions such as scanning your instances for patch updates Running AWS Step Function state machines to perform tasks such as removing an instance from an Elastic Load Balancing environment, patching the instance, and then adding the instance back to the Elastic Load Balancing environment   NoteTo register Step Function tasks you must use the AWS CLI.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Simple Notification Service Topic</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/7_create_sns_topic/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/7_create_sns_topic/</guid>
+      <description>Amazon Simple Notification Service (Amazon SNS) coordinates and manages the delivery or sending of messages to subscribing endpoints or clients. In Amazon SNS, there are two types of clients: publishers and subscribers. These are also referred to as producers and consumers. Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel. Subscribers (i.e., web servers, email addresses, Amazon SQS queues, AWS Lambda functions) consume or receive the message or notification over one of the supported protocols (i.</description>
+    </item>
+    
+    <item>
+      <title>Removing Lab Resources</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/8_cleanup/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/8_cleanup/</guid>
+      <description>NoteWhen the lab is complete, remove the resources you created. Otherwise you will be charged for any resources that are not covered in the AWS Free Tier.
+ 7.1 Remove resources created with CloudFormation  Navigate to the CloudFormation dashboard at https://console.aws.amazon.com/cloudformation/:  Select your first stack. Choose Actions and choose delete stack. Select your second stack. Choose Actions and choose delete stack .   Navigate to Systems Manager console at https://console.</description>
+    </item>
+    
+  </channel>
+</rss>
