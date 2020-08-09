@@ -25,7 +25,7 @@ CloudWatch 콘솔 가기 : https://console.aws.amazon.com/cloudwatch/
 1. **지표 및 조건 지정** 설정을 진행하겠습니다. **지표**는 백분율을 이용하여 CPU가 90%이상 사용될 경우 경보를 생성할 예정입니다. 그래프의 **통계** 항목을 **p90**으로 변경합니다. 실제 사용하실 경우 다양항 측정기준이 있으니 원하시는 항목을 선택하시면 됩니다. **기간**은 **1분**을 선택합니다. 1분마다 항목을 업데이트합니다.
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm-setting.png#medium)
 
-1.  **조건**의 입계값 유형은 **정적**으로, **보다 큼**를 선택 한 후 **...보다**에 95를 입력합니다. CPU사용율의 백분율이 95%이상 올라갈 경우 알람이 생성됩니다.
+1.  **조건**의 입계값 유형은 **정적**으로, **보다 큼**를 선택 한 후 **...보다**에 95를 입력합니다. CPU사용율의 백분율이 95%이상 올라갈 경우 경보이 생성됩니다.
     ![CloudwatchAlarm](/images/war/cloudwatch-percent.png#medium)
 
 1. 이제 하단의 **다음**을 선택합니다.
@@ -38,7 +38,7 @@ CloudWatch 콘솔 가기 : https://console.aws.amazon.com/cloudwatch/
     - **Alarm description - optional** : `for WAR workshop`
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm-fin.png#medium)
 
-1. ***알람생성 버튼**을 눌러 생성을 완료합니다. 
+1. ***경보생성 버튼**을 눌러 생성을 완료합니다. 
 1. 이제 기본적인 셋팅이 완료되었습니다. 
 
 [이제 EC2 Instance의 CPU사용율이 올라가면 어떤 변화가 있는지 확인해 보겠습니다.](/performanceefficiency/cloudwatcheventemail/snstopic)

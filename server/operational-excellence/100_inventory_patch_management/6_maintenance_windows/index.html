@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="description" content="Hands on labs and real world design scenarios for Well-Architected workloads">
+<meta name="author" content="Well-Architected Team">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Creating Maintenance Windows and Scheduling Automated Operations Activities :: AWS Well-Architected Labs</title>
+
+    
+    <link href="/css/nucleus.css?1594865008" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1594865008" rel="stylesheet">
+    <link href="/css/hybrid.css?1594865008" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1594865008" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1594865008" rel="stylesheet">
+    <link href="/css/auto-complete.css?1594865008" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1594865008" rel="stylesheet">
+    <link href="/css/theme.css?1594865008" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1594865008" rel="stylesheet">
+    
+    <link href="/css/theme-walabs.css?1594865008" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1594865008"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/operational-excellence/100_inventory_patch_management/6_maintenance_windows/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com">
+  <img src="/images/wa.png" alt="Well-Architected Labs">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1594865008"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1594865008"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1594865008"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/introduction/" title="소개" class="dd-item
+    
+        
+        ">
+      <a href="/introduction/">
+          <b>1. </b>소개
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/introduction/framework/" title="AWS-Well-Architected Framework란?" class="dd-item
+    
+        
+        ">
+      <a href="/introduction/framework/">
+          <b>1-1 </b>AWS-Well-Architected Framework란?
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/introduction/pillar/" title="AWS Well-Architected의 기반" class="dd-item
+    
+        
+        ">
+      <a href="/introduction/pillar/">
+          <b>1-2 </b>AWS Well-Architected의 기반
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/setup/" title="실습 환경 셋업" class="dd-item
+    
+        
+        ">
+      <a href="/setup/">
+          <b>2. </b>실습 환경 셋업
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/setup/lab-setup-master/" title="MASTER 계정 셋업" class="dd-item
+    
+        
+        ">
+      <a href="/setup/lab-setup-master/">
+          <b>2-2. </b>MASTER 계정 셋업
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/" title="성능효율성" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/">
+          <b>3. </b>성능효율성
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/" title="CloudWatch 대시보드를 사용하여 모니터링 하기" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatchdashboards/">
+          <b>3-1. </b>CloudWatch 대시보드를 사용하여 모니터링 하기
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/default-dashboard/" title="자동 대시보드 설정" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatchdashboards/default-dashboard/">
+          <b>1. </b>자동 대시보드 설정
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/setup/" title="사용자 대시보드 설정" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatchdashboards/setup/">
+          <b>2. </b>사용자 대시보드 설정
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CPU 경보" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatcheventemail/">
+          <b>3-2. </b>CPU 경보
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/setup/" title="사용자 경보 설정" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatcheventemail/setup/">
+          <b>1. </b>사용자 경보 설정
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/snstopic/" title="이메일 확인 및 전화번호 등록" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatcheventemail/snstopic/">
+          <b>2. </b>이메일 확인 및 전화번호 등록
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/ec2/" title="EC2 Loadtest 진행" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatcheventemail/ec2/">
+          <b>3. </b>EC2 Loadtest 진행
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/cost/" title="비용최적화" class="dd-item
+    
+        
+        ">
+      <a href="/cost/">
+          <b>4. </b>비용최적화
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/cost/100_1_aws_account_setup/" title="AWS 계정 설정: AWS Organization &amp; AWS SSO " class="dd-item
+    
+        
+        ">
+      <a href="/cost/100_1_aws_account_setup/">
+          <b>4-1. </b>AWS 계정 설정: AWS Organization &amp; AWS SSO 
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/1_iam_access/" title="IAM access 설정" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/1_iam_access/">
+        <b>1. </b>IAM access 설정
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/2_account_structure/" title="계정 구조 만들기" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/2_account_structure/">
+        <b>2. </b>계정 구조 만들기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/3_configure_sso/" title="Single Sign On (SSO) 활성화" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/3_configure_sso/">
+        <b>3. </b>Single Sign On (SSO) 활성화
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/4_account_settings/" title="계정 구성 설정" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/4_account_settings/">
+        <b>4. </b>계정 구성 설정
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/5_cur/" title="비용 및 사용 보고서(CUR) 설정" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/5_cur/">
+        <b>5. </b>비용 및 사용 보고서(CUR) 설정
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/6_quicksight/" title="Amazon QuickSight 설정" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/6_quicksight/">
+        <b>6. </b>Amazon QuickSight 설정
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/7_cost_explorer/" title="AWS Cost Explorer 활성화" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/7_cost_explorer/">
+        <b>7. </b>AWS Cost Explorer 활성화
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/8_cost_tags/" title="AWS 생성 비용할당태그 활성화" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/8_cost_tags/">
+        <b>8. </b>AWS 생성 비용할당태그 활성화
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_1_aws_account_setup/9_tear_down/" title="Tear down" class="dd-item ">
+        <a href="/cost/100_1_aws_account_setup/9_tear_down/">
+        <b>9. </b>Tear down
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/cost/100_aws_resource_optimization/" title="EC2 적정크기 찾기" class="dd-item
+    
+        
+        ">
+      <a href="/cost/100_aws_resource_optimization/">
+          <b>4-1. </b>EC2 적정크기 찾기
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/1_cloudwatch_intro/" title="Amazon Cloudwatch에 대하여 알아보기" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/1_cloudwatch_intro/">
+        <b>1. </b>Amazon Cloudwatch에 대하여 알아보기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/2_resource_opt/" title="Amazon EC2 리소스 최적화 Recommendations 사용" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/2_resource_opt/">
+        <b>2. </b>Amazon EC2 리소스 최적화 Recommendations 사용
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/3_prio_resource_opt/" title="AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/3_prio_resource_opt/">
+        <b>3. </b>AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/4_act_resource_opt/" title="recommendations 조치" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/4_act_resource_opt/">
+        <b>4. </b>recommendations 조치
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/" title="Amazon EC2 올바른 크기를 위한 모범사례" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/">
+        <b>5. </b>Amazon EC2 올바른 크기를 위한 모범사례
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/6_tear_down/" title="실습 종료" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/6_tear_down/">
+        <b>6. </b>실습 종료
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/cost/200_aws_resource_optimization/" title="EC2 적정크기 찾기 (MEM)" class="dd-item
+    
+        
+        ">
+      <a href="/cost/200_aws_resource_optimization/">
+          <b>4-2. </b>EC2 적정크기 찾기 (MEM)
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/2_create_iamrole/" title="AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/2_create_iamrole/">
+        <b>2. </b>AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/3_attach_iamrole/" title="EC2인스턴스에 CloudWatch IAM role 연결하기" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/3_attach_iamrole/">
+        <b>3. </b>EC2인스턴스에 CloudWatch IAM role 연결하기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/4_memory_plugin/" title="Cloudwatch Agent 수동 설치" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/4_memory_plugin/">
+        <b>4. </b>Cloudwatch Agent 수동 설치
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/5_ec2_updated_rec/" title="업데이트 된 Amazon EC2 리소스 최적화 권장 사항" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/5_ec2_updated_rec/">
+        <b>5. </b>업데이트 된 Amazon EC2 리소스 최적화 권장 사항
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/" title="AMAZON EC2 올바를 크기를 위한 모범사례" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/">
+        <b>6. </b>AMAZON EC2 올바를 크기를 위한 모범사례
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/7_tear_down/" title="실습 종료" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/7_tear_down/">
+        <b>7. </b>실습 종료
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/" title="운영우수성" class="dd-item
+    parent
+        
+        ">
+      <a href="/operational-excellence/">
+          <b>5. </b>운영우수성
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/100_inventory_patch_management/" title="100 - 인벤토리와 패치 관리" class="dd-item
+    parent
+        
+        ">
+      <a href="/operational-excellence/100_inventory_patch_management/">
+          100 - 인벤토리와 패치 관리
+          
+            
+              <i class="fas fa-caret-down"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/operational-excellence/100_inventory_patch_management/1_intro/" title="소개" class="dd-item ">
+        <a href="/operational-excellence/100_inventory_patch_management/1_intro/">
+        <b>1. </b>소개
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/operational-excellence/100_inventory_patch_management/4_inventory_mgmt/" title=" 운영의 코드화를 사용한 Inventory Management" class="dd-item ">
+        <a href="/operational-excellence/100_inventory_patch_management/4_inventory_mgmt/">
+        <b>4. </b> 운영의 코드화를 사용한 Inventory Management
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/operational-excellence/100_inventory_patch_management/5_patch_mgmt/" title="Patch Management" class="dd-item ">
+        <a href="/operational-excellence/100_inventory_patch_management/5_patch_mgmt/">
+        <b>5. </b>Patch Management
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/operational-excellence/100_inventory_patch_management/6_maintenance_windows/" title="Creating Maintenance Windows and Scheduling Automated Operations Activities" class="dd-item active">
+        <a href="/operational-excellence/100_inventory_patch_management/6_maintenance_windows/">
+        <b>6. </b>Creating Maintenance Windows and Scheduling Automated Operations Activities
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/operational-excellence/100_inventory_patch_management/7_create_sns_topic/" title="Creating a Simple Notification Service Topic" class="dd-item ">
+        <a href="/operational-excellence/100_inventory_patch_management/7_create_sns_topic/">
+        <b>7. </b>Creating a Simple Notification Service Topic
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/operational-excellence/100_inventory_patch_management/8_cleanup/" title="Removing Lab Resources" class="dd-item ">
+        <a href="/operational-excellence/100_inventory_patch_management/8_cleanup/">
+        <b>8. </b>Removing Lab Resources
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/free/"><i class='fas fa-bookmark'></i> Amazon Free Tier</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/100_inventory_patch_management/6_maintenance_windows/" selected>한국어</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> </a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      
+<h4>License</h4>
+<h5>Documentation License</h5>
+Licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Share Alike 4.0</a> license. <br>
+
+<h5>Code License</h5>
+Licensed under the Apache 2.0 and MITnoAttr License.<br>
+© 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved.<br>
+Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at <a href="https://aws.amazon.com/apache2.0/">https://aws.amazon.com/apache2.0/</a> or in the license accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/sykang169/aws-well-architected-labs-kor/Operational%20Excellence/100_Inventory_Patch_Management/6_maintenance_windows.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>홈</a> > <a href='/operational-excellence/'>운영우수성</a> > <a href='/operational-excellence/100_inventory_patch_management/'>100 - 인벤토리와 패치 관리</a> > Creating Maintenance Windows and Scheduling Automated Operations Activities
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#aws-systems-manager-maintenance-windows">AWS Systems Manager: Maintenance Windows</a>
+      <ul>
+        <li><a href="#61-setting-up-maintenance-windows">6.1 Setting up Maintenance Windows</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-maintenance-windows">Creating Maintenance Windows</a>
+      <ul>
+        <li><a href="#62-create-a-patch-maintenance-window">6.2 Create a Patch Maintenance Window</a></li>
+        <li><a href="#63-assigning-targets-to-your-patch-maintenance-window">6.3 Assigning Targets to Your Patch Maintenance Window</a></li>
+        <li><a href="#64-assigning-tasks-to-your-patch-maintenance-window">6.4 Assigning Tasks to Your Patch Maintenance Window</a></li>
+        <li><a href="#65-review-maintenance-window-execution">6.5 Review Maintenance Window Execution</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Creating Maintenance Windows and Scheduling Automated Operations Activities
+            </h1>
+          
+
+        
+
+
+<h2 id="aws-systems-manager-maintenance-windows">AWS Systems Manager: Maintenance Windows</h2>
+<p><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-maintenance.html">AWS Systems Manager Maintenance Windows</a> let you define a schedule for when to perform potentially disruptive actions on your instances such as patching an operating system (OS), updating drivers, or installing software. Each Maintenance Window has a schedule, a duration, a set of registered targets, and a set of registered tasks. With Maintenance Windows, you can perform tasks like the following:</p>
+<ul>
+<li>Installing applications, updating patches, installing or updating SSM Agent, or executing PowerShell commands and Linux shell scripts by using a Systems Manager Run Command task</li>
+<li>Building Amazon Machine Images (AMIs), boot-strapping software, and configuring instances by using Systems Manager Automation</li>
+<li>Executing AWS Lambda functions that trigger additional actions such as scanning your instances for patch updates</li>
+<li>Running AWS Step Function state machines to perform tasks such as removing an instance from an Elastic Load Balancing environment, patching the instance, and then adding the instance back to the Elastic Load Balancing environment</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong><!-- raw HTML omitted -->To register Step Function tasks you must use the AWS CLI.</p>
+</blockquote>
+<h3 id="61-setting-up-maintenance-windows">6.1 Setting up Maintenance Windows</h3>
+<ol>
+<li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-perm-console.html">Create the role</a> that allows Systems Manager to tasks in Maintenance Windows on your behalf:
+<ol>
+<li>Navigate to the <a href="https://console.aws.amazon.com/iam/">IAM console</a>.</li>
+<li>In the navigation pane, choose <strong>Roles</strong>, and then choose <strong>Create role</strong>.</li>
+<li>In the <strong>Select type of trusted entity</strong> section, verify that the default <strong>AWS service</strong> is selected.</li>
+<li>In the <strong>Choose the service that will use this role</strong> section, choose <strong>EC2</strong>. This allows EC2 instances to call AWS services on your behalf.</li>
+<li>Choose <strong>Next: Permissions</strong>.</li>
+</ol>
+</li>
+<li>Under <strong>Attached permissions policy</strong>:
+<ol>
+<li>Search for <strong>AmazonSSMMaintenanceWindowRole</strong>.</li>
+<li>Check the box next to <strong>AmazonSSMMaintenanceWindowRole</strong> in the list.</li>
+<li>Choose <strong>Next: Review</strong>.</li>
+</ol>
+</li>
+<li>In the <strong>Review</strong> section:
+<ol>
+<li>Enter a <strong>Role name</strong>, such as <code>SSMMaintenanceWindowRole</code>.</li>
+<li>Enter a <strong>Role description</strong>, such as <code>Role for Amazon SSMMaintenanceWindow</code>.</li>
+<li>Choose <strong>Create role</strong>. Upon success you will be returned to the <strong>Roles</strong> screen.</li>
+</ol>
+</li>
+<li>To enable the service to run tasks on your behalf, we need to edit the trust relationship for this role:
+<ol>
+<li>Choose the role you just created to enter its <strong>Summary</strong> page.</li>
+<li>Choose the <strong>Trust relationships</strong> tab.</li>
+<li>Choose <strong>Edit trust relationship</strong>.</li>
+<li>Delete the current policy, and then copy and paste the following policy into the <strong>Policy Document</strong> field:</li>
+</ol>
+</li>
+</ol>
+<pre><code>{
+   &quot;Version&quot;:&quot;2012-10-17&quot;,
+   &quot;Statement&quot;:[
+      {
+         &quot;Sid&quot;:&quot;&quot;,
+         &quot;Effect&quot;:&quot;Allow&quot;,
+         &quot;Principal&quot;:{
+            &quot;Service&quot;:[
+               &quot;ec2.amazonaws.com&quot;,
+               &quot;ssm.amazonaws.com&quot;,
+               &quot;sns.amazonaws.com&quot;
+            ]
+         },
+         &quot;Action&quot;:&quot;sts:AssumeRole&quot;
+      }
+   ]
+}
+</code></pre><ol start="5">
+<li>Choose <strong>Update Trust Policy</strong>. You will be returned to the now updated Summary page for your role.</li>
+<li>Copy the <strong>Role ARN</strong> to your clipboard by choosing the double document icon at the end of the ARN.</li>
+</ol>
+<p>When you register a task with a Maintenance Window, you specify the role you created, which the service will assume when it runs tasks on your behalf. To register the task, you must assign the IAM PassRole policy to your IAM user account. The policy in the following procedure provides the minimum permissions required to register tasks with a Maintenance Window.</p>
+<ol start="7">
+<li>To create the IAM PassRole policy for your Administrators IAM user group:
+<ol>
+<li>In the IAM console navigation pane, choose <strong>Policies</strong>, and then choose <strong>Create policy</strong>.</li>
+<li>On the Create policy page, in the <strong>Select a service area</strong>, next to <strong>Service</strong> choose <strong>Choose a service</strong>, and then choose <strong>IAM</strong>.</li>
+<li>In the <strong>Actions</strong> section, search for <strong>PassRole</strong> and check the box next to it when it appears in the list.</li>
+<li>In the <strong>Resources</strong> section, choose &ldquo;You choose actions that require the <strong>role</strong> resource type.&rdquo;, and then choose <strong>Add ARN</strong> to restrict access. The Add ARN(s) window will open.</li>
+<li>In the <strong>Add ARN(s)</strong> window, in the <strong>Specify ARN for role field</strong>, delete the existing entry, paste in the role ARN you created in the previous procedure, and then choose <strong>Add</strong> to return to the Create policy window.</li>
+<li>Choose <strong>Review policy</strong>.</li>
+<li>On the <strong>Review Policy</strong> page, type a name in the <strong>Name</strong> box, such as <code>SSMMaintenanceWindowPassRole</code> and then choose <strong>Create policy</strong>. You will be returned to the <strong>Policies</strong> page.</li>
+</ol>
+</li>
+<li>To assign the IAM PassRole policy to your Administrators IAM user group:
+<ol>
+<li>In the IAM console navigation pane, choose <strong>Groups</strong>, and then choose your <strong>Administrators</strong> group to reach its Summary page.</li>
+<li>Under the permissions tab, choose <strong>Attach Policy</strong>.</li>
+<li>On the <strong>Attach Policy</strong> page, search for SSMMaintenanceWindowPassRole, check the box next to it in the list, and choose <strong>Attach Policy</strong>. You will be returned to the Summary page for the group.</li>
+</ol>
+</li>
+</ol>
+<h2 id="creating-maintenance-windows">Creating Maintenance Windows</h2>
+<p>To <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-create-mw.html">create a Maintenance Window</a>, you must do the following:</p>
+<ol>
+<li>Create the window and define its schedule and duration.</li>
+<li>Assign targets for the window.</li>
+<li>Assign tasks to run during the window.</li>
+</ol>
+<p>After you complete these steps, the Maintenance Window runs according to the schedule you defined and runs the tasks on the targets you specified. After a task is finished, Systems Manager logs the details of the execution.</p>
+<h3 id="62-create-a-patch-maintenance-window">6.2 Create a Patch Maintenance Window</h3>
+<p>First, you must <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-create-mw.html">create the window</a> and define its schedule and duration:</p>
+<ol>
+<li>Open the AWS <a href="https://console.aws.amazon.com/systems-manager/">Systems Manager console</a>.</li>
+<li>In the navigation pane, choose <strong>Maintenance Windows</strong> and then choose <strong>Create a Maintenance Window</strong>.</li>
+<li>In the <strong>Provide maintenance window details</strong> section:
+<ol>
+<li>In the <strong>Name</strong> field, type a descriptive name to help you identify this Maintenance Window, such as <code>PatchTestWorkloadWebServers</code>.</li>
+<li>(Optional) you may enter a description in the <strong>Description</strong> field.</li>
+<li>Choose <strong>Allow unregistered targets</strong> if you want to allow a Maintenance Window task to run on managed instances, even if you have not registered those instances as targets.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong><!-- raw HTML omitted -->If you choose <strong>Allow unregistered targets</strong>, then you can choose the unregistered instances (by instance ID) when you register a task with the Maintenance Window. If you don&rsquo;t, then you must choose previously registered targets when you register a task with the Maintenance Window.</p>
+</blockquote>
+<ol>
+<li>Specify a schedule for the Maintenance Window by using one of the scheduling options:
+<ol>
+<li>Under <strong>Specify with</strong>, accept the default <strong>Cron schedule builder</strong>.</li>
+<li>Under <strong>Window starts</strong>, choose the third option, specify <strong>Every Day at</strong>, and select a time, such as <code>02:00</code>.</li>
+<li>In the <strong>Duration</strong> field, type the number of hours the Maintenance Window should run, such as &lsquo;3&rsquo; <strong>hours</strong>.</li>
+<li>In the <strong>Stop initiating tasks</strong> field, type the number of hours before the end of the Maintenance Window that the system should stop scheduling new tasks to run, such as <code>1</code> <strong>hour before the window closes</strong>. Allow enough time for initiate activities to complete before the close of the maintenance window.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>(Optionally) to have the maintenance window execute more rapidly while engaged with the lab:
+<ol>
+<li>Under <strong>Window starts</strong>, choose <strong>Every 30 minutes</strong> to have the tasks execute on every hour and every half hour.</li>
+<li>Set the <strong>Duration</strong> to the minimum <code>1</code> hours.</li>
+<li>Set the <strong>Stop initiation tasks</strong> to the minimum <code>0</code> hours.</li>
+</ol>
+</li>
+<li>Choose <strong>Create maintenance window</strong>. The system returns you to the <strong>Maintenance Window</strong> page. The state of the Maintenance Window you just created is <strong>Enabled</strong>.</li>
+</ol>
+<h3 id="63-assigning-targets-to-your-patch-maintenance-window">6.3 Assigning Targets to Your Patch Maintenance Window</h3>
+<p>After you create a Maintenance Window, you <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-assign-targets.html">assign targets</a> where the tasks will run.</p>
+<ol>
+<li>On the <strong>Maintenance windows</strong> page, choose the <strong>Window ID</strong> of your maintenance window to enter its Details page.</li>
+<li>Choose <strong>Actions</strong> in the top right of the window and select <strong>Register targets</strong>.</li>
+<li>On the <strong>Register target</strong> page under <strong>Maintenance window target details</strong>:
+<ol>
+<li>In the <strong>Target Name</strong> field, enter a name for the targets, such as <code>TestWebServers</code>.</li>
+<li>(Optional) Enter a description in the <strong>Description</strong> field.</li>
+<li>(Optional) Specify a name or work alias in the <strong>Owner information</strong> field.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: Owner information is included in any CloudWatch Events that are raised while running tasks for these targets in this Maintenance Window.</p>
+</blockquote>
+</li>
+<li>In the <strong>Targets</strong> section, under <strong>Select Targets by</strong>:
+<ol>
+<li>Choose the default <strong>Specifying tags</strong> to target instances by using Amazon EC2 tags that were previously assigned to the instances.</li>
+<li>Under <strong>Tags</strong>, enter &lsquo;Workload&rsquo; as the key and <code>Test</code> as the value. The option to add and additional tag key/value pair will appear.</li>
+<li>Add a second key/value pair using <code>InstanceRole</code> as the key and <code>WebServer</code> as the value.</li>
+</ol>
+</li>
+<li>Choose <strong>Register target</strong> at the bottom of the page to return to the maintenance window details page.</li>
+</ol>
+<p>If you want to assign more targets to this window, choose the <strong>Targets</strong> tab, and then choose <strong>Register target</strong>to register new targets. With this option, you can choose a different means of targeting. For example, if you previously targeted instances by instance ID, you can register new targets and target instances by specifying Amazon EC2 tags.</p>
+<h3 id="64-assigning-tasks-to-your-patch-maintenance-window">6.4 Assigning Tasks to Your Patch Maintenance Window</h3>
+<p>After you assign targets, you <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-assign-tasks.html">assign tasks</a> to perform during the window:</p>
+<ol>
+<li>From the details page of your maintenance window, choose <strong>Actions</strong> in the top right of the window and select <strong>Register Run command task</strong>.</li>
+<li>On the <strong>Register Run command task</strong> page:
+<ol>
+<li>In the <strong>Name</strong> field, enter a name for the task, such as <code>PatchTestWorkloadWebServers</code>.</li>
+<li>(Optional) Enter a description in the <strong>Description</strong> field.</li>
+</ol>
+</li>
+<li>In the <strong>Command document</strong> section:
+<ol>
+<li>Choose the search icon, select <code>Platform</code>, and then choose <code>Linux</code> to display all the available commands that can be applied to Linux instances.</li>
+<li>Choose <strong>AWS-RunPatchBaseline</strong> in the list.</li>
+<li>Leave the <strong>Task priority</strong> at the default value of <strong>1</strong> (1 is the highest priority).</li>
+<li>Tasks in a Maintenance Window are scheduled in priority order, with tasks that have the same priority scheduled in parallel.</li>
+</ol>
+</li>
+<li>In the <strong>Targets</strong> section:
+<ol>
+<li>For <strong>Target by</strong>, select <strong>Selecting registered target groups</strong>.</li>
+<li>Select the group you created from the list.</li>
+</ol>
+</li>
+<li>In the <strong>Rate control</strong> section:
+<ol>
+<li>For <strong>Concurrency</strong>, leave the default <strong>targets</strong> selected and specify <code>1</code>.</li>
+<li>For <strong>Error threshold</strong>, leave the default <strong>errors</strong> selected and specify <code>1</code>.</li>
+</ol>
+</li>
+<li>In the <strong>Role</strong> section, specify the role you defined with the AmazonSSMMaintenanceWindowRole. It will be <code>SSMMaintenanceWindowRole</code> if you followed the suggestion in the instructions above.</li>
+<li>In <strong>Output options</strong>, leave <strong>Enable writing to S3</strong> clear.
+<ol>
+<li>(Optionally) Specify <strong>Output options</strong> to record the entire output to a preconfigured <strong>S3 bucket</strong> and optional <strong>S3 key prefix</strong></li>
+</ol>
+<blockquote>
+<p><strong>Note</strong><!-- raw HTML omitted -->Only the last 2500 characters of a command document&rsquo;s output are displayed in the console. To capture the complete output define and S3 bucket to receive the logs.</p>
+</blockquote>
+</li>
+<li>In <strong>SNS notifications</strong>, leave <strong>Enable SNS notifications</strong> clear.
+<ol>
+<li>(Optional) Specify <strong>SNS notifications</strong> to a preconfigured <strong>SNS Topic</strong> on all events or a specific event type for either the entire command or on a per-instance basis.</li>
+</ol>
+</li>
+<li>In the <strong>Parameters</strong> section, under <strong>Operation</strong>, select <strong>Install</strong>.</li>
+<li>Choose <strong>Register Run command task</strong> to complete the task definition and return to the details page.</li>
+</ol>
+<h3 id="65-review-maintenance-window-execution">6.5 Review Maintenance Window Execution</h3>
+<ol>
+<li>After allowing enough time for your maintenance window to complete:
+<ol>
+<li>Navigte to the AWS <a href="https://console.aws.amazon.com/systems-manager/">Systems Manager console</a>.</li>
+<li>Choose <strong>Maintenance Windows</strong>, and then select the <strong>Window ID</strong> for your new maintenance window.</li>
+</ol>
+</li>
+<li>On the <strong>Maintenance window ID</strong> details page, choose <strong>History</strong>.</li>
+<li>Select a <strong>Windows execution ID</strong> and choose <strong>View details</strong>.</li>
+<li>On the <strong>Command ID</strong> details page, scroll down to the <strong>Targets and outputs</strong> section, select an <strong>Instance ID</strong>, and choose <strong>View output</strong>.</li>
+<li>Choose <strong>Step 1 - Output</strong> and review the output.</li>
+<li>Choose <strong>Step 2 - Output</strong> and review the output.</li>
+</ol>
+<p>You have now configured a maintenance window, assigned targets, assigned tasks, and validated successful execution. The same procedures can be used to schedule the execution of any <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html">AWS Systems Manager Document</a>.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1594865008"></script>
+    <script src="/js/perfect-scrollbar.min.js?1594865008"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1594865008"></script>
+    <script src="/js/jquery.sticky.js?1594865008"></script>
+    <script src="/js/featherlight.min.js?1594865008"></script>
+    <script src="/js/highlight.pack.js?1594865008"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1594865008"></script>
+    <script src="/js/learn.js?1594865008"></script>
+    <script src="/js/hugo-learn.js?1594865008"></script>
+
+    <link href="/mermaid/mermaid.css?1594865008" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1594865008"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

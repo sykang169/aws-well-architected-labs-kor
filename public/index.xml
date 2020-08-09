@@ -23,6 +23,16 @@
     </item>
     
     <item>
+      <title>IAM access 설정</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/1_iam_access/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/1_iam_access/</guid>
+      <description>참고 :이 작업을 수행하려면 루트 계정 자격 증명을 사용하여 마스터 계정에 로그인해야합니다.
+ 루트 자격 증명을 사용하지 않고 청구 정보에 접근하려면 IAM 액세스를 활성화해야합니다. 이를 통해 루트가 아닌 다른 사용자가 마스터 계정의 청구 정보에 액세스 할 수 있습니다. 이 접근 방식은 각 사용자에게 개별 로그인 정보를 제공하며 각 사용자에게 계정 작업에 필요한 권한만 부여 할 수 있습니다. 예를 들어 재무 팀에 청구 정보에만 액세스 권한을 부여하고 계정의 다른 리소스는 접근 할 수 없도록 할 수 있습니다.</description>
+    </item>
+    
+    <item>
       <title>AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
@@ -41,6 +51,16 @@
       <description>이 실습은 실제 사용 계정에서 진행 해보세요. 현재 Lab환경으로는 수행하실 수 없습니다.
  참고:이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer의 권장 사항 섹션으로 이동하여 Amazon EC2 리소스 최적화를 활성화화세요.
  Amazon EC2 Resource Optimization은 추가비용 없이 AWS Cost Explorer에서 올바른 크기 조정 권장 사항을 제공합니다. 이러한 권장 사항은 계정, 리전 및 태그에서 유휴 상태이거나 사용률이 낮은 인스턴스를 식별합니다. 이러한 권장사항을 생성하기 위해 AWS는 기존 EC2리소스 사용량(Amazon CloudWatch 사용) 및 기존 예약공간을 분석하여 비용 절감기회를 찾아냅니다(예:유휴 인스턴스를 종료하거나 활성 인스턴스를 동일한 제품군/세대 내에서 더 저렴한 옵션으로 축소).</description>
+    </item>
+    
+    <item>
+      <title>계정 구조 만들기</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/2_account_structure/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/2_account_structure/</guid>
+      <description>AWS Organizations  AWS Organizations는 AWS의 워크로드가 증가하고 확장됨에 따라 환경을 중앙에서 관리하는 데 도움이 됩니다. 성장하는 스타트업이든, 대기업이든 관계없이 AWS Organizations를 활용하면 결제를 관리하고, 액세스, 규정 준수 및 보안을 제어하고, AWS 계정에서 리소스를 공유하는 일을 모두 중앙에서 손쉽게 처리할 수 있습니다.
+AWS Organizations를 사용하면 계정 생성을 자동화하고, 비즈니스 요구를 반영하도록 계정 그룹을 생성하고, 거버넌스를 위해 이러한 그룹에 정책을 적용할 수 있습니다. 또한 모든 AWS 계정에 대해 단일 결제 방법을 설정하여 결제 과정을 간소화할 수도 있습니다.</description>
     </item>
     
     <item>
@@ -65,6 +85,15 @@
     </item>
     
     <item>
+      <title>Single Sign On (SSO) 활성화</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/3_configure_sso/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/3_configure_sso/</guid>
+      <description>AWS Single Sign-On  AWS Single Sign-On(SSO)을 사용하면 여러 AWS 계정 및 비즈니스 애플리케이션에 대한 액세스를 중앙에서 손쉽게 관리하고 사용자에게 Single Sign-On 액세스를 제공하여 할당된 모든 계정 및 애플리케이션을 한 곳에서 액세스하도록 할 수 있습니다. AWS SSO를 사용하면 AWS Organizations의 모든 내 계정에 대한 액세스와 사용자 권한을 중앙에서 손쉽게 관리할 수 있습니다. AWS SSO는 계정에 필요한 모든 권한을 자동으로 구성하고 관리하므로 각 계정에서 추가로 설정할 필요가 없습니다. 일반적인 작업 기능을 기반으로 사용자 권한을 할당하고 특정 보안 요구 사항을 충족하도록 해당 권한을 사용자 지정할 수 있습니다.</description>
+    </item>
+    
+    <item>
       <title>Cloudwatch Agent 수동 설치</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
@@ -86,13 +115,32 @@
     </item>
     
     <item>
-      <title>Amazon EC2 올바를 크기를 위한 모범사례</title>
+      <title>계정 구성 설정</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/4_account_settings/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/4_account_settings/</guid>
+      <description>계정 연락처가 최신 상태인지 확인하는 것은 중요합니다. 이를 통해 AWS는 필요한 경우 조직의 올바른 담당자에게 연락 할 수 있습니다. 중복성을 위해 여러 팀 구성원이 액세스 할 수있는 메일링 리스트 또는 공유 이메일을 사용하는 것이 좋습니다. 이메일 계정을 적극적으로 모니터링하십시오.
+  올바른 권한을 가진 마스터계정의 IAM사용자로 로그인을 한 후, 오른쪽 상단의 계정 이름을 선택하고, 메뉴의 My Account 를 클릭합니다:   스크롤을 내려 Alternate Contacts 의 Edit를 클릭합니다:   Billing, Operations 와 Security의 정보를 입력한 후 Update를 클릭합니다:   </description>
+    </item>
+    
+    <item>
+      <title>Amazon EC2 올바른 크기를 위한 모범사례</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</guid>
       <description>시작은 간단하게: 유휴리소스는와 중요하지 않은 개발/QA 및 이전 세대 인스턴스의 비용절감은 식별하기 쉽고 테스트 빠르게 적용해볼 수 있습니다(Amazon EC2 시작시간 통계는 다른 인스턴스보다 오래 실행 된 인스턴스를 식별하는 데 사용될 수 있습니다).
   마이그레이션을 진행하기 전에 올바른 크기를 먼저 식별하는게 좋습니다: 시간을 절약하기 위해 올바른 크기 조정을 건너 뛰면 마이그레이션 속도가 증가 할 수는 있지만 잠재적으로 더 긴 시간 동안 더 많은 클라우드 인프라 지출이 발생할 가능성이 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>비용 및 사용 보고서(CUR) 설정</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/5_cur/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/5_cur/</guid>
+      <description>AWS 비용 및 사용 보고서란 무엇입니까?  AWS 비용 및 사용 보고서(AWS CUR)에는 사용 가능한 가장 포괄적인 비용 및 사용 데이터 집합이 포함되어 있습니다. 비용 및 사용 보고서를 사용하여 소유한 Amazon Simple Storage Service(Amazon S3) 버킷에 AWS 결제 보고서를 게시할 수 있습니다. 시간이나 월, 제품이나 제품 리소스, 또는 직접 정의한 태그를 기준으로 비용을 구분한 보고서를 받을 수 있습니다. AWS는 이 보고서를 하루에 한 번 CSV(쉼표로 분리된 값) 형식으로 버킷에 업데이트합니다. Microsoft Excel, Apache OpenOffice Calc와 같은 스프레드시트 소프트웨어를 사용하여 보고서를 보거나 애플리케이션에서 Amazon S3 API를 사용하여 액세스할 수 있습니다.</description>
     </item>
     
     <item>
@@ -118,6 +166,16 @@
     </item>
     
     <item>
+      <title>Amazon QuickSight 설정</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/6_quicksight/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/6_quicksight/</guid>
+      <description>이제 워크로드 계정의 사용자가 분석 및 대시보드를 만들 수 있도록 Amazon QuickSight를 설정할 것입니다.
+첫 QuickSight 설정   워크로드 계정의 IAM 사용자로 콘솔에 로그인합니다. 그리고 Amazon QuickSight 콘솔로 이동합니다:   이전에 QuickSight의 Sign up for QuickSight를 진행했다면, Setup QuickSight IAM Policy 으로 바로 건너 뛰어도 됩니다:   Standard 에디션을 선택하고 Continue를 클릭합니다:   CUR 파일이 있는 region을 선택합니다. QuickSight account name에 계정이름, Notification email address에 email을 입력합니다.</description>
+    </item>
+    
+    <item>
       <title>실습 종료</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/6_tear_down/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
@@ -127,12 +185,43 @@
     </item>
     
     <item>
+      <title>AWS Cost Explorer 활성화</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/7_cost_explorer/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/7_cost_explorer/</guid>
+      <description>AWS Cost Explorer는 시간에 따른 AWS 비용 및 사용량을 시각화, 분석 및 관리 할 수 있습니다. 이것은 계쩡에서 활성화 해야 사용 할 수 있습니다. 일단 활성화되면 모든 계정에 대해 활성화되고 IAM 정책을 통해 제어됩니다. 비용 탐색기의 기본 구성은 무료이지만 시간 단위로 사용하도록 설정하면 추가 비용이 발생합니다.- AWS Cost Management Pricing.
+  권한을 가진 IAM 사용자를 콘솔에 로그인하고 Billing 으로 갑니다:   왼쪽 메뉴에서 Cost Explorer를 선택합니다:   Enable Cost Explorer를 클릭합니다:   You will receive notification that Cost Explorer has been enabled, and data will be populated:</description>
+    </item>
+    
+    <item>
       <title>실습 종료</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</guid>
       <description> IAM role CloudWatchAgentServerRole을 삭제합니다.  </description>
+    </item>
+    
+    <item>
+      <title>AWS 생성 비용할당태그 활성화</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/8_cost_tags/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/8_cost_tags/</guid>
+      <description>AWS 생성 비용할당태그를 활성화하면 리소스 생성자 정보가 포함 된 비용 할당 태그가 생성됩니다. 이것은 생성 된 리소스에 자동으로 적용되며 리소스를 만든 사람에 따라 비용을 확인하고 할당 할 수 있습니다.
+  Master account 계정의 IAM사용자로 로그인한 후, Billing 콘솔로 갑니다:   왼쪽 메뉴의 Cost Allocation Tags를 클릭합니다:   Activate를 클릭하여 태그를 활성화 합니다:   이제 동작하는 것을 확인할 수 있습니다:   </description>
+    </item>
+    
+    <item>
+      <title>Tear down</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/9_tear_down/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/9_tear_down/</guid>
+      <description>이제 모든 AWS 계정이 비용 최적화를 활성화하는 데 필요한 기본 단계를 다루었습니다. 이 실습에 대한 리소스를 제거하겠습니다.
+QuickSight구독 취소 아래 단계를 따라 QuickSight의 구독을 취소하세요.
+  Click on your profile icon in the top right, select Manage QuickSight:   Click on Account settings:   Cluck on Unsubscribe:   Review the notifications, click Unsubscribe:   </description>
     </item>
     
     <item>

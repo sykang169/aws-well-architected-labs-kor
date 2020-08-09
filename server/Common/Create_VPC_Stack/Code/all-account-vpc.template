@@ -584,7 +584,7 @@
     "BastionHost": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "ImageId": "ami-09d95fab7fff3776c",
+        "ImageId": "ami-0e34e7b9ca0ace12d",
         "InstanceType": {
           "Fn::FindInMap": [
             "instancesTypes",
@@ -814,7 +814,7 @@
     "ASGLaunchConfigC00AF12B": {
       "Type": "AWS::AutoScaling::LaunchConfiguration",
       "Properties": {
-        "ImageId": "ami-09d95fab7fff3776c",
+        "ImageId": "ami-0e34e7b9ca0ace12d",
         "InstanceType": "t2.micro",
         "IamInstanceProfile": {
           "Ref": "ASGInstanceProfile"

@@ -8,12 +8,27 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/1_iam_access/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/</loc>
+    <lastmod>2020-04-24T11:16:08-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/2_resource_opt/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/2_account_structure/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
@@ -28,6 +43,11 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/3_configure_sso/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
@@ -38,7 +58,17 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/4_account_settings/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/5_cur/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
@@ -53,6 +83,11 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/6_quicksight/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/6_tear_down/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
@@ -63,6 +98,11 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/7_cost_explorer/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
@@ -70,6 +110,16 @@
   <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/8_cost_tags/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/9_tear_down/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
@@ -135,6 +185,26 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/</loc>
+    <lastmod>2020-04-24T11:16:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/systemmanager/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/default-dashboard/</loc>
   </url>
   
@@ -152,6 +222,26 @@
   
   <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/ec2/</loc>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/inventorysetup/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/statemanager/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/patchmanager/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/awsrunpatchbaseline/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>

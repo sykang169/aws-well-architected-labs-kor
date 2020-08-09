@@ -1,5 +1,5 @@
 ---
-title: "CPU 경보 알람"
+title: "CPU 경보"
 weight: 32
 pre: "<b>3-2. </b>"
 ---

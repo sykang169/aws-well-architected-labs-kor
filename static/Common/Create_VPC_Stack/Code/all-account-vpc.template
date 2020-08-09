@@ -691,6 +691,12 @@
             "FromPort": "22",
             "ToPort": "22",
             "CidrIp": "0.0.0.0/0"
+          },
+          {
+            "IpProtocol": "https",
+            "FromPort": "443",
+            "ToPort": "443",
+            "CidrIp": "0.0.0.0/0"
           }
         ],
         "VpcId": {
@@ -699,7 +705,13 @@
       },
       "Metadata": {
         "aws:cdk:path": "WellArchitectedLabsStack/ASG/InstanceSecurityGroup/Resource"
-      }
+      },
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "InstanceSG"
+        }
+      ]
     },
     "BastionhostSG": {
       "Type": "AWS::EC2::SecurityGroup",
@@ -854,6 +866,23 @@
             "Key": "Name",
             "PropagateAtLaunch": true,
             "Value": "WellArchitectedLabsStack/ASG"
+          },
+          {
+            "Key": "Workload",
+            "PropagateAtLaunch": true,
+            "Value": {
+                "Ref": "WorkloadName"
+              }
+          },
+          {
+            "Key": "Patch Group",
+            "PropagateAtLaunch": true,
+            "Value": "Critical"
+          },
+          {
+            "Key": "Environment",
+            "PropagateAtLaunch": true,
+            "Value": "MasterAccount"
           }
         ],
         "TargetGroupARNs": [
