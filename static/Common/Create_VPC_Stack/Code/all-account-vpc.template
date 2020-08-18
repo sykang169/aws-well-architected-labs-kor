@@ -693,7 +693,7 @@
             "CidrIp": "0.0.0.0/0"
           },
           {
-            "IpProtocol": "https",
+            "IpProtocol": "tcp",
             "FromPort": "443",
             "ToPort": "443",
             "CidrIp": "0.0.0.0/0"
@@ -705,13 +705,7 @@
       },
       "Metadata": {
         "aws:cdk:path": "WellArchitectedLabsStack/ASG/InstanceSecurityGroup/Resource"
-      },
-      "Tags": [
-        {
-          "Key": "Name",
-          "Value": "InstanceSG"
-        }
-      ]
+      }
     },
     "BastionhostSG": {
       "Type": "AWS::EC2::SecurityGroup",
@@ -731,6 +725,13 @@
             "IpProtocol": "tcp",
             "FromPort": "80",
             "ToPort": "80",
+            "CidrIp": "0.0.0.0/0"
+          }
+          ,
+          {
+            "IpProtocol": "tcp",
+            "FromPort": "443",
+            "ToPort": "443",
             "CidrIp": "0.0.0.0/0"
           }
         ],
@@ -799,6 +800,9 @@
           ],
           "Version": "2012-10-17"
         },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess"
+        ],
         "Tags": [
           {
             "Key": "Name",
@@ -840,14 +844,20 @@
           }
         ],
         "UserData": {
-          "Fn::Base64": "#include https://s3.amazonaws.com/immersionday-labs/bootstrap.sh"
+          "Fn::Base64": {
+              "Fn::Join" : [ "", [
+                "#include https://sykang-productionapp.s3-us-west-2.amazonaws.com/bootstrap_rds.sh"
+              ]
+            ]
+          }
         },
         "KeyName": {
           "Ref": "KeyName"
         }
       },
       "DependsOn": [
-        "ASGInstanceRole"
+        "ASGInstanceRole",
+        "InstanceC1063A87"
       ],
       "Metadata": {
         "aws:cdk:path": "WellArchitectedLabsStack/ASG/LaunchConfig"
@@ -1047,6 +1057,13 @@
             "FromPort": 80,
             "IpProtocol": "tcp",
             "ToPort": 80
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow from anyone on port 443",
+            "FromPort": 443,
+            "IpProtocol": "tcp",
+            "ToPort": 443
           }
         ],
         "VpcId": {
@@ -1150,15 +1167,18 @@
         "AllocatedStorage": "100",
         "CopyTagsToSnapshot": false,
         "DBName": "rdscluster",
+        "EngineVersion": "5.7.30",
         "DBSubnetGroupName": {
           "Ref": "InstanceSubnetGroupF2CBA54F"
         },
+        "MultiAZ" : true,
         "DeleteAutomatedBackups": false,
         "DeletionProtection": false,
         "Engine": "mysql",
         "MasterUsername": "awsuser",
         "MasterUserPassword": "awspassword",
         "StorageType": "gp2",
+        "DBInstanceIdentifier":"wellarchitecteddbinstance",
         "VPCSecurityGroups": [
           {
             "Fn::GetAtt": [

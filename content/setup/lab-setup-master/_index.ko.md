@@ -56,13 +56,13 @@ AWS CloudFormation에서는 클라우드 환경에서 AWS 및 타사 애플리�
 
 AWS CodeQuality 실습에 필요한 AWS 리소스를 사전에 생성하기 위해 제공된CloudFormation template을 사용하여 CloudFormation stack을 생성합니다. 
 
-CloudFormation 스택을 시작하려면, [Launch Stack 버튼](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.template)를 클릭해서 CloudFormation 콘솔로 이동합니다.
+CloudFormation 스택을 시작하려면, [Launch Stack 버튼](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.yaml)를 클릭해서 CloudFormation 콘솔로 이동합니다.
 
 {{% notice warning %}}
 중요: 이 탬플릿은 us-west-2 (오레곤)을 위해 만들어졌습니다.
 {{% /notice %}}
 
-{{% button href="https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.template" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
+{{% button href="https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.yaml" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
 
 {{% notice warning %}}
 반드시 pem 키를 다운받아야합니다. EventEngine의 default key를 사용하지 마십시오.
