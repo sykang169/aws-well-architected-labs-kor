@@ -32,6 +32,34 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/cloud9/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/cloud9/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/cloud9/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/"
+                />
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"

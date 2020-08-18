@@ -48,7 +48,17 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/3_failure_injection_prep/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/4_failure_injection_ec2/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
@@ -64,6 +74,11 @@
   
   <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/5_failure_injection_rds/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
@@ -84,6 +99,11 @@
   
   <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_1_aws_account_setup/6_quicksight/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/6_failure_injection_az/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
@@ -164,6 +184,20 @@
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/cloud9/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/cloud9/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/cloud9/"
+                />
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/lab-setup-master/</loc>
   </url>
   
@@ -202,6 +236,21 @@
   <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/"
+                />
   </url>
   
   <url>
