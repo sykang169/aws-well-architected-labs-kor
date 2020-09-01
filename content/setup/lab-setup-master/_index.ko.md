@@ -18,7 +18,7 @@ AWS 계정 생성 및 활성화 가이드는 다음 [링크](https://aws.amazon.
 모든 이미지는 클릭하여 확대가 가능합니다.스크린샷의 자세한 내용이 필요하시면 눌러서 확인해주세요.
 {{% /notice %}}
 {{% notice info %}}
-실습은 **us-west-2 (오레곤) 리전을 선택**합니다.  
+실습은 **ap-northeast-2 (서울) 리전을 선택**합니다.  
 {{% /notice %}}
 
 ## IAM 사용자
@@ -56,13 +56,13 @@ AWS CloudFormation에서는 클라우드 환경에서 AWS 및 타사 애플리�
 
 AWS CodeQuality 실습에 필요한 AWS 리소스를 사전에 생성하기 위해 제공된CloudFormation template을 사용하여 CloudFormation stack을 생성합니다. 
 
-CloudFormation 스택을 시작하려면, [Launch Stack 버튼](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.yaml)를 클릭해서 CloudFormation 콘솔로 이동합니다.
+CloudFormation 스택을 시작하려면, [Launch Stack 버튼](https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.yaml?versionId=null)를 클릭해서 CloudFormation 콘솔로 이동합니다.
 
 {{% notice warning %}}
-중요: 이 탬플릿은 us-west-2 (오레곤)을 위해 만들어졌습니다.
+중요: 이 탬플릿은 ap-northeast-2 (서울)을 위해 만들어졌습니다.
 {{% /notice %}}
 
-{{% button href="https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.yaml" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
+{{% button href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc.yaml?versionId=null" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
 
 {{% notice warning %}}
 반드시 pem 키를 다운받아야합니다. EventEngine의 default key를 사용하지 마십시오.

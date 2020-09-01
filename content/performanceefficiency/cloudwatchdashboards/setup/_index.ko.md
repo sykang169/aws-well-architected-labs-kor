@@ -10,7 +10,7 @@ CloudFormation에서 생성한 WellArchitectedFrameworkLabsStack에서 생성된
 
 1. 먼저 WellArchitectedFrameworkLabsStack의 Auto scaling group이 생성한 인스턴스의 CPU Utilization을 가져오기 위해 Auto scaling group의 이름이 필요하며 Load Balancer에 연결된 EC2의 갯수를 확인하기 위해선 Application Load Balancer의 이름이 필요합니다.
 
-    CloudFormation 콘솔로 가기 : https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2
+    CloudFormation 콘솔로 가기 : https://ap-northeast-2.console.aws.amazon.com/cloudformation/home?region=ap-northeast-2
 
 1. Output의 `ASGName`은 Auto scaling group의 이름입니다. `ALBName`는 Application Load Balancer의 이름입니다. 
     CloudFormation 콘솔에서 `MasterAccountStack`을 선택합니다. 
@@ -20,7 +20,7 @@ CloudFormation에서 생성한 WellArchitectedFrameworkLabsStack에서 생성된
     ![CloudwatchDashboard](/images/war/cloudwatch-stack-output.png#medium)
 
     이제 CloudWatch에서 대시보드를 생성할 것입니다.
-    CloudWatch 콜솔로 가기 : https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2
+    CloudWatch 콜솔로 가기 : https://ap-northeast-2.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-2
 
 1. 오른쪽 상단의 **Dashboards**를 선택합니다. 
     ![CloudwatchDashboard](/images/war/cloudwatch-dashboard.png#medium)

@@ -1083,7 +1083,7 @@
       "us-east-2": {
         "RANGE": "10.43"
       },
-      "us-west-2": {
+      "ap-northeast-2": {
         "RANGE": "10.42"
       },
       "us-west-1": {
@@ -1153,7 +1153,7 @@
     },
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
-      "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "ap-northeast-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
       "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
       "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
       "eu-west-2"        : {"HVM64" : "ami-f976839e", "HVMG2" : "NOT_SUPPORTED"},
@@ -1407,7 +1407,7 @@
                 {
                   "Ref": "AWS::Region"
                 },
-                "us-west-2"
+                "ap-northeast-2"
               ]
             }
           ]

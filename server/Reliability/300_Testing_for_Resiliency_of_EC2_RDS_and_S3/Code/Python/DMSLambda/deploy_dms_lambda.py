@@ -31,7 +31,7 @@ LOG_LEVELS = {'CRITICAL': 50, 'ERROR': 40, 'WARNING': 30, 'INFO': 20, 'DEBUG': 1
 # Data flow Master (Ohio) --replication--> RR (Oregon) --DMS--> Master (Oregon)
 AWS_REGION_SOURCE_DB = 'us-east-2' #Ohio
 AWS_REGION_CFN_TEMPLATE = 'us-east-2' #Ohio
-AWS_REGION_DMS_DEPLOY = 'us-west-2' #Oregon
+AWS_REGION_DMS_DEPLOY = 'ap-northeast-2' #Oregon
 
 stackname = 'DMSforResiliencyTesting'
 
@@ -320,7 +320,7 @@ if __name__ == "__main__":
     event = {
         "log_level": "DEBUG",
         "region_name": "us-east-2",
-        "secondary_region_name": "us-west-2",
+        "secondary_region_name": "ap-northeast-2",
         "cfn_region": "us-east-2",
         "cfn_bucket": "aws-well-architected-labs-ohio",
         "folder": "Reliability/",

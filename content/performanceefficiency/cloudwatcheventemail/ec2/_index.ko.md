@@ -12,7 +12,7 @@ EC2의 CPU사용량이 많아지면 Autoscaling Group은 자동으로 EC2 Instan
 
 1. Cloudformation에서 만든 WellArchitectedFrameworkLabsStack의 Output에 Application Load balancer의 DNS주소가 있습니다. 
 
-    CloudFormation 콘솔로 가기 : https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2
+    CloudFormation 콘솔로 가기 : https://ap-northeast-2.console.aws.amazon.com/cloudformation/home?region=ap-northeast-2
  
 1. 실습 Setup에서 만든 WellArchitectedFrameworkLabsStack을 선택합니다. 
     ![CloudwatchDashboard](/images/war/cloudwatch-stack.png#medium)

@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System Manager 셋팅 on AWS Well-Architected Labs</title>
-    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/systemmanager/</link>
+    <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/systemmanager/</link>
     <description>Recent content in System Manager 셋팅 on AWS Well-Architected Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <lastBuildDate>Fri, 24 Apr 2020 11:16:09 -0400</lastBuildDate>
     
-	<atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/systemmanager/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/systemmanager/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

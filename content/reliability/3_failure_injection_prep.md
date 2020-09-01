@@ -34,7 +34,7 @@ weight: 3
       * [fail_az.sh](/Reliability/300_Testing_for_Resiliency_of_EC2_RDS_and_S3/Code/FailureSimulations/bash/fail_az.sh)
       * [fail_instance.sh](/Reliability/300_Testing_for_Resiliency_of_EC2_RDS_and_S3/Code/FailureSimulations/bash/fail_instance.sh)
       * [failover_rds.sh](/Reliability/300_Testing_for_Resiliency_of_EC2_RDS_and_S3/Code/FailureSimulations/bash/failover_rds.sh)
-1. 이제 Cloud9을 실행시킵니다([AWS Cloud9 Console로 가기](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2#)). 콘솔로 이동하여 실습환경셋업에서 생성한 `WellArchitectedWorkshop's Cloud9`을 선택합니다.
+1. 이제 Cloud9을 실행시킵니다([AWS Cloud9 Console로 가기](https://ap-northeast-2.console.aws.amazon.com/cloud9/home?region=ap-northeast-2#)). 콘솔로 이동하여 실습환경셋업에서 생성한 `WellArchitectedWorkshop's Cloud9`을 선택합니다.
       ![](/images/reliability/reliability-cloud9-start.png)      
 1. 다운로드 받은 세 파일을 Cloud9에 업로드합니다. 상단의 메뉴에서 **File** -> **Upload Local Files**...을 클릭하고 업로드할 파일을 선택합니다.
       ![](/images/reliability/reliability-cloud9-upload.png)      

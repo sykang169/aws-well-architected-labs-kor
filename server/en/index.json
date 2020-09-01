@@ -1,27 +1,27 @@
 [
 {
-	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/",
+	"uri": "http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/",
 	"title": "홈",
 	"tags": [],
 	"description": "",
 	"content": "Well Architected Labs  Introduction The Well-Architected framework has been developed to help cloud architects build the most secure, high-performing, resilient, and efficient infrastructure possible for their applications. This framework provides a consistent approach for customers and partners to evaluate architectures, and provides guidance to help implement designs that will scale with your application needs over time.\nThis repository contains documentation and code in the format of hands-on labs to help you learn, measure, and build using architectural best practices. The labs are categorized into levels, where 100 is introductory, 200/300 is intermediate and 400 is advanced.\nLicense Licensed under the Apache 2.0 and MITnoAttr License.\nCopyright 2018-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.\nLicensed under the Apache License, Version 2.0 (the \u0026ldquo;License\u0026rdquo;). You may not use this file except in compliance with the License. A copy of the License is located at\nhttps://aws.amazon.com/apache2.0/\nor in the \u0026ldquo;license\u0026rdquo; file accompanying this file. This file is distributed on an \u0026ldquo;AS IS\u0026rdquo; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n "
 },
 {
-	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/",
+	"uri": "http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/setup/",
 	"title": "Setup",
 	"tags": [],
 	"description": "",
 	"content": " The CloudFormation`s stack created in the next chapter includes all infrastructure and the CI/CD pipeline of master and develop.\n This lab include how to improve your code quality using AWS services. developers can commit, test, and deploy code with minimal effort. The deployment and testing environment is automated.\ninfrastructure Service    Name contents     CodeCommit this is code repository, the development code is JAVA and Gradle.   CodeBuild The build tool is CodeBuild. It using Junit for UnitTest and the result is report to xml. The printed report can be viewed directly from the console using CodeCommit\u0026rsquo;s report group.   CodeDeploy Tested code is automatically deployed to the Dev environment. The code pushed to the Develop Branch is deploy to the DevWebApp01 instance and starts profiling by CodeGuru\u0026rsquo;s profiler. And when all tests pass and merge into Master, the code is automatically deployed as ProdWebApp01.   CodePipeline Visualize the series of steps above as CodePipeline. Developers can immediately find out where the pushed code has a problem.   CodeGuru When Pull-Request, Code-Review is automatically performed. Profiling of the code deployed on DevWebapp01, ProdWebapp01.    -let`s set up the lab environment using CloudFomration.\n"
 },
 {
-	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/categories/",
+	"uri": "http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/tags/",
+	"uri": "http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

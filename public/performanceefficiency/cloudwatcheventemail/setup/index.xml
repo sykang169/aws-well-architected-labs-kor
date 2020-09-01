@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>사용자 경보 설정 on AWS Well-Architected Labs</title>
-    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/</link>
+    <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/</link>
     <description>Recent content in 사용자 경보 설정 on AWS Well-Architected Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     
-	<atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
