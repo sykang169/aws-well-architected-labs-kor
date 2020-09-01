@@ -266,7 +266,7 @@ if __name__ == "__main__":
     logger = init_logging()
     event = {
         'log_level': 'DEBUG',
-        'region_name': 'us-west-2',
+        'region_name': 'ap-northeast-2',
         'secondary_region_name': 'us-east-2',
         'cfn_region': 'us-east-2',
         'workshop': 'LondonSummit',

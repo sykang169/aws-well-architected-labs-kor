@@ -347,7 +347,7 @@ if __name__ == "__main__":
             'status': 'CREATE_COMPLETE'
         },
         'log_level': 'DEBUG',
-        'region_name': 'us-west-2',
+        'region_name': 'ap-northeast-2',
         'cfn_region': 'us-east-2',
         'cfn_bucket': 'aws-well-architected-labs-ohio',
         'folder': 'Reliability/',

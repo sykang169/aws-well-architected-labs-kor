@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>EC2 적정크기 찾기 (MEM) on AWS Well-Architected Labs</title>
-    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/</link>
+    <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/</link>
     <description>Recent content in EC2 적정크기 찾기 (MEM) on AWS Well-Architected Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate>
     
-	<atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</link>
+      <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</guid>
+      <guid>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</guid>
       <description>AAWS 리소스를 사용하려면 권한이 필요합니다. 이제 에이전트가 CloudWatch에 지표를 작성하는 데 필요한 권한을 부여하기 위해 IAM 역할을 생성합니다. Amazon은 해당 용도로만 사용 할 수 있는 CloudWatchAgentServerPolicy 및 CloudWatchAgentAdminPolicy라는 두 개의 기본 정책을 만들었습니다.
   AWS Management Console로 로그인 한 다음 IAM console로 들어갑니다.   왼쪽 메뉴페이지에서 Roles을 선택하고 Create role을 클릭합니다.   Choose a use case 아래, EC2를 클릭합니다(EC2가 AWS Services를 호출하는 것을 허락). 그리고 Next: Permissions를 클릭합니다.</description>
     </item>
     
     <item>
       <title>EC2인스턴스에 CloudWatch IAM role 연결하기</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</link>
+      <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</guid>
+      <guid>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</guid>
       <description>이제 이전 스텝에서 생성한 IAM Role created 기존의 EC2인스턴스와 연결할 것입니다. Amazon EC2 Dashboard 로 가겠습니다..   왼쪽 메뉴에서 Instances를 클릭하세요.   검색창에 WellArchitectedLabsStack을 입력하여 오토스캐일링 그룹이 자동으로 생성한 2개의 인스턴스를 찾습니다. 그리고 하나를 선택한수 상단의 Action버튼을 클릭합니다. 그리고 Instance Settings -&amp;gt; Attach/Replace IAM Role 을 아래 그림과 같이 순서대로 클릭합니다.   IAM role의 드랍 박스 버튼을 클릭하여 이전에 생성한 CloudWatchAgentServerRole 역할을 검색 한 후 선택하고 Apply를 클릭합니다.</description>
     </item>
     
     <item>
       <title>Cloudwatch Agent 수동 설치</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</link>
+      <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</guid>
+      <guid>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</guid>
       <description>이제 수동으로 CloudWatch agent 설치한 후 메모리 데이타 수집을 시작할 것입니다.Amazon EC2 Dashboard로 갑니다.   CloudWatchAgentServerRole IAM role을 연결한 EC2인스턴스의 접속정보를 복사하겠습니다. IAM role을 연결한 인스턴스를 선택하고 Connect를 누릅니다.   Connect to your instance 대화창에서 example에 있는 접속정보를 복사합니다.
   이 정보는 bastionhost에서 접속할때 필요하니 어딘가 복사해 둡니다.
   Loadbalancer와 연결된 EC2는 PrivateSubnet에 있기 때문에 VPC외부에서는 직접 접근이 불가능합니다. BastionHost를 이용해 EC2에 접근하도록 하겠습니다. EC2가 사용하는 pem 키를 bastionhost로 복사하겠습니다.</description>
@@ -43,10 +43,10 @@
     
     <item>
       <title>업데이트 된 Amazon EC2 리소스 최적화 권장 사항</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</link>
+      <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</guid>
+      <guid>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</guid>
       <description>이 실습은 실제 사용 계정에서 진행 해보세요. 현재 Lab환경으로는 수행하실 수 없습니다.
  이 단계를 완료하려면 Amazon EC2 리소스 최적화를 활성화해야합니다. AWS Cost Explorer, 권장 사항 (왼쪽 리스트) 섹션으로 이동하면됩니다.
  인스턴스에 CloudWatch 에이전트를 방금 설치 한 경우 Amazon EC2 Resource Optimization에서 업데이트 된 권장 사항을 제공하는 데 며칠이 걸릴 수 있으므로 첫 번째 확인 중에 메모리 데이터가 표시되지 않더라도 걱정하지 마십시오.
@@ -55,20 +55,20 @@
     
     <item>
       <title>AMAZON EC2 올바를 크기를 위한 모범사례</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</link>
+      <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</guid>
+      <guid>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</guid>
       <description>시작은 간단하게: 유휴리소스는와 중요하지 않은 개발/QA 및 이전 세대 인스턴스의 비용절감은 식별하기 쉽고 테스트 빠르게 적용해볼 수 있습니다(Amazon EC2 시작시간 통계는 다른 인스턴스보다 오래 실행 된 인스턴스를 식별하는 데 사용될 수 있습니다).
   마이그레이션을 진행하기 전에 올바른 크기를 먼저 식별하는게 좋습니다: 시간을 절약하기 위해 올바른 크기 조정을 건너 뛰면 마이그레이션 속도가 증가 할 수는 있지만 잠재적으로 더 긴 시간 동안 더 많은 클라우드 인프라 지출이 발생할 가능성이 있습니다.</description>
     </item>
     
     <item>
       <title>실습 종료</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</link>
+      <link>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</guid>
+      <guid>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</guid>
       <description> IAM role CloudWatchAgentServerRole을 삭제합니다.  </description>
     </item>
     

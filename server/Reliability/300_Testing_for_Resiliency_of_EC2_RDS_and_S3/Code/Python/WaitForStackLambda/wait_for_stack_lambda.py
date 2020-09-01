@@ -168,7 +168,7 @@ if __name__ == "__main__":
     event = {
         "log_level": "DEBUG",
         "region_name": "us-east-2",
-        "secondary_region_name": "us-west-2",
+        "secondary_region_name": "ap-northeast-2",
         "cfn_region": "us-east-2",
         "cfn_bucket": "aws-well-architected-labs-ohio",
         "folder": "Reliability/",

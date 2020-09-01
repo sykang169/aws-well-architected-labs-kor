@@ -53,7 +53,7 @@
   "Mappings" : {
     "Region2Examples" : {
       "us-east-1"      : { "Examples" : "https://s3.amazonaws.com/cloudformation-examples-us-east-1" },
-      "us-west-2"      : { "Examples" : "https://s3-us-west-2.amazonaws.com/cloudformation-examples-us-west-2" },
+      "ap-northeast-2"      : { "Examples" : "https://s3-ap-northeast-2.amazonaws.com/cloudformation-examples-ap-northeast-2" },
       "us-west-1"      : { "Examples" : "https://s3-us-west-1.amazonaws.com/cloudformation-examples-us-west-1" },
       "eu-west-1"      : { "Examples" : "https://s3-eu-west-1.amazonaws.com/cloudformation-examples-eu-west-1" },
       "eu-west-2"      : { "Examples" : "https://s3-eu-west-2.amazonaws.com/cloudformation-examples-eu-west-2" },
@@ -186,7 +186,7 @@
 
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"PV64" : "ami-c87053b2", "HVM64" : "ami-97785bed", "HVMG2" : "ami-0a6e3770"},
-      "us-west-2"        : {"PV64" : "ami-31d86849", "HVM64" : "ami-f2d3638a", "HVMG2" : "ami-ee15a196"},
+      "ap-northeast-2"        : {"PV64" : "ami-31d86849", "HVM64" : "ami-f2d3638a", "HVMG2" : "ami-ee15a196"},
       "us-west-1"        : {"PV64" : "ami-d8494bb8", "HVM64" : "ami-824c4ee2", "HVMG2" : "ami-0da4a46d"},
       "eu-west-1"        : {"PV64" : "ami-e539a69c", "HVM64" : "ami-d834aba1", "HVMG2" : "ami-af8013d6"},
       "eu-west-2"        : {"PV64" : "NOT_SUPPORTED", "HVM64" : "ami-403e2524", "HVMG2" : "NOT_SUPPORTED"},

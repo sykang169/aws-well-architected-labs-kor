@@ -584,7 +584,7 @@
     "BastionHost": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "ImageId": "ami-0e34e7b9ca0ace12d",
+        "ImageId": "ami-0bd7691bf6470fe9c",
         "InstanceType": {
           "Fn::FindInMap": [
             "instancesTypes",
@@ -830,7 +830,7 @@
     "ASGLaunchConfigC00AF12B": {
       "Type": "AWS::AutoScaling::LaunchConfiguration",
       "Properties": {
-        "ImageId": "ami-0e34e7b9ca0ace12d",
+        "ImageId": "ami-0bd7691bf6470fe9c",
         "InstanceType": "t2.micro",
         "IamInstanceProfile": {
           "Ref": "ASGInstanceProfile"
@@ -846,7 +846,7 @@
         "UserData": {
           "Fn::Base64": {
               "Fn::Join" : [ "", [
-                "#include https://sykang-productionapp.s3-us-west-2.amazonaws.com/bootstrap_rds.sh"
+                "#include https://sykang-productionapp.s3-ap-northeast-2.amazonaws.com/bootstrap_rds.sh"
               ]
             ]
           }
@@ -1209,7 +1209,7 @@
       "us-east-2": {
         "RANGE": "10.43"
       },
-      "us-west-2": {
+      "ap-northeast-2": {
         "RANGE": "10.42"
       },
       "us-west-1": {
@@ -1282,7 +1282,7 @@
         "HVM64": "ami-0ff8a91507f77f867",
         "HVMG2": "ami-0a584ac55a7631c0c"
       },
-      "us-west-2": {
+      "ap-northeast-2": {
         "HVM64": "ami-a0cfeed8",
         "HVMG2": "ami-0e09505bc235aa82d"
       },
@@ -1599,7 +1599,7 @@
                 {
                   "Ref": "AWS::Region"
                 },
-                "us-west-2"
+                "ap-northeast-2"
               ]
             }
           ]

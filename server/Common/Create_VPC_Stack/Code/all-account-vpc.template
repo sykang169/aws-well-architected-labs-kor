@@ -1160,7 +1160,7 @@
       "us-east-2": {
         "RANGE": "10.43"
       },
-      "us-west-2": {
+      "ap-northeast-2": {
         "RANGE": "10.42"
       },
       "us-west-1": {
@@ -1233,7 +1233,7 @@
         "HVM64": "ami-0ff8a91507f77f867",
         "HVMG2": "ami-0a584ac55a7631c0c"
       },
-      "us-west-2": {
+      "ap-northeast-2": {
         "HVM64": "ami-a0cfeed8",
         "HVMG2": "ami-0e09505bc235aa82d"
       },
@@ -1550,7 +1550,7 @@
                 {
                   "Ref": "AWS::Region"
                 },
-                "us-west-2"
+                "ap-northeast-2"
               ]
             }
           ]

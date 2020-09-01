@@ -18,9 +18,9 @@ weight: 6
       * 그런 다음 AWS RDS 기본 DB 인스턴스와 동일한 AZ에서 다시 시도합니다.이 시나리오를 **시나리오 2**라고합니다.
       * 이러한 방식으로 3 개의 AZ 중 2 개를 제거하는 것은 가능성이 낮은 사용 사례이지만 극한 상황에서도 AWS 시스템이 서비스 무결성을 유지하기 위해 어떻게 작동하는지 보여줍니다.
       * 그리고 이러한 방식으로 실행하면 두 가지 다른 시나리오에서 영향과 대응을 알 수 있습니다.
-1. AZ의 실패를 시뮬레이션하려면 서비스에서 사용하는 가용 영역 (`us-west-2a`, `us-west-2b` 또는 `us-west-2c`) 중 하나를 `<az>`로 선택합니다.
-      * **시나리오 1**의 경우 RDS DB 인스턴스에 대해 기본도 보조도 아닌 AZ를 선택합니다. 다음 RDS 콘솔이 주어지면 `us-west-2c`를 선택합니다.
-      * **시나리오 2**의 경우 RDS DB 인스턴스의 기본 AZ를 선택합니다. 다음 RDS 콘솔이 주어지면 `us-west-2b`를 선택합니다.
+1. AZ의 실패를 시뮬레이션하려면 서비스에서 사용하는 가용 영역 (`ap-northeast-2a`, `ap-northeast-2b` 또는 `ap-northeast-2c`) 중 하나를 `<az>`로 선택합니다.
+      * **시나리오 1**의 경우 RDS DB 인스턴스에 대해 기본도 보조도 아닌 AZ를 선택합니다. 다음 RDS 콘솔이 주어지면 `ap-northeast-2c`를 선택합니다.
+      * **시나리오 2**의 경우 RDS DB 인스턴스의 기본 AZ를 선택합니다. 다음 RDS 콘솔이 주어지면 `ap-northeast-2b`를 선택합니다.
       ![DBConfigurationShort](/Reliability/300_Testing_for_Resiliency_of_EC2_RDS_and_S3/Images/DBConfigurationShort.png)
 
 1. 아래 명령어를 입력합니다. VPC ID는 이전에 기록한 `<vpc-id>`를 사용합니다.
@@ -46,9 +46,9 @@ weight: 6
 
 이 시나리오는 아키텍처에서 AZ 당 하나의 EC2 서버 만 있기 때문에 EC2 장애 주입 테스트와 유사합니다. 해당 테스트와 동일한 대쉬보드와 화면을 관찰해보세요.
 
-* [EC2 Instances](http://console.aws.amazon.com/ec2/v2/home?region=us-west-2#Instances:)
-* Load Balancer [Target group](http://console.aws.amazon.com/ec2/v2/home?region=us-west-2#TargetGroups:)
-* [Auto Scaling Groups](http://console.aws.amazon.com/ec2/autoscaling/home?region=us-west-2#AutoScalingGroups:)
+* [EC2 Instances](http://console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#Instances:)
+* Load Balancer [Target group](http://console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#TargetGroups:)
+* [Auto Scaling Groups](http://console.aws.amazon.com/ec2/autoscaling/home?region=ap-northeast-2#AutoScalingGroups:)
 
 관찰하게 될 EC2 장애 주입과의 차이점은 Auto Scaling이 나머지 AZ에서 요청 된 2 개의 EC2 인스턴스의 균형을 맞추려고 시도 할 때 이미 EC2 인스턴스가있는 AZ에서 교체 EC2 인스턴스를 가져온다는 것입니다.
 
@@ -68,11 +68,11 @@ weight: 6
 
 이 단계는 선택 사항입니다. AZ를 다시 정상으로 돌리려면 아래 내용을 수행하세요.
 
-1. [Auto Scaling Group console](http://console.aws.amazon.com/ec2/autoscaling/home?region=us-west-2#AutoScalingGroups:)으로 갑니다.
+1. [Auto Scaling Group console](http://console.aws.amazon.com/ec2/autoscaling/home?region=ap-northeast-2#AutoScalingGroups:)으로 갑니다.
 1. **MasterAccount-ASG**로 시작하는 Auto Scaling Group를 선택합니다.
 1. Actions >> Edit
 1. **Subnet**에 **WellArchitectedLabsStack/VPC/PrivateSubnet**중 없는 것을 추가합니다.(총 2개, PrivateSubnet1, PrivateSubnet2 ) 그리고 **Save**을 누릅니다.
-1. [Network ACL console](https://us-west-2.console.aws.amazon.com/vpc/home?region=us-west-2#acls:)로 갑니다.
+1. [Network ACL console](https://ap-northeast-2.console.aws.amazon.com/vpc/home?region=ap-northeast-2#acls:)로 갑니다.
 1. **WellArchitectedLabsStack/VPC**의 NACL을 살펴봅니다.
 1.  **Default**가 아닌 값을 찾습니다.
       1. NACL을 선택합니다.
