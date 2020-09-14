@@ -523,7 +523,7 @@ Resources:
         Fn::Base64:
           Fn::Join:
           - ''
-          - - "#include https://sykang-productionapp.s3-ap-northeast-2.amazonaws.com/bootstrap_rds.sh"
+          - - "#include https://sykang-productionapp.s3-us-west-2.amazonaws.com/bootstrap_rds_new.sh"
       KeyName:
         Ref: KeyName
     DependsOn:
@@ -769,7 +769,7 @@ Mappings:
       RANGE: '10.42'
     us-east-2:
       RANGE: '10.43'
-    ap-northeast-2:
+    us-west-2:
       RANGE: '10.42'
     us-west-1:
       RANGE: '10.43'
@@ -816,7 +816,7 @@ Mappings:
     us-east-1:
       HVM64: ami-0ff8a91507f77f867
       HVMG2: ami-0a584ac55a7631c0c
-    ap-northeast-2:
+    us-west-2:
       HVM64: ami-a0cfeed8
       HVMG2: ami-0e09505bc235aa82d
     us-west-1:
@@ -885,13 +885,21 @@ Outputs:
       - LB8A12904C
       - LoadBalancerName
     Export:
-      Name: albname
+      Name:
+        Fn::Join:
+        - ''
+        - - albname-
+          - Ref: WorkloadName
   S3bucket:
     Description: The name of s3 bucket for CUR
     Value:
       Ref: CURmaster
     Export:
-      Name: s3bucket
+      Name: 
+        Fn::Join:
+        - ''
+        - - s3bucket-
+          - Ref: WorkloadName
   BastionHostDNS:
     Description: The name of bastionhost dnS
     Value:
@@ -899,7 +907,12 @@ Outputs:
       - BastionHost
       - PublicDnsName
     Export:
-      Name: Bastionhost
+      Name: 
+        Fn::Join:
+        - ''
+        - - Bastionhost-
+          - Ref: WorkloadName
+
   ALBDNS:
     Description: The address of an ApplicationLoadBalancer
     Value:
@@ -907,13 +920,21 @@ Outputs:
       - LB8A12904C
       - DNSName
     Export:
-      Name: albdnsaddress
+      Name: 
+        Fn::Join:
+        - ''
+        - - albdnsaddress-
+          - Ref: WorkloadName
   ASGName:
     Description: The name of an Autoscaling group
     Value:
       Ref: ASG46ED3070
     Export:
-      Name: asgname
+      Name: 
+        Fn::Join:
+          - ''
+          - - asgname-
+            - Ref: WorkloadName
   RDSDNS:
     Description: The address of RDS
     Value:
@@ -921,7 +942,11 @@ Outputs:
       - ClusterC1063A87
       - Endpoint.Address
     Export:
-      Name: rdsaddress
+      Name:
+        Fn::Join:
+          - ''
+          - - rdsaddress-
+            - Ref: WorkloadName 
 Conditions:
   CDKMetadataAvailable:
     Fn::Or:
@@ -986,4 +1011,4 @@ Conditions:
         - us-west-1
       - Fn::Equals:
         - Ref: AWS::Region
-        - ap-northeast-2
+        - us-west-2

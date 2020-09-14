@@ -2,8 +2,8 @@
 title: "Cloudwatch Agent 수동 설치"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
-pre: "<b>4. </b>"
-weight: 4
+pre: "<b>3. </b>"
+weight: 3
 ---
 
 1. 이제 수동으로 **CloudWatch agent** 설치한 후 메모리 데이타 수집을 시작할 것입니다.**Amazon EC2 Dashboard**로 갑니다.

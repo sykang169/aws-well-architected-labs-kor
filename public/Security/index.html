@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cloud9 :: AWS Well-Architected Labs</title>
+    <title>보안 :: AWS Well-Architected Labs</title>
 
     
     <link href="/css/nucleus.css?1600101544" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/setup/cloud9/">
+  <body class="" data-url="/security/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -172,7 +172,7 @@
     
     
     <li data-nav-id="/setup/" title="실습 환경 셋업" class="dd-item
-    parent
+    
         
         ">
       <a href="/setup/">
@@ -202,8 +202,8 @@
     
     
     <li data-nav-id="/setup/cloud9/" title="Cloud9" class="dd-item
-    parent
-        active
+    
+        
         ">
       <a href="/setup/cloud9/">
           <b>2-1. </b>Cloud9
@@ -1237,8 +1237,8 @@
     
     
     <li data-nav-id="/security/" title="보안" class="dd-item
-    
-        
+    parent
+        active
         ">
       <a href="/security/">
           <b>7. </b>보안
@@ -1288,22 +1288,10 @@
                   
                     
                     
-                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/setup/cloud9/" selected>한국어</option>
+                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/security/" selected>한국어</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/setup/cloud9/">English</option>
-                    
                   
               
           
@@ -1366,7 +1354,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/sykang169/aws-well-architected-labs-kor/setup/cloud9/_index.ko.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/sykang169/aws-well-architected-labs-kor/security/_index.ko.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -1393,13 +1381,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>홈</a> > <a href='/setup/'>실습 환경 셋업</a> > Cloud9
-          
-        
+            <a href='/'>홈</a> > 보안
           
         
           
@@ -1414,8 +1396,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#cloud9에-workspace를-생성할-것입니다">Cloud9에 Workspace를 생성할 것입니다:</a></li>
-        <li><a href="#workspace-만들기">Workspace 만들기</a></li>
+        <li><a href="#authors">Authors</a></li>
+        <li><a href="#introduction">Introduction</a></li>
       </ul>
     </li>
   </ul>
@@ -1435,7 +1417,7 @@
           
             <h1>
               
-              Cloud9
+              보안
             </h1>
           
 
@@ -1443,42 +1425,13 @@
 
 
 
-	<h3 id="cloud9에-workspace를-생성할-것입니다">Cloud9에 Workspace를 생성할 것입니다:</h3>
-<p>AWS Cloud9은 브라우저만으로 코드를 작성, 실행 및 디버깅할 수 있는 클라우드 기반 IDE(통합 개발 환경)입니다. 코드 편집기, 디버거 및 터미널이 포함되어 있습니다. Cloud9은 JavaScript, Python, PHP를 비롯하여 널리 사용되는 프로그래밍 언어를 위한 필수 도구가 사전에 패키징되어 제공되므로, 새로운 프로젝트를 시작하기 위해 파일을 설치하거나 개발 머신을 구성할 필요가 없습니다.</p>
-<p>Cloud9콘솔로 가기: <a href="https://console.aws.amazon.com/cloud9">https://console.aws.amazon.com/cloud9</a></p>
-<h3 id="workspace-만들기">Workspace 만들기</h3>
-
-<div class="notices info" ><p>실습은 <strong>ap-northeast-2 (서울) 리전을 선택</strong>합니다.</p>
-</div>
-
-<ol>
-<li>
-<p>오른쪽 상단의 <strong>Create Environment</strong>를 선택합니다. 
-<img src="/images/setup/cloud9-create-environment.png" alt="cloud902"></p>
-</li>
-<li>
-<p>Name environment의 Name에 <code>WellArchitectedWorkshop's Cloud9</code>을 입력하고 Description에는 <code>for Workshop</code>을 입력한 후 <strong>Next Step</strong>을 누릅니다.
-<img src="/images/setup/cloud9-name-environment.png" alt="cloud903"></p>
-</li>
-<li>
-<p>서울리전을 사용한다면 Configure settings에서 인스턴스 크기를 <strong>m5.large</strong>로 설정하고 <strong>Next step</strong>을 선택합니다. 
-<img src="/images/setup/cloud9-configure-setting.png" alt="cloud904"></p>
-</li>
-</ol>
-
-<div class="notices warning" ><p>Cloud9을 Default환경에 배치시키세요. 실습용 VPC에 위치시키면 카오스테스트를 진행할 때 Cloud9이 종료될 수 있습니다.</p>
-</div>
-
-<ol>
-<li>
-<p>Review에서 생성되는 Cloud9의 환경과 셋팅을 확인한 후 <strong>Create Environment</strong>를 선택합니다. 
-<img src="/images/setup/cloud9-review.png" alt="cloud905"></p>
-</li>
-<li>
-<p>생성이 완료되면 아래와 같은 Cloud9이 셋팅됩니다. 
-<img src="/images/setup/cloud9-settig-fin.png" alt="cloud905"></p>
-</li>
-</ol>
+	<h1 id="cloudfront-with-waf-protection">CLOUDFRONT WITH WAF PROTECTION</h1>
+<h3 id="authors">Authors</h3>
+<p>Eunsu, Shin</p>
+<h3 id="introduction">Introduction</h3>
+<p>이 실습 실습에서는 Amazon CloudFront 및 AWS 웹 애플리케이션 방화벽 (WAF)을 사용하여 네트워크 기반 공격으로부터 워크로드를 보호하는 단계를 안내합니다. 학습 한 기술은 AWS Well-Architected 프레임 워크에 따라 워크로드를 보호하는 데 도움이됩니다.</p>
+<p>AWS 보안에 대한 자세한 내용은 AWS 보안을 방문하고 AWS Well-Architected 보안 백서 또는 온라인 <a href="https://wa.aws.amazon.com/">https://wa.aws.amazon.com/</a>을 참조하십시오.</p>
+<p><a href="https://sessin.github.io/awswafhol/">AWS WAF 공격 및 방어</a>실습 시작하기.</p>
 
 
 
@@ -1572,7 +1525,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1587,7 +1539,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1604,9 +1555,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2216,6 +2164,7 @@
             
             
                 
+                    
                     
                 
                 

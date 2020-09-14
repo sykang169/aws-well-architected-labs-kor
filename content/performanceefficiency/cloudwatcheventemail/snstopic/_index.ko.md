@@ -12,6 +12,9 @@ SNS topic에서 연결한 email은 해당 계정에서 재승인을 해야 올�
 그리고 **Confirm subription**을 누르세요. 아래와 같은 화면이 나타나면서 구독이 완료됩니다. 
    ![CloudwatchAlarm](/images/war/cloudwatch-confirm-fin.png#medium)
 
+{{% notice info %}}
+아래 작업은 SNS를 제공하는 리전에서 사용가능합니다.(서울리전은 불가)
+{{% /notice %}}
 이제 추가로 경보 발생시 휴대폰 문자를 보낼 수 있도록 SNS topic에 휴대폰 번호를 추가해보겠습니다. 
 
 Amazon SNS 콘솔 가기 : https://console.aws.amazon.com/sns/ 

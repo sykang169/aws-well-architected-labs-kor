@@ -403,7 +403,7 @@ Resources:
       Description: from 0.0.0.0/0:{IndirectPort}
       FromPort:
         Fn::GetAtt:
-        - ClusterC1063A87
+        - InstanceC1063A87
         - Endpoint.Port
       GroupId:
         Fn::GetAtt:
@@ -411,7 +411,7 @@ Resources:
         - GroupId
       ToPort:
         Fn::GetAtt:
-        - ClusterC1063A87
+        - InstanceC1063A87
         - Endpoint.Port
     Metadata:
       aws:cdk:path: WellArchitectedLabsStack/DatabaseSecurityGroup/from 0.0.0.0_0:{IndirectPort}
@@ -528,7 +528,7 @@ Resources:
         Ref: KeyName
     DependsOn:
     - ASGInstanceRole
-    - ClusterC1063A87
+    - InstanceC1063A87
     Metadata:
       aws:cdk:path: WellArchitectedLabsStack/ASG/LaunchConfig
   ASG46ED3070:
@@ -702,55 +702,31 @@ Resources:
       - Ref: VPCPrivateSubnet2SubnetCFCDAA7A
     Metadata:
       aws:cdk:path: WellArchitectedLabsStack/Instance/SubnetGroup
-  ClusterC1063A87: 
-    Properties: 
-      DBClusterParameterGroupName: 
-        Ref: RDSDBClusterParameterGroup
-      DBSubnetGroupName: 
+  InstanceC1063A87:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceClass: db.t2.small
+      AllocatedStorage: '100'
+      CopyTagsToSnapshot: false
+      DBName: rdscluster
+      EngineVersion: 5.7.30
+      DBSubnetGroupName:
         Ref: InstanceSubnetGroupF2CBA54F
-      Engine: aurora
-      DatabaseName: rdscluster
-      MasterUserPassword: 
-        "awspassword"
-      MasterUsername: 
-        "awsuser"
-      DBClusterIdentifier: wellarchitecteddbinstance  
-      VpcSecurityGroupIds:
-        - Fn::GetAtt:
-          - DatabaseSecurityGroup7319C0F6
-          - GroupId
-    Type: "AWS::RDS::DBCluster"
-  RDSDBClusterParameterGroup: 
-    Properties: 
-      Description: "CloudFormation Sample Aurora Cluster Parameter Group"
-      Family: aurora5.6
-      Parameters: 
-        time_zone: US/Eastern
-    Type: "AWS::RDS::DBClusterParameterGroup"
-  RDSDBInstance1: 
-    Properties: 
-      DBClusterIdentifier: 
-        Ref: ClusterC1063A87
-      DBInstanceClass: db.r3.xlarge
-      DBParameterGroupName: 
-        Ref: RDSDBParameterGroup
-      DBSubnetGroupName: 
-        Ref: InstanceSubnetGroupF2CBA54F
-      Engine: aurora
-      PubliclyAccessible: "false"
-    Type: "AWS::RDS::DBInstance"
-  RDSDBInstance2: 
-    Properties: 
-      DBClusterIdentifier: 
-        Ref: ClusterC1063A87
-      DBInstanceClass: db.r3.xlarge
-      DBParameterGroupName: 
-        Ref: RDSDBParameterGroup
-      DBSubnetGroupName: 
-        Ref: InstanceSubnetGroupF2CBA54F
-      Engine: aurora
-      PubliclyAccessible: "false"
-    Type: "AWS::RDS::DBInstance"
+      MultiAZ: true
+      DeleteAutomatedBackups: false
+      DeletionProtection: false
+      Engine: mysql
+      MasterUsername: awsuser
+      MasterUserPassword: awspassword
+      StorageType: gp2
+      DBInstanceIdentifier: wellarchitecteddbinstance
+      VPCSecurityGroups:
+      - Fn::GetAtt:
+        - DatabaseSecurityGroup7319C0F6
+        - GroupId
+    UpdateReplacePolicy: Delete
+    Metadata:
+      aws:cdk:path: WellArchitectedLabsStack/Instance/Resource
   RDSDBParameterGroup: 
     Properties: 
       Description: "CloudFormation Sample Aurora Parameter Group"
@@ -939,7 +915,7 @@ Outputs:
     Description: The address of RDS
     Value:
       Fn::GetAtt:
-      - ClusterC1063A87
+      - InstanceC1063A87
       - Endpoint.Address
     Export:
       Name:

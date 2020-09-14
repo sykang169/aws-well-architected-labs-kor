@@ -7,7 +7,11 @@ The [Well-Architected](https://aws.amazon.com/well-architected) framework has be
 
 This repository contains documentation and code in the format of hands-on labs to help you learn, measure, and build using architectural best practices. The labs are categorized into levels, where 100 is introductory, 200/300 is intermediate and 400 is advanced.
 
-## Lab Website
+--> this web customize for korea well architected workshop.
+    this contents include cost optimization, performance efficiency, reliability, operational excellence.
+    normal 3-tier-web develop using well architected framework best practice.
+    this lab include original lab website contents
+## Original Lab Website
 
 | Note |
 | :---: |
@@ -26,6 +30,12 @@ The labs are structured around the five pillars of the [Well-Architected Framewo
 - [Cost Optimization](http://wellarchitectedlabs.com/cost/)
 - [Well-Architected Tool](http://wellarchitectedlabs.com/well-architectedtool/)
 
+
+## Custom Lab Website
+| Note |
+| :---: |
+|To run these AWS Well-Architected Labs, please go to:|
+|**http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/**|
 
 ## License
 Licensed under the Apache 2.0 and MITnoAttr License.

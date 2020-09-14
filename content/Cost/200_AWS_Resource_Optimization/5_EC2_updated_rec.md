@@ -2,8 +2,8 @@
 title: "업데이트 된 Amazon EC2 리소스 최적화 권장 사항"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
-pre: "<b>5. </b>"
-weight: 5
+pre: "<b>4. </b>"
+weight: 4
 ---
 
 {{% notice warning %}}

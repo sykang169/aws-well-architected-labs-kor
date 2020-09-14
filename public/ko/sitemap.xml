@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/1_cloudwatch_intro/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/1_cloudwatch_intro/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
@@ -18,22 +18,22 @@
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/</loc>
-    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/3_failure_injection_prep/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/3_failure_injection_prep/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
@@ -48,22 +48,22 @@
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</loc>
-    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/5_failure_injection_rds/</loc>
-    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/5_failure_injection_rds/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
@@ -78,13 +78,13 @@
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/</loc>
-    <lastmod>2020-04-24T11:16:08-04:00</lastmod>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</loc>
-    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/</loc>
+    <lastmod>2020-04-24T11:16:08-04:00</lastmod>
   </url>
   
   <url>
@@ -201,6 +201,10 @@
                 hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/security/</loc>
   </url>
   
   <url>
