@@ -66,6 +66,9 @@ weight: 4
 
 * 웹 사이트 사용 가능한지 확인. 
 * 나머지 EC2 인스턴스가 모든 요청을 처리합니다.
+{{% notice info %}}
+BastionHost가 떨어질 수도 있습니다. 카오스엔지니어링에서는 이러한 경우도 고려해야하지만 아래 실습내용은 EC2를 다루고 있습니다. 다시 Cloud9에서 다시 명령어를 실행하세요. 
+{{% /notice %}}
 
 #### 4.2.2 로드벨런싱
 
@@ -80,6 +83,7 @@ weight: 4
       * 비정상 인스턴스 인스턴스가 생겼다면 리스트에 새로 추가 된 인스턴스가 생깁니다. 로드 밸런서는 인스턴스 초기화가 완료 될 때까지 트래픽을 전송하지 않습니다. 궁극적으로 정상 상태로 전환 된 다음 트래픽 수신을 시작합니다.
       * 새 인스턴스는 실패한 인스턴스와 동일한 가용 영역에서 시작됩니다. Amazon EC2 Auto Scaling은 사용자가 지정한 모든 가용 영역에서 자동으로 균형을 유지합니다.
         ![TargetGroups](/images/reliability/reliability-ec2-targetgroup.png)    
+      
 
 1. 동일한 콘솔에서 이제 **Monitoring** 탭을 클릭하고 **Unhealthy hosts** 및 **Healthy hosts**와 같은 메트릭을 봅니다.
       ![TargetGroupsMonitoring](/images/reliability/reliability-ec2-montoring.png)   

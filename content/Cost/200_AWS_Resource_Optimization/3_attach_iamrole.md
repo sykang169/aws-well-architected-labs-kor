@@ -2,8 +2,8 @@
 title: "EC2인스턴스에 CloudWatch IAM role 연결하기"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
-pre: "<b>3. </b>"
-weight: 3
+pre: "<b>2. </b>"
+weight: 2
 ---
 
 1. 이제 이전 스텝에서 생성한 IAM Role created 기존의 EC2인스턴스와 연결할 것입니다. **Amazon EC2 Dashboard** 로 가겠습니다..

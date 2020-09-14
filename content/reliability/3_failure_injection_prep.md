@@ -13,11 +13,10 @@ weight: 3
 
 테스트 하기 전에 다음을 준비하세요. 
 
-1. **Oregon**리전에서 진행됩니다.
+1. **서울**리전에서 진행됩니다.
       * AWS 콘솔을 사용하여 테스트의 영향을 평가할 것입니다.
-      * 이 실습 전체에서 귀하가 **Oregon** 지역에 있는지 확인하십시오.
+      * 이 실습 전체에서 귀하가 **서울** 지역에 있는지 확인하십시오.
 
-      ![SelectOregon](/images/reliability/reliability-region.png)      
 1. VPC ID 가져오기
       * VPC (Amazon Virtual Private Cloud)는 서비스에 대한 리소스를 배포 한 AWS 클라우드의 논리적으로 격리 된 섹션입니다.
       * 테스트를 위해서는 VPC의 **VPC ID**를 알아야합니다.
@@ -38,6 +37,8 @@ weight: 3
       ![](/images/reliability/reliability-cloud9-start.png)      
 1. 다운로드 받은 세 파일을 Cloud9에 업로드합니다. 상단의 메뉴에서 **File** -> **Upload Local Files**...을 클릭하고 업로드할 파일을 선택합니다.
       ![](/images/reliability/reliability-cloud9-upload.png)      
+
+
 
 1. 업로드가 완료되면 업로드된 파일을 Cloud9에서 확인할 수 있습니다. 
       ![](/images/reliability/reliability-cloud9-fin.png)      

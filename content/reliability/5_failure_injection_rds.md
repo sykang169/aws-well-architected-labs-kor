@@ -54,11 +54,11 @@ weight: 5
 
          ![DBPostFailConfiguration](/Reliability/300_Testing_for_Resiliency_of_EC2_RDS_and_S3/Images/DBPostFailConfiguration.png)
 
-      1. From the AWS RDS console, click on the **Logs & events** tab and scroll down to **Recent events**. You should see entries like those below. In this case failover took less than a minute.
       1. AWS RDS 콘솔에서 **Logs & events** 탭을 클릭하고 **Recent events**까지 아래로 스크롤합니다. 아래와 같은 항목이 표시됩니다. 이 경우 장애 조치는 1 분도 채 걸리지 않았습니다.
-              Mon, 14 Oct 2019 19:53:37 GMT - Multi-AZ instance failover started.
-              Mon, 14 Oct 2019 19:53:45 GMT - DB instance restarted
-              Mon, 14 Oct 2019 19:54:21 GMT - Multi-AZ instance failover completed
+
+      > * Mon, 14 Oct 2019 19:53:37 GMT - Multi-AZ instance failover started.
+      > * Mon, 14 Oct 2019 19:53:45 GMT - DB instance restarted
+      > * Mon, 14 Oct 2019 19:54:21 GMT - Multi-AZ instance failover completed
 
 #### 5.2.4 RDS 장애 주입 - 결론
 

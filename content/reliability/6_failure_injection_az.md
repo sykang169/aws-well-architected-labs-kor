@@ -11,7 +11,7 @@ weight: 6
 
 이 장애 주입은 서비스에서 사용하는 두가지 AWS 가용영역(AZ)중 하나가 문제가 생겼을 경우를 시뮬레이션합니다. AWS 가용영역은 고 가용성 애플리케이션을 구축하는 데 도움이되는 강력한 도구입니다. 애플리케이션이 AZ로 분할되면 기업은 낙뢰, 토네이도, 지진 등과 같은 문제로부터 격리되고 보호됩니다.
 
-1. AWS Console <http://console.aws.amazon.com/rds>의 RDS 대쉬보드에서 _primary_ DB 인스턴스가 어느 가용 영역에 
+1. AWS Console <http://console.aws.amazon.com/rds>의 RDS 대쉬보드에서 _primary_ DB 인스턴스가 어느 가용 영역에 있는지 확인하세요.
       * 이전에 **RDS 장애주입 테스트**를 실행 한 경우 콘솔에 _primary_ 및 _standby_ 인스턴스의 AZ가 스왑 된 것으로 표시 될 때까지 기다려야합니다.
       * A good way to run the AZ failure injection is first in an AZ _other_ than this - we'll call this **Scenario 1**
       * AZ 장애 주입을 실행하는 좋은 방법은 다른 AZ에서 먼저 실행하는 것입니다. 이 시나리오를 **시나리오 1**이라고합니다.

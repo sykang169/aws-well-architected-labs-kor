@@ -2,8 +2,8 @@
 title: "AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
-weight: 2
-pre: "<b>2. </b>"
+weight: 1
+pre: "<b>1. </b>"
 ---
 
 AAWS 리소스를 사용하려면 권한이 필요합니다. 이제 에이전트가 CloudWatch에 지표를 작성하는 데 필요한 권한을 부여하기 위해 IAM 역할을 생성합니다. Amazon은 해당 용도로만 사용 할 수 있는 *CloudWatchAgentServerPolicy* 및 *CloudWatchAgentAdminPolicy*라는 두 개의 기본 정책을 만들었습니다.

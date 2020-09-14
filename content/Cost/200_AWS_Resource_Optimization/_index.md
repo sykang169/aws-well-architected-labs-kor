@@ -28,7 +28,7 @@ pre : "<b>4-2. </b>"
 
 ## Steps:
 {{% children  %}}
-a
+
 ## 모범 사례 점검표
 - [ ] Amazon CloudWatch를 시작하고 EC2 인스턴스의 평균 CPU, 디스크 및 네트워크 사용량을 관찰하십시오
 - [ ] EC2 인스턴스에 CloudWatch 에이전트를 수동으로 설치하여 메모리 사용률을 추적합니다.
