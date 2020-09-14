@@ -11,6 +11,7 @@ This repository contains documentation and code in the format of hands-on labs t
     this contents include cost optimization, performance efficiency, reliability, operational excellence.
     normal 3-tier-web develop using well architected framework best practice.
     this lab include original lab website contents
+
 ## Original Lab Website
 
 | Note |
@@ -34,7 +35,7 @@ The labs are structured around the five pillars of the [Well-Architected Framewo
 ## Custom Lab Website
 | Note |
 | :---: |
-|To run these AWS Well-Architected Labs, please go to:|
+|To run these Custom korea AWS Well-Architected Labs, please go to:|
 |**http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/**|
 
 ## License
