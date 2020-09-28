@@ -3,8 +3,8 @@ title: "장애 주입 준비"
 menutitle: "장애 주입 준비"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
-pre: "<b>3. </b>"
-weight: 3
+pre: "<b>1. </b>"
+weight: 1
 ---
 
 **장애 주입** (**chaos testing**라고도 함)은 워크로드의 복원력을 검증하고 이해하는 효과적이고 필수적인 방법이며 [AWS Well-Architected Reliability Pillar](https://aws.amazon.com/architecture/well-architected/)의 권장 사례입니다. 여기에서 다양한 장애 시나리오를 시작하고 시스템이 어떻게 반응하는지 평가합니다.

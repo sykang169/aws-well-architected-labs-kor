@@ -3,279 +3,279 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/1_cloudwatch_intro/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/1_cloudwatch_intro/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/2_resource_opt/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/3_failure_injection_prep/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/2_resource_opt/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/4_failure_injection_ec2/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/3_failure_injection_prep/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/4_failure_injection_ec2/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/4_act_resource_opt/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/5_failure_injection_rds/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/6_failure_injection_az/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/4_act_resource_opt/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/5_failure_injection_rds/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/6_failure_injection_az/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/6_tear_down/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/6_tear_down/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/100_aws_resource_optimization/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/200_aws_resource_optimization/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/introduction/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/introduction/framework/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/framework/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/introduction/pillar/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/pillar/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/</loc>
     <lastmod>2020-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/"
                 />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/setup/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/setup/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/setup/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/"
                 />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/setup/cloud9/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/cloud9/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/setup/cloud9/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/cloud9/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/setup/cloud9/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/cloud9/"
                 />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/setup/lab-setup-master/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/lab-setup-master/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/cost/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/systemmanager/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/systemmanager/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/inventory/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/patch/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/reliability/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/reliability/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/"
                 />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/security/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/default-dashboard/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/default-dashboard/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/setup/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/setup/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/snstopic/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/snstopic/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/ec2/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/ec2/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/inventory/inventorysetup/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/inventorysetup/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/inventory/statemanager/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/statemanager/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/patch/patchmanager/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/patchmanager/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/operational-excellence/patch/awsrunpatchbaseline/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/awsrunpatchbaseline/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/categories/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/categories/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/categories/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/credits/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/credits/</loc>
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/tags/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/en/tags/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com/tags/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/"
                 />
   </url>
   

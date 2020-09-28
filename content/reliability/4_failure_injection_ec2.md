@@ -3,8 +3,8 @@ title: "EC2 장애 주입을 사용하여 안정성 테스트"
 menutitle: "EC2 장애 주입"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
-pre: "<b>4. </b>"
-weight: 4
+pre: "<b>2. </b>"
+weight: 2
 ---
 
 ### 4.1 EC2 장애 주입
