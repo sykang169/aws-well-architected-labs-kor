@@ -6,32 +6,37 @@ pre: "<b>1. </b>"
 weight: 531
 ---
 
-## Systems Manager: 패치 관리자
+## Systems Manager: 패치 관리자(Patch Manager)
 
 AWS Systems Manager [패치 관리자](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html)는 보안 관련 및 기타 유형의 업데이트로 관리형 인스턴스에 패치를 적용하는 프로세스를 자동화해 줍니다.
 
 >**Note**<br> Linux 기반 인스턴스의 경우 non-security 업데이트 패치를 설치할 수 있습니다.
 
-운영체제 유형별로 Amazon EC2인스턴스 또는 온프레미스 서버 및 가상머신(VM)을 패치 할 수 있습니다. 지원되는 버전은 Windows, Ubuntu Server, RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 및 Amazon Linux가 포함됩니다. 인스턴스를 스캔하여 누락된 패치에 대한 보고서만 보거나 누락된 모든 패치를 스캔하고 자동으로 설치할 수 있습니다. Amazon EC2태그를 사용하여 인스턴스를 개별적으로 또는 대규모 그룹으로 타겟팅 할 수 있습니다.
+운영체제 유형별로 Amazon EC2인스턴스 또는 온프레미스 서버 및 가상머신(VM)을 패치할 수 있습니다. 지원되는 버전은 Windows, Ubuntu Server, RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 및 Amazon Linux가 포함됩니다. 인스턴스를 스캔하여 누락된 패치에 대한 보고서만 보거나 누락된 모든 패치를 스캔하고 자동으로 설치할 수 있습니다. Amazon EC2 태그를 사용하여 인스턴스를 개별적으로 또는 대규모 그룹으로 패치를 수행할 수도 있습니다.
 
-{{% notice warning %}}
-**AWS는 패치 관리자에서 패치를 제공하기 전에 Windows 또는 Linux 용 패치를 테스트하지 않습니다.**
-**또한 패치관리자가 업데이트를 수행하면 패치 된 인스턴스는 재부팅됩니다**.
-**무엇보다도 프로덕션 환경에 배포하기 전에 항상 패치를 철저히 테스트하십시오**.
-{{% /notice%}}
+> **Warnings**
+>  * 패치 관리자를 통해 고객에게 패치를 제공하기 전 AWS는 별도로 Windows 또는 Linux 패치를 테스트하지 않습니다. 
+>  * 패치관리자가 업데이트를 수행 시 패치 된 인스턴스는 재부팅 됩니다.
+>  * 프로덕션 환경에 적용하기 전 철저히 패치를 테스트 해야 합니다.
 
-## 패치기준
 
-패치 관리자는 **패치기준**을 사용합니다. 패치 기준은 인스턴스에 대한 설치가 승인되는 패치를 정의합니다. 패치 승인 또는 거부는 하나씩 지정할 수 있습니다. 또한 자동 승인 규칙을 생성하여 특정 유형의 업데이트(예: 필수 업데이트)가 자동 승인되도록 지정할 수도 있습니다. 거부된 목록은 규칙 및 승인 목록을 모두 재정의합니다.
+## 패치 기준(Patch Baseline)
+
+
+Patch Manager는 패치 기준(Patch Baseline)을 사용합니다. 여기에는 패치가 출시 된 후 며칠 이내에 패치를 자동 승인하는 규칙과 승인 및 거부 된 패치 목록이 포함됩니다. 이 실습의 뒷부분에서 Systems Manager 유지 관리 기간 작업을 사용하여 정기적으로 패치를 적용하도록 예약합니다. Patch Manager는 AWS Identity and Access Management (IAM), AWS CloudTrail 및 Amazon CloudWatch Events와 통합되어 이벤트 알림 및 사용 감사 기능을 포함하는 안전한 패치 경험을 제공합니다.
+
+<!--
+패치 관리자는 **패치 기준**을 사용합니다. 패치 기준은 인스턴스에 대한 설치가 승인되는 패치를 정의합니다. 패치 승인 또는 거부는 하나씩 지정할 수 있습니다. 또한 자동 승인 규칙을 생성하여 특정 유형의 업데이트(예: 필수 업데이트)가 자동 승인되도록 지정할 수도 있습니다. 거부된 목록은 규칙 및 승인 목록을 모두 재정의합니다.
 
 승인된 패치 목록을 사용하여 특정 패키지를 설치하려면 먼저 모든 자동 승인 규칙을 제거하십시오. 임의 패치를 명시적으로 거부로 구분하면 해당 패치는 자동 승인 규칙의 모든 기준을 만족하더라도 승인 또는 설치되지 않습니다. 또한 패치가 해당 인스턴스에 대해 승인되었더라도 인스턴스의 소프트웨어에 적용되는 경우에만 패치가 인스턴스에 설치됩니다.
 
 패치 관리자는 패치 관리자에서 지원하는 운영 체제마다 사전 정의된 패치 기준을 제공합니다. 이러한 기준은 현재 구성된 대로 사용하거나(사용자 지정할 수 없음) 고유한 사용자 지정 패치 기준을 생성할 수 있습니다. 사용자 지정 패치 기준을 사용하면 환경에 대해 승인 또는 거부되는 패치를 더욱 효과적으로 제어할 수 있습니다. 또한 미리 정의된 기준은 해당 기준을 사용하여 설치된 모든 패치에 Unspecified의 규정 준수 수준을 할당합니다. 규정 준수 값을 할당하려면 미리 정의된 기준의 복사본을 생성하고 패치에 할당할 규정 준수 값을 지정할 수 있습니다. 자세한 내용은 사용자 지정 기준 정보 및 사용자 지정 패치 기준 생성 단원을 참조하십시오.
+--> 
 
 >**Warning**<br> [패치 관리자가 지원하는 운영 체제](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-supported-oses.html)는 SSM 에이전트가 지원하는 운영 체제와 다를 수 있습니다.
 
 
-### 1 패치 기준 생성
+### 1. 패치 기준 생성
 
 1. **AWS Systems Manager**의 **Instances and Nodes**에서 **패치 관리자**를 클릭합니다.
 1. **Configure patching** 버튼 아래 **View predefined patch baseline** 버튼을 클릭합니다.
@@ -73,7 +78,7 @@ Amazon EC2 태그를 사용하여 패치 그룹을 생성합니다. Systems Mana
 * 해당 그룹에 대한 패치 기준이있는 경우 시스템은 해당 패치 기준을 적용합니다.
 * 인스턴스가 패치 그룹에 할당되지 않은 경우 시스템은 현재 구성된 default 패치 기준을 자동으로 사용합니다.
 
-### 2 패치 그룹 할당
+### 2. 패치 그룹 할당하기
 
 1. 새로 생성된 baseline **Baseline ID**를 클릭하여 세부 정보 화면을 입력합니다.(Baseline ID가 보이지 않는다면 페이지를 넘겨보세요. 이 실습에서 만든 baseline name은 `AmazonLinuxSecAndNonSecBaseline`입니다.)
 ![/images/operation/ssm-patch-pg.png](/images/operation/ssm-patch-pg.png)

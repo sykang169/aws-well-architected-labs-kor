@@ -1,19 +1,24 @@
 ---
-title: "패치 실행"
+title: "Run Command"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
 pre: "<b>2. </b>"
 weight: 532
 ---
 
+## AWS Systems Manager: Run Command
+AWS Systems Manager에서는 **서버에 로그인하지 않고** **대규모로 인스턴스를 원격으로 안전하게 관리**할 수 있는 기능을 제공하므로, 배스천 호스트, SSH 또는 원격 PowerShell이 필요 없습니다. 레지스트리 편집, 사용자 관리, 소프트웨어 및 패치 설치와 같은 **일반적인 관리 작업을** 인스턴스 그룹 전체에서 **자동화**하는 간단한 방법을 제공합니다. AWS Identity and Access Management(IAM)와의 통합을 통해 세분화된 권한을 적용하여 사용자가 인스턴스에 수행할 수 있는 작업을 **제어**할 수 있습니다. Systems Manager가 수행한 모든 작업이 AWS CloudTrail에 기록되기 때문에 환경 전체의 **변경 사항을 감사**할 수도 있습니다. Run Command는 무료로 제공됩니다.
+
+이번 실습에서는 Run Command를 이용해 패치 작업을 수행해봅니다.
+
 ## AWS-RunPatchBaseline
 
-[AWS-RunPatchBaseline](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-ssm-documents.html#patch-manager-ssm-documents-recommended-AWS-RunPatchBaseline)은 패치 기준을 사용하여 패치승인을 제어 할 수있는 명령문서입니다. 그리고 Systems Manager **Compliance** tools를 사용하여 볼 수 있는 패치 준수 정보를 볼 수 있습니다. 예를 들어 패치가 없는 인스턴스와 설치되지 않은 패치가 무엇인지 확인할 수 있습니다.
+[AWS-RunPatchBaseline](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-ssm-documents.html#patch-manager-ssm-documents-recommended-AWS-RunPatchBaseline)은 패치 기준을 사용하여 패치승인을 제어할 수 있는 명령문서입니다. 그리고 Systems Manager **Compliance** tools를 사용하여 볼 수 있는 패치 준수 정보를 볼 수 있습니다. 예를 들어 패치가 없는 인스턴스와 설치되지 않은 패치가 무엇인지 확인할 수 있습니다.
 
 Linux 운영 체제의 경우 인스턴스에 구성된 기본소스 리포지토리, 그리고 사용자지정 패치 기준에 지정한 대체 source repositories의 패치에 준수정보가 제공됩니다. AWS-RunPatchBaseline은 Windows 및 Linux 운영 체제를 모두 지원합니다.
 
 
-## AWS Systems Manager: 문서
+## AWS Systems Manager: 문서(Documents)
 
 [AWS Systems Manager 문서](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html)는 Systems Manager가 관리형 인스턴스에서 수행하는 작업을 정의합니다. Systems Manager에는 `AWS-RunPatchBaseline`을 포함하여 런타임시 매개 변수를 지정하여 사용할 수있는 많은 **사전-구성 문서**가 포함되어 있습니다. 이 문서는 JSON(JavaScript Object Notation) 또는 YAML을 사용하며 실행단계 및 매개변수를 포함합니다.
 
@@ -35,7 +40,7 @@ AWS가 제공하는 모든 자동화 및 실행 명령 **문서**는 AWS Systems
 
 ## AWS Systems Manager: Run Command
 
-[AWS Systems Manager Run Command](https://docs.aws.amazon.com/systems-manager/latest/userguide/execute-remote-commands.html)를 통해 관리형 인스턴스의 구성을 원격으로 안전하게 관리할 수 있습니다. 관리형 인스턴스는 Systems Manager용으로 구성된 하이브리드 환경의 EC2 인스턴스 또는 온프레미스 머신입니다. Run Command를 사용하면 일반적인 관리 작업을 자동화하고 대규모로 애드혹 구성을 변경할 수 있습니다. AWS 콘솔, AWS Command Line Interface, AWS Tools for Windows PowerShell 또는 AWS SDK에서 Run Command를 사용할 수 있습니다. Run Command는 무료로 제공됩니다.
+[AWS Systems Manager Run Command](https://docs.aws.amazon.com/systems-manager/latest/userguide/execute-remote-commands.html)를 통해 관리형 인스턴스의 구성을 원격으로 안전하게 관리할 수 있습니다. 관리형 인스턴스는 Systems Manager용으로 구성된 하이브리드 환경의 EC2 인스턴스 또는 온프레미스 머신입니다. Run Command를 사용하면 일반적인 관리 작업을 자동화하고 대규모로 애드혹 구성을 변경할 수 있습니다. AWS 콘솔, AWS Command Line Interface, AWS Tools for Windows PowerShell 또는 AWS SDK에서 Run Command를 사용할 수 있습니다. 
 
 ### 2 Run Command를 통한 AWS-RunPatchBaseline사용하여 인스턴스 스캔
 1. **Instances and Nodes** 아래  **Run Command**를 클릭하세요.
