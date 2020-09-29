@@ -11,7 +11,6 @@ chapter: true
 ### Introduction
 
 이 실습은 기본적인 3-tier-web에 적용할 수 있는 Best-Practice들을 포함하고 있습니다. 
-Well-Architected Framework와 
 
 AWS(Amazon Web Services)는 고객이 클라우드에서 안정적이고 안전하면서도 효율적이고 경제적인 시스템을 설계할 수 있도록 하려면 아키텍처 모범 사례를
 고객과 공유해야 한다는 점을 잘 알고 있습니다. 이러한 노력의 일환으로 개발된 AWS Well-Architected 프레임워크를 이용하면 AWS에서 시스템을 구축하면서 내리게 되는 결정의 장점과 단점을 이해할 수 있습니다. Well-Architected 시스템을 마련하면 사업의 성공 가능성이 대폭 높아질 것입니다.

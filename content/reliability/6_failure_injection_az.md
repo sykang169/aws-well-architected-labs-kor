@@ -3,8 +3,8 @@ title: "AZ 장애 주입을 사용하여 안정성 테스트"
 menutitle: "AZ 장애 주입"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
-pre: "<b>6. </b>"
-weight: 6
+pre: "<b>4. </b>"
+weight: 4
 ---
 
 ### 6.1 AZ 장애 주입

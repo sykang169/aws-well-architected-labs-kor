@@ -1,5 +1,5 @@
 ---
-title: "AMAZON EC2 올바를 크기를 위한 모범사례"
+title: "AMAZON EC2 올바른 크기를 위한 모범사례"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
 pre: "<b>5. </b>"

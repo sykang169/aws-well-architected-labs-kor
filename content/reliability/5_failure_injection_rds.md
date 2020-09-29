@@ -3,8 +3,8 @@ title: "RDS 장애 주입을 사용하여 안정성 테스트"
 menutitle: "RDS 장애 주입"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
-pre: "<b>5. </b>"
-weight: 5
+pre: "<b>3. </b>"
+weight: 3
 ---
 
 ### 5.1 RDS 장애 주입 {#rdsfailureinjection}

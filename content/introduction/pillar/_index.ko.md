@@ -25,7 +25,7 @@ AWS Well-Architected Framework는 **운영우수성**, **보안**, **안정성**
 
 
 
-- [ 그럼 각 기반별 실습을 진행해보도록하겠습니다. ](/performanceefficiency)
+- [ 그럼 각 기반별 실습을 진행해보도록하겠습니다. ](/setup)
 
 
 

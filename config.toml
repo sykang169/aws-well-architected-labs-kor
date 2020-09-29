@@ -1,4 +1,4 @@
-baseURL = "http://wellarchitected.workshop.kr.s3-website-ap-northeast-2.amazonaws.com"
+baseURL = "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/"
 languageCode = "ko-KR"
 title = "AWS Well-Architected Labs"
 theme = "learn"
