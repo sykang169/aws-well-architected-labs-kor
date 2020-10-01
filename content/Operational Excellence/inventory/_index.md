@@ -10,19 +10,17 @@ AWS Systems Manager는이 실습 전체에서 살펴볼 IT 운영을 지원하�
 {{% /notice%}}
 
 ### Systems Manager 사전 요구 사항
-Systems Manager를 사용하여 **하이브리드 환경**에서 **EC2 인스턴스** 또는 **온 프레미스 시스템**을 관리하기 전에 충족해야하는 설정 작업 및 사전 요구 사항이 있습니다.
+Systems Manager를 사용하여 **하이브리드 환경**에서 **EC2 인스턴스** 또는 **온 프레미스 시스템**을 관리하기 전에 충족해야하는 [설정 작업 및 사전 요구 사항](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-prereqs.html#prereqs-powershell)이 있습니다.
 
 * **지원되는 운영 체제**를 사용해야합니다
    * 지원되는 운영 체제에는 Windows, Amazon Linux, Ubuntu Server, RHEL 및 CentOS 버전이 포함됩니다
 * **SSM 에이전트가 설치**되어 있어야합니다
-   * 윈도우 환경의 SSM 에이전트를 사용하는 경우는 PowerShell 3.0이상의 버전이 필요하고 낮은 버전의 경우는[SSM documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-prereqs.html#prereqs-powershell)를 확인해주세요.
+   * 윈도우 환경의 SSM 에이전트를 사용하는 경우는 PowerShell 3.0이상의 버전이 필요하고 낮은 버전의 경우는 [SSM documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-prereqs.html#prereqs-powershell)를 확인해주세요.
    * 실습은 CloudFormation의 경우 EC2는 privatesubnet에 위치해있습니다. System Manager가 public network를 통해 EC2에 접근하는 것이 불가능하기 때문에 VPC endpoint가 필요합니다. 
 * **지원되는 리전**의 Systems Manager에 액세스해야합니다
 * Systems Manager에는 **IAM 역할**이 필요합니다
-   * 명령을 처리 할 인스턴스용
-   * 명령을 실행하는 사용자용
 
-SSM 에이전트는 기본적으로 다음에 설치됩니다.
+다음 인스턴스들에는 SSM 에이전트가 기본적으로 설치되어 있습니다.
 * 2017년 9월 이후의 Amazon Linux _base_ AMI
 * Windows Server 2016 인스턴스
 * 2016년 11월 이후에 배포된 Windows Server 2003-2012 R2 AMI에서 생성된 인스턴스

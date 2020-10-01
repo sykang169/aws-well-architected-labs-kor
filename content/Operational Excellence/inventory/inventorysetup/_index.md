@@ -42,20 +42,27 @@ AWS Systems Manager 인벤토리를 사용하여 하이브리드 환경의 Amazo
 1. 인벤토리 수집 주기 시간을 설정합니다(기본설정은 30분입니다).
    - **Collect inventory data every**를 **30**분으로 설정합니다.
    ![/images/operation/ssm-inventory-schedule.png](/images/operation/ssm-inventory-schedule.png)
-2. **parameters**에서 어떤 정보를 인벤토리에서 수집할지 지정하십시오.
-   - 옵션들을 검토하고 기본값들을 선택하세요.
-3. (선택사항) 원하는 경우 인벤토리 실행 로그를 수신하도록 S3 버킷을 지정할 수 있습니다(옵션지정 전에 [로그를 저장할 버킷](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) 을 생성해야합니다):
+2. **Parameters**에서 어떤 정보를 인벤토리에서 수집할지 지정할 수 있습니다.
+   - 각 파라미터에 대해 더 자세히 알아보시려면 [링크](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)를 참고합니다. 
+  
+<!--
+1. (선택사항) 필요한 경우 인벤토리 실행 로그를 지정한 S3 버킷에 수집할 수도 있습니다. (사전에 [로그를 저장할 버킷](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)이 생성되어 있어야 합니다):
    1. **Advanced**의 **Sync inventory execution logs to an S3 bucket**의 체크박스를 선택하세요.
    2. S3 버킷 이름을 지정합니다.
    3. (선택사항) S3 버킷의 접두어를 지정할 수 있습니다.
+2. !-->
+3. **Sync inventory execution logs to an S3 bucket**은 기본 설정대로 선택하지 않은 채로 남겨둡니다. 
    ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-advanced.png)
-4. 아래의 **Setup Inventory**를 선택합니다.(새 인벤토리 정책을 인스턴스에 배포하는 데 최대 10 분이 소요될 수 있습니다).
+4. 설정을 검토한 후 우측 하단의 **Setup Inventory**를 클릭합니다. 새 인벤토리 정책을 인스턴스에 배포하는 데 최대 10분이 소요될 수 있습니다.
    ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-finish.png)
-5. 새로운 정책을 만드려면 동일 방법으로 추가할 수 있습니다.
-6. 기존의 정책을 변경하려면 왼쪽 메뉴의 **State Manager**을 클릭하고 변경할 정책의 **Associations**를 클릭한다음 **Edit**을 선택하세요.
+
+<!--
+1. 새로운 정책을 만드려면 동일 방법으로 추가할 수 있습니다.
+2. 기존의 정책을 변경하려면 왼쪽 메뉴의 **State Manager**을 클릭하고 변경할 정책의 **Associations**를 클릭한다음 **Edit**을 선택하세요.
+!-->
 
 {{% notice note %}}
-여러 개의 Inventory specifications을 생성하실 수도 있으며 이들은 Systems Manager 상태 관리자(State Manager) 내에 **Associations**으로 저장됩니다. 다음 챕터에서 더 상세히 알아보겠습니다. 
+여러 가지의 Inventory specifications을 생성하실 수도 있습니다. 이들은 Systems Manager 상태 관리자(State Manager) 내에 **연결(Associations)** 로 저장됩니다. 다음 챕터에서 더 상세히 알아보겠습니다. 
 {{% /notice%}}
 
 <!--

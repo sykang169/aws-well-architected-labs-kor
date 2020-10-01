@@ -9,9 +9,6 @@ weight: 51
 AWS Systems Manager로 EC2 인스턴스 및 [하이브리드 환경](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html)을 관리하기 위해 필요한 [요구 사항](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-prereqs.html) 및 [필요한 설정](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html)에 대한 상세 내용은 문서를 참고합니다.
 {{% /notice%}}
 
-[AWS Systems Manager의 추가 사용 요금은 없습니다.](https://aws.amazon.com/systems-manager/pricing/) AWS Systems Manager에서 관리하거나 생성한 기본 AWS 리소스(예: Amazon EC2 인스턴스 또는 Amazon CloudWatch 지표)에 대해서 사용한 만큼만 비용을 지불합니다. 최소 비용과 사전 약정은 없습니다.
-
-
 ### 운영 우수성과 AWS System Manager
 {{% notice note %}} 여러 AWS 서비스의 운영 데이터를 중앙집중화하고 AWS 리소스 전체에서 작업을 자동화할 수 있습니다. 애플리케이션, 애플리케이션 스택의 다양한 계층 또는 프로덕션 환경 대 개발 환경 같은 논리적 리소스 그룹을 만들 수 있습니다. Systems Manager에서는 리소스 그룹을 선택하여 리소스 그룹의 최근 API 작업, 리소스 구성 변경, 관련 알림, 운영 경보, 소프트웨어 인벤토리, 패치 규정 준수 상태를 볼 수 있습니다. 운영상 필요에 따라 각 리소스 그룹에 대한 조치를 취할 수도 있습니다. 상세 내용은 링크를 참고합니다. {{% /notice%}}
 
