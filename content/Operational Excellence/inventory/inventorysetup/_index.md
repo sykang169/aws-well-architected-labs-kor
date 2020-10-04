@@ -7,44 +7,65 @@ weight: 521
 ---
 
 ## Systems Manager: 인벤토리
+AWS Systems Manager 인벤토리를 사용하여 하이브리드 환경의 Amazon EC2 인스턴스와 온 프레미스 서버 또는 가상 머신 (VM)에서 운영 체제 (OS), 애플리케이션 및 인스턴스 메타 데이터를 수집 할 수 있습니다. 메타 데이터를 쿼리하여 소프트웨어 정책에 필요한 소프트웨어 및 구성을 실행중인 인스턴스와 업데이트해야하는 인스턴스를 빠르게 이해할 수 있습니다.
 
-[AWS Systems Manager 인벤토리](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)A는 Amazon EC2 및 온프레미스 컴퓨팅 환경에 대한 가시성을 제공합니다. 인벤토리를 사용하여 관리형 인스턴스에서 메타데이터를 수집할 수 있습니다. 이 메타데이터를 중앙 Amazon Simple Storage Service(Amazon S3) 버킷에 저장한 후 기본 제공 도구를 사용하여 데이터를 쿼리하고 어느 인스턴스에서 소프트웨어 정책이 요구하는 소프트웨어 및 구성을 실행 중인지, 어느 인스턴스를 업데이트해야 하는지 빠르게 확인할 수 있습니다. 원클릭 절차를 사용하여 모든 관리형 인스턴스에 대해 인벤토리를 구성할 수 있습니다. 또한 여러 AWS 리전 및 계정으로부터 인벤토리 데이터를 구성하고 볼 수 있습니다.
+<!--
+[AWS Systems Manager 인벤토리](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)는 Amazon EC2 및 온프레미스 컴퓨팅 환경에 대한 가시성을 제공합니다. 인벤토리를 사용하여 관리형 인스턴스에서 메타데이터를 수집할 수 있습니다. 이 메타데이터를 중앙 Amazon Simple Storage Service(Amazon S3) 버킷에 저장한 후 기본 제공 도구를 사용하여 데이터를 쿼리하고 어느 인스턴스에서 소프트웨어 정책이 요구하는 소프트웨어 및 구성을 실행 중인지, 어느 인스턴스를 업데이트해야 하는지 빠르게 확인할 수 있습니다. 원클릭 절차를 사용하여 모든 관리형 인스턴스에 대해 인벤토리를 구성할 수 있습니다. 또한 여러 AWS 리전 및 계정으로부터 인벤토리 데이터를 구성하고 볼 수 있습니다.
+-->
 
-### 2 Systems Manager 인벤토리를 사용하여 인스턴스 추적
+### 인벤토리를 활용하여 인스턴스 메타 데이터 추적하기
 
-1. AWS Systems Manager 메뉴의 **Instances & Nodes** 아래 **Inventory**를 선택하세요.
+#### 인벤토리가 기본적으로 수집하는 EC2 인스턴스 메타 데이터는 무엇이 있을까요? 
+   1. AWS Systems Manager 메뉴의 **Instances & Nodes** 아래 **Inventory**를 선택합니다.
    ![/images/operation/ssm-inventory.png](/images/operation/ssm-inventory.png)
-   1. 스크롤을 내려 **Corresponding managed instances** 을 선택합니다. 현재 인벤토리에는 EC2에서 사용 가능한 인스턴스 데이터만 포함되어 있습니다.
-   1. 당신의 **InstanceID**중 하나를 클릭하세요.
+   1. 스크롤을 내려 **Corresponding managed instances** 을 선택합니다. <!--현재 인벤토리에는 EC2에서 사용 가능한 인스턴스 데이터만 포함되어 있습니다.-->
+   2. 인벤토리가 수집한 인스턴스의 정보를 확인하기 위해 실습자의 **InstanceID** 중 하나를 선택합니다.
       ![/images/operation/ssm-inventory-click.png](/images/operation/ssm-inventory-click.png)
-   1. **Instance ID**이름 아래 다양한 사용 가능한 데이터들을 검토하세요.
+   3. 각 탭을 클릭해 어떤 정보들이 수집되었는지 확인합니다. 
    ![/images/operation/ssm-inventory-menu.png](/images/operation/ssm-inventory-menu.png)
-1. 이제 인벤토리 수집을 구체적으로 구성하고 수집 할 데이터 유형을 지정해야합니다.
+
+#### 인벤토리 수집 대상 및 주기는 물론, 어떤 데이터를 수집할 것인지 직접 지정하실 수도 있습니다. 
+**인벤토리 수집 대상을 리소스 태그 기반으로 한정하기**
+{{% notice tip %}}
+계정 내 모든 관리형 인스턴스를 선택하여 인벤토리를 확보할 수도 있지만 필요에 따라 Environment 또는 Workload 등 특정 태그를 기반으로 인벤토리 인스턴스를 선택할 수도 있습니다. 물론 수동으로 특정 인스턴스를 선택하는 방법도 있습니다.
+{{% /notice%}}
    1. 메뉴의 **Inventory**를 클릭합니다.
-   1. 오른쪽 상단의 **Setup Inventory**를 클릭합니다.
+   2. 오른쪽 상단의 **Setup Inventory**를 클릭합니다.
    ![/images/operation/ssm-inventory-setup.png](/images/operation/ssm-inventory-setup.png)
 1. **Setup Inventory** 화면에서, 인벤토리 대상을 정의하세요:
    1. **Targets**의 **Specify targets by**리스트 중 **Specifying a tag**를 클릭합니다.
-   1. **Tags**의 key 값은 `Environment` , value는 `MasterAccount`로 지정하세요.
-   >**Note**<br>이 계정에서 모든 관리형 인스턴스를 선택하여 해당 인스턴스의 인벤토리를 확보 할 수 있습니다. Environment 또는 Workload와 같은 특정 태그가있는 인스턴스로 인벤토리 인스턴스를 제한 할 수도 있습니다. 또는 인벤토리의 특정 인스턴스를 수동으로 선택할 수 있습니다.
+   2. **Tags**의 key 값은 `Environment` , value는 `MasterAccount`로 지정합니다. 
    ![/images/operation/ssm-inventory-targets.png](/images/operation/ssm-inventory-targets.png)
+
+**인벤토리 수집 주기 설정하기**
+
 1. 인벤토리 수집 주기 시간을 설정합니다(기본설정은 30분입니다).
    - **Collect inventory data every**를 **30**분으로 설정합니다.
    ![/images/operation/ssm-inventory-schedule.png](/images/operation/ssm-inventory-schedule.png)
-1. **parameters**에서 어떤 정보를 인벤토리에서 수집할지 지정하십시오.
-   - 옵션들을 검토하고 기본값들을 선택하세요.
-1. (선택사항) 원하는 경우 인벤토리 실행 로그를 수신하도록 S3 버킷을 지정할 수 있습니다(옵션지정 전에 [로그를 저장할 버킷](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) 을 생성해야합니다):
+2. **Parameters**에서 어떤 정보를 인벤토리에서 수집할지 지정할 수 있습니다.
+   - 각 파라미터에 대해 더 자세히 알아보시려면 [링크](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)를 참고합니다. 
+  
+<!--
+1. (선택사항) 필요한 경우 인벤토리 실행 로그를 지정한 S3 버킷에 수집할 수도 있습니다. (사전에 [로그를 저장할 버킷](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)이 생성되어 있어야 합니다):
    1. **Advanced**의 **Sync inventory execution logs to an S3 bucket**의 체크박스를 선택하세요.
-   1. S3 버킷 이름을 지정합니다.
-   1. (선택사항) S3 버킷의 접두어를 지정할 수 있습니다.
+   2. S3 버킷 이름을 지정합니다.
+   3. (선택사항) S3 버킷의 접두어를 지정할 수 있습니다.
+2. !-->
+3. **Sync inventory execution logs to an S3 bucket**은 기본 설정대로 선택하지 않은 채로 남겨둡니다. 
    ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-advanced.png)
-1. 아래의 **Setup Inventory**를 선택합니다.(새 인벤토리 정책을 인스턴스에 배포하는 데 최대 10 분이 소요될 수 있습니다).
+4. 설정을 검토한 후 우측 하단의 **Setup Inventory**를 클릭합니다. 새 인벤토리 정책을 인스턴스에 배포하는 데 최대 10분이 소요될 수 있습니다.
    ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-finish.png)
+
+<!--
 1. 새로운 정책을 만드려면 동일 방법으로 추가할 수 있습니다.
-1. 기존의 정책을 변경하려면 왼쪽 메뉴의 **State Manager**을 클릭하고 변경할 정책의 **Associations**를 클릭한다음 **Edit**을 선택하세요.
+2. 기존의 정책을 변경하려면 왼쪽 메뉴의 **State Manager**을 클릭하고 변경할 정책의 **Associations**를 클릭한다음 **Edit**을 선택하세요.
+!-->
 
->**Note**<br>여러 Inventory specifications을 생성 할 수 있습니다. 이들은 각각 Systems Manager State Manager 내에 **Associations**으로 저장됩니다.
+{{% notice note %}}
+여러 가지의 Inventory specifications을 생성하실 수도 있습니다. 이들은 Systems Manager 상태 관리자(State Manager) 내에 **연결(Associations)** 로 저장됩니다. 다음 챕터에서 더 상세히 알아보겠습니다. 
+{{% /notice%}}
 
+<!--
 ## Systems Manager: State Manager
  
 State Manager에서 [Association](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-associations.html)은 관리형 인스턴스에 할당되는 구성입니다. 이러한 구성은 인스턴스에서 관리하려는 상태를 정의합니다. 예를 들어, 연결은 인스턴스에서 안티바이러스 소프트웨어가 설치되어 실행 중이어야 하는지 또는 특정 포트가 닫혀 있어야 하는지를 지정할 수 있습니다. 연결은 구성이 다시 적용되는 시점에 대한 일정을 지정합니다. 또한 연결은 구성 적용 시 취할 조치도 지정합니다. 예를 들어, 안티바이러스 소프트웨어에 대한 연결은 하루에 한 번 실행할 수 있습니다. 이러한 소프트웨어가 설치되어 있지 않으면 State Manager가 해당 소프트웨어를 설치합니다. 소프트웨어가 설치되어 있으나 서비스가 실행 중이 아닌 경우 연결이 State Manager에 해당 서비스의 시작을 지시할 수 있습니다.
@@ -97,3 +118,4 @@ _Inventory_ 다음과 같이 완성됩니다. :
 AWS Systems Manager Configuration [Compliance](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-compliance.html)를 사용하여 관리형 인스턴스 집합에 대해 패치 규정 준수 및 구성 일관성을 검사할 수 있습니다. 여러 AWS 계정 및 리전의 데이터를 수집하여 집계한 후 규정을 준수하지 않는 특정 리소스로 드릴다운할 수 있습니다. 기본적으로 구성 규정 준수는 Systems Manager 패치 관리자 패치 및 Systems Manager State Manager 연결에 대한 현재의 규정 준수 데이터를 표시합니다. Systems Manager 규정 준수에는 다음과 같은 추가적인 장점 및 기능이 있습니다.
 
 기본적으로 Configuration Compliance는 **Systems Manager Patch Manager** 패치 및 **Systems Manager State Manager** associations에 대한 준수 데이터를 표시합니다. IT 또는 비즈니스 요구사항에 따라 서비스 사용자를 지정하고 고유한 규정 준수유형을 만들 수도 있습니다. 데이터를 Amazon Athena 및 Amazon QuickSight로 보내 전체 보고서를 생성 할 수도 있습니다.
+-->
