@@ -13,15 +13,24 @@ AWS Systems Manager 인벤토리를 사용하여 하이브리드 환경의 Amazo
 [AWS Systems Manager 인벤토리](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)는 Amazon EC2 및 온프레미스 컴퓨팅 환경에 대한 가시성을 제공합니다. 인벤토리를 사용하여 관리형 인스턴스에서 메타데이터를 수집할 수 있습니다. 이 메타데이터를 중앙 Amazon Simple Storage Service(Amazon S3) 버킷에 저장한 후 기본 제공 도구를 사용하여 데이터를 쿼리하고 어느 인스턴스에서 소프트웨어 정책이 요구하는 소프트웨어 및 구성을 실행 중인지, 어느 인스턴스를 업데이트해야 하는지 빠르게 확인할 수 있습니다. 원클릭 절차를 사용하여 모든 관리형 인스턴스에 대해 인벤토리를 구성할 수 있습니다. 또한 여러 AWS 리전 및 계정으로부터 인벤토리 데이터를 구성하고 볼 수 있습니다.
 -->
 
+<<<<<<< HEAD
 ### 인벤토리를 활용하여 인스턴스 메타 데이터 추적하기
 
 #### 인벤토리가 기본적으로 수집하는 EC2 인스턴스 메타 데이터는 무엇이 있을까요? 
+=======
+
+#### 관리형 인스턴스(Managed Instances)에 대해 기본적으로 수집하는 정보는 무엇이 있을까요? 
+>>>>>>> 10ff751802894533b4d2ed100b73d3961dc3be45
    1. AWS Systems Manager 메뉴의 **Instances & Nodes** 아래 **Inventory**를 선택합니다.
    ![/images/operation/ssm-inventory.png](/images/operation/ssm-inventory.png)
    1. 스크롤을 내려 **Corresponding managed instances** 을 선택합니다. <!--현재 인벤토리에는 EC2에서 사용 가능한 인스턴스 데이터만 포함되어 있습니다.-->
    2. 인벤토리가 수집한 인스턴스의 정보를 확인하기 위해 실습자의 **InstanceID** 중 하나를 선택합니다.
       ![/images/operation/ssm-inventory-click.png](/images/operation/ssm-inventory-click.png)
+<<<<<<< HEAD
    3. 각 탭을 클릭해 어떤 정보들이 수집되었는지 확인합니다. 
+=======
+   3. 각 탭을 클릭해 어떤 정보들이 수집되었는지 확인합니다. 아직은 인벤토리를 설정하기 전이므로 Inventory 탭은 비어있을 것입니다. 
+>>>>>>> 10ff751802894533b4d2ed100b73d3961dc3be45
    ![/images/operation/ssm-inventory-menu.png](/images/operation/ssm-inventory-menu.png)
 
 #### 인벤토리 수집 대상 및 주기는 물론, 어떤 데이터를 수집할 것인지 직접 지정하실 수도 있습니다. 
@@ -39,12 +48,21 @@ AWS Systems Manager 인벤토리를 사용하여 하이브리드 환경의 Amazo
 
 **인벤토리 수집 주기 설정하기**
 
+<<<<<<< HEAD
 1. 인벤토리 수집 주기 시간을 설정합니다(기본설정은 30분입니다).
    - **Collect inventory data every**를 **30**분으로 설정합니다.
    ![/images/operation/ssm-inventory-schedule.png](/images/operation/ssm-inventory-schedule.png)
 2. **Parameters**에서 어떤 정보를 인벤토리에서 수집할지 지정할 수 있습니다.
    - 각 파라미터에 대해 더 자세히 알아보시려면 [링크](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)를 참고합니다. 
   
+=======
+1. 인벤토리의 **Name**은 `InventoryAllInstances`로 입력합니다.
+2. 인벤토리 수집 주기를 기본 설정대로 30분으로 남겨둡니다. 
+   ![/images/operation/ssm-inventory-schedule.png](/images/operation/ssm-inventory-schedule.png)
+3. **Parameters**에서 어떤 정보를 인벤토리에서 수집할지 지정할 수 있습니다.
+   - 각 파라미터에 대해 더 자세히 알아보시려면 [링크](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)를 참고합니다. 
+     ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-finish.png)
+>>>>>>> 10ff751802894533b4d2ed100b73d3961dc3be45
 <!--
 1. (선택사항) 필요한 경우 인벤토리 실행 로그를 지정한 S3 버킷에 수집할 수도 있습니다. (사전에 [로그를 저장할 버킷](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)이 생성되어 있어야 합니다):
    1. **Advanced**의 **Sync inventory execution logs to an S3 bucket**의 체크박스를 선택하세요.
@@ -54,7 +72,11 @@ AWS Systems Manager 인벤토리를 사용하여 하이브리드 환경의 Amazo
 3. **Sync inventory execution logs to an S3 bucket**은 기본 설정대로 선택하지 않은 채로 남겨둡니다. 
    ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-advanced.png)
 4. 설정을 검토한 후 우측 하단의 **Setup Inventory**를 클릭합니다. 새 인벤토리 정책을 인스턴스에 배포하는 데 최대 10분이 소요될 수 있습니다.
+<<<<<<< HEAD
    ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-finish.png)
+=======
+
+>>>>>>> 10ff751802894533b4d2ed100b73d3961dc3be45
 
 <!--
 1. 새로운 정책을 만드려면 동일 방법으로 추가할 수 있습니다.

@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: "AWS System Manager"
+=======
+title: "AWS Systems Manager"
+>>>>>>> 10ff751802894533b4d2ed100b73d3961dc3be45
 chapter: false
 pre: "<b>5-1. </b>"
 weight: 51
@@ -9,8 +13,14 @@ weight: 51
 AWS Systems Manager로 EC2 인스턴스 및 [하이브리드 환경](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html)을 관리하기 위해 필요한 [요구 사항](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-prereqs.html) 및 [필요한 설정](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html)에 대한 상세 내용은 문서를 참고합니다.
 {{% /notice%}}
 
+<<<<<<< HEAD
 ### 운영 우수성과 AWS System Manager
 {{% notice note %}} 여러 AWS 서비스의 운영 데이터를 중앙집중화하고 AWS 리소스 전체에서 작업을 자동화할 수 있습니다. 애플리케이션, 애플리케이션 스택의 다양한 계층 또는 프로덕션 환경 대 개발 환경 같은 논리적 리소스 그룹을 만들 수 있습니다. Systems Manager에서는 리소스 그룹을 선택하여 리소스 그룹의 최근 API 작업, 리소스 구성 변경, 관련 알림, 운영 경보, 소프트웨어 인벤토리, 패치 규정 준수 상태를 볼 수 있습니다. 운영상 필요에 따라 각 리소스 그룹에 대한 조치를 취할 수도 있습니다. 상세 내용은 링크를 참고합니다. {{% /notice%}}
+=======
+### 운영 우수성과 AWS Systems Manager
+{{% notice note %}} AWS Systems Manager는 AWS 인프라에 대한 가시성과 제어를 제공합니다. Systems Manager는 통합된 사용자 인터페이스를 제공하므로 여러 AWS 서비스의 운영 데이터를 보고 AWS 리소스 전체에서 운영 작업을 자동화할 수 있습니다. Systems Manager를 사용하면 Amazon EC2 인스턴스, Amazon S3 버킷 또는 Amazon RDS 인스턴스와 같은 리소스를 애플리케이션별로 그룹화하고, 모니터링과 문제 해결을 위해 운영 데이터를 보고, 리소스 그룹에 조치를 취할 수 있습니다. Systems Manager는 리소스 및 애플리케이션 관리를 간소화하고, 운영 문제를 탐지 및 해결하는 시간을 단축하며, 인프라를 대규모로 안전하게 운영 및 관리할 수 있게 해줍니다. {{% /notice%}}
+
+>>>>>>> 10ff751802894533b4d2ed100b73d3961dc3be45
 
 #### 인벤토리
 AWS Systems Manager는 인스턴스와 인스턴스에 설치된 소프트웨어에 대한 정보를 수집하여 시스템 구성과 설치된 애플리케이션에 대해 이해할 수 있도록 지원합니다. 애플리케이션, 파일, 네트워크 구성, Windows 서비스, 레지스트리, 서버 역할, 업데이트, 기타 시스템 속성을 수집할 수 있습니다. 수집된 데이터를 통해 애플리케이션 자산을 관리하고, 라이선스를 추적하고, 파일 무결성을 모니터링하고, 기존 설치 프로그램으로 설치하지 않은 애플리케이션을 찾을 수 있습니다.

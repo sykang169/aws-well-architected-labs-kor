@@ -12,6 +12,9 @@ pre: "<b>5. </b>"
 AWS의 운영우수성에 대한 자세한 내용은 AWS 콘솔의 Well-Architected 페이지의 AWS [Well-Architected Operational Excellence](https://d1.awsstatic.com/whitepapers/ko_KR/architecture/AWS-Operational-Excellence-Pillar.pdf)백서를 참조합니다.
 {{% /notice%}}
 
+### 운영 우수성(Operational Excellence)이란?
+비즈니스 가치를 제공하고 지원 프로세스와 절차를 **지속적으로 개선**하기 위해 시스템을 실행하고 **운영에 대한 통찰력**을 얻을 수 있는 능력
+
 ### 운영 우수성을 위한 5가지 설계 원칙
 #### 코드를 통한 운영
 애플리케이션 코드에 사용되었던 동일한 엔지니어링 원칙을 클라우드의 전체 환경에 적용할 수 있습니다. 그러면 전체 워크로드(애플리케이션, 인프라 등)를 코드로 정의하고 코드로 업데이트할 수 있습니다. 운영 절차를 스크립트로 작성하고 이벤트에 응답하여 스크립트를 트리거하면 실행을 자동화할 수 있습니다. 운영을 코드로 수행하여 인적 오류를 방지하고 이벤트에 대한 지속적인 응답을 활성화합니다.
