@@ -33,9 +33,9 @@ Linux 운영 체제의 경우 인스턴스에 구성된 기본소스 리포지�
 4. 그리고 `AWS-Run`입력하고 엔터를 쳐서 검색합니다.
    ![/images/operation/ssm-document-search-fin.png](/images/operation/ssm-document-search.png)
 5. **AWS-RunPatchBaseline**를 찾아 선택한 후 **View details**을 클릭합니다.
-6. 해당 문서의 각 탭의 내용을 살펴봅니다. 특히 **Contents** 탭을 클릭하면 이 문서가 담고 있는 **실행 명령**의 상세 내용을 확인할 수 있습니다.
    ![/images/operation/ssm-documents-detail.png](/images/operation/ssm-documents-detail.png)
-
+6. 해당 문서의 각 탭의 내용을 살펴봅니다. 특히 **Contents** 탭을 클릭하면 이 문서가 담고 있는 **실행 명령**의 상세 내용을 확인할 수 있습니다.
+   ![](/images/operation/runpatchbaseline.png)
 <!--
 ## AWS Systems Manager: Run Command
 
@@ -71,7 +71,7 @@ Linux 운영 체제의 경우 인스턴스에 구성된 기본소스 리포지�
    ![/images/operation/ssm-runcommand-output1.png](/images/operation/ssm-runcommand-output1.png)
 5. **Step 2 - Output** 를 펼쳐 내용을 확인합니다. Step 2에서는 윈도우 대상 패치이므로 생략했음을 확인할 수 있습니다. 
 
-
+<!--
 #### 3. Patch Compliance 현재 상태 리뷰 (패치 적용 전)
 
 1. **Instances & Nodes**의 **Compliance**를 클릭합니다.
@@ -110,11 +110,13 @@ Linux 운영 체제의 경우 인스턴스에 구성된 기본소스 리포지�
 >**Warning**<br>
 > * Patch Manager가 업데이트를 설치하면 패치 된 인스턴스가 재부팅됩니다.
 !-->
-
+<!--
 #### 5. 패치 후 Patch Compliance 리뷰
+!-->
 
+#### 패치 스캔 후 Compliance 리뷰
 1. **Instances & Nodes** 아래 **Compliance**로 이동합니다.
-1. The **Compliance resources summary**에 중요한 심각도 패치 컴플라이언스를 충족하는 2개의 시스템이 있음이 표시됩니다.
+2. The **Compliance resources summary**에 **Compliance type** **Patch**를 준수하는 2개의 리소스가 있다는 것을 확인할 수 있습니다. 만약 Non-Compliant라면 리뷰 후 Run Command에서 이번에는 **Scan**이 아닌 **Install**로 조치를 취할 수 있을 것입니다.
 
 ### **코드로 운영하기가 가져다주는 기대효과**
 전통적인 환경에서는 이러한 활동을 수행하기 위해 시스템과 소프트웨어를 직접 설정해야 했습니다. 그리고 스크립트를 실행하기 위한 서버도 필요했지요. 모든 시스템의 인증 자격 증명을 관리해야 할 필요도 있었습니다. 
