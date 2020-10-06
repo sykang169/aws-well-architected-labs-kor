@@ -15,21 +15,13 @@ weight: 51
 실습 환경에서는 EC2가 Private Subnet에 위치하고 있습니다. 본 실습에서는 AWS Systems Manager가 퍼블릭 IP 필요 없이 [VPC 엔드포인트](https://docs.aws.amazon.com/ko_kr/vpc/latest/userguide/vpc-endpoints.html)를 통해 비공개로 연결하도록 구성합니다.
 1. AWS Services 메뉴의 [VPC](https://console.aws.amazon.com/vpc)로 이동합니다. 그리고 왼쪽 메뉴의 **endpoint**를 클릭합니다. 그리고 **Create endpoint**를 클릭합니다.
    ![/images/war-operationalexcellence/ssm-agent.png](/images/war-operationalexcellence/ssm-endpoint-create.png)
-<<<<<<< HEAD
-1. **Service category**의 **AWS Service**를 클릭하고 **Service Name**의 검색창에 ec2를 검색합니다. 그리고 com.amazonaws.<region>.ec2 을 선택하고 맨 아래 **Create endpoint**를 클릭합니다.
-=======
 1. **Service category**의 **AWS Service**를 클릭하고 **Service Name**의 검색창에 ec2를 검색합니다. 그리고 `com.amazonaws.<region>.ec2` 을 선택하고 맨 아래 **Create endpoint**를 클릭합니다.
->>>>>>> 10ff751802894533b4d2ed100b73d3961dc3be45
    ![/images/war-operationalexcellence/ssm-agent.png](/images/war-operationalexcellence/ssm-endpoint-select.png)
 2. **VPC**를 선택합니다. 실습에서 생성한 `WellArchitectedLabsStack/VPC`를 검색하여 선택합니다. **Subnets**은 `ap-northeast-2b`, `ap-northeast-2b`의 체크박스를 선택하고 모두 **PrivateSubnet**을 선택합니다.
    ![/images/war-operationalexcellence/ssm-agent-vpc.png](/images/war-operationalexcellence/ssm-agent-vpc.png)
 3. **Security Group**를 선택합니다. Description에서 EC2인스턴스와 동일한 보안그룹을 선택합니다. 실습환견에서는 `WellArchitectedLabsStack/ASG/InstanceSecurityGroup`을 선택하면 됩니다. 
    ![/images/war-operationalexcellence/ssm-agent-sg.png](/images/war-operationalexcellence/ssm-agent-sg.png)
-<<<<<<< HEAD
-4. 동일한 방법으로 **SSM**을 검색하여 **com.amazonaws.< region >.ssm**도 선택합니다. 
-=======
 4. 동일한 방법으로 **SSM**을 검색하여 `com.amazonaws.< region >.ssm`도 선택합니다. 
->>>>>>> 10ff751802894533b4d2ed100b73d3961dc3be45
 5. 최종적으로 생성된 엔드포인트는 아래와 같이 ec2와 ssm의 2개의 최소한 엔드포인트가 있어야 합니다. 
    * **com.amazonaws.ap-northeast-2.ec2**
    * **com.amazonaws.ap-northeast-2.ssm** 

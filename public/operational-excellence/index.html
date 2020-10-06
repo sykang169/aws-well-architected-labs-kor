@@ -12,21 +12,21 @@
     <title>운영우수성 :: AWS Well-Architected Labs</title>
 
     
-    <link href="/css/nucleus.css?1601259406" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1601259406" rel="stylesheet">
-    <link href="/css/hybrid.css?1601259406" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1601259406" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1601259406" rel="stylesheet">
-    <link href="/css/auto-complete.css?1601259406" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1601259406" rel="stylesheet">
-    <link href="/css/theme.css?1601259406" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1601259406" rel="stylesheet">
+    <link href="/css/nucleus.css?1601994470" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1601994470" rel="stylesheet">
+    <link href="/css/hybrid.css?1601994470" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1601994470" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1601994470" rel="stylesheet">
+    <link href="/css/auto-complete.css?1601994470" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1601994470" rel="stylesheet">
+    <link href="/css/theme.css?1601994470" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1601994470" rel="stylesheet">
     
-    <link href="/css/theme-walabs.css?1601259406" rel="stylesheet">
+    <link href="/css/theme-walabs.css?1601994470" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1601259406"></script>
+    <script src="/js/jquery-3.3.1.min.js?1601994470"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1601259406"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1601259406"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1601994470"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1601994470"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1601259406"></script>
+<script type="text/javascript" src="/js/search.js?1601994470"></script>
 
     
   </div>
@@ -897,17 +897,60 @@
     
     
     
-    <li data-nav-id="/operational-excellence/systemmanager/" title="System Manager 구성" class="dd-item
+    <li data-nav-id="/operational-excellence/systemmanager/" title="AWS Systems Manager" class="dd-item
     
         
         ">
       <a href="/operational-excellence/systemmanager/">
-          <b>5-1. </b>System Manager 구성
+          <b>5-1. </b>AWS Systems Manager
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
           
           
             <i class="fas read-icon"></i>
           
       </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/systemmanager/prepare/" title="사전 준비" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/systemmanager/prepare/">
+          <b>1. </b>사전 준비
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
       
     </li>
   
@@ -924,12 +967,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/" title="리소스 관리" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/" title="리소스 중앙 관리" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/">
-          <b>5-2. </b>리소스 관리
+          <b>5-2. </b>리소스 중앙 관리
           
             
               <i class="fas fa-caret-right"></i>
@@ -985,12 +1028,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="State Manager" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="상태 관리자" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/statemanager/">
-          <b>2. </b>State Manager
+          <b>2. </b>상태 관리자
           
           
             <i class="fas read-icon"></i>
@@ -1082,12 +1125,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/patch/awsrunpatchbaseline/" title="패치 실행" class="dd-item
+    <li data-nav-id="/operational-excellence/patch/awsrunpatchbaseline/" title="Run Command" class="dd-item
     
         
         ">
       <a href="/operational-excellence/patch/awsrunpatchbaseline/">
-          <b>2. </b>패치 실행
+          <b>2. </b>Run Command
           
           
             <i class="fas read-icon"></i>
@@ -1396,10 +1439,9 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#운영-우수성operational-excellence이란">운영 우수성(Operational Excellence)이란?</a></li>
         <li><a href="#운영-우수성을-위한-5가지-설계-원칙">운영 우수성을 위한 5가지 설계 원칙</a></li>
-        <li><a href="#운영-우수성과-aws-system-manager">운영 우수성과 AWS System Manager</a></li>
-        <li><a href="#준비사항">준비사항:</a></li>
-        <li><a href="#permissions-required">Permissions required</a></li>
+        <li><a href="#실습-준비물">실습 준비물</a></li>
       </ul>
     </li>
   </ul>
@@ -1431,6 +1473,8 @@
 <div class="notices note" ><p>AWS의 운영우수성에 대한 자세한 내용은 AWS 콘솔의 Well-Architected 페이지의 AWS <a href="https://d1.awsstatic.com/whitepapers/ko_KR/architecture/AWS-Operational-Excellence-Pillar.pdf">Well-Architected Operational Excellence</a>백서를 참조합니다.</p>
 </div>
 
+<h3 id="운영-우수성operational-excellence이란">운영 우수성(Operational Excellence)이란?</h3>
+<p>비즈니스 가치를 제공하고 지원 프로세스와 절차를 <strong>지속적으로 개선</strong>하기 위해 시스템을 실행하고 <strong>운영에 대한 통찰력</strong>을 얻을 수 있는 능력</p>
 <h3 id="운영-우수성을-위한-5가지-설계-원칙">운영 우수성을 위한 5가지 설계 원칙</h3>
 <h4 id="코드를-통한-운영">코드를 통한 운영</h4>
 <p>애플리케이션 코드에 사용되었던 동일한 엔지니어링 원칙을 클라우드의 전체 환경에 적용할 수 있습니다. 그러면 전체 워크로드(애플리케이션, 인프라 등)를 코드로 정의하고 코드로 업데이트할 수 있습니다. 운영 절차를 스크립트로 작성하고 이벤트에 응답하여 스크립트를 트리거하면 실행을 자동화할 수 있습니다. 운영을 코드로 수행하여 인적 오류를 방지하고 이벤트에 대한 지속적인 응답을 활성화합니다.</p>
@@ -1443,30 +1487,10 @@
 <p>잠재적인 실패의 원인을 찾아내 이를 없애거나 완화할 수 있도록 합니다. 실패 시나리오를 테스트하고 그에 따른 영향을 이해했는지 여부를 검증합니다. 응답 절차를 테스트하여 효과가 있는지, 팀이 이 실행 단계에 익숙한지 확인합니다. 정기 게임 데이를 준비하여 시뮬레이션된 이벤트에 대한 팀의 응답 및 워크로드를 테스트합니다.</p>
 <h4 id="모든-운영-실패로부터-학습">모든 운영 실패로부터 학습</h4>
 <p>모든 운영 이벤트 및 실패로부터 파악한 내용을 바탕으로 개선합니다. 팀 전반 및 전체 조직에 걸쳐 파악한 내용을 공유합니다.</p>
-<h3 id="운영-우수성과-aws-system-manager">운영 우수성과 AWS System Manager</h3>
-
-<div class="notices note" ><p>여러 AWS 서비스의 운영 데이터를 중앙집중화하고 AWS 리소스 전체에서 작업을 자동화할 수 있습니다. 애플리케이션, 애플리케이션 스택의 다양한 계층 또는 프로덕션 환경 대 개발 환경 같은 논리적 리소스 그룹을 만들 수 있습니다. Systems Manager에서는 리소스 그룹을 선택하여 리소스 그룹의 최근 API 작업, 리소스 구성 변경, 관련 알림, 운영 경보, 소프트웨어 인벤토리, 패치 규정 준수 상태를 볼 수 있습니다. 운영상 필요에 따라 각 리소스 그룹에 대한 조치를 취할 수도 있습니다. 상세 내용은 <a href="https://aws.amazon.com/ko/systems-manager/features/">링크</a>를 참고합니다.</p>
-</div>
-
-<h4 id="인벤토리">인벤토리</h4>
-<p>AWS Systems Manager는 인스턴스와 인스턴스에 설치된 소프트웨어에 대한 정보를 수집하여 시스템 구성과 설치된 애플리케이션에 대해 이해할 수 있도록 지원합니다. 애플리케이션, 파일, 네트워크 구성, Windows 서비스, 레지스트리, 서버 역할, 업데이트, 기타 시스템 속성을 수집할 수 있습니다. 수집된 데이터를 통해 애플리케이션 자산을 관리하고, 라이선스를 추적하고, 파일 무결성을 모니터링하고, 기존 설치 프로그램으로 설치하지 않은 애플리케이션을 찾을 수 있습니다.</p>
-<h4 id="run-command">Run Command</h4>
-<p>AWS Systems Manager에서는 서버에 로그인하지 않고 대규모로 인스턴스를 원격으로 안전하게 관리할 수 있는 기능을 제공하므로, 배스천 호스트, SSH 또는 원격 PowerShell이 필요 없습니다. 레지스트리 편집, 사용자 관리, 소프트웨어 및 패치 설치와 같은 일반적인 관리 작업을 인스턴스 그룹 전체에서 자동화하는 간단한 방법을 제공합니다. AWS Identity and Access Management(IAM)와의 통합을 통해 세분화된 권한을 적용하여 사용자가 인스턴스에 수행할 수 있는 작업을 제어할 수 있습니다. Systems Manager가 수행한 모든 작업이 AWS CloudTrail에 기록되기 때문에 환경 전체의 변경 사항을 감사할 수도 있습니다.</p>
-<h4 id="패치-관리자">패치 관리자</h4>
-<p>AWS Systems Manager는 대규모 Amazon EC2 그룹 또는 온프레미스 인스턴스 전체에서 자동으로 운영 체제 및 소프트웨어 패치를 선택 및 배포하도록 지원합니다. 패치 기준선을 통해 운영 체제 또는 높은 심각도 패치 등 선택한 카테고리의 패치를 자동 승인하도록 규칙을 설정할 수 있고, 이러한 규칙을 무시하고 자동 승인 또는 거부할 패치 목록을 지정할 수 있습니다. 또한, 미리 설정된 시간에만 패치가 적용되도록 패치에 대한 유지 관리 기간을 예약할 수 있습니다. Systems Manager는 소프트웨어를 최신으로 유지하고 규정 준수 정책을 충족하는 데 도움이 됩니다.</p>
-<h4 id="유지-관리-기간">유지 관리 기간</h4>
-<p>AWS Systems Manager를 사용하면 인스턴스 전체에서 관리 및 유지 보수 작업을 실행할 시간대를 예약할 수 있습니다. 따라서 패치 및 업데이트를 설치하거나 다른 구성 변경 사항을 적용할 편리하고 안전한 시간을 선택할 수 있으므로 서비스와 애플리케이션의 가용성과 안정성을 향상할 수 있습니다.</p>
-<h4 id="run-command-1">Run Command</h4>
-<p>AWS Systems Manager에서는 서버에 로그인하지 않고 대규모로 인스턴스를 원격으로 안전하게 관리할 수 있는 기능을 제공하므로, 배스천 호스트, SSH 또는 원격 PowerShell이 필요 없습니다. 레지스트리 편집, 사용자 관리, 소프트웨어 및 패치 설치와 같은 일반적인 관리 작업을 인스턴스 그룹 전체에서 자동화하는 간단한 방법을 제공합니다. AWS Identity and Access Management(IAM)와의 통합을 통해 세분화된 권한을 적용하여 사용자가 인스턴스에 수행할 수 있는 작업을 제어할 수 있습니다. Systems Manager가 수행한 모든 작업이 AWS CloudTrail에 기록되기 때문에 환경 전체의 변경 사항을 감사할 수도 있습니다.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<h3 id="준비사항">준비사항:</h3>
+<h3 id="실습-준비물">실습 준비물</h3>
 <ul>
-<li>사용할 <a href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html">AWS 계정</a></li>
-</ul>
-<h3 id="permissions-required">Permissions required</h3>
-<ul>
-<li><strong>AdministratorAccess</strong> AWS 관리 권한</li>
+<li>실습에 사용할 <a href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html">AWS 계정</a></li>
+<li><strong>AdministratorAccess</strong> 관리자 권한</li>
 </ul>
 
 <div class="notices warning" ><p>본 실습에서는 AWS 프리 티어에서 다루지 않은 AWS 리소스가 사용될 수 있습니다. 랩 가이드의 끝에는 생성 한 모든 리소스를 제거하는 방법에 대한 추가 섹션이 있습니다. 랩 종료 후 반드시 수행해주세요.</p>
@@ -1498,7 +1522,7 @@
 			
 				
 <li>
-<a href="/operational-excellence/systemmanager/" >System Manager 구성</a>
+<a href="/operational-excellence/systemmanager/" >AWS Systems Manager</a>
 </li>
 				
 
@@ -1511,7 +1535,7 @@
 			
 				
 <li>
-<a href="/operational-excellence/inventory/" >리소스 관리</a>
+<a href="/operational-excellence/inventory/" >리소스 중앙 관리</a>
 </li>
 				
 
@@ -2083,8 +2107,26 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -2303,19 +2345,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1601259406"></script>
-    <script src="/js/perfect-scrollbar.min.js?1601259406"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1601259406"></script>
-    <script src="/js/jquery.sticky.js?1601259406"></script>
-    <script src="/js/featherlight.min.js?1601259406"></script>
-    <script src="/js/highlight.pack.js?1601259406"></script>
+    <script src="/js/clipboard.min.js?1601994470"></script>
+    <script src="/js/perfect-scrollbar.min.js?1601994470"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1601994470"></script>
+    <script src="/js/jquery.sticky.js?1601994470"></script>
+    <script src="/js/featherlight.min.js?1601994470"></script>
+    <script src="/js/highlight.pack.js?1601994470"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1601259406"></script>
-    <script src="/js/learn.js?1601259406"></script>
-    <script src="/js/hugo-learn.js?1601259406"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1601994470"></script>
+    <script src="/js/learn.js?1601994470"></script>
+    <script src="/js/hugo-learn.js?1601994470"></script>
 
-    <link href="/mermaid/mermaid.css?1601259406" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1601259406"></script>
+    <link href="/mermaid/mermaid.css?1601994470" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1601994470"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

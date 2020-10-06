@@ -12,21 +12,21 @@
     <title>홈 :: AWS Well-Architected Labs</title>
 
     
-    <link href="/css/nucleus.css?1601259406" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1601259406" rel="stylesheet">
-    <link href="/css/hybrid.css?1601259406" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1601259406" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1601259406" rel="stylesheet">
-    <link href="/css/auto-complete.css?1601259406" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1601259406" rel="stylesheet">
-    <link href="/css/theme.css?1601259406" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1601259406" rel="stylesheet">
+    <link href="/css/nucleus.css?1601994470" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1601994470" rel="stylesheet">
+    <link href="/css/hybrid.css?1601994470" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1601994470" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1601994470" rel="stylesheet">
+    <link href="/css/auto-complete.css?1601994470" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1601994470" rel="stylesheet">
+    <link href="/css/theme.css?1601994470" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1601994470" rel="stylesheet">
     
-    <link href="/css/theme-walabs.css?1601259406" rel="stylesheet">
+    <link href="/css/theme-walabs.css?1601994470" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1601259406"></script>
+    <script src="/js/jquery-3.3.1.min.js?1601994470"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1601259406"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1601259406"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1601994470"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1601994470"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1601259406"></script>
+<script type="text/javascript" src="/js/search.js?1601994470"></script>
 
     
   </div>
@@ -897,17 +897,60 @@
     
     
     
-    <li data-nav-id="/operational-excellence/systemmanager/" title="System Manager 구성" class="dd-item
+    <li data-nav-id="/operational-excellence/systemmanager/" title="AWS Systems Manager" class="dd-item
     
         
         ">
       <a href="/operational-excellence/systemmanager/">
-          <b>5-1. </b>System Manager 구성
+          <b>5-1. </b>AWS Systems Manager
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
           
           
             <i class="fas read-icon"></i>
           
       </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/systemmanager/prepare/" title="사전 준비" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/systemmanager/prepare/">
+          <b>1. </b>사전 준비
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
       
     </li>
   
@@ -924,12 +967,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/" title="리소스 관리" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/" title="리소스 중앙 관리" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/">
-          <b>5-2. </b>리소스 관리
+          <b>5-2. </b>리소스 중앙 관리
           
             
               <i class="fas fa-caret-right"></i>
@@ -985,12 +1028,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="State Manager" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="상태 관리자" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/statemanager/">
-          <b>2. </b>State Manager
+          <b>2. </b>상태 관리자
           
           
             <i class="fas read-icon"></i>
@@ -1082,12 +1125,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/patch/awsrunpatchbaseline/" title="패치 실행" class="dd-item
+    <li data-nav-id="/operational-excellence/patch/awsrunpatchbaseline/" title="Run Command" class="dd-item
     
         
         ">
       <a href="/operational-excellence/patch/awsrunpatchbaseline/">
-          <b>2. </b>패치 실행
+          <b>2. </b>Run Command
           
           
             <i class="fas read-icon"></i>
@@ -1378,8 +1421,7 @@
 <h2 id="well-architected-labs">Well Architected Labs</h2>
 <hr>
 <h3 id="introduction">Introduction</h3>
-<p>이 실습은 기본적인 3-tier-web에 적용할 수 있는 Best-Practice들을 포함하고 있습니다. 
-Well-Architected Framework와</p>
+<p>이 실습은 기본적인 3-tier-web에 적용할 수 있는 Best-Practice들을 포함하고 있습니다.</p>
 <p>AWS(Amazon Web Services)는 고객이 클라우드에서 안정적이고 안전하면서도 효율적이고 경제적인 시스템을 설계할 수 있도록 하려면 아키텍처 모범 사례를
 고객과 공유해야 한다는 점을 잘 알고 있습니다. 이러한 노력의 일환으로 개발된 AWS Well-Architected 프레임워크를 이용하면 AWS에서 시스템을 구축하면서 내리게 되는 결정의 장점과 단점을 이해할 수 있습니다. Well-Architected 시스템을 마련하면 사업의 성공 가능성이 대폭 높아질 것입니다.</p>
 <p>이 프레임 워크는 고객과 파트너가 아키텍쳐를 평가할 수 있는 일관적인 접근방식을 제공하며, 시간이 지남에 따라 어플리케이션의 요구에 따라 확장 할 수 있는 설계 구현을 돕는 가이드라인을 제공합니다.</p>
@@ -1925,8 +1967,26 @@ Well-Architected Framework와</p>
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -2145,19 +2205,19 @@ Well-Architected Framework와</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1601259406"></script>
-    <script src="/js/perfect-scrollbar.min.js?1601259406"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1601259406"></script>
-    <script src="/js/jquery.sticky.js?1601259406"></script>
-    <script src="/js/featherlight.min.js?1601259406"></script>
-    <script src="/js/highlight.pack.js?1601259406"></script>
+    <script src="/js/clipboard.min.js?1601994470"></script>
+    <script src="/js/perfect-scrollbar.min.js?1601994470"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1601994470"></script>
+    <script src="/js/jquery.sticky.js?1601994470"></script>
+    <script src="/js/featherlight.min.js?1601994470"></script>
+    <script src="/js/highlight.pack.js?1601994470"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1601259406"></script>
-    <script src="/js/learn.js?1601259406"></script>
-    <script src="/js/hugo-learn.js?1601259406"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1601994470"></script>
+    <script src="/js/learn.js?1601994470"></script>
+    <script src="/js/hugo-learn.js?1601994470"></script>
 
-    <link href="/mermaid/mermaid.css?1601259406" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1601259406"></script>
+    <link href="/mermaid/mermaid.css?1601994470" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1601994470"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

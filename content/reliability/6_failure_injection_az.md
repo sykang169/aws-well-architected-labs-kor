@@ -26,7 +26,7 @@ weight: 4
 1. 아래 명령어를 입력합니다. VPC ID는 이전에 기록한 `<vpc-id>`를 사용합니다.
 
 ```bash
-./failover_rds.sh <az> <vpc-id>
+./failover_az.sh <az> <vpc-id>
 ```
 
 1. RDS 장애 조치가 시작되었는지 확인합니다.(AWS RDS _primary_ DB 인스턴스가 포함 된 AZ를 선택한 경우).
