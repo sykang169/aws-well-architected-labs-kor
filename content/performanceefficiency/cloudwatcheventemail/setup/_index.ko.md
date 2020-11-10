@@ -4,7 +4,7 @@ weight: 321
 pre: "<b>1. </b>"
 ---
 
-### CloudWatch 경보, 경보 생성을
+### CloudWatch 경보 생성
 ---
 CloudFormation에서 생성한 WellArchitectedFrameworkLabsStack에서 생성된 인스턴스의 CPU사용량과 갯수를 측정 할 것입니다.
  
@@ -38,8 +38,8 @@ CloudWatch 콘솔 가기 : https://console.aws.amazon.com/cloudwatch/
     - **Alarm description - optional** : `for WAR workshop`
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm-fin.png#medium)
 
-1. ***경보생성 버튼**을 눌러 생성을 완료합니다. 
+1. **경보생성 버튼**을 눌러 생성을 완료합니다. 
 1. 이제 기본적인 셋팅이 완료되었습니다. 
 
-[이제 EC2 Instance의 CPU사용율이 올라가면 어떤 변화가 있는지 확인해 보겠습니다.](/performanceefficiency/cloudwatcheventemail/snstopic)
+[이제 이메일과 전화번호를 등록해보겠습니다.](/performanceefficiency/cloudwatcheventemail/snstopic)
  

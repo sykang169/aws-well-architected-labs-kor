@@ -1,7 +1,7 @@
 ---
 title: "EC2 Loadtest 진행"
 weight: 323
-pre: "<b>2. </b>"
+pre: "<b>3. </b>"
 ---
 
 ### EC2의 CPU사용량을 늘린 다음 대시보드를 확인할 것입니다:

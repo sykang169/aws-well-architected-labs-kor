@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="description" content="Hands on labs and real world design scenarios for Well-Architected workloads">
+<meta name="author" content="Well-Architected Team">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Setup :: AWS Well-Architected Labs</title>
+
+    
+    <link href="/css/nucleus.css?1603716327" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1603716327" rel="stylesheet">
+    <link href="/css/hybrid.css?1603716327" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1603716327" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1603716327" rel="stylesheet">
+    <link href="/css/auto-complete.css?1603716327" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1603716327" rel="stylesheet">
+    <link href="/css/theme.css?1603716327" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1603716327" rel="stylesheet">
+    
+    <link href="/css/theme-walabs.css?1603716327" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1603716327"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/en/setup/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/">
+  <img src="/images/wa.png" alt="Well-Architected Labs">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1603716327"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1603716327"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/\/en";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1603716327"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/setup/" title="Setup" class="dd-item
+    parent
+        active
+        ">
+      <a href="/en/setup/">
+          <b>2. </b>Setup
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/setup/cloud9/" title="Cloud9" class="dd-item
+    
+        
+        ">
+      <a href="/en/setup/cloud9/">
+          <b>2-1. </b>Cloud9
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/reliability/" title="안정성" class="dd-item
+    
+        
+        ">
+      <a href="/en/reliability/">
+          <b>6. </b>안정성
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/free/"><i class='fas fa-bookmark'></i> Amazon Free Tier</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/">한국어</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/" selected>English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+    
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    <h2 class="github-title">Github Repo</h2>
+
+    <h3 class="github-title">Well-Architected HOL</h3>
+    <a class="github-button" href="https://github.com/sykang169/aws-well-architected-labs-kor" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
+    &nbsp;<a class="github-button" href="https://github.com/sykang169/aws-well-architected-labs-kor" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork on GitHub">Fork</a><br />
+
+
+    <br>
+      
+    
+
+    <a href="https://aws.amazon.com/ko/privacy/">Privacy</a> | <a href="https://aws.amazon.com/terms/">Site terms</a> | © 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+      
+     
+
+</left>
+
+
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/sykang169/aws-well-architected-labs-kor/setup/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/en/'>홈</a> > Setup
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Setup
+            </h1>
+          
+
+        
+
+
+
+	
+<div class="notices note" ><p>The CloudFormation`s stack created in the next chapter includes all infrastructure and the CI/CD pipeline of master and develop.</p>
+</div>
+
+<p>This lab include how to improve your code quality using AWS services. developers can commit, test, and deploy code with minimal effort. The deployment and testing environment is automated.</p>
+<h4 id="infrastructure">infrastructure</h4>
+<p><img src="/images/aws.svg" alt="AWS-Code-Cycle"></p>
+<h4 id="service">Service</h4>
+<p><img src="/images/awsservice.svg" alt="AWS-Code-Cycle"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>CodeCommit</strong></td>
+<td style="text-align:left">this is code repository, the development code is <strong>JAVA</strong> and Gradle.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CodeBuild</strong></td>
+<td style="text-align:left">The build tool is <strong>CodeBuild</strong>. It using Junit for UnitTest and the result is report to xml. The printed report can be viewed directly from the console using CodeCommit&rsquo;s report group.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CodeDeploy</strong></td>
+<td style="text-align:left">Tested code is automatically deployed to the Dev environment. The code pushed to the Develop Branch is deploy to the DevWebApp01 instance and starts profiling by CodeGuru&rsquo;s profiler. And when all tests pass and merge into Master, the code is automatically deployed as ProdWebApp01.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CodePipeline</strong></td>
+<td style="text-align:left">Visualize the series of steps above as <strong>CodePipeline</strong>. Developers can immediately find out where the pushed code has a problem.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CodeGuru</strong></td>
+<td style="text-align:left">When Pull-Request, Code-Review is automatically performed. Profiling of the code deployed on DevWebapp01, ProdWebapp01.</td>
+</tr>
+</tbody>
+</table>
+<p>-<a href="/en/setup/lab-setup">let`s set up the lab environment using CloudFomration.</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1603716327"></script>
+    <script src="/js/perfect-scrollbar.min.js?1603716327"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1603716327"></script>
+    <script src="/js/jquery.sticky.js?1603716327"></script>
+    <script src="/js/featherlight.min.js?1603716327"></script>
+    <script src="/js/highlight.pack.js?1603716327"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1603716327"></script>
+    <script src="/js/learn.js?1603716327"></script>
+    <script src="/js/hugo-learn.js?1603716327"></script>
+
+    <link href="/mermaid/mermaid.css?1603716327" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1603716327"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

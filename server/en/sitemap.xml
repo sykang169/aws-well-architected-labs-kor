@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/</loc>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/cloud9/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/cloud9/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/cloud9/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/tags/"
+                />
+  </url>
+  
+</urlset>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="description" content="Hands on labs and real world design scenarios for Well-Architected workloads">
+<meta name="author" content="Well-Architected Team">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>안정성 :: AWS Well-Architected Labs</title>
+
+    
+    <link href="/css/nucleus.css?1603716327" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1603716327" rel="stylesheet">
+    <link href="/css/hybrid.css?1603716327" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1603716327" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1603716327" rel="stylesheet">
+    <link href="/css/auto-complete.css?1603716327" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1603716327" rel="stylesheet">
+    <link href="/css/theme.css?1603716327" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1603716327" rel="stylesheet">
+    
+    <link href="/css/theme-walabs.css?1603716327" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1603716327"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/en/reliability/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/">
+  <img src="/images/wa.png" alt="Well-Architected Labs">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1603716327"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1603716327"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/\/en";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1603716327"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/setup/" title="Setup" class="dd-item
+    
+        
+        ">
+      <a href="/en/setup/">
+          <b>2. </b>Setup
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/setup/cloud9/" title="Cloud9" class="dd-item
+    
+        
+        ">
+      <a href="/en/setup/cloud9/">
+          <b>2-1. </b>Cloud9
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/reliability/" title="안정성" class="dd-item
+    parent
+        active
+        ">
+      <a href="/en/reliability/">
+          <b>6. </b>안정성
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/free/"><i class='fas fa-bookmark'></i> Amazon Free Tier</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/">한국어</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/" selected>English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+    
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    <h2 class="github-title">Github Repo</h2>
+
+    <h3 class="github-title">Well-Architected HOL</h3>
+    <a class="github-button" href="https://github.com/sykang169/aws-well-architected-labs-kor" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
+    &nbsp;<a class="github-button" href="https://github.com/sykang169/aws-well-architected-labs-kor" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork on GitHub">Fork</a><br />
+
+
+    <br>
+      
+    
+
+    <a href="https://aws.amazon.com/ko/privacy/">Privacy</a> | <a href="https://aws.amazon.com/terms/">Site terms</a> | © 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+      
+     
+
+</left>
+
+
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/sykang169/aws-well-architected-labs-kor/reliability/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/en/'>홈</a> > 안정성
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              안정성
+            </h1>
+          
+
+        
+
+
+
+	<p><img src="/Reliability/Images/ReliabilityIconHorizontal.png" alt="ReliabilityIconHorizontal"></p>
+<p>실습 랩은 AWS를 사용하여 <strong>안정적인</strong> 워크로드를 구현하는 방법을 알려줍니다.</p>
+<ul>
+<li>
+<p><strong>Reliability</strong>은 워크로드가 의도 한 기능을 예상 할 때 정확하고 일관되게 수행 할 수있는 능력입니다. 여기에는 전체 수명주기 동안 워크로드를 운영하고 테스트하는 기능이 포함됩니다.</p>
+</li>
+<li>
+<p><strong>Resiliency</strong> 은 인프라 또는 서비스 중단으로부터 복구하고, 수요를 충족하기 위해 컴퓨팅 리소스를 동적으로 확보하고, 잘못된 구성 또는 일시적인 네트워크 문제와 같은 중단을 완화하는 워크로드의 능력입니다.</p>
+</li>
+<li>
+<p><strong>Reliability</strong> 은 여러 요인에 따라 달라지며 그 중 복원력이 가장 큰 영향을 미칩니다.</p>
+</li>
+</ul>
+<p>안정성에 대한 자세한 내용은 AWS Well-Architected <a href="https://d1.awsstatic.com/whitepapers/architecture/AWS-Reliability-Pillar.pdf">AWS Well-Architected Reliability whitepaper</a>를 참조하십시오.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1603716327"></script>
+    <script src="/js/perfect-scrollbar.min.js?1603716327"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1603716327"></script>
+    <script src="/js/jquery.sticky.js?1603716327"></script>
+    <script src="/js/featherlight.min.js?1603716327"></script>
+    <script src="/js/highlight.pack.js?1603716327"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1603716327"></script>
+    <script src="/js/learn.js?1603716327"></script>
+    <script src="/js/hugo-learn.js?1603716327"></script>
+
+    <link href="/mermaid/mermaid.css?1603716327" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1603716327"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

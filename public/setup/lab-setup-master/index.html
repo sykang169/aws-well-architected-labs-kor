@@ -1,0 +1,2649 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="description" content="Hands on labs and real world design scenarios for Well-Architected workloads">
+<meta name="author" content="Well-Architected Team">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>MASTER 계정 셋업 :: AWS Well-Architected Labs</title>
+
+    
+    <link href="/css/nucleus.css?1603716327" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1603716327" rel="stylesheet">
+    <link href="/css/hybrid.css?1603716327" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1603716327" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1603716327" rel="stylesheet">
+    <link href="/css/auto-complete.css?1603716327" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1603716327" rel="stylesheet">
+    <link href="/css/theme.css?1603716327" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1603716327" rel="stylesheet">
+    
+    <link href="/css/theme-walabs.css?1603716327" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1603716327"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/setup/lab-setup-master/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/">
+  <img src="/images/wa.png" alt="Well-Architected Labs">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1603716327"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1603716327"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1603716327"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/introduction/" title="소개" class="dd-item
+    
+        
+        ">
+      <a href="/introduction/">
+          <b>1. </b>소개
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/introduction/framework/" title="AWS-Well-Architected Framework란?" class="dd-item
+    
+        
+        ">
+      <a href="/introduction/framework/">
+          <b>1-1 </b>AWS-Well-Architected Framework란?
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/introduction/pillar/" title="AWS Well-Architected의 기반" class="dd-item
+    
+        
+        ">
+      <a href="/introduction/pillar/">
+          <b>1-2 </b>AWS Well-Architected의 기반
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/setup/" title="실습 환경 셋업" class="dd-item
+    parent
+        
+        ">
+      <a href="/setup/">
+          <b>2. </b>실습 환경 셋업
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/setup/cloud9/" title="Cloud9" class="dd-item
+    
+        
+        ">
+      <a href="/setup/cloud9/">
+          <b>2-1. </b>Cloud9
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/setup/lab-setup-master/" title="MASTER 계정 셋업" class="dd-item
+    parent
+        active
+        ">
+      <a href="/setup/lab-setup-master/">
+          <b>2-2. </b>MASTER 계정 셋업
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/setup/wellarchitectedtools/" title="AWS Well-Architected Tool 리뷰" class="dd-item
+    
+        
+        ">
+      <a href="/setup/wellarchitectedtools/">
+          <b>2-3. </b>AWS Well-Architected Tool 리뷰
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/setup/wellarchitectedtools/2_create_workload/" title="워크로드 생성" class="dd-item ">
+        <a href="/setup/wellarchitectedtools/2_create_workload/">
+        <b>1. </b>워크로드 생성
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/setup/wellarchitectedtools/3_perform_review/" title="리뷰 진행" class="dd-item ">
+        <a href="/setup/wellarchitectedtools/3_perform_review/">
+        <b>2. </b>리뷰 진행
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/setup/wellarchitectedtools/4_save_milestone/" title="마일스톤 저장" class="dd-item ">
+        <a href="/setup/wellarchitectedtools/4_save_milestone/">
+        <b>3. </b>마일스톤 저장
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/setup/wellarchitectedtools/5_view_report/" title="보고서 확인 및 저장" class="dd-item ">
+        <a href="/setup/wellarchitectedtools/5_view_report/">
+        <b>4. </b>보고서 확인 및 저장
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/" title="성능효율성" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/">
+          <b>3. </b>성능효율성
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/" title="CloudWatch 대시보드를 사용하여 모니터링 하기" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatchdashboards/">
+          <b>3-1. </b>CloudWatch 대시보드를 사용하여 모니터링 하기
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/default-dashboard/" title="자동 대시보드 설정" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatchdashboards/default-dashboard/">
+          <b>1. </b>자동 대시보드 설정
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/setup/" title="사용자 대시보드 설정" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatchdashboards/setup/">
+          <b>2. </b>사용자 대시보드 설정
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CPU 경보" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatcheventemail/">
+          <b>3-2. </b>CPU 경보
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/setup/" title="사용자 경보 설정" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatcheventemail/setup/">
+          <b>1. </b>사용자 경보 설정
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/snstopic/" title="이메일 확인 및 전화번호 등록" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatcheventemail/snstopic/">
+          <b>2. </b>이메일 확인 및 전화번호 등록
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/ec2/" title="EC2 Loadtest 진행" class="dd-item
+    
+        
+        ">
+      <a href="/performanceefficiency/cloudwatcheventemail/ec2/">
+          <b>2. </b>EC2 Loadtest 진행
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/cost/" title="비용최적화" class="dd-item
+    
+        
+        ">
+      <a href="/cost/">
+          <b>4. </b>비용최적화
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/cost/100_aws_resource_optimization/" title="EC2 적정크기 찾기" class="dd-item
+    
+        
+        ">
+      <a href="/cost/100_aws_resource_optimization/">
+          <b>4-1. </b>EC2 적정크기 찾기
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/1_cloudwatch_intro/" title="Amazon Cloudwatch에 대하여 알아보기" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/1_cloudwatch_intro/">
+        <b>1. </b>Amazon Cloudwatch에 대하여 알아보기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/2_resource_opt/" title="Amazon EC2 리소스 최적화 Recommendations 사용" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/2_resource_opt/">
+        <b>2. </b>Amazon EC2 리소스 최적화 Recommendations 사용
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/3_prio_resource_opt/" title="AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/3_prio_resource_opt/">
+        <b>3. </b>AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/4_act_resource_opt/" title="recommendations 조치" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/4_act_resource_opt/">
+        <b>4. </b>recommendations 조치
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/" title="Amazon EC2 올바른 크기를 위한 모범사례" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/">
+        <b>5. </b>Amazon EC2 올바른 크기를 위한 모범사례
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/100_aws_resource_optimization/6_tear_down/" title="실습 종료" class="dd-item ">
+        <a href="/cost/100_aws_resource_optimization/6_tear_down/">
+        <b>6. </b>실습 종료
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/cost/200_aws_resource_optimization/" title="EC2 적정크기 찾기 (MEM)" class="dd-item
+    
+        
+        ">
+      <a href="/cost/200_aws_resource_optimization/">
+          <b>4-2. </b>EC2 적정크기 찾기 (MEM)
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/2_create_iamrole/" title="AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/2_create_iamrole/">
+        <b>1. </b>AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/3_attach_iamrole/" title="EC2인스턴스에 CloudWatch IAM role 연결하기" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/3_attach_iamrole/">
+        <b>2. </b>EC2인스턴스에 CloudWatch IAM role 연결하기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/4_memory_plugin/" title="Cloudwatch Agent 수동 설치" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/4_memory_plugin/">
+        <b>3. </b>Cloudwatch Agent 수동 설치
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/5_ec2_updated_rec/" title="업데이트 된 Amazon EC2 리소스 최적화 권장 사항" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/5_ec2_updated_rec/">
+        <b>4. </b>업데이트 된 Amazon EC2 리소스 최적화 권장 사항
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/" title="AMAZON EC2 올바른 크기를 위한 모범사례" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/">
+        <b>5. </b>AMAZON EC2 올바른 크기를 위한 모범사례
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cost/200_aws_resource_optimization/7_tear_down/" title="실습 종료" class="dd-item ">
+        <a href="/cost/200_aws_resource_optimization/7_tear_down/">
+        <b>6. </b>실습 종료
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/" title="운영우수성" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/">
+          <b>5. </b>운영우수성
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/systemmanager/" title="AWS Systems Manager" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/systemmanager/">
+          <b>5-1. </b>AWS Systems Manager
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/systemmanager/prepare/" title="사전 준비" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/systemmanager/prepare/">
+          <b>1. </b>사전 준비
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/inventory/" title="리소스 중앙 관리" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/inventory/">
+          <b>5-2. </b>리소스 중앙 관리
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/inventory/inventorysetup/" title="인벤토리" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/inventory/inventorysetup/">
+          <b>1. </b>인벤토리
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="상태 관리자" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/inventory/statemanager/">
+          <b>2. </b>상태 관리자
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/patch/" title="패치 관리" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/patch/">
+          <b>5-3. </b>패치 관리
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/patch/patchmanager/" title="패치 관리자" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/patch/patchmanager/">
+          <b>1. </b>패치 관리자
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/operational-excellence/patch/awsrunpatchbaseline/" title="Run Command" class="dd-item
+    
+        
+        ">
+      <a href="/operational-excellence/patch/awsrunpatchbaseline/">
+          <b>2. </b>Run Command
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/reliability/" title="안정성" class="dd-item
+    
+        
+        ">
+      <a href="/reliability/">
+          <b>6. </b>안정성
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/reliability/3_failure_injection_prep/" title="장애 주입 준비" class="dd-item ">
+        <a href="/reliability/3_failure_injection_prep/">
+        <b>1. </b>장애 주입 준비
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/reliability/4_failure_injection_ec2/" title="EC2 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/4_failure_injection_ec2/">
+        <b>2. </b>EC2 장애 주입
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/reliability/5_failure_injection_rds/" title="RDS 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/5_failure_injection_rds/">
+        <b>3. </b>RDS 장애 주입
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/reliability/6_failure_injection_az/" title="AZ 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/6_failure_injection_az/">
+        <b>4. </b>AZ 장애 주입
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/security/" title="보안" class="dd-item
+    
+        
+        ">
+      <a href="/security/">
+          <b>7. </b>보안
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/review/" title="재검토" class="dd-item
+    
+        
+        ">
+      <a href="/review/">
+          <b>8. </b>재검토
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/review/1_reviewagine/" title="AWS Well-Architected Tool을 통한 재검토" class="dd-item ">
+        <a href="/review/1_reviewagine/">
+        AWS Well-Architected Tool을 통한 재검토
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/free/"><i class='fas fa-bookmark'></i> Amazon Free Tier</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/lab-setup-master/" selected>한국어</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+    
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    <h2 class="github-title">Github Repo</h2>
+
+    <h3 class="github-title">Well-Architected HOL</h3>
+    <a class="github-button" href="https://github.com/sykang169/aws-well-architected-labs-kor" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
+    &nbsp;<a class="github-button" href="https://github.com/sykang169/aws-well-architected-labs-kor" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork on GitHub">Fork</a><br />
+
+
+    <br>
+      
+    
+
+    <a href="https://aws.amazon.com/ko/privacy/">Privacy</a> | <a href="https://aws.amazon.com/terms/">Site terms</a> | © 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+      
+     
+
+</left>
+
+
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/sykang169/aws-well-architected-labs-kor/setup/lab-setup-master/_index.ko.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>홈</a> > <a href='/setup/'>실습 환경 셋업</a> > MASTER 계정 셋업
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#aws-계정">AWS 계정</a></li>
+    <li><a href="#iam-사용자">IAM 사용자</a></li>
+    <li><a href="#ec2-key-pair">EC2 Key Pair</a></li>
+    <li><a href="#cloudformation-template">CloudFormation Template</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              MASTER 계정 셋업
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="aws-계정">AWS 계정</h2>
+<p>
+<div class="notices info" ><p>중요: AWS가 제공하는 Test계정인 <strong>EventEngine</strong>을 사용한다면 바로 하단의 <strong>Cloudformation template</strong>부터 진행하세요.</p>
+</div>
+
+
+<div class="notices warning" ><p>이미 AWS 계정을 가지고 있다면 즉시 이 실습의 가이드를 따라 진행할 수 있으나, <strong>계정이 없다면</strong> 먼저 AWS 계정을 만들어야 합니다.</p>
+</div>
+
+AWS 계정 생성 및 활성화 가이드는 다음 <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/">링크</a>를 참조하시기 바랍니다.<br>
+
+<div class="notices info" ><p>모든 이미지는 클릭하여 확대가 가능합니다.스크린샷의 자세한 내용이 필요하시면 눌러서 확인해주세요.</p>
+</div>
+
+
+<div class="notices info" ><p>실습은 <strong>ap-northeast-2 (서울) 리전을 선택</strong>합니다.</p>
+</div>
+</p>
+<h2 id="iam-사용자">IAM 사용자</h2>
+<p>AWS 계정을 생성했지만 직접 IAM 사용자를 생성하지 않은 경우, IAM 콘솔을 사용하여 IAM 사용자를 생성 할 수 있습니다. 다음 스텝에 따라 Administrator (관리자) 사용자를 생성합니다. 이미 관리자 사용자가 있다면, 다음 IAM 사용자 생성 작업을 건너 뜁니다.</p>
+<ol>
+<li>AWS 계정 이메일 주소와 비밀번호를 사용하여 AWS 계정의 <strong>Root</strong> 사용자로 <a href="https://console.aws.amazon.com/iam/">IAM 콘솔</a> 에 로그인 합니다.</li>
+<li>IAM 콘솔 왼쪽 메뉴 패널에서 <strong>Users</strong> (사용자)를 선택한 다음 <strong>Add user</strong> (사용자 추가)를 클릭합니다.</li>
+<li><strong>User name</strong> (사용자 이름)은 <code>Administrator</code>로 입력합니다.</li>
+<li><strong>AWS Management Console access</strong> 체크박스를 선택하고, <strong>Custom password</strong>를 선택한 다음 비빌번호를 입력합니다.</li>
+<li><strong>Next: Permissions</strong> (다음: 권한)을 클릭합니다.
+<img src="/images/iam_user_01.png" alt="IAMPermission"></li>
+<li><strong>Attach existing policies directly</strong> (기존 정책 직접 연결)를 선택하고 <strong>AdministratorAccess</strong> 정책에 체크박스를 선택하고 <strong>Next: Tags</strong> (다음: 태그)를 클릭합니다.
+<img src="/images/iam_user_02.png" alt="IAMPolicy"></li>
+<li><strong>Next: Review</strong> (다음: 검토)를 클릭합니다.</li>
+<li>Administrator 사용자에 AdministratorAccess 관리형 정책이 추가 된 것을 확인하고 <strong>Create user</strong> (사용자 만들기)를 클릭합니다.</li>
+<li>이제 <strong>Root</strong> 사용자를 <strong>로그아웃</strong>하고 새로 생성한 <strong>Administrator</strong> 사용자로 <strong>로그인</strong>을 합니다. 다음 URL을 사용하여 로그인 할 수 있습니다.</li>
+</ol>
+<blockquote>
+<p><code>https://&lt;your_aws_account_id&gt;.signin.aws.amazon.com/console/</code><br>
+
+<div class="notices warning" ><p>&lt;your_aws_account_id&gt;는 본인 AWS 계정의 고유 ID를 입력합니다. Root 사용자로는 해당 실습을 진행할 때 에러가 발생할 수 있습니다. 반드시 admin 유저 계정으로 로그인하여 진행하세요.</p>
+</div>
+</p>
+</blockquote>
+<h2 id="ec2-key-pair">EC2 Key Pair</h2>
+<p>CloudFormaton template을 사용하여 실습에 필요한 기본 환경을 구성하려면 Amazon EC2 키 페어를 제공해야 합니다. 이미 EC2 키 페어가 있는 경우 다음 작업을 건너 뜁니다.</p>
+<ol>
+<li><strong>Administrator</strong> 사용자로 AWS 콘솔에 로그인 한 다음 <a href="https://console.aws.amazon.com/ec2/">EC2 콘솔</a>로 이동합니다.</li>
+<li>탐색 창의 <strong>Network &amp; Security</strong> (네트워크 &amp; 보안)에서 <strong>Key Pairs</strong> (키 페어)를 선택합니다.</li>
+<li><strong>Create Key Pair</strong> (키 페어 생성)를 클릭합니다.</li>
+<li><strong>Key pair name</strong> (키 페어 이름)에 새 key pair의 이름을 입력 한 다음 <strong>Create</strong> (생성)을 클릭합니다.</li>
+<li>.PEM 파일 형식의 Private Key (개인 키) 파일은 브라우저에서 자동으로 다운로드 됩니다. 개인 키는 다음 CloudFormation을 사용할 때 필요합니다.</li>
+</ol>
+<h2 id="cloudformation-template">CloudFormation Template</h2>
+<p>
+<div class="notices info" ><p>이 계정은 Master가 되는 계정을 위한 설정입니다.</p>
+</div>
+
+AWS CloudFormation에서는 클라우드 환경에서 AWS 및 타사 애플리케이션 리소스를 모델링하고 프로비저닝할 수 있도록 공용 언어를 제공합니다. AWS CloudFormation을 사용하면 프로그래밍 언어 또는 간단한 텍스트 파일을 사용하여 자동화되고 안전한 방식으로 모든 지역과 계정에 걸쳐 애플리케이션에 필요한 모든 리소스를 모델링 및 프로비저닝할 수 있습니다.</p>
+<p>AWS CodeQuality 실습에 필요한 AWS 리소스를 사전에 생성하기 위해 제공된CloudFormation template을 사용하여 CloudFormation stack을 생성합니다.</p>
+<p>CloudFormation 스택을 시작하려면, <a href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&amp;templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml">Launch Stack 버튼</a>를 클릭해서 CloudFormation 콘솔로 이동합니다.</p>
+
+<div class="notices warning" ><p>중요: 이 탬플릿은 ap-northeast-2 (서울)을 위해 만들어졌습니다.</p>
+</div>
+
+
+<a  href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&amp;templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml" target="_blank"  class="btn btn-default">
+  
+  
+  
+    
+  <i class="fab fa-aws"></i>
+    
+  
+   Launch Stack
+  
+</a>
+
+
+<div class="notices warning" ><p>반드시 pem 키를 다운받아야합니다. EventEngine의 default key를 사용하지 마십시오.</p>
+</div>
+
+<p>스택 생성 단계에서 스택 이름을 입력하고 앞서 생성한 EC2 키 페어를 선택합니다. 그리고 나머지는 기본 값을 유지하고 마지막 단계에서 CloudFormation이 IAM 리소스를 생성할 때 커스텀 이름을 사용할 수 있게</p>
+<p>Stackname에 <code>MasterAccountStack</code>을 입력합니다.
+Workload Name에 <code>Prod</code>를 입력합니다.</p>
+<p><strong>Acknowledge 체크박스를 선택</strong>하고 <strong>Create stack</strong> (스택 생성)을 클릭합니다.</p>
+
+<div class="notices note" ><p>스택 생성이 완료되면 AWS 계정에 실습을 실행하는 데 필요한 모든 기본 리소스가 준비 되어있습니다. <strong>Outputs 탭</strong>에서 <strong>ALBAddress</strong>, <strong>DBDNS</strong>가 표시됩니다.</p>
+</div>
+
+<p>-<a href="/performanceefficiency">이제 워크샵을 진행해보도록 하겠습니다.</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1603716327"></script>
+    <script src="/js/perfect-scrollbar.min.js?1603716327"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1603716327"></script>
+    <script src="/js/jquery.sticky.js?1603716327"></script>
+    <script src="/js/featherlight.min.js?1603716327"></script>
+    <script src="/js/highlight.pack.js?1603716327"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1603716327"></script>
+    <script src="/js/learn.js?1603716327"></script>
+    <script src="/js/hugo-learn.js?1603716327"></script>
+
+    <link href="/mermaid/mermaid.css?1603716327" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1603716327"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

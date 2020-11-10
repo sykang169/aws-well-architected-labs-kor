@@ -5,25 +5,22 @@ pre: "<b>2. </b>"
 ---
 
 {{% notice note %}}
-The CloudFormation`s stack created in the next chapter includes all infrastructure and the CI/CD pipeline of master and develop.
+This CloudFormation stack include all enviromnent each pillar`s hands on labs. 
 {{% /notice%}}
+ 
 
-This lab include how to improve your code quality using AWS services. developers can commit, test, and deploy code with minimal effort. The deployment and testing environment is automated.
+#### Enviroment
+![AWS-Code-Cycle](/images/war/awswellarchitected.svg)
 
-#### infrastructure
-![AWS-Code-Cycle](/images/aws.svg)
-
-#### Service
-![AWS-Code-Cycle](/images/awsservice.svg)
+#### Use Services
+![AWS-Code-Cycle](/images/war/awsservice.svg)
 
 
-| Name | contents|
+| 이름 | 설명|
 |:---|:---|
-| **CodeCommit** | this is code repository, the development code is **JAVA** and Gradle. |
-| **CodeBuild** | The build tool is **CodeBuild**. It using Junit for UnitTest and the result is report to xml. The printed report can be viewed directly from the console using CodeCommit's report group. |
-| **CodeDeploy** | Tested code is automatically deployed to the Dev environment. The code pushed to the Develop Branch is deploy to the DevWebApp01 instance and starts profiling by CodeGuru's profiler. And when all tests pass and merge into Master, the code is automatically deployed as ProdWebApp01.| 
-| **CodePipeline** | Visualize the series of steps above as **CodePipeline**. Developers can immediately find out where the pushed code has a problem. |
-| **CodeGuru** | When Pull-Request, Code-Review is automatically performed. Profiling of the code deployed on DevWebapp01, ProdWebapp01. |
+| **Amazon EC2** | Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment. |
+| **Application Load Balancer** | A load balancer serves as the single point of contact for clients. The load balancer distributes incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones. This increases the availability of your application. You add one or more listeners to your load balancer.|
+| **Amazon RDS** | Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as hardware provisioning, database setup, patching and backups. It frees you to focus on your applications so you can give them the fast performance, high availability, security and compatibility they need. | 
+| **AWS Auto Scaling** | AWS Auto Scaling monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. Using AWS Auto Scaling, it’s easy to setup application scaling for multiple resources across multiple services in minutes. The service provides a simple, powerful user interface that lets you build scaling plans for resources including Amazon EC2 instances and Spot Fleets, Amazon ECS tasks, Amazon DynamoDB tables and indexes, and Amazon Aurora Replicas. AWS Auto Scaling makes scaling simple with recommendations that allow you to optimize performance, costs, or balance between them. If you’re already using Amazon EC2 Auto Scaling to dynamically scale your Amazon EC2 instances, you can now combine it with AWS Auto Scaling to scale additional resources for other AWS services. With AWS Auto Scaling, your applications always have the right resources at the right time.| 
 
-
--[let`s set up the lab environment using CloudFomration.](/en/setup/lab-setup) 
+-[Let's deploy CloudFomration stack.](/setup/lab-setup-master) 

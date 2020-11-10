@@ -3,14 +3,13 @@ title: "보안"
 weight: 70
 pre: "<b>7. </b>"
 ---
-# CLOUDFRONT WITH WAF PROTECTION
 
-### Authors
-Eunsu, Shin
+## Introduction
+보안랩은 아키텍처 모범 사례를 사용하여 학습, 측정 및 구축하는 데 도움이되는 실습 랩 형식의 문서 및 코드입니다.
 
-### Introduction
-이 실습 실습에서는 Amazon CloudFront 및 AWS 웹 애플리케이션 방화벽 (WAF)을 사용하여 네트워크 기반 공격으로부터 워크로드를 보호하는 단계를 안내합니다. 학습 한 기술은 AWS Well-Architected 프레임 워크에 따라 워크로드를 보호하는 데 도움이됩니다.
+AWS 보안과 관련하여 더 자세한 정보를 얻고싶으시다면 [AWS Security](https://aws.amazon.com/security/)을 방문하여 [AWS Well-Architected Security whitepaper](https://d1.awsstatic.com/whitepapers/architecture/AWS-Security-Pillar.pdf) 또는 [https://wa.aws.amazon.com/](https://wa.aws.amazon.com/)를 읽어보세요. 또한 [https://awssecworkshops.com/](https://awssecworkshops.com/) 핸즈온 랩 워크샵을 체크하세요. 공식 AWS Security 교육 옵션은 [AWS Training and Certification Learning Library](https://www.aws.training/LearningLibrary?filters=classification%3A27&search=&tab=digital_courses%3Ftc%3Dicon)를 확인해주세요.
 
-AWS 보안에 대한 자세한 내용은 AWS 보안을 방문하고 AWS Well-Architected 보안 백서 또는 온라인 https://wa.aws.amazon.com/을 참조하십시오. 
+![Images/aws_security_areas.png](/Security/images/aws_security_areas.png)  
 
-[AWS WAF 공격 및 방어](https://sessin.github.io/awswafhol/)실습 시작하기.
+## Labs & Quests
+{{% children depth=1 %}}

@@ -5,27 +5,30 @@ pre: "<b>2-1. </b>"
 
 ---
 
-{{% notice tip %}}
-Ad blockers, javascript disablers, and tracking blockers should be disabled for the cloud9 domain, or connecting to the workspace might be impacted. Cloud9 requires third-party-cookies. You can whitelist the specific domains.
-{{% /notice %}}
+### Let's make Cloud9 instance:
 
-### Navigate to the Cloud9 console:
+AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes prepackaged with essential tools for popular programming languages, including JavaScript, Python, PHP, and more, so you don’t need to install files or configure your development machine to start new projects. Since your Cloud9 IDE is cloud-based, you can work on your projects from your office, home, or anywhere using an internet-connected machine. Cloud9 also provides a seamless experience for developing serverless applications enabling you to easily define resources, debug, and switch between local and remote execution of serverless applications. With Cloud9, you can quickly share your development environment with your team, enabling you to pair program and track each other's inputs in real time.
 
-Navigate to the Cloud9 console: https://console.aws.amazon.com/cloud9
+Cloud9 console start: https://console.aws.amazon.com/cloud9
 
-### Create a workspace
-Once you navigate to the Cloud9 console, click on the create environment button:
+### make Workspace 
+1. select **Create Environment** on left menu. 
 ![cloud902](/images/setup/cloud9-create-environment.png)
 
-1. Enter `CodequalityWorkshop's Cloud9` to the Name and` for Workshop` to the Description, and then click **Next Step**.
+1. typing `WellArchitectedWorkshop's Cloud9` at Name environment of Name, at Description typing `for Workshop` and click **Next Step**.
 ![cloud903](/images/setup/cloud9-name-environment.png)
 
-1. Configure settings without changing anything, select **Next step**.
+1. Click **Next step** button. 
 ![cloud904](/images/setup/cloud9-configure-setting.png)
 
-1. Select **Create Environment**.
+{{% notice warning %}}
+Deploy Cloud9 to the default VPC. Cloud9 may shut down if it deploy in wellarchitectedlabs VPC when chasos test in a reliability pillar.
+{{% /notice %}}
+
+1. Review stage, check Cloud9 enviroment and setting click **Create Environment**. 
 ![cloud905](/images/setup/cloud9-review.png)
 
-1. Finish!
-![cloud905](/images/setup/cloud9-desktop.png)
+1. Deploy finished you can use Cloud9. 
+![cloud905](/images/setup/cloud9-settig-fin.png)
+
 

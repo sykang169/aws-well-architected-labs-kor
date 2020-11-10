@@ -1,5 +1,5 @@
 ---
-title: "MASTER 계정 셋업"
+title: "CloudFormation 배포"
 weight: 22
 pre: "<b>2-2. </b>"
 hide: true
@@ -48,10 +48,13 @@ CloudFormaton template을 사용하여 실습에 필요한 기본 환경을 구�
 1.	**Key pair name** (키 페어 이름)에 새 key pair의 이름을 입력 한 다음 **Create** (생성)을 클릭합니다.
 1.	.PEM 파일 형식의 Private Key (개인 키) 파일은 브라우저에서 자동으로 다운로드 됩니다. 개인 키는 다음 CloudFormation을 사용할 때 필요합니다.
 
-## CloudFormation Template
-{{% notice info %}}
-이 계정은 Master가 되는 계정을 위한 설정입니다. 
+{{% notice warning %}}
+반드시 pem 키를 다운받아야합니다. EventEngine의 default key를 사용하지 마십시오.
 {{% /notice %}}
+
+
+## CloudFormation Template
+ 
 AWS CloudFormation에서는 클라우드 환경에서 AWS 및 타사 애플리케이션 리소스를 모델링하고 프로비저닝할 수 있도록 공용 언어를 제공합니다. AWS CloudFormation을 사용하면 프로그래밍 언어 또는 간단한 텍스트 파일을 사용하여 자동화되고 안전한 방식으로 모든 지역과 계정에 걸쳐 애플리케이션에 필요한 모든 리소스를 모델링 및 프로비저닝할 수 있습니다.
 
 AWS CodeQuality 실습에 필요한 AWS 리소스를 사전에 생성하기 위해 제공된CloudFormation template을 사용하여 CloudFormation stack을 생성합니다. 
@@ -64,12 +67,8 @@ CloudFormation 스택을 시작하려면, [Launch Stack 버튼](https://console.
 
 {{% button href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
 
-{{% notice warning %}}
-반드시 pem 키를 다운받아야합니다. EventEngine의 default key를 사용하지 마십시오.
-{{% /notice %}}
 
-
-스택 생성 단계에서 스택 이름을 입력하고 앞서 생성한 EC2 키 페어를 선택합니다. 그리고 나머지는 기본 값을 유지하고 마지막 단계에서 CloudFormation이 IAM 리소스를 생성할 때 커스텀 이름을 사용할 수 있게 
+스택 생성 단계에서 스택 이름을 입력하고 앞서 생성한 EC2 키 페어를 선택합니다. 그리고 나머지는 기본 값을 유지하고 마지막 단계에서 CloudFormation이 IAM 리소스를 생성할 때 커스텀 이름을 사용할 수 있게 체크합니다.
 
 Stackname에 `MasterAccountStack`을 입력합니다.
 Workload Name에 `Prod`를 입력합니다.
