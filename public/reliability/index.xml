@@ -7,54 +7,5 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <lastBuildDate>Fri, 24 Apr 2020 11:16:09 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>장애 주입 준비</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/3_failure_injection_prep/</link>
-      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
-      
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/3_failure_injection_prep/</guid>
-      <description>장애 주입 (chaos testing라고도 함)은 워크로드의 복원력을 검증하고 이해하는 효과적이고 필수적인 방법이며 AWS Well-Architected Reliability Pillar의 권장 사례입니다. 여기에서 다양한 장애 시나리오를 시작하고 시스템이 어떻게 반응하는지 평가합니다.
-준비 테스트 하기 전에 다음을 준비하세요.
-  서울리전에서 진행됩니다.
- AWS 콘솔을 사용하여 테스트의 영향을 평가할 것입니다. 이 실습 전체에서 귀하가 서울 지역에 있는지 확인하십시오.    VPC ID 가져오기
- VPC (Amazon Virtual Private Cloud)는 서비스에 대한 리소스를 배포 한 AWS 클라우드의 논리적으로 격리 된 섹션입니다.</description>
-    </item>
-    
-    <item>
-      <title>EC2 장애 주입을 사용하여 안정성 테스트</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/4_failure_injection_ec2/</link>
-      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
-      
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/4_failure_injection_ec2/</guid>
-      <description>4.1 EC2 장애 주입   EC2 콘솔로 이동하고 왼쪽 창에서 Instances를 클릭합니다: http://console.aws.amazon.com/ec2.
-  WellArchitectedLabsStack/ASG로 시작하는 이름을 가진 2개의 EC2 인스턴스가 있습니다:
- 각각 고유 한 Instance ID가 있습니다. 각 가용 영역 당 하나의 인스턴스가 있습니다. 모든 인스턴스가 정상입니다.    변화를 관찰하기 위해 Target Groups 와 Auto Scaling Groups 를 별도의 탭에 오픈합니다.
-  EC2 인스턴스 중 하나에 장애가 발생시키려면 Cloud9의 터미널에서 VPC ID를 사용하여 아래 스크립트를 실행시킵니다.</description>
-    </item>
-    
-    <item>
-      <title>RDS 장애 주입을 사용하여 안정성 테스트</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/5_failure_injection_rds/</link>
-      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
-      
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/5_failure_injection_rds/</guid>
-      <description>5.1 RDS 장애 주입 이 장애 주입은 Amazon RDS DB 인스턴스의 심각한 실패를 시뮬레이션합니다.
-  Go to the RDS Dashboard in the AWS Console at http://console.aws.amazon.com/rds
-  From the RDS dashboard
- &amp;ldquo;DB Instances (n/40)&amp;ldquo;를 클릭합니다. 실습환경생성에서 생성한 DB identifier를 클릭합니다. (만약 여러개의 DB가 있다면 VPC ID가 이전에 복사한것과 동일한 DB를 선택합니다.) Configuration을 클릭합니다.    구성된 값을 확인하십시오. 다음 사항에 유의하십시오.
- Info값이 Available인지 확인하세요. RDS DB는 Multi-AZ로 구성됩니다.</description>
-    </item>
-    
-    <item>
-      <title>AZ 장애 주입을 사용하여 안정성 테스트</title>
-      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/6_failure_injection_az/</link>
-      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
-      
-      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/6_failure_injection_az/</guid>
-      <description>6.1 AZ 장애 주입 이 장애 주입은 서비스에서 사용하는 두가지 AWS 가용영역(AZ)중 하나가 문제가 생겼을 경우를 시뮬레이션합니다. AWS 가용영역은 고 가용성 애플리케이션을 구축하는 데 도움이되는 강력한 도구입니다. 애플리케이션이 AZ로 분할되면 기업은 낙뢰, 토네이도, 지진 등과 같은 문제로부터 격리되고 보호됩니다.
-  AWS Console http://console.aws.amazon.com/rds의 RDS 대쉬보드에서 primary DB 인스턴스가 어느 가용 영역에 있는지 확인하세요.
- 이전에 RDS 장애주입 테스트를 실행 한 경우 콘솔에 primary 및 standby 인스턴스의 AZ가 스왑 된 것으로 표시 될 때까지 기다려야합니다.</description>
-    </item>
-    
   </channel>
 </rss>

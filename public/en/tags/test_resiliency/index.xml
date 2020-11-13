@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test_resiliency on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/tags/test_resiliency/</link>
+    <description>Recent content in test_resiliency on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/tags/test_resiliency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing for Resiliency of EC2, RDS, and AZ</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:08 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/</guid>
+      <description>Authors  Rodney Lester, Senior Solutions Architect Manager, AWS Well-Architected Adrian Hornsby, Principal Tech Evangelist, AWS Seth Eliot, Principal Reliability Solutions Architect, AWS Well-Architected Seyong Kang, Solutions Architect  Introduction The purpose if this lab is to teach you the fundamentals of using tests to ensure your implementation is resilient to failure by injecting failure modes into your application. This may be a familiar concept to companies that practice Failure Mode Engineering Analysis (FMEA).</description>
+    </item>
+    
+  </channel>
+</rss>

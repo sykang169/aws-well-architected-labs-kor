@@ -8,7 +8,7 @@ pre : "<b>4-1. </b>"
 ---
 ## Authors
 - Arthur Basbaum, AWS Cloud Economics
-- +Seyong Kang, Solutions Architect, Solutions Architect
+- Seyong Kang, Solutions Architect, Solutions Architect
 
 
 ## 소개

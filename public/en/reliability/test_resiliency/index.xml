@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing for Resiliency of EC2, RDS, and AZ on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/</link>
+    <description>Recent content in Testing for Resiliency of EC2, RDS, and AZ on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preparation for Failure Injection</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/3_failure_injection_prep/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/3_failure_injection_prep/</guid>
+      <description>Failure injection (also known as chaos testing) is an effective and essential method to validate and understand the resiliency of your workload and is a recommended practice of the AWS Well-Architected Reliability Pillar. Here you will initiate various failure scenarios and assess how your system reacts.
+Preparation Before testing, please prepare the following:
+  Get VPC ID
+ A VPC (Amazon Virtual Private Cloud) is a logically isolated section of the AWS Cloud where you have deployed the resources for your service For these tests you will need to know the VPC ID of the VPC you created as part of deploying the service Navigate to the VPC management console: https://console.</description>
+    </item>
+    
+    <item>
+      <title>Test Resiliency Using EC2 Failure Injection</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/4_failure_injection_ec2/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/4_failure_injection_ec2/</guid>
+      <description>4.1 EC2 failure injection This failure injection will simulate a critical problem with one of the three web servers used by your service.
+  Open EC2 Console, Select Instances in left menu: http://console.aws.amazon.com/ec2.
+  There are two EC2 instances with a name beginning with WellArchitectedLabsStack/ASG. For these EC2 instances note:
+ Each has a unique Instance ID There is one instance per each Availability Zone All instances are healthy     Open up two more console in separate tabs/windows.</description>
+    </item>
+    
+    <item>
+      <title>Test Resiliency Using RDS Failure Injection</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/5_failure_injection_rds/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/5_failure_injection_rds/</guid>
+      <description>5.1 RDS failure injection This failure injection will simulate a critical failure of the Amazon RDS DB instance.
+  Go to the RDS Dashboard in the AWS Console at http://console.aws.amazon.com/rds
+  From the RDS dashboard
+ Click on &amp;ldquo;DB Instances (n/40)&amp;rdquo; Click on the DB identifier for your database (if you have more than one database, refer to the VPC ID to find the one for this workshop) If running the multi-region deployment, select the DB instance with Role=Master Select the Configuration tab    Look at the configured values.</description>
+    </item>
+    
+    <item>
+      <title>Test Resiliency Using Availability Zone (AZ) Failure Injection</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/6_failure_injection_az/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/6_failure_injection_az/</guid>
+      <description>6.1 AZ failure injection This failure injection will simulate a critical problem with one of the three AWS Availability Zones (AZs) used by your service. AWS Availability Zones are powerful tools for helping build highly available applications. If an application is partitioned across AZs, companies are better isolated and protected from issues such as lightning strikes, tornadoes, earthquakes and more.
+ Go to the RDS Dashboard in the AWS Console at http://console.</description>
+    </item>
+    
+  </channel>
+</rss>

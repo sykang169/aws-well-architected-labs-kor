@@ -1,11 +1,247 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>홈 on AWS Well-Architected Labs</title>
+    <title>Home on AWS Well-Architected Labs</title>
     <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/</link>
-    <description>Recent content in 홈 on AWS Well-Architected Labs</description>
+    <description>Recent content in Home on AWS Well-Architected Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Again AWS Well-Architected Review using Well-Architected tool</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/review/1_reviewagine/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/review/1_reviewagine/</guid>
+      <description>Review based on pillars with best practices applied.
+   Log-in AWS console, typing Well-Architected Tools in service search bar. you can go to this link : https://console.aws.amazon.com/wellarchitected/.
+  In the previously created workload, Workload for AWS Workshop, click AWS Well-Architected Framework. Then click on each filler to check the question that corresponds to the best practice applied.
+  operational excellence as an example. Select Operational Excellence at the bottom.</description>
+    </item>
+    
+    <item>
+      <title>AWS WAF Config</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/1_config_waf/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/1_config_waf/</guid>
+      <description>  Open the AWS WAF Console: https://console.aws.amazon.com/wafv2/homev2
+  From left menu, select Getting started, click Create web ACL.   first setting resource type to CloudFront distributions. and type value in each text bar like this.
+   Name : well-architected-cf-waf-acl Description : for well-architected CF WAF
+And click next, and click Create web ACL for finish configuration.  </description>
+    </item>
+    
+    <item>
+      <title>Creating a workload</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/2_create_workload/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/2_create_workload/</guid>
+      <description>Log-in AWS console, typing Well-Architected Tools in service search bar. you can go to this link : https://console.aws.amazon.com/wellarchitected/.
+Well-Architected Reviews are conducted per workload. A workload identifies a set of components that deliver business value. The workload is usually the level of detail that business and technology leaders communicate about.
+  Click the Define Workload button on the landing page:   If you have already created a workload, a list of workloads will appear.</description>
+    </item>
+    
+    <item>
+      <title>Getting to know Amazon Cloudwatch</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/1_cloudwatch_intro/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/1_cloudwatch_intro/</guid>
+      <description>The first step to perform right sizing is to monitor and analyze your current use of services to gain insight into instance performance and usage patterns. To gather sufficient data, observe performance over at least a two-week period (ideally, over a one-month period) to capture the workload and business peak. The most common metrics that define instance performance are vCPU utilization, memory utilization, network utilization, and disk use.
+  Log into your AWS console via SSO, go to the Amazon CloudWatch service page:   Select EC2 under the Service Dashboard:   Observe the Service Dashboard and all of its different metrics, but focus on CPU Utilization and Network In and Out:   Select one of the EC2 resources by clicking on the little color icon to the left of the resource-id name:   Deselect the EC2 resource and now modify the time range on the top right, click custom and select the last 2 weeks:   Navigate to the CPU Utilization Average widget, click the three dots and launch the View in metrics page.</description>
+    </item>
+    
+    <item>
+      <title>Getting to know Amazon Cloudwatch</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/2_create_iamrole/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/2_create_iamrole/</guid>
+      <description>Access to AWS resources requires permissions. You will now create an IAM role to grant permissions that the agent needs to write metrics to CloudWatch. Amazon created two new default policies called CloudWatchAgentServerPolicy and CloudWatchAgentAdminPolicy only for that purpose.
+  To create the IAM role first you will need to sign in to the AWS Management Console and open the IAM console   In the navigation pane on the left, choose Roles and then Create role.</description>
+    </item>
+    
+    <item>
+      <title>Preparation for Failure Injection</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/3_failure_injection_prep/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/3_failure_injection_prep/</guid>
+      <description>Failure injection (also known as chaos testing) is an effective and essential method to validate and understand the resiliency of your workload and is a recommended practice of the AWS Well-Architected Reliability Pillar. Here you will initiate various failure scenarios and assess how your system reacts.
+Preparation Before testing, please prepare the following:
+  Get VPC ID
+ A VPC (Amazon Virtual Private Cloud) is a logically isolated section of the AWS Cloud where you have deployed the resources for your service For these tests you will need to know the VPC ID of the VPC you created as part of deploying the service Navigate to the VPC management console: https://console.</description>
+    </item>
+    
+    <item>
+      <title>Attach CloudWatch IAM role to selected EC2 Instances</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/3_attach_iamrole/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/3_attach_iamrole/</guid>
+      <description>We are now going to attach the IAM Role created on the previous step in one of our EC2 Instances, to do that let&amp;rsquo;s go to the Amazon EC2 Dashboard.   On the left bar, click on Instances.   Click on Launch Instance and select Linux 2 AMI (HVM) and t2.micro (free tier eligible) on the following screens. Click Review and launch:   Look for the created IAM role CloudWatchAgentServerRole under the IAM role box, select it and apply.</description>
+    </item>
+    
+    <item>
+      <title>CloudFront Config - EC2 or Load Balancer</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/2_config_cloudfront/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/2_config_cloudfront/</guid>
+      <description>Open AWS CloudFront Console: https://console.aws.amazon.com/cloudfront/home.
+  Click Create Distribution button.   in Web section, Click Get Started button.   Open new browser, open CloudFormation console: https://console.aws.amazon.com/cloudformation/ And click MasterAccount stack`s Output tab and copy value of ALBDNS
+  Enter the DNS address of the Application Load Balancer copied to Origin Domain Name in Origin Settings. Origin ID will be entered automatically.   If you scroll down, you can select the well-architected-cf-waf-acl you created earlier in the AWS WAF Web ACL in Distribution Setting.</description>
+    </item>
+    
+    <item>
+      <title>Performing a review</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/3_perform_review/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/3_perform_review/</guid>
+      <description>From the detail page for the workload, click the Start review button. And click the AWS Well-Architected Framework.   In this walkthrough, we are only going to complete the Reliability Pillar questions. Collapse the Operational Excellence questions by selecting the collapsing icon on the left of the words Operation Excellence on the left:   Expand the Reliability Questions by selecting the expanding icon to the left of the word Reliability:   Select the first question: REL 1.</description>
+    </item>
+    
+    <item>
+      <title>Test Resiliency Using EC2 Failure Injection</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/4_failure_injection_ec2/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/4_failure_injection_ec2/</guid>
+      <description>4.1 EC2 failure injection This failure injection will simulate a critical problem with one of the three web servers used by your service.
+  Open EC2 Console, Select Instances in left menu: http://console.aws.amazon.com/ec2.
+  There are two EC2 instances with a name beginning with WellArchitectedLabsStack/ASG. For these EC2 instances note:
+ Each has a unique Instance ID There is one instance per each Availability Zone All instances are healthy     Open up two more console in separate tabs/windows.</description>
+    </item>
+    
+    <item>
+      <title>Using Amazon EC2 Resource Optimization Recommendations</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/2_resource_opt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/2_resource_opt/</guid>
+      <description>NOTE: In order to complete this step you need to have Amazon EC2 Resource Optimization enabled, you can do that by going to AWS Cost Explorer, Recommendations (left bar) section.
+Amazon EC2 Resource Optimization offers right sizing recommendations in AWS Cost Explorer without any additional cost. These recommendations identify likely idle and underutilized instances across your accounts, regions and tags. To generate these recommendations, AWS analyzes your historical EC2 resource usage (using Amazon CloudWatch) and your existing reservation footprint to identify opportunities for cost savings (e.</description>
+    </item>
+    
+    <item>
+      <title>Cloudwatch Agent Manual Install</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/4_memory_plugin/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/4_memory_plugin/</guid>
+      <description>We are now going to manually install the CloudWatch agent to start collecting memory data, to start let&amp;rsquo;s go back to the Amazon EC2 Dashboard.   Check EC2 connect infomation which CloudWatchAgentServerRole IAM role attached. Select EC2 instance which attached IAM role and Click Connect button.   Copy connect info in Connect to your instance   This Command Line need when connect bastionhost. copy to notepad.</description>
+    </item>
+    
+    <item>
+      <title>Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/3_prio_resource_opt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/3_prio_resource_opt/</guid>
+      <description>Download the Amazon EC2 Resource Optimization report:   If you don’t have any Amazon EC2 Resource Optimization recommendation use the file below as a reference. Sample Amazon EC2 Resource Optimization file (.xlsx)
+  First let’s exclude instances that are too small or were only running for a few hours from the analysis. By doing so, we minimize the time required to perform rightsizing modifications that would otherwise result in minimal savings.</description>
+    </item>
+    
+    <item>
+      <title>Saving a milestone</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/4_save_milestone/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/4_save_milestone/</guid>
+      <description>From the detail page for the workload, click the Save milestone button:   Enter a name for the milestone as AWS Workshop Milestone and click the Save button:   Click on the Milestones tab:   This will display the milestone and data about it:   Now let&amp;rsquo;s change the state of the workload. Click on the Workload for AWS Workshop workload in the left navigation bar, and select the Properties tab.</description>
+    </item>
+    
+    <item>
+      <title>Test Resiliency Using RDS Failure Injection</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/5_failure_injection_rds/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/5_failure_injection_rds/</guid>
+      <description>5.1 RDS failure injection This failure injection will simulate a critical failure of the Amazon RDS DB instance.
+  Go to the RDS Dashboard in the AWS Console at http://console.aws.amazon.com/rds
+  From the RDS dashboard
+ Click on &amp;ldquo;DB Instances (n/40)&amp;rdquo; Click on the DB identifier for your database (if you have more than one database, refer to the VPC ID to find the one for this workshop) If running the multi-region deployment, select the DB instance with Role=Master Select the Configuration tab    Look at the configured values.</description>
+    </item>
+    
+    <item>
+      <title>Action the recommendations</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/4_act_resource_opt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/4_act_resource_opt/</guid>
+      <description>During this lab exercise, we learned how to prioritize the right sizing recommendations with the goal of identifying low complexity and high savings recommendations. We initially started with 2,534 recommendations with a potential saving of $86,627 but we managed to identify the top 60 cases with lowest complexity that together add up to $14,699.56 of the overall potential saving.
+Group 1 (Idle) and Group 2 (Previous Generation) are the less complex cases where you may want to start the right sizing exercises for your organization.</description>
+    </item>
+    
+    <item>
+      <title>Test Resiliency Using Availability Zone (AZ) Failure Injection</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/6_failure_injection_az/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/6_failure_injection_az/</guid>
+      <description>6.1 AZ failure injection This failure injection will simulate a critical problem with one of the three AWS Availability Zones (AZs) used by your service. AWS Availability Zones are powerful tools for helping build highly available applications. If an application is partitioned across AZs, companies are better isolated and protected from issues such as lightning strikes, tornadoes, earthquakes and more.
+ Go to the RDS Dashboard in the AWS Console at http://console.</description>
+    </item>
+    
+    <item>
+      <title>Updated Amazon EC2 Resource Optimization recommendations</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/5_ec2_updated_rec/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/5_ec2_updated_rec/</guid>
+      <description>Please try this exercise in a real user account. Currently, it cannot be performed in a lab environment.
+ In order to complete this step you need to have Amazon EC2 Resource Optimization enabled, you can do that going to the AWS Cost Explorer, Recommendations (left bar) section.
+ If you have just installed the CloudWatch agent at your instances it may take a couple of days for Amazon EC2 Resource Optimization to start to provide updated recommendations, so don&amp;rsquo;t worry if you don&amp;rsquo;t see the memory data during the first checks.</description>
+    </item>
+    
+    <item>
+      <title>Viewing and downloading the report</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/5_view_report/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/5_view_report/</guid>
+      <description>From the detail page for the workload, click the Improvement Plan tab:   This will display the number of high and medium risk items and allow you to update the Improvement status:   You can also edit the Pillar priority configuration. Click Workload for AWS workshop in the left menu, scroll down and click the Edit button in the Pillar priority tab:   Move the Reliability Pillar up by clicking the up icon to the right of the word, Reliability:   Click the Save button to save this configuration:   Now let&amp;rsquo;s generate and download the report.</description>
+    </item>
+    
+    <item>
+      <title>Amazon EC2 Right Sizing Best Practices</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</guid>
+      <description>Start simple: idle resources, non-critical development/QA and previous generation instances will require less testing hours and provide quick wins (The Amazon EC2 Launch time statistics can be used to identify instances that have been running longer than others and is a good statistic to sort your Amazon EC2 instances by).
+  Right Size before performing a migration: If you skip right sizing to save time, your migration speed might increase, but you will end up with higher cloud infrastructure spend for a potentially longer period of time.</description>
+    </item>
+    
+    <item>
+      <title>Amazon EC2 Right Sizing Best Practices</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</guid>
+      <description>Start simple: idle resources, non-critical development/QA and previous generation instances will require less testing hours and provide quick wins (The Amazon EC2 Launch time statistics can be used to identify instances that have been running longer than others and is a good statistic to sort your Amazon EC2 instances by).
+  Right Size before performing a migration: If you skip right sizing to save time, your migration speed might increase, but you will end up with higher cloud infrastructure spend for a potentially longer period of time.</description>
+    </item>
+    
+    <item>
+      <title>Tear down</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/6_tear_down/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/6_tear_down/</guid>
+      <description>No tear down is required for this lab.</description>
+    </item>
+    
+    <item>
+      <title>Tear down</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/7_tear_down/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/7_tear_down/</guid>
+      <description> Delete the IAM role CloudWatchAgentServerRole.  </description>
+    </item>
+    
   </channel>
 </rss>

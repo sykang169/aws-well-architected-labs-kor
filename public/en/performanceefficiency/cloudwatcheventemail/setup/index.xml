@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Custom Alram Configuration on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatcheventemail/setup/</link>
+    <description>Recent content in Custom Alram Configuration on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatcheventemail/setup/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

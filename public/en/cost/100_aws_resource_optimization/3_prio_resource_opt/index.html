@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="description" content="Hands on labs and real world design scenarios for Well-Architected workloads">
+<meta name="author" content="Well-Architected Team">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins :: AWS Well-Architected Labs</title>
+
+    
+    <link href="/css/nucleus.css?1605237165" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1605237165" rel="stylesheet">
+    <link href="/css/hybrid.css?1605237165" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1605237165" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1605237165" rel="stylesheet">
+    <link href="/css/auto-complete.css?1605237165" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1605237165" rel="stylesheet">
+    <link href="/css/theme.css?1605237165" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1605237165" rel="stylesheet">
+    
+    <link href="/css/theme-walabs.css?1605237165" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1605237165"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/en/cost/100_aws_resource_optimization/3_prio_resource_opt/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/">
+  <img src="/images/wa.png" alt="Well-Architected Labs">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1605237165"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1605237165"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/\/en";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1605237165"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/introduction/" title="Introduce" class="dd-item
+    
+        
+        ">
+      <a href="/en/introduction/">
+          <b>1. </b>Introduce
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/introduction/framework/" title="Why AWS-Well-Architected Framework?" class="dd-item
+    
+        
+        ">
+      <a href="/en/introduction/framework/">
+          <b>1-1 </b>Why AWS-Well-Architected Framework?
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/introduction/pillar/" title="The Five Pillars of the Framework" class="dd-item
+    
+        
+        ">
+      <a href="/en/introduction/pillar/">
+          <b>1-2 </b>The Five Pillars of the Framework
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/setup/" title="Setup" class="dd-item
+    
+        
+        ">
+      <a href="/en/setup/">
+          <b>2. </b>Setup
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/setup/cloud9/" title="Cloud9" class="dd-item
+    
+        
+        ">
+      <a href="/en/setup/cloud9/">
+          <b>2-1. </b>Cloud9
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/setup/lab-setup-master/" title="CloudFormation Deploy" class="dd-item
+    
+        
+        ">
+      <a href="/en/setup/lab-setup-master/">
+          <b>2-2. </b>CloudFormation Deploy
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/setup/wellarchitectedtools/" title="Start AWS Well-Architected Review using Well-Architected tool" class="dd-item
+    
+        
+        ">
+      <a href="/en/setup/wellarchitectedtools/">
+          <b>2-3. </b>Start AWS Well-Architected Review using Well-Architected tool
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/setup/wellarchitectedtools/2_create_workload/" title="Creating a workload" class="dd-item ">
+        <a href="/en/setup/wellarchitectedtools/2_create_workload/">
+        <b>1. </b>Creating a workload
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/setup/wellarchitectedtools/3_perform_review/" title="Performing a review" class="dd-item ">
+        <a href="/en/setup/wellarchitectedtools/3_perform_review/">
+        <b>2. </b>Performing a review
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/setup/wellarchitectedtools/4_save_milestone/" title="Saving a milestone" class="dd-item ">
+        <a href="/en/setup/wellarchitectedtools/4_save_milestone/">
+        <b>3. </b>Saving a milestone
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/setup/wellarchitectedtools/5_view_report/" title="Viewing and downloading the report" class="dd-item ">
+        <a href="/en/setup/wellarchitectedtools/5_view_report/">
+        <b>4. </b>Viewing and downloading the report
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/performanceefficiency/" title="Performance Efficiency" class="dd-item
+    
+        
+        ">
+      <a href="/en/performanceefficiency/">
+          <b>3. </b>Performance Efficiency
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/performanceefficiency/cloudwatchdashboards/" title="Monitoring using the CloudWatch dashboard" class="dd-item
+    
+        
+        ">
+      <a href="/en/performanceefficiency/cloudwatchdashboards/">
+          <b>3-1. </b>Monitoring using the CloudWatch dashboard
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/performanceefficiency/cloudwatchdashboards/default-dashboard/" title="View Amazon CloudWatch Automatic Dashboards" class="dd-item
+    
+        
+        ">
+      <a href="/en/performanceefficiency/cloudwatchdashboards/default-dashboard/">
+          <b>1. </b>View Amazon CloudWatch Automatic Dashboards
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/performanceefficiency/cloudwatchdashboards/setup/" title="CloudWatch Custom Dashboard" class="dd-item
+    
+        
+        ">
+      <a href="/en/performanceefficiency/cloudwatchdashboards/setup/">
+          <b>2. </b>CloudWatch Custom Dashboard
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/performanceefficiency/cloudwatcheventemail/" title="CPU Alram using the CloudWatch" class="dd-item
+    
+        
+        ">
+      <a href="/en/performanceefficiency/cloudwatcheventemail/">
+          <b>3-2. </b>CPU Alram using the CloudWatch
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/performanceefficiency/cloudwatcheventemail/setup/" title="Custom Alram Configuration" class="dd-item
+    
+        
+        ">
+      <a href="/en/performanceefficiency/cloudwatcheventemail/setup/">
+          <b>1. </b>Custom Alram Configuration
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/performanceefficiency/cloudwatcheventemail/snstopic/" title="Subscribe e-mail and mobile number" class="dd-item
+    
+        
+        ">
+      <a href="/en/performanceefficiency/cloudwatcheventemail/snstopic/">
+          <b>2. </b>Subscribe e-mail and mobile number
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/performanceefficiency/cloudwatcheventemail/ec2/" title="EC2 Loadtest" class="dd-item
+    
+        
+        ">
+      <a href="/en/performanceefficiency/cloudwatcheventemail/ec2/">
+          <b>3. </b>EC2 Loadtest
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/cost/" title="Cost Optimization" class="dd-item
+    parent
+        
+        ">
+      <a href="/en/cost/">
+          <b>4. </b>Cost Optimization
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/cost/100_aws_resource_optimization/" title="EC2 Right Sizing" class="dd-item
+    parent
+        
+        ">
+      <a href="/en/cost/100_aws_resource_optimization/">
+          <b>4-1. </b>EC2 Right Sizing
+          
+            
+              <i class="fas fa-caret-down"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/100_aws_resource_optimization/1_cloudwatch_intro/" title="Getting to know Amazon Cloudwatch" class="dd-item ">
+        <a href="/en/cost/100_aws_resource_optimization/1_cloudwatch_intro/">
+        <b>1. </b>Getting to know Amazon Cloudwatch
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/100_aws_resource_optimization/2_resource_opt/" title="Using Amazon EC2 Resource Optimization Recommendations" class="dd-item ">
+        <a href="/en/cost/100_aws_resource_optimization/2_resource_opt/">
+        <b>2. </b>Using Amazon EC2 Resource Optimization Recommendations
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/100_aws_resource_optimization/3_prio_resource_opt/" title="Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins" class="dd-item active">
+        <a href="/en/cost/100_aws_resource_optimization/3_prio_resource_opt/">
+        <b>3. </b>Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/100_aws_resource_optimization/4_act_resource_opt/" title="Action the recommendations" class="dd-item ">
+        <a href="/en/cost/100_aws_resource_optimization/4_act_resource_opt/">
+        <b>4. </b>Action the recommendations
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/" title="Amazon EC2 Right Sizing Best Practices" class="dd-item ">
+        <a href="/en/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/">
+        <b>5. </b>Amazon EC2 Right Sizing Best Practices
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/100_aws_resource_optimization/6_tear_down/" title="Tear down" class="dd-item ">
+        <a href="/en/cost/100_aws_resource_optimization/6_tear_down/">
+        <b>6. </b>Tear down
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/cost/200_aws_resource_optimization/" title="EC2 Right Sizing(MEM)" class="dd-item
+    
+        
+        ">
+      <a href="/en/cost/200_aws_resource_optimization/">
+          <b>4-2. </b>EC2 Right Sizing(MEM)
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/200_aws_resource_optimization/2_create_iamrole/" title="Getting to know Amazon Cloudwatch" class="dd-item ">
+        <a href="/en/cost/200_aws_resource_optimization/2_create_iamrole/">
+        <b>1. </b>Getting to know Amazon Cloudwatch
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/200_aws_resource_optimization/3_attach_iamrole/" title="Attach CloudWatch IAM role to selected EC2 Instances" class="dd-item ">
+        <a href="/en/cost/200_aws_resource_optimization/3_attach_iamrole/">
+        <b>2. </b>Attach CloudWatch IAM role to selected EC2 Instances
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/200_aws_resource_optimization/4_memory_plugin/" title="Cloudwatch Agent Manual Install" class="dd-item ">
+        <a href="/en/cost/200_aws_resource_optimization/4_memory_plugin/">
+        <b>3. </b>Cloudwatch Agent Manual Install
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/200_aws_resource_optimization/5_ec2_updated_rec/" title="Updated Amazon EC2 Resource Optimization recommendations" class="dd-item ">
+        <a href="/en/cost/200_aws_resource_optimization/5_ec2_updated_rec/">
+        <b>4. </b>Updated Amazon EC2 Resource Optimization recommendations
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/" title="Amazon EC2 Right Sizing Best Practices" class="dd-item ">
+        <a href="/en/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/">
+        <b>5. </b>Amazon EC2 Right Sizing Best Practices
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/cost/200_aws_resource_optimization/7_tear_down/" title="Tear down" class="dd-item ">
+        <a href="/en/cost/200_aws_resource_optimization/7_tear_down/">
+        <b>6. </b>Tear down
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/" title="Operation Excellence" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/">
+          <b>5. </b>Operation Excellence
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/systemmanager/" title="AWS Systems Manager" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/systemmanager/">
+          <b>5-1. </b>AWS Systems Manager
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/systemmanager/prepare/" title="Prepare" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/systemmanager/prepare/">
+          <b>1. </b>Prepare
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/inventory/" title="Resource Management" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/inventory/">
+          <b>5-2. </b>Resource Management
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/inventory/inventorysetup/" title="Inventory" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/inventory/inventorysetup/">
+          <b>1. </b>Inventory
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/inventory/statemanager/" title="State Manager" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/inventory/statemanager/">
+          <b>2. </b>State Manager
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/patch/" title="Patch Management" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/patch/">
+          <b>5-3. </b>Patch Management
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/patch/patchmanager/" title="패치 관리자" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/patch/patchmanager/">
+          <b>1. </b>패치 관리자
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/operational-excellence/patch/awsrunpatchbaseline/" title="Run Command" class="dd-item
+    
+        
+        ">
+      <a href="/en/operational-excellence/patch/awsrunpatchbaseline/">
+          <b>2. </b>Run Command
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/reliability/" title="Reliability" class="dd-item
+    
+        
+        ">
+      <a href="/en/reliability/">
+          <b>6. </b>Reliability
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/reliability/test_resiliency/" title="Testing for Resiliency of EC2, RDS, and AZ" class="dd-item
+    
+        
+        ">
+      <a href="/en/reliability/test_resiliency/">
+          Test Resiliency EC2, RDS, &amp; AZ
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/reliability/test_resiliency/3_failure_injection_prep/" title="Preparation for Failure Injection" class="dd-item ">
+        <a href="/en/reliability/test_resiliency/3_failure_injection_prep/">
+        <b>1. </b>Preparation for Failure Injection
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/reliability/test_resiliency/4_failure_injection_ec2/" title="Test Resiliency Using EC2 Failure Injection" class="dd-item ">
+        <a href="/en/reliability/test_resiliency/4_failure_injection_ec2/">
+        <b>2. </b>EC2 Failure Injection
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/reliability/test_resiliency/5_failure_injection_rds/" title="Test Resiliency Using RDS Failure Injection" class="dd-item ">
+        <a href="/en/reliability/test_resiliency/5_failure_injection_rds/">
+        <b>3. </b>RDS Failure Injection
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/reliability/test_resiliency/6_failure_injection_az/" title="Test Resiliency Using Availability Zone (AZ) Failure Injection" class="dd-item ">
+        <a href="/en/reliability/test_resiliency/6_failure_injection_az/">
+        <b>4. </b>AZ Failure Injection
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/security/" title="Security" class="dd-item
+    
+        
+        ">
+      <a href="/en/security/">
+          <b>7. </b>Security
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/security/200_cloudfront_with_waf_protection/" title="CloudFront with WAF Protection" class="dd-item
+    
+        
+        ">
+      <a href="/en/security/200_cloudfront_with_waf_protection/">
+          CloudFront with WAF Protection
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/security/200_cloudfront_with_waf_protection/1_config_waf/" title="AWS WAF Config" class="dd-item ">
+        <a href="/en/security/200_cloudfront_with_waf_protection/1_config_waf/">
+        <b>1. </b>AWS WAF Config
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/security/200_cloudfront_with_waf_protection/2_config_cloudfront/" title="CloudFront Config - EC2 or Load Balancer" class="dd-item ">
+        <a href="/en/security/200_cloudfront_with_waf_protection/2_config_cloudfront/">
+        <b>2. </b>CloudFront Config - EC2 or Load Balancer
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/en/review/" title="Review Again(Machanism)" class="dd-item
+    
+        
+        ">
+      <a href="/en/review/">
+          <b>8. </b>Review Again(Machanism)
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/en/review/1_reviewagine/" title="Again AWS Well-Architected Review using Well-Architected tool" class="dd-item ">
+        <a href="/en/review/1_reviewagine/">
+        Again AWS Well-Architected Review using Well-Architected tool
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/free/"><i class='fas fa-bookmark'></i> Amazon Free Tier</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/">한국어</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/3_prio_resource_opt/" selected>English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+    
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    <h2 class="github-title">Github Repo</h2>
+
+    <h3 class="github-title">Well-Architected HOL</h3>
+    <a class="github-button" href="https://github.com/sykang169/aws-well-architected-labs-kor" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
+    &nbsp;<a class="github-button" href="https://github.com/sykang169/aws-well-architected-labs-kor" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork on GitHub">Fork</a><br />
+
+
+    <br>
+      
+    
+
+    <a href="https://aws.amazon.com/ko/privacy/">Privacy</a> | <a href="https://aws.amazon.com/terms/">Site terms</a> | © 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+      
+     
+
+</left>
+
+
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/sykang169/aws-well-architected-labs-kor/Cost/100_aws_resource_optimization/3_prio_resource_opt.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/en/'>Home</a> > <a href='/en/cost/'>Cost Optimization</a> > <a href='/en/cost/100_aws_resource_optimization/'>EC2 Right Sizing</a> > Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins
+            </h1>
+          
+
+        
+
+
+<ol>
+<li>
+<p>Download the <strong>Amazon EC2 Resource Optimization</strong> report:
+<img src="/cost/100_aws_resource_optimization/Images/ResourceOpt06b.png" alt="Images/ResourceOpt06b.png"></p>
+</li>
+<li>
+<p>If you don’t have any Amazon EC2 Resource Optimization recommendation use the file below as a reference.
+<a href="/cost/100_aws_resource_optimization/code/ENT206-ec2-rightsizing-recommendations-sykang.xlsx">Sample Amazon EC2 Resource Optimization file (.xlsx)</a></p>
+</li>
+<li>
+<p>First let’s exclude instances that are too small or were only running for a few hours from the analysis. By doing so, we minimize the time required to perform rightsizing modifications that would otherwise result in minimal savings.
+<img src="/cost/100_aws_resource_optimization/Images/ResourceOpt07.png" alt="Images/ResourceOpt07.png"></p>
+</li>
+</ol>
+<p><strong>NOTE</strong>: Depending on how many cost allocation tags you have enabled on your account the columns may differ from the example, that said try to match the formulas using the screenshots below and the default column names.</p>
+<p>Insert a new column to the right of the <em>Recommended Action</em> column. The first row will be the label for the column “TooSmall”. In each row below the label, paste the following formula:</p>
+<pre><code>=IF(Q2&lt;25,1,0)
+</code></pre><p>Where <em>Column Q = Recommended Instance Type 1 Estimated Savings</em></p>
+<p>That formula will flag all EC2 instances with a “1” any instance that will fail to deliver more than $25/month in savings (or $300/year). Feel free to adjust the threshold for your organization own savings expectation. If you prefer to perform the analysis against instance families instead of potential savings you can use the following formula to exclude smaller instances from the recommendations as well.</p>
+<pre><code>=IF(N2=&quot;Modify&quot;,IF(SUMPRODUCT(--(NOT(ISERR(SEARCH({&quot;nano&quot;,&quot;micro&quot;,&quot;small&quot;,&quot;medium&quot;},D2)))))&gt;0,&quot;1&quot;,&quot;0&quot;),&quot;0&quot;)
+</code></pre><p>Where <em>Column N = Recommended Action</em> and <em>Column D = Instance Type</em></p>
+<ol start="4">
+<li>Next, let’s flag EC2 instances that belong to previous generations (C4, M3, etc), if you are investing engineer time on right sizing let&rsquo;s make sure you are also leveraging the newest technology available. Newer EC2 generations have a superior performance increasing the changes of success for the right sizing exercise, they also generally cost less than previous generations providing a higher cost vs benefit.</li>
+</ol>
+<p><img src="/cost/100_aws_resource_optimization/Images/ResourceOpt08.png" alt="Images/ResourceOpt08.png"></p>
+<p>Insert a new column <strong>Old Gen</strong> to the right of the <em>Instance Type</em> field, and paste the following formula:</p>
+<pre><code>=IF(SUMPRODUCT(--(NOT(ISERR(SEARCH({&quot;c4&quot;,&quot;c3&quot;,&quot;c1&quot;,&quot;m4&quot;,&quot;m3&quot;,&quot;m2&quot;,&quot;m1&quot;,&quot;r3&quot;,&quot;r4&quot;,&quot;i2&quot;,&quot;cr1&quot;,&quot;hs1&quot;,&quot;g2&quot;},D2)))))&gt;0,&quot;1&quot;,&quot;0&quot;)
+</code></pre><p><em>Column D = Instance Type</em></p>
+<ol start="5">
+<li>Now let’s sort the recommendations by low complexity and higher savings:</li>
+</ol>
+<p><strong>Minimum Effort:</strong> Set the minimum savings required</p>
+<p>First we want to only focus on savings that are worth our effort, we will define this as $100. Apply a <strong>number filter</strong> on <strong>Recommended Instance Type 1 Estimated Savings</strong> that is <strong>Greater than 100</strong></p>
+<p><strong>Group 1:</strong> Idle EC2 resources</p>
+<p>Filter the data on <strong>Recommended Action = &ldquo;Terminate&rdquo;</strong></p>
+<p>Sort the data by <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong></p>
+<p>Start filtering the idle resources or instances where CPU utilization &lt;1%, it is likely these instances were launched and forgotten so the potential savings here may represent the entire On Demand cost.</p>
+<p><img src="/cost/100_aws_resource_optimization/Images/ResourceOpt09.png" alt="Images/ResourceOpt09.png"></p>
+<p>The resulting filtered list should be where you start right sizing discussions with application owners; perform an investigation to understand why these instance were launched and validate their usage with the resource owner. If possible, terminate them.</p>
+<p>If you are using the Right Sizing CSV file provided in this lab exercise, you will notice that we filtered down from an original <em>2,534 recommendations to 16</em> and <em>identified $3,458 per month in potential savings</em>.</p>
+<p><strong>Group 2:</strong> Previous generation instances</p>
+<p>Filter the data on <strong>Recommended Actions = “Modify”</strong> AND <strong>OldGen = “1”</strong> AND <strong>TooSmall = “0”</strong></p>
+<p>Filter the data on <strong>Recommended Instance Type 1 Projected CPU &lt; 40%</strong></p>
+<p>Sort the data by <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong></p>
+<p>This will focus on the underutilized resources (&lt;40% CPU) that belongs to previous generations and can either be downsized within the same family (column P below) or modernized to the newest generation.</p>
+<p><img src="/cost/100_aws_resource_optimization/Images/ResourceOpt10.png" alt="Images/ResourceOpt10.png"></p>
+<p>Moving to a modern generation may require additional testing hours compared to instances identified on Group 1, but depending on the case it can maximize savings and performance.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">Linux</th>
+<th style="text-align:right">vs new gen</th>
+<th style="text-align:center">Windows</th>
+<th style="text-align:right">vs new gen</th>
+<th></th>
+<th style="text-align:center">Linux</th>
+<th style="text-align:right">vs new gen</th>
+<th style="text-align:center">Windows</th>
+<th style="text-align:right">vs new gen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c3.large</td>
+<td style="text-align:center">$0.105/hr</td>
+<td style="text-align:right">up 19%</td>
+<td style="text-align:center">$0.188/hr</td>
+<td style="text-align:right">up 5%</td>
+<td>m3.large</td>
+<td style="text-align:center">$0.133/hr</td>
+<td style="text-align:right">up 27%</td>
+<td style="text-align:center">$0.259/hr</td>
+<td style="text-align:right">up 27%</td>
+</tr>
+<tr>
+<td>c4.large</td>
+<td style="text-align:center">$0.100/hr</td>
+<td style="text-align:right">up 15%</td>
+<td style="text-align:center">$0.192/hr</td>
+<td style="text-align:right">up 7%</td>
+<td>m4.large</td>
+<td style="text-align:center">$0.100/hr</td>
+<td style="text-align:right">up 4%</td>
+<td style="text-align:center">$0.192/hr</td>
+<td style="text-align:right">up 2%</td>
+</tr>
+<tr>
+<td>c5.large</td>
+<td style="text-align:center">$0.985/hr</td>
+<td style="text-align:right">0%</td>
+<td style="text-align:center">$0.177/hr</td>
+<td style="text-align:right">0%</td>
+<td>m5.large</td>
+<td style="text-align:center">$0.096/hr</td>
+<td style="text-align:right">0%</td>
+<td style="text-align:center">$0.188/hr</td>
+<td style="text-align:right">0%</td>
+</tr>
+</tbody>
+</table>
+<p><em>prices are from US-Virginia (Nov 2019)</em></p>
+<p>If you are using the Right Sizing CSV file provided in this lab exercise, you will notice that we filtered down from originally <em>2,534 recommendations to 22</em> with <em>$6,362 per month in potential savings</em>.</p>
+<p><strong>Group 3:</strong> Current generation instances</p>
+<p>Filter the data on <strong>Recommended Actions = “Modify”</strong> AND <strong>OldGen = “0”</strong> AND <strong>TooSmall = “0”</strong></p>
+<p>The filter on <strong>Recommended Instance Type 1 Projected CPU &lt; 40%</strong> should still be in place.</p>
+<p>Sort the data by <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong></p>
+<p>This will select underutilized resources from the current, most modern generation. We recommend sorting them by potential savings to make sure you are prioritizing the instances that will provide larger savings first.</p>
+<p><img src="/cost/100_aws_resource_optimization/Images/ResourceOpt11.png" alt="Images/ResourceOpt11.png"></p>
+<p>Also, do not forget to check the other recommended instance types (columns U to AD); Amazon EC2 Resource Optimization will recommend up to 3 instances for each resource moving from a more conservative recommendation (the first recommendation) to a more aggressive and higher savings recommendation (second and third recommendations).</p>
+<p>If you are using the Right Sizing CSV file provided in this lab exercise, you will notice that we filtered down from originally <em>2,534 recommendations to 22</em> with <em>$4,879.56 per month in potential savings</em>.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1605237165"></script>
+    <script src="/js/perfect-scrollbar.min.js?1605237165"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1605237165"></script>
+    <script src="/js/jquery.sticky.js?1605237165"></script>
+    <script src="/js/featherlight.min.js?1605237165"></script>
+    <script src="/js/highlight.pack.js?1605237165"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1605237165"></script>
+    <script src="/js/learn.js?1605237165"></script>
+    <script src="/js/hugo-learn.js?1605237165"></script>
+
+    <link href="/mermaid/mermaid.css?1605237165" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1605237165"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

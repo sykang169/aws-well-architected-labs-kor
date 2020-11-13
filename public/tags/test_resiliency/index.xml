@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test_resiliency on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/test_resiliency/</link>
+    <description>Recent content in test_resiliency on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/test_resiliency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EC2, RD와 AZ의 복원력 테스트</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:08 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/</guid>
+      <description>Authors  Rodney Lester, Senior Solutions Architect Manager, AWS Well-Architected Adrian Hornsby, Principal Tech Evangelist, AWS Seth Eliot, Principal Reliability Solutions Architect, AWS Well-Architected Seyong Kang, Solutions Architect  Introduction 이 실습의 목적은 애플리케이션에 장애 모드를 삽입하여 구현이 장애에 대해 탄력적인지 확인하기 위해 테스트를 사용하는 기본 사항을 가르치는 것입니다. 이것은 FMEA (고장 모드 엔지니어링 분석)를 실행하는 회사에 익숙한 개념 일 수 있습니다. 또한 이러한 실패 주입을 사용하여 워크로드 탄력성에 대한 가설을 테스트하는 Chaos Engineering의 핵심 구성 요소이기도합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

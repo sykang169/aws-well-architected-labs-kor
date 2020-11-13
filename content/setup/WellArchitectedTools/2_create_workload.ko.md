@@ -15,7 +15,7 @@ pre: "<b>1. </b>"
 
     Well-Architected 리뷰는 [워크로드](https://wa.aws.amazon.com/wat.concept.workload.en.html)단위로 생성합니다(워크로드는 비지니스 가치를 제공하는 단위로 식별됩니다.). 
 
-1. 랜딩페이지 회면의 **Define Workload** 버튼을 클릭합니다.:
+1. 랜딩페이지 회면의 **Define Workload** 버튼을 클릭합니다:
     ![ClickWorkload](/watool/100_Walkthrough_of_the_Well-Architected_Tool/Images/AWSWAT1.png)
 
 1. 만약 이미 생성한 워크로드가 있다면, 워크로드 리스트가 나올 것입니다. 동일하게 이 화면에서도 **Define Workload** 버튼을 클릭합니다.

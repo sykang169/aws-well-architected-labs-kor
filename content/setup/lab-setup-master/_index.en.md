@@ -46,7 +46,7 @@ To configure the basic environment required for the lab using the CloudFormaton 
 1. Private Key file in .PEM file format is automatically downloaded from the browser. The private key is required when using the following CloudFormation.
  
 {{% notice warning %}}
-You must download .pem key. Do not use EventEngine의 default key.
+You must download .pem key. Do not use EventEngine's default key.
 {{% /notice %}}
 
 
@@ -55,10 +55,10 @@ Create a CloudFormation stack using the CloudFormation-template provided to proa
 
 Create EC2 and VPC for 3-tier-web. We adopt best practices each pillar to this web.
 
-To launch the CloudFormation stack, click the  [Launch Stack button](https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml) to go to the CloudFormation console.
+To launch the CloudFormation stack, click the  [Launch Stack button](https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml) to go to the CloudFormation console.
  
  
-{{% button href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
+{{% button href="https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
 
 
 Typing `MasterAccountStack` in Stackname.
@@ -72,7 +72,7 @@ In the stack creation step, enter a stack name and choose the EC2 key pair you c
 Check CloudFormation stack in **Outputs tab**, find **ALBAddress**, **DBDNS**.
 {{% /notice %}}
 
--[Let's Start Workshop!](/performanceefficiency) 
+-[Let's review this enviroment from cloudformation deployed!](/en/setup/WellArchitectedTools) 
 
 
 

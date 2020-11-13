@@ -81,7 +81,9 @@ Workload Name에 `Prod`를 입력합니다.
 스택 생성이 완료되면 AWS 계정에 실습을 실행하는 데 필요한 모든 기본 리소스가 준비 되어있습니다. **Outputs 탭**에서 **ALBAddress**, **DBDNS**가 표시됩니다.
 {{% /notice %}}
 
--[이제 워크샵을 진행해보도록 하겠습니다.](/performanceefficiency) 
+
+-[배포된 환경을 리뷰해 보겠습니다.](/en/setup/WellArchitectedTools) 
+ 
 
 
 

@@ -1,48 +1,48 @@
 ---
-title: "인벤토리"
+title: "Inventory"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
 pre: "<b>1. </b>"
 weight: 521
 ---
 
-## Systems Manager: 인벤토리
-AWS Systems Manager 인벤토리를 사용하여 하이브리드 환경의 Amazon EC2 인스턴스와 온 프레미스 서버 또는 가상 머신 (VM)에서 운영 체제 (OS), 애플리케이션 및 인스턴스 메타 데이터를 수집 할 수 있습니다. 메타 데이터를 쿼리하여 소프트웨어 정책에 필요한 소프트웨어 및 구성을 실행중인 인스턴스와 업데이트해야하는 인스턴스를 빠르게 이해할 수 있습니다.
+## Systems Manager: Inventory
+You can use [AWS Systems Manager Inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) to collect operating system (OS), application, and instance metadata from your Amazon EC2 instances and your on-premises servers or virtual machines (VMs) in your hybrid environment. You can query the metadata to quickly understand which instances are running the software and configurations required by your software policy, and which instances need to be updated.
 
 <!--
 [AWS Systems Manager 인벤토리](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)는 Amazon EC2 및 온프레미스 컴퓨팅 환경에 대한 가시성을 제공합니다. 인벤토리를 사용하여 관리형 인스턴스에서 메타데이터를 수집할 수 있습니다. 이 메타데이터를 중앙 Amazon Simple Storage Service(Amazon S3) 버킷에 저장한 후 기본 제공 도구를 사용하여 데이터를 쿼리하고 어느 인스턴스에서 소프트웨어 정책이 요구하는 소프트웨어 및 구성을 실행 중인지, 어느 인스턴스를 업데이트해야 하는지 빠르게 확인할 수 있습니다. 원클릭 절차를 사용하여 모든 관리형 인스턴스에 대해 인벤토리를 구성할 수 있습니다. 또한 여러 AWS 리전 및 계정으로부터 인벤토리 데이터를 구성하고 볼 수 있습니다.
 -->
 
 
-#### 관리형 인스턴스(Managed Instances)에 대해 기본적으로 수집하는 정보는 무엇이 있을까요? 
-   1. AWS Systems Manager 메뉴의 **Instances & Nodes** 아래 **Inventory**를 선택합니다.
+####  Using Systems Manager Inventory to Track Your Instances
+   1. Under **Instances & Nodes** in the AWS Systems Manager navigation bar, choose **Inventory**.
    ![/images/operation/ssm-inventory.png](/images/operation/ssm-inventory.png)
-   1. 스크롤을 내려 **Corresponding managed instances** 을 선택합니다. <!--현재 인벤토리에는 EC2에서 사용 가능한 인스턴스 데이터만 포함되어 있습니다.-->
-   2. 인벤토리가 수집한 인스턴스의 정보를 확인하기 위해 실습자의 **InstanceID** 중 하나를 선택합니다.
+   1. Scroll down in the window to the **Corresponding managed instances** section. Inventory currently contains only the instance data available from the EC2 <!--현재 인벤토리에는 EC2에서 사용 가능한 인스턴스 데이터만 포함되어 있습니다.-->
+   2. Choose the **InstanceID** of one of your systems.
       ![/images/operation/ssm-inventory-click.png](/images/operation/ssm-inventory-click.png)
-   3. 각 탭을 클릭해 어떤 정보들이 수집되었는지 확인합니다. 아직은 인벤토리를 설정하기 전이므로 Inventory 탭은 비어있을 것입니다. 
+   3. Examine each of the available tabs of data under the **Instance ID** heading.The Inventory tab will be empty as it is not yet set up for inventory.
    ![/images/operation/ssm-inventory-menu.png](/images/operation/ssm-inventory-menu.png)
 
-#### 인벤토리 수집 대상 및 주기는 물론, 어떤 데이터를 수집할 것인지 직접 지정하실 수도 있습니다. 
-**인벤토리 수집 대상을 리소스 태그 기반으로 한정하기**
+#### Inventory collection must be specifically configured and the data types to be collected must be specified. 
+**Limiting inventory collection targets based on resource tags**
 {{% notice tip %}}
-계정 내 모든 관리형 인스턴스를 선택하여 인벤토리를 확보할 수도 있지만 필요에 따라 Environment 또는 Workload 등 특정 태그를 기반으로 인벤토리 인스턴스를 선택할 수도 있습니다. 물론 수동으로 특정 인스턴스를 선택하는 방법도 있습니다.
+You can also select all managed instances in your account to get your inventory, but you can also choose inventory instances based on specific tags, such as Environment or Workload, depending on your needs. Of course, you can also manually select specific instances.
 {{% /notice%}}
-   1. 메뉴의 **Inventory**를 클릭합니다.
-   2. 오른쪽 상단의 **Setup Inventory**를 클릭합니다.
+   1. Choose **Inventory** in the navigation bar.
+   2. Choose **Setup Inventory** in the top right corner of the window
    ![/images/operation/ssm-inventory-setup.png](/images/operation/ssm-inventory-setup.png)
-1. **Setup Inventory** 화면에서, 인벤토리 대상을 정의하세요:
-   1. **Targets**의 **Specify targets by**리스트 중 **Specifying a tag**를 클릭합니다.
-   2. **Tags**의 key 값은 `Environment` , value는 `MasterAccount`로 지정합니다. 
+1. In the **Setup Inventory** screen, define targets for inventory:
+   1. Under **Specify targets by**, select **Specifying a tag**
+   1. Under **Tags** specify `Environment` for the key and `MasterAccount` for the value
    ![/images/operation/ssm-inventory-targets.png](/images/operation/ssm-inventory-targets.png)
 
-**인벤토리 수집 주기 설정하기**
+**Schedule the frequency with which inventory is collected**
 
-1. 인벤토리의 **Name**은 `InventoryAllInstances`로 입력합니다.
-2. 인벤토리 수집 주기를 기본 설정대로 30분으로 남겨둡니다. 
+1. type `InventoryAllInstances` in **Name** of inventory.
+2. For **Collect inventory data every**, accept the default **30** Minute(s)
    ![/images/operation/ssm-inventory-schedule.png](/images/operation/ssm-inventory-schedule.png)
-3. **Parameters**에서 어떤 정보를 인벤토리에서 수집할지 지정할 수 있습니다.
-   - 각 파라미터에 대해 더 자세히 알아보시려면 [링크](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html)를 참고합니다. 
+3. Under **parameters**, specify what information to collect with the inventory process
+   - Please refer to the [link](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) to learn more about each parameter.
      ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-finish.png)
 <!--
 1. (선택사항) 필요한 경우 인벤토리 실행 로그를 지정한 S3 버킷에 수집할 수도 있습니다. (사전에 [로그를 저장할 버킷](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)이 생성되어 있어야 합니다):
@@ -50,9 +50,9 @@ AWS Systems Manager 인벤토리를 사용하여 하이브리드 환경의 Amazo
    2. S3 버킷 이름을 지정합니다.
    3. (선택사항) S3 버킷의 접두어를 지정할 수 있습니다.
 2. !-->
-3. **Sync inventory execution logs to an S3 bucket**은 기본 설정대로 선택하지 않은 채로 남겨둡니다. 
+3. Not check **Sync inventory execution logs to an S3 bucket**. 
    ![/images/operation/ssm-inventory-advanced.png](/images/operation/ssm-inventory-advanced.png)
-4. 설정을 검토한 후 우측 하단의 **Setup Inventory**를 클릭합니다. 새 인벤토리 정책을 인스턴스에 배포하는 데 최대 10분이 소요될 수 있습니다.
+4. reviewing the settings, click **Setup Inventory** at the bottom right. It can take up to 10 minutes to deploy the new inventory policy to your instances.
 
 <!--
 1. 새로운 정책을 만드려면 동일 방법으로 추가할 수 있습니다.
@@ -60,7 +60,7 @@ AWS Systems Manager 인벤토리를 사용하여 하이브리드 환경의 Amazo
 !-->
 
 {{% notice note %}}
-여러 가지의 Inventory specifications을 생성하실 수도 있습니다. 이들은 Systems Manager 상태 관리자(State Manager) 내에 **연결(Associations)** 로 저장됩니다. 다음 챕터에서 더 상세히 알아보겠습니다. 
+Several Inventory specifications can also be created. These are stored as **Associations** within the Systems Manager State Manager. We will learn more in the next chapter.
 {{% /notice%}}
 
 <!--

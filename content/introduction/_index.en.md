@@ -20,4 +20,4 @@ Every day, experts at AWS assist customers in architecting systems to take advan
 
 Based on what we have learned, we have created the AWS Well-Architected Framework, which provides a consistent set of best practices for customers and partners to evaluate architectures, and provides a set of questions you can use to evaluate how well an architecture is aligned to AWS best practices.
 
-- [What is AWS Well-Architected Framework?](/introduction/framework)
+- [What is AWS Well-Architected Framework?](/en/introduction/framework)

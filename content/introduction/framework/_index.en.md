@@ -21,7 +21,7 @@ To drive better outcomes, you can build and operate workloads on the cloud. With
 
 Well-Architected-Framework asks questions and works with the intention of improving the architecture. It also means replacing it with a perfect mechanism to check for compliance with rules or processes.
 
- ![framework](/images/war/mechanism.png)
+ ![framework](/images/war/mechanism_en.png)
 
 it repeatable process that **learn** cloud service and best practice, **measure** architecture data, and **improve** architecture using it.
 
@@ -29,7 +29,7 @@ it repeatable process that **learn** cloud service and best practice, **measure*
 #### Configuration AWS Well-Architected Framework
 The AWS Well-Architected Framework consists of:
 
-![framework](/images/war/framework.png)
+![framework](/images/war/framework_en.png)
 1. Based on five pillar. 
    - Creating a software system is a lot like constructing a building. If the foundation is not solid, structural problems can undermine the integrity and function of the building. When architecting technology solutions, if you neglect the ﬁve pillars of **operational excellence**, **security**, **reliability**, **performance efficiency**, and **cost optimization**, it can become challenging to build a system that delivers on your expectations and requirements. Incorporating these pillars into your architecture will help you produce stable and efficient systems. This will allow you to focus on the other aspects of design, such as functional requirements.
 
@@ -46,7 +46,7 @@ The AWS Well-Architected Framework consists of:
   
 
   
-- [ So let's take a look at the five pillar of AWS Well-Architected. ](/introduction/pillar)
+- [ So let's take a look at the five pillar of AWS Well-Architected. ](/en/introduction/pillar)
 
 
 

@@ -12,21 +12,21 @@
     <title>Cloudwatch Agent 수동 설치 :: AWS Well-Architected Labs</title>
 
     
-    <link href="/css/nucleus.css?1603716327" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1603716327" rel="stylesheet">
-    <link href="/css/hybrid.css?1603716327" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1603716327" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1603716327" rel="stylesheet">
-    <link href="/css/auto-complete.css?1603716327" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1603716327" rel="stylesheet">
-    <link href="/css/theme.css?1603716327" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1603716327" rel="stylesheet">
+    <link href="/css/nucleus.css?1605237164" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1605237164" rel="stylesheet">
+    <link href="/css/hybrid.css?1605237164" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1605237164" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1605237164" rel="stylesheet">
+    <link href="/css/auto-complete.css?1605237164" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1605237164" rel="stylesheet">
+    <link href="/css/theme.css?1605237164" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1605237164" rel="stylesheet">
     
-    <link href="/css/theme-walabs.css?1603716327" rel="stylesheet">
+    <link href="/css/theme-walabs.css?1605237164" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1603716327"></script>
+    <script src="/js/jquery-3.3.1.min.js?1605237164"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1603716327"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1603716327"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1605237164"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1605237164"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1603716327"></script>
+<script type="text/javascript" src="/js/search.js?1605237164"></script>
 
     
   </div>
@@ -228,12 +228,12 @@
     
     
     
-    <li data-nav-id="/setup/lab-setup-master/" title="MASTER 계정 셋업" class="dd-item
+    <li data-nav-id="/setup/lab-setup-master/" title="CloudFormation 배포" class="dd-item
     
         
         ">
       <a href="/setup/lab-setup-master/">
-          <b>2-2. </b>MASTER 계정 셋업
+          <b>2-2. </b>CloudFormation 배포
           
           
             <i class="fas read-icon"></i>
@@ -506,12 +506,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CPU 경보" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CloudWatch를 사용한 CPU 경보 구성" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/">
-          <b>3-2. </b>CPU 경보
+          <b>3-2. </b>CloudWatch를 사용한 CPU 경보 구성
           
             
               <i class="fas fa-caret-right"></i>
@@ -599,7 +599,7 @@
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/ec2/">
-          <b>2. </b>EC2 Loadtest 진행
+          <b>3. </b>EC2 Loadtest 진행
           
           
             <i class="fas read-icon"></i>
@@ -1300,6 +1300,8 @@
         <ul>
           
           
+            
+          
           
 
         
@@ -1311,8 +1313,40 @@
  
   
     
-      <li data-nav-id="/reliability/3_failure_injection_prep/" title="장애 주입 준비" class="dd-item ">
-        <a href="/reliability/3_failure_injection_prep/">
+    
+    
+    <li data-nav-id="/reliability/test_resiliency/" title="EC2, RD와 AZ의 복원력 테스트" class="dd-item
+    
+        
+        ">
+      <a href="/reliability/test_resiliency/">
+          EC2, RD와 AZ의 복원력 테스트
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/reliability/test_resiliency/3_failure_injection_prep/" title="장애 주입 준비" class="dd-item ">
+        <a href="/reliability/test_resiliency/3_failure_injection_prep/">
         <b>1. </b>장애 주입 준비
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1330,8 +1364,8 @@
  
   
     
-      <li data-nav-id="/reliability/4_failure_injection_ec2/" title="EC2 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
-        <a href="/reliability/4_failure_injection_ec2/">
+      <li data-nav-id="/reliability/test_resiliency/4_failure_injection_ec2/" title="EC2 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/test_resiliency/4_failure_injection_ec2/">
         <b>2. </b>EC2 장애 주입
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1349,8 +1383,8 @@
  
   
     
-      <li data-nav-id="/reliability/5_failure_injection_rds/" title="RDS 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
-        <a href="/reliability/5_failure_injection_rds/">
+      <li data-nav-id="/reliability/test_resiliency/5_failure_injection_rds/" title="RDS 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/test_resiliency/5_failure_injection_rds/">
         <b>3. </b>RDS 장애 주입
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1368,13 +1402,22 @@
  
   
     
-      <li data-nav-id="/reliability/6_failure_injection_az/" title="AZ 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
-        <a href="/reliability/6_failure_injection_az/">
+      <li data-nav-id="/reliability/test_resiliency/6_failure_injection_az/" title="AZ 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/test_resiliency/6_failure_injection_az/">
         <b>4. </b>AZ 장애 주입
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
      
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
   
  
 
@@ -1407,6 +1450,97 @@
             <i class="fas read-icon"></i>
           
       </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/security/200_cloudfront_with_waf_protection/" title="WAF를 사용한 CloudFront 보호" class="dd-item
+    
+        
+        ">
+      <a href="/security/200_cloudfront_with_waf_protection/">
+          WAF를 사용한 CloudFront 보호
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/200_cloudfront_with_waf_protection/1_config_waf/" title="AWS WAF 구성" class="dd-item ">
+        <a href="/security/200_cloudfront_with_waf_protection/1_config_waf/">
+        <b>1. </b>AWS WAF 구성
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/" title="CloudFront 구성 - EC2 또는 Load Balancer" class="dd-item ">
+        <a href="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/">
+        <b>2. </b>CloudFront 구성 - EC2 또는 Load Balancer
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
       
     </li>
   
@@ -1509,6 +1643,18 @@
                   
               
           
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/4_memory_plugin/">English</option>
+                    
+                  
+              
+          
         </select>
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
@@ -1568,7 +1714,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/sykang169/aws-well-architected-labs-kor/Cost/200_aws_resource_optimization/4_memory_plugin.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/sykang169/aws-well-architected-labs-kor/Cost/200_aws_resource_optimization/4_memory_plugin.ko.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -1659,17 +1805,17 @@
 </li>
 <li>
 <p>Loadbalancer와 연결된 EC2는 PrivateSubnet에 있기 때문에 VPC외부에서는 직접 접근이 불가능합니다. BastionHost를 이용해 EC2에 접근하도록 하겠습니다. EC2가 사용하는 pem 키를 bastionhost로 복사하겠습니다.</p>
-</li>
-</ol>
 
-<div class="notices warning" ><p>.pem 파일의 권한을 변경해야합니다. chmod 400 &lt;path.pem&gt; 을 입력하여 파일권한을 변경합니다.</p>
+<div class="notices warning" ><pre><code>.pem 파일의 권한을 변경해야합니다. chmod 400 &lt;path.pem&gt; 을 입력하여 파일권한을 변경합니다.
+</code></pre>
 </div>
 
-<ol start="6">
-<li>아래 명령어를 터미널의 pem키가 있는 위치에서 입력합니다.</li>
-</ol>
+</li>
+<li>
+<p>아래 명령어를 터미널의 pem키가 있는 위치에서 입력합니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i &lt;pem path&gt; &lt;pem filename&gt; ec2-user@&lt;bastionhost-public-dns&gt;:~
-</code></pre></div><ul>
+</code></pre></div><p>``</p>
+<ul>
 <li>
 <p><strong>pem-path</strong> : CloudFormation은 생성할때 만든 EC2 key pair .pem의 경로를 입력합니다.</p>
 </li>
@@ -1692,7 +1838,8 @@
 </ul>
 <p>예) 아래와 같은 형태로 입력하세요.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">scp -i ./warworkshopkey.pem warworkshopkey.pem ec2-user@ec2-3-210-197-135.compute-1.amazonaws.com:~
-</code></pre></div><ol start="7">
+</code></pre></div><p>``</p>
+</li>
 <li>
 <p>아래와 같이 메세지와 함께 업로드가 완료됩니다.
 <img src="/images/war-cost/cloudwatch-agent-install-key.png" alt="/images/war-cost/cloudwatch-agent-connect-ec2.png"></p>
@@ -1717,25 +1864,26 @@
 </li>
 <li>
 <p><strong>Amazon Cloudwatch</strong> agent 패키지를 다운로드합니다. 해당 링크는 Amazon Linux를 위한 패키지이며, 다른 os는 <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html">여기</a>서 확인하세요.</p>
-</li>
-</ol>
 <pre><code>wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/AmazonCloudWatchAgent.zip
-</code></pre><p><img src="/cost/200_aws_resource_optimization/Images/AgentInstall06.png" alt="Images/MemInstall06.png"></p>
-<ol start="13">
-<li>install package의 압축을 해제합니다.</li>
-</ol>
+</code></pre><p>``</p>
+<p><img src="/cost/200_aws_resource_optimization/Images/AgentInstall06.png" alt="Images/MemInstall06.png"></p>
+</li>
+<li>
+<p>install package의 압축을 해제합니다.</p>
 <pre><code>unzip AmazonCloudWatchAgent.zip
 sudo ./install.sh
-</code></pre><p><img src="/cost/200_aws_resource_optimization/Images/AgentInstall07.png" alt="Images/MemInstall07.png"></p>
-<ol start="14">
-<li>AmazonCloudWatchAgent profile 구성</li>
-</ol>
+</code></pre><p>``</p>
+<p><img src="/cost/200_aws_resource_optimization/Images/AgentInstall07.png" alt="Images/MemInstall07.png"></p>
+</li>
+<li>
+<p>AmazonCloudWatchAgent profile 구성</p>
 <p>서버에서 CloudWatch 에이전트를 실행하기 전에 사용자 정의 지표를 포함하여 에이전트가 수집 할 지표 및 로그를 지정하는 JSON 파일 인 CloudWatch 에이전트 구성파일을 작성해야합니다. 마법사를 사용하거나 처음부터 직접 작성하여 만들 수 있습니다. 에이전트 구성 파일을 변경할 때마다 변경 사항을 적용하려면 에이전트를 다시 시작해야합니다.</p>
 <p>마법사는 AWS 자격증명 및 구성파일이있는 경우 사용할 자격증명 및 AWS 리전을 자동 검색 할 수 있습니다. 이러한 파일에 대한 자세한 내용은 <em>AWS Systems Manager 사용 설명서</em> 및 A<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file.html">AWS documentation page</a>의 <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html">구성 및 자격증몇 파일</a>을 참조하십시오.</p>
 <p>이제 선택한 EC2 인스턴스에서 아래 명령을 실행하여 CloudWatch 에이전트 구성 파일 마법사를 시작하겠습니다.</p>
 <pre><code>sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
-</code></pre><p><img src="/cost/200_aws_resource_optimization/Images/AgentInstall08.png" alt="Images/MemInstall08.png"></p>
-<p>For this lab we want to keep the following structure:</p>
+</code></pre><p>``</p>
+<p><img src="/cost/200_aws_resource_optimization/Images/AgentInstall08.png" alt="Images/MemInstall08.png"></p>
+<p>이 실습에서는 다음 구조를 유지하려고합니다.</p>
 <table>
 <thead>
 <tr>
@@ -1804,41 +1952,43 @@ sudo ./install.sh
 </table>
 <p>The CloudWatch Agent config file should look like the following:</p>
 <pre><code>{
-	&quot;agent&quot;: {
-			&quot;metrics_collection_interval&quot;: 60,
-			&quot;run_as_user&quot;: &quot;cwagent&quot;
-	},
-	&quot;metrics&quot;: {
-			&quot;append_dimensions&quot;: {
-				&quot;AutoScalingGroupName&quot;: &quot;${aws:AutoScalingGroupName}&quot;,
-				&quot;ImageId&quot;: &quot;${aws:ImageId}&quot;,
-				&quot;InstanceId&quot;: &quot;${aws:InstanceId}&quot;,
-				&quot;InstanceType&quot;: &quot;${aws:InstanceType}&quot;
-			},
-			&quot;metrics_collected&quot;: {
-				&quot;disk&quot;: {
-					&quot;measurement&quot;: [
-						&quot;used_percent&quot;
-				],
-				&quot;metrics_collection_interval&quot;: 60,
-					&quot;resources&quot;: [
-							&quot;*&quot;
-				]
-			},
-			&quot;mem&quot;: {
-					&quot;measurement&quot;: [
-						&quot;mem_used_percent&quot;
-					],
-					&quot;metrics_collection_interval&quot;: 60
-			}
-		}
-	}
+    &quot;agent&quot;: {
+            &quot;metrics_collection_interval&quot;: 60,
+            &quot;run_as_user&quot;: &quot;cwagent&quot;
+    },
+    &quot;metrics&quot;: {
+            &quot;append_dimensions&quot;: {
+                &quot;AutoScalingGroupName&quot;: &quot;${aws:AutoScalingGroupName}&quot;,
+                &quot;ImageId&quot;: &quot;${aws:ImageId}&quot;,
+                &quot;InstanceId&quot;: &quot;${aws:InstanceId}&quot;,
+                &quot;InstanceType&quot;: &quot;${aws:InstanceType}&quot;
+            },
+            &quot;metrics_collected&quot;: {
+                &quot;disk&quot;: {
+                    &quot;measurement&quot;: [
+                        &quot;used_percent&quot;
+                ],
+                &quot;metrics_collection_interval&quot;: 60,
+                    &quot;resources&quot;: [
+                            &quot;*&quot;
+                ]
+            },
+            &quot;mem&quot;: {
+                    &quot;measurement&quot;: [
+                        &quot;mem_used_percent&quot;
+                    ],
+                    &quot;metrics_collection_interval&quot;: 60
+            }
+        }
+    }
 }
-</code></pre><ol start="15">
-<li>CloudWatch Agent를 시작합니다.</li>
-</ol>
+</code></pre><p>``</p>
+</li>
+<li>
+<p>CloudWatch Agent를 시작합니다.</p>
 <pre><code>sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
-</code></pre><p><img src="/cost/200_aws_resource_optimization/Images/AgentInstall09.png" alt="Images/MemInstall09.png"></p>
+</code></pre><p>``</p>
+<p><img src="/cost/200_aws_resource_optimization/Images/AgentInstall09.png" alt="Images/MemInstall09.png"></p>
 <p>지표를 사용할 수있게되는 데 최대 5 분이 소요될 수 있습니다. 지표세션 아래의 <strong>Amazon CloudWatch</strong> 콘솔 페이지로 돌아가서 메모리 정보를 받고 있는지 확인하십시오.</p>
 <p><strong>CWAgent</strong>를 클릭합니다:
 <img src="/cost/200_aws_resource_optimization/Images/AgentInstall10.png" alt="Images/MemInstall10.png"></p>
@@ -1847,6 +1997,8 @@ sudo ./install.sh
 <p>리스트의 <strong>Instance</strong>를 선택합니다:
 <img src="/cost/200_aws_resource_optimization/Images/AgentInstall12.png" alt="Images/MemInstall12.png"></p>
 <p>이제 CloudWatch 에이전트 설치를 완료했으며 Amazon CloudWatch에서 해당 인스턴스의 메모리 사용률을 모니터링 할 수 있습니다.</p>
+</li>
+</ol>
 
 
 <footer class="footline">
@@ -2612,6 +2764,21 @@ sudo ./install.sh
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -2682,6 +2849,24 @@ sudo ./install.sh
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
                         
             
             
@@ -2694,6 +2879,41 @@ sudo ./install.sh
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
                     
             
         
@@ -2745,19 +2965,19 @@ sudo ./install.sh
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1603716327"></script>
-    <script src="/js/perfect-scrollbar.min.js?1603716327"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1603716327"></script>
-    <script src="/js/jquery.sticky.js?1603716327"></script>
-    <script src="/js/featherlight.min.js?1603716327"></script>
-    <script src="/js/highlight.pack.js?1603716327"></script>
+    <script src="/js/clipboard.min.js?1605237164"></script>
+    <script src="/js/perfect-scrollbar.min.js?1605237164"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1605237164"></script>
+    <script src="/js/jquery.sticky.js?1605237164"></script>
+    <script src="/js/featherlight.min.js?1605237164"></script>
+    <script src="/js/highlight.pack.js?1605237164"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1603716327"></script>
-    <script src="/js/learn.js?1603716327"></script>
-    <script src="/js/hugo-learn.js?1603716327"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1605237164"></script>
+    <script src="/js/learn.js?1605237164"></script>
+    <script src="/js/hugo-learn.js?1605237164"></script>
 
-    <link href="/mermaid/mermaid.css?1603716327" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1603716327"></script>
+    <link href="/mermaid/mermaid.css?1605237164" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1605237164"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

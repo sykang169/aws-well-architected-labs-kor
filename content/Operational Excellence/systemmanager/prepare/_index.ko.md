@@ -19,7 +19,7 @@ weight: 51
    ![/images/war-operationalexcellence/ssm-agent.png](/images/war-operationalexcellence/ssm-endpoint-select.png)
 2. **VPC**를 선택합니다. 실습에서 생성한 `WellArchitectedLabsStack/VPC`를 검색하여 선택합니다. **Subnets**은 `ap-northeast-2b`, `ap-northeast-2b`의 체크박스를 선택하고 모두 **PrivateSubnet**을 선택합니다.
    ![/images/war-operationalexcellence/ssm-agent-vpc.png](/images/war-operationalexcellence/ssm-agent-vpc.png)
-3. **Security Group**를 선택합니다. Description에서 EC2인스턴스와 동일한 보안그룹을 선택합니다. 실습환견에서는 `WellArchitectedLabsStack/ASG/InstanceSecurityGroup`을 선택하면 됩니다. 
+3. **Security Group**를 선택합니다. Description에서 EC2인스턴스와 동일한 보안그룹을 선택합니다. 실습환경에서는 `WellArchitectedLabsStack/ASG/InstanceSecurityGroup`을 선택하면 됩니다. 
    ![/images/war-operationalexcellence/ssm-agent-sg.png](/images/war-operationalexcellence/ssm-agent-sg.png)
 4. 동일한 방법으로 **SSM**을 검색하여 `com.amazonaws.< region >.ssm`도 선택합니다. 
 5. 최종적으로 생성된 엔드포인트는 아래와 같이 ec2와 ssm의 2개의 최소한 엔드포인트가 있어야 합니다. 

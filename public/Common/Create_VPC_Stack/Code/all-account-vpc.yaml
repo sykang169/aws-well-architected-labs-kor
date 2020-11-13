@@ -359,7 +359,8 @@ Resources:
   BastionHost:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0bd7691bf6470fe9c
+      ImageId: 
+        Ref: SSMparamimageid
       InstanceType:
         Fn::FindInMap:
         - instancesTypes
@@ -511,7 +512,8 @@ Resources:
   ASGLaunchConfigC00AF12B:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
-      ImageId: ami-0bd7691bf6470fe9c
+      ImageId: 
+        Ref: SSMparamimageid
       InstanceType: t2.micro
       IamInstanceProfile:
         Ref: ASGInstanceProfile
@@ -531,6 +533,16 @@ Resources:
     - ClusterC1063A87
     Metadata:
       aws:cdk:path: WellArchitectedLabsStack/ASG/LaunchConfig
+      Type: AWS::SSM::Parameter
+  BasicParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: awsuser
+      Type: String
+      Value: date
+      Description: SSM Parameter for rdsuser name.
+      Tags:
+        Environment: DEV
   ASG46ED3070:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
@@ -868,6 +880,10 @@ Mappings:
       HVM64: ami-6b6a7d09
       HVMG2: NOT_SUPPORTED
 Parameters:
+  SSMparamimageid:
+    Description: Name of an EC2 Image ID 
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
   WorkloadName:
     Description: The Name tag you wish to apply to the workload that will be created
     Type: String

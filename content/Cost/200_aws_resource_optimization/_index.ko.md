@@ -9,7 +9,7 @@ pre : "<b>4-2. </b>"
 ## Authors
 - Jeff Kassel, AWS Technical Account Manager
 - Arthur Basbaum, AWS Cloud Economics
-- +Seyong Kang, Solutions Architect
+- Seyong Kang, Solutions Architect
 
 ## 소개
 이 실습에서는 CloudWatch 에이전트를 설치하여 메모리 사용률 (GB 소모량)을 수집하고 AWS Resource Optimization를 사용하여 EC2 올바른 크기 조정연습에 새로운 데이터 포인트가 어떻게 도움이 되는지 분석하는 단계를 안내합니다.

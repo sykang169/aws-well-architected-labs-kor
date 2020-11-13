@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Start AWS Well-Architected Review using Well-Architected tool on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/</link>
+    <description>Recent content in Start AWS Well-Architected Review using Well-Architected tool on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a workload</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/2_create_workload/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/2_create_workload/</guid>
+      <description>Log-in AWS console, typing Well-Architected Tools in service search bar. you can go to this link : https://console.aws.amazon.com/wellarchitected/.
+Well-Architected Reviews are conducted per workload. A workload identifies a set of components that deliver business value. The workload is usually the level of detail that business and technology leaders communicate about.
+  Click the Define Workload button on the landing page:   If you have already created a workload, a list of workloads will appear.</description>
+    </item>
+    
+    <item>
+      <title>Performing a review</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/3_perform_review/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/3_perform_review/</guid>
+      <description>From the detail page for the workload, click the Start review button. And click the AWS Well-Architected Framework.   In this walkthrough, we are only going to complete the Reliability Pillar questions. Collapse the Operational Excellence questions by selecting the collapsing icon on the left of the words Operation Excellence on the left:   Expand the Reliability Questions by selecting the expanding icon to the left of the word Reliability:   Select the first question: REL 1.</description>
+    </item>
+    
+    <item>
+      <title>Saving a milestone</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/4_save_milestone/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/4_save_milestone/</guid>
+      <description>From the detail page for the workload, click the Save milestone button:   Enter a name for the milestone as AWS Workshop Milestone and click the Save button:   Click on the Milestones tab:   This will display the milestone and data about it:   Now let&amp;rsquo;s change the state of the workload. Click on the Workload for AWS Workshop workload in the left navigation bar, and select the Properties tab.</description>
+    </item>
+    
+    <item>
+      <title>Viewing and downloading the report</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/5_view_report/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/5_view_report/</guid>
+      <description>From the detail page for the workload, click the Improvement Plan tab:   This will display the number of high and medium risk items and allow you to update the Improvement status:   You can also edit the Pillar priority configuration. Click Workload for AWS workshop in the left menu, scroll down and click the Edit button in the Pillar priority tab:   Move the Reliability Pillar up by clicking the up icon to the right of the word, Reliability:   Click the Save button to save this configuration:   Now let&amp;rsquo;s generate and download the report.</description>
+    </item>
+    
+  </channel>
+</rss>

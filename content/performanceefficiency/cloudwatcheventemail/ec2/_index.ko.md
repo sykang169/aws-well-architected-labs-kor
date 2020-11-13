@@ -21,9 +21,9 @@ EC2의 CPU사용량이 많아지면 Autoscaling Group은 자동으로 EC2 Instan
     ![CloudwatchDashboard](/images/war/cloudwatch-albdns.png#medium)
 
 1. 다음과 같은 화면을 볼 수 있습니다. 
-    ![CloudwatchDashboard](/images/war/cloudwatch-ec2.png#medium)
+    ![CloudwatchDashboard](/images/war/cloudwatch-ec22.png#medium)
     이 웹서버의 CPU사용률은 0%입니다. 상단의 Load test 버튼을 클릭하면 화면이 전환하면서 EC2의 CPU사용율이 100%로 올라갑니다. 
-    ![CloudwatchDashboard](/images/war/cloudwatch-ec2-loadtest.png#medium)
+    ![CloudwatchDashboard](/images/war/cloudwatch-ec2-loadtest2.png#medium)
     이 화면을 벗어날때까지 CPU사용율은 내려가지 않을 것입니다.  
 
 1. CloudWatch 콘솔로 이동하여 이전에 만든 사용자 대시보드를 확인하겠습니다.

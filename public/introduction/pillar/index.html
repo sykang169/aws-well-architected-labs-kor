@@ -12,21 +12,21 @@
     <title>AWS Well-Architected의 기반 :: AWS Well-Architected Labs</title>
 
     
-    <link href="/css/nucleus.css?1603716327" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1603716327" rel="stylesheet">
-    <link href="/css/hybrid.css?1603716327" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1603716327" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1603716327" rel="stylesheet">
-    <link href="/css/auto-complete.css?1603716327" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1603716327" rel="stylesheet">
-    <link href="/css/theme.css?1603716327" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1603716327" rel="stylesheet">
+    <link href="/css/nucleus.css?1605237164" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1605237164" rel="stylesheet">
+    <link href="/css/hybrid.css?1605237164" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1605237164" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1605237164" rel="stylesheet">
+    <link href="/css/auto-complete.css?1605237164" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1605237164" rel="stylesheet">
+    <link href="/css/theme.css?1605237164" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1605237164" rel="stylesheet">
     
-    <link href="/css/theme-walabs.css?1603716327" rel="stylesheet">
+    <link href="/css/theme-walabs.css?1605237164" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1603716327"></script>
+    <script src="/js/jquery-3.3.1.min.js?1605237164"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1603716327"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1603716327"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1605237164"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1605237164"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1603716327"></script>
+<script type="text/javascript" src="/js/search.js?1605237164"></script>
 
     
   </div>
@@ -228,12 +228,12 @@
     
     
     
-    <li data-nav-id="/setup/lab-setup-master/" title="MASTER 계정 셋업" class="dd-item
+    <li data-nav-id="/setup/lab-setup-master/" title="CloudFormation 배포" class="dd-item
     
         
         ">
       <a href="/setup/lab-setup-master/">
-          <b>2-2. </b>MASTER 계정 셋업
+          <b>2-2. </b>CloudFormation 배포
           
           
             <i class="fas read-icon"></i>
@@ -506,12 +506,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CPU 경보" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CloudWatch를 사용한 CPU 경보 구성" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/">
-          <b>3-2. </b>CPU 경보
+          <b>3-2. </b>CloudWatch를 사용한 CPU 경보 구성
           
             
               <i class="fas fa-caret-right"></i>
@@ -599,7 +599,7 @@
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/ec2/">
-          <b>2. </b>EC2 Loadtest 진행
+          <b>3. </b>EC2 Loadtest 진행
           
           
             <i class="fas read-icon"></i>
@@ -1300,6 +1300,8 @@
         <ul>
           
           
+            
+          
           
 
         
@@ -1311,8 +1313,40 @@
  
   
     
-      <li data-nav-id="/reliability/3_failure_injection_prep/" title="장애 주입 준비" class="dd-item ">
-        <a href="/reliability/3_failure_injection_prep/">
+    
+    
+    <li data-nav-id="/reliability/test_resiliency/" title="EC2, RD와 AZ의 복원력 테스트" class="dd-item
+    
+        
+        ">
+      <a href="/reliability/test_resiliency/">
+          EC2, RD와 AZ의 복원력 테스트
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/reliability/test_resiliency/3_failure_injection_prep/" title="장애 주입 준비" class="dd-item ">
+        <a href="/reliability/test_resiliency/3_failure_injection_prep/">
         <b>1. </b>장애 주입 준비
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1330,8 +1364,8 @@
  
   
     
-      <li data-nav-id="/reliability/4_failure_injection_ec2/" title="EC2 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
-        <a href="/reliability/4_failure_injection_ec2/">
+      <li data-nav-id="/reliability/test_resiliency/4_failure_injection_ec2/" title="EC2 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/test_resiliency/4_failure_injection_ec2/">
         <b>2. </b>EC2 장애 주입
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1349,8 +1383,8 @@
  
   
     
-      <li data-nav-id="/reliability/5_failure_injection_rds/" title="RDS 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
-        <a href="/reliability/5_failure_injection_rds/">
+      <li data-nav-id="/reliability/test_resiliency/5_failure_injection_rds/" title="RDS 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/test_resiliency/5_failure_injection_rds/">
         <b>3. </b>RDS 장애 주입
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1368,13 +1402,22 @@
  
   
     
-      <li data-nav-id="/reliability/6_failure_injection_az/" title="AZ 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
-        <a href="/reliability/6_failure_injection_az/">
+      <li data-nav-id="/reliability/test_resiliency/6_failure_injection_az/" title="AZ 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+        <a href="/reliability/test_resiliency/6_failure_injection_az/">
         <b>4. </b>AZ 장애 주입
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
      
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
   
  
 
@@ -1407,6 +1450,97 @@
             <i class="fas read-icon"></i>
           
       </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/security/200_cloudfront_with_waf_protection/" title="WAF를 사용한 CloudFront 보호" class="dd-item
+    
+        
+        ">
+      <a href="/security/200_cloudfront_with_waf_protection/">
+          WAF를 사용한 CloudFront 보호
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/200_cloudfront_with_waf_protection/1_config_waf/" title="AWS WAF 구성" class="dd-item ">
+        <a href="/security/200_cloudfront_with_waf_protection/1_config_waf/">
+        <b>1. </b>AWS WAF 구성
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/" title="CloudFront 구성 - EC2 또는 Load Balancer" class="dd-item ">
+        <a href="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/">
+        <b>2. </b>CloudFront 구성 - EC2 또는 Load Balancer
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
       
     </li>
   
@@ -1506,6 +1640,18 @@
                     
                   
               
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/introduction/pillar/">English</option>
+                    
                   
               
           
@@ -2433,6 +2579,21 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -2503,6 +2664,24 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
                         
             
             
@@ -2515,6 +2694,41 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
                     
             
         
@@ -2566,19 +2780,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1603716327"></script>
-    <script src="/js/perfect-scrollbar.min.js?1603716327"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1603716327"></script>
-    <script src="/js/jquery.sticky.js?1603716327"></script>
-    <script src="/js/featherlight.min.js?1603716327"></script>
-    <script src="/js/highlight.pack.js?1603716327"></script>
+    <script src="/js/clipboard.min.js?1605237164"></script>
+    <script src="/js/perfect-scrollbar.min.js?1605237164"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1605237164"></script>
+    <script src="/js/jquery.sticky.js?1605237164"></script>
+    <script src="/js/featherlight.min.js?1605237164"></script>
+    <script src="/js/highlight.pack.js?1605237164"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1603716327"></script>
-    <script src="/js/learn.js?1603716327"></script>
-    <script src="/js/hugo-learn.js?1603716327"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1605237164"></script>
+    <script src="/js/learn.js?1605237164"></script>
+    <script src="/js/hugo-learn.js?1605237164"></script>
 
-    <link href="/mermaid/mermaid.css?1603716327" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1603716327"></script>
+    <link href="/mermaid/mermaid.css?1605237164" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1605237164"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -8,33 +8,34 @@ hidden: false
 pre: "<b>5. </b>"
 ---
 
+## Author
+* Mahanth Jayadeva, Solutions Architect, Well-Architected
+* +Seyong Knag, Solutions Architect
+* +Jimin Kim, Solutions Architect
+
 {{% notice note %}}
-AWS의 운영우수성에 대한 자세한 내용은 AWS 콘솔의 Well-Architected 페이지의 AWS [Well-Architected Operational Excellence](https://d1.awsstatic.com/whitepapers/ko_KR/architecture/AWS-Operational-Excellence-Pillar.pdf)백서를 참조합니다.
+For more information about Operational Excellence on AWS visit the Well-Architected tool in the AWS console, and read the AWS [Well-Architected Operational Excellence](https://d1.awsstatic.com/whitepapers/architecture/AWS-Operational-Excellence-Pillar.pdf) whitepaper.
 {{% /notice%}}
 
-### 운영 우수성(Operational Excellence)이란?
-비즈니스 가치를 제공하고 지원 프로세스와 절차를 **지속적으로 개선**하기 위해 시스템을 실행하고 **운영에 대한 통찰력**을 얻을 수 있는 능력
+### What is Operational Excellence?
+The Operational Excellence pillar includes the ability to support development and run workloads effectively, gain insight into their operations, and to continuously improve supporting processes and procedures to deliver business value.
 
-### 운영 우수성을 위한 5가지 설계 원칙
-#### 코드를 통한 운영
-애플리케이션 코드에 사용되었던 동일한 엔지니어링 원칙을 클라우드의 전체 환경에 적용할 수 있습니다. 그러면 전체 워크로드(애플리케이션, 인프라 등)를 코드로 정의하고 코드로 업데이트할 수 있습니다. 운영 절차를 스크립트로 작성하고 이벤트에 응답하여 스크립트를 트리거하면 실행을 자동화할 수 있습니다. 운영을 코드로 수행하여 인적 오류를 방지하고 이벤트에 대한 지속적인 응답을 활성화합니다.
-#### 되돌리기 용이한 작은 단위의 변경 내용을 자주 적용
-주기적으로 구성 요소 업데이트가 가능하도록 워크로드를 설계하여 워크로드에 유익한 변경 사항이 지속적으로 적용되게 합니다. 운영 환경에서 발생한 문제를 식별하고 해결하는 데 어려움이 있는 경우, 가능한 한 고객에게 영향을 주지 않고 되돌릴 수 있을 정도의 작은 단위로 변경 내용을 적용합니다.
-#### 수시로 운영 절차 수정
-사용 중인 운영 절차에 개선할 여지가 있는지 확인합니다. 워크로드가 개선되면 절차도 적절하게 개선합니다. 정기적인 게임 데이를 준비하여 모든
-절차가 효과가 있는지, 이러한 절차에 팀원들이 익숙한지 검토하고 검증합니다.
-#### 실패 예측
-잠재적인 실패의 원인을 찾아내 이를 없애거나 완화할 수 있도록 합니다. 실패 시나리오를 테스트하고 그에 따른 영향을 이해했는지 여부를 검증합니다. 응답 절차를 테스트하여 효과가 있는지, 팀이 이 실행 단계에 익숙한지 확인합니다. 정기 게임 데이를 준비하여 시뮬레이션된 이벤트에 대한 팀의 응답 및 워크로드를 테스트합니다.
-#### 모든 운영 실패로부터 학습
-모든 운영 이벤트 및 실패로부터 파악한 내용을 바탕으로 개선합니다. 팀 전반 및 전체 조직에 걸쳐 파악한 내용을 공유합니다.
+### Design Principles for Operational Excellence
+#### Perform operations as code
+In the cloud, you can apply the same engineering discipline that you use for application code to your entire environment. You can define your entire workload (applications, infrastructure) as code and update it with code. You can implement your operations procedures as code and automate their execution by triggering them in response to events. By performing operations as code, you limit human error and enable consistent responses to events.
 
-### 실습 준비물
-* 실습에 사용할 [AWS 계정](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) 
-* **AdministratorAccess** 관리자 권한
 
-{{% notice warning %}}
-본 실습에서는 AWS 프리 티어에서 다루지 않은 AWS 리소스가 사용될 수 있습니다. 랩 가이드의 끝에는 생성 한 모든 리소스를 제거하는 방법에 대한 추가 섹션이 있습니다. 랩 종료 후 반드시 수행해주세요.
-{{% /notice %}}
+#### Make frequent, small, reversible changes
+Design workloads to allow components to be updated regularly. Make changes in small increments that can be reversed if they fail (without affecting customers when possible).
+
+#### Refine operations procedures frequently
+As you use operations procedures, look for opportunities to improve them. As you evolve your workload, evolve your procedures appropriately. Set up regular game days to review and validate that all procedures are effective and that teams are familiar with them.
+
+#### Anticipate failure
+Perform “pre-mortem” exercises to identify potential sources of failure so that they can be removed or mitigated. Test your failure scenarios and validate your understanding of their impact. Test your response procedures to ensure that they are effective, and that teams are familiar with their execution. Set up regular game days to test workloads and team responses to simulated events.
+
+#### Learn from all operational failures
+Drive improvement through lessons learned from all operational events and failures. Share what is learned across teams and through the entire organization.
 
 Steps:
 {{% children %}}

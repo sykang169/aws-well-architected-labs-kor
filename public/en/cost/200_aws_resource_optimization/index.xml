@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EC2 Right Sizing(MEM) on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/</link>
+    <description>Recent content in EC2 Right Sizing(MEM) on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting to know Amazon Cloudwatch</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/2_create_iamrole/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/2_create_iamrole/</guid>
+      <description>Access to AWS resources requires permissions. You will now create an IAM role to grant permissions that the agent needs to write metrics to CloudWatch. Amazon created two new default policies called CloudWatchAgentServerPolicy and CloudWatchAgentAdminPolicy only for that purpose.
+  To create the IAM role first you will need to sign in to the AWS Management Console and open the IAM console   In the navigation pane on the left, choose Roles and then Create role.</description>
+    </item>
+    
+    <item>
+      <title>Attach CloudWatch IAM role to selected EC2 Instances</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/3_attach_iamrole/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/3_attach_iamrole/</guid>
+      <description>We are now going to attach the IAM Role created on the previous step in one of our EC2 Instances, to do that let&amp;rsquo;s go to the Amazon EC2 Dashboard.   On the left bar, click on Instances.   Click on Launch Instance and select Linux 2 AMI (HVM) and t2.micro (free tier eligible) on the following screens. Click Review and launch:   Look for the created IAM role CloudWatchAgentServerRole under the IAM role box, select it and apply.</description>
+    </item>
+    
+    <item>
+      <title>Cloudwatch Agent Manual Install</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/4_memory_plugin/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/4_memory_plugin/</guid>
+      <description>We are now going to manually install the CloudWatch agent to start collecting memory data, to start let&amp;rsquo;s go back to the Amazon EC2 Dashboard.   Check EC2 connect infomation which CloudWatchAgentServerRole IAM role attached. Select EC2 instance which attached IAM role and Click Connect button.   Copy connect info in Connect to your instance   This Command Line need when connect bastionhost. copy to notepad.</description>
+    </item>
+    
+    <item>
+      <title>Updated Amazon EC2 Resource Optimization recommendations</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/5_ec2_updated_rec/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/5_ec2_updated_rec/</guid>
+      <description>Please try this exercise in a real user account. Currently, it cannot be performed in a lab environment.
+ In order to complete this step you need to have Amazon EC2 Resource Optimization enabled, you can do that going to the AWS Cost Explorer, Recommendations (left bar) section.
+ If you have just installed the CloudWatch agent at your instances it may take a couple of days for Amazon EC2 Resource Optimization to start to provide updated recommendations, so don&amp;rsquo;t worry if you don&amp;rsquo;t see the memory data during the first checks.</description>
+    </item>
+    
+    <item>
+      <title>Amazon EC2 Right Sizing Best Practices</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</guid>
+      <description>Start simple: idle resources, non-critical development/QA and previous generation instances will require less testing hours and provide quick wins (The Amazon EC2 Launch time statistics can be used to identify instances that have been running longer than others and is a good statistic to sort your Amazon EC2 instances by).
+  Right Size before performing a migration: If you skip right sizing to save time, your migration speed might increase, but you will end up with higher cloud infrastructure spend for a potentially longer period of time.</description>
+    </item>
+    
+    <item>
+      <title>Tear down</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/7_tear_down/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/7_tear_down/</guid>
+      <description> Delete the IAM role CloudWatchAgentServerRole.  </description>
+    </item>
+    
+  </channel>
+</rss>

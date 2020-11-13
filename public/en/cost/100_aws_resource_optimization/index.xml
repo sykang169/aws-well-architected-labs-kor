@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EC2 Right Sizing on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/</link>
+    <description>Recent content in EC2 Right Sizing on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting to know Amazon Cloudwatch</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/1_cloudwatch_intro/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/1_cloudwatch_intro/</guid>
+      <description>The first step to perform right sizing is to monitor and analyze your current use of services to gain insight into instance performance and usage patterns. To gather sufficient data, observe performance over at least a two-week period (ideally, over a one-month period) to capture the workload and business peak. The most common metrics that define instance performance are vCPU utilization, memory utilization, network utilization, and disk use.
+  Log into your AWS console via SSO, go to the Amazon CloudWatch service page:   Select EC2 under the Service Dashboard:   Observe the Service Dashboard and all of its different metrics, but focus on CPU Utilization and Network In and Out:   Select one of the EC2 resources by clicking on the little color icon to the left of the resource-id name:   Deselect the EC2 resource and now modify the time range on the top right, click custom and select the last 2 weeks:   Navigate to the CPU Utilization Average widget, click the three dots and launch the View in metrics page.</description>
+    </item>
+    
+    <item>
+      <title>Using Amazon EC2 Resource Optimization Recommendations</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/2_resource_opt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/2_resource_opt/</guid>
+      <description>NOTE: In order to complete this step you need to have Amazon EC2 Resource Optimization enabled, you can do that by going to AWS Cost Explorer, Recommendations (left bar) section.
+Amazon EC2 Resource Optimization offers right sizing recommendations in AWS Cost Explorer without any additional cost. These recommendations identify likely idle and underutilized instances across your accounts, regions and tags. To generate these recommendations, AWS analyzes your historical EC2 resource usage (using Amazon CloudWatch) and your existing reservation footprint to identify opportunities for cost savings (e.</description>
+    </item>
+    
+    <item>
+      <title>Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/3_prio_resource_opt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/3_prio_resource_opt/</guid>
+      <description>Download the Amazon EC2 Resource Optimization report:   If you don’t have any Amazon EC2 Resource Optimization recommendation use the file below as a reference. Sample Amazon EC2 Resource Optimization file (.xlsx)
+  First let’s exclude instances that are too small or were only running for a few hours from the analysis. By doing so, we minimize the time required to perform rightsizing modifications that would otherwise result in minimal savings.</description>
+    </item>
+    
+    <item>
+      <title>Action the recommendations</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/4_act_resource_opt/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/4_act_resource_opt/</guid>
+      <description>During this lab exercise, we learned how to prioritize the right sizing recommendations with the goal of identifying low complexity and high savings recommendations. We initially started with 2,534 recommendations with a potential saving of $86,627 but we managed to identify the top 60 cases with lowest complexity that together add up to $14,699.56 of the overall potential saving.
+Group 1 (Idle) and Group 2 (Previous Generation) are the less complex cases where you may want to start the right sizing exercises for your organization.</description>
+    </item>
+    
+    <item>
+      <title>Amazon EC2 Right Sizing Best Practices</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</guid>
+      <description>Start simple: idle resources, non-critical development/QA and previous generation instances will require less testing hours and provide quick wins (The Amazon EC2 Launch time statistics can be used to identify instances that have been running longer than others and is a good statistic to sort your Amazon EC2 instances by).
+  Right Size before performing a migration: If you skip right sizing to save time, your migration speed might increase, but you will end up with higher cloud infrastructure spend for a potentially longer period of time.</description>
+    </item>
+    
+    <item>
+      <title>Tear down</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/6_tear_down/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/6_tear_down/</guid>
+      <description>No tear down is required for this lab.</description>
+    </item>
+    
+  </channel>
+</rss>

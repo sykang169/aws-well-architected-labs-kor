@@ -22,7 +22,7 @@ tags:
 * Rodney Lester, Senior Solutions Architect Manager, AWS Well-Architected
 * Adrian Hornsby, Principal Tech Evangelist, AWS
 * Seth Eliot, Principal Reliability Solutions Architect, AWS Well-Architected
-* +Seyong Kang, Solutions Architect
+* Seyong Kang, Solutions Architect
 
 ## Introduction
 

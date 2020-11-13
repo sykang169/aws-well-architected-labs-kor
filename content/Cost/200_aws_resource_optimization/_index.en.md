@@ -9,7 +9,7 @@ pre : "<b>4-2. </b>"
 ## Authors
 - Jeff Kassel, AWS Technical Account Manager
 - Arthur Basbaum, AWS Cloud Economics
-- +Seyong Kang, Solutions Architect
+- Seyong Kang, Solutions Architect
 
 ## Feedback
 If you wish to provide feedback on this lab, there is an error, or you want to make a suggestion, please email: costoptimization@amazon.com

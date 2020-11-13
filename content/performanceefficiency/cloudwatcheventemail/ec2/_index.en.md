@@ -8,7 +8,7 @@ pre: "<b>3. </b>"
 ---
 When the CPU usage increases, Autoscaling Group automatically increases the number of EC2 Instances. And we'll see that change on Cloudwatch's dashboard.
 
-#### AWeb access through application load balancer
+#### Web access through application load balancer
 
 1. The DNS address of the Application Load balancer is in the **Output** in **WellArchitectedFrameworkLabsStack** created before.
 
@@ -20,11 +20,11 @@ When the CPU usage increases, Autoscaling Group automatically increases the numb
 1. The `ALBDNS` in output is the DNS address of the Application Load Balancer. After selecting the output in the upper tab, copy the value of `ALBDNS` and put it in the address bar of your web browser.
     ![CloudwatchDashboard](/images/war/cloudwatch-albdns.png#medium)
 
-1. You can see the following screen.
-    ![CloudwatchDashboard](/images/war/cloudwatch-ec2.png#medium)
-    The CPU usage of this web server is 0%. When you click the Load test button at the top, the screen changes and the CPU usage of EC2 rises to 100%.
-    ![CloudwatchDashboard](/images/war/cloudwatch-ec2-loadtest.png#medium)
-    CPU usage will not go down until you exit this screen.
+1. You can see the this screen.
+    ![CloudwatchDashboard](/images/war/cloudwatch-ec22.png#medium)
+    The CPU usage of this web server is 0%. When you click the Load test button at the top, the screen changes and the CPU load of EC2 rises to 100%.
+    ![CloudwatchDashboard](/images/war/cloudwatch-ec2-loadtest2.png#medium)
+    CPU load will not go down until you exit this screen.
 
 1. Let's go to the CloudWatch console and see the user dashboard we created earlier.
 

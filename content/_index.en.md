@@ -17,7 +17,7 @@ This lab guide not covers all best practices in pillar. Detail info is check [AW
 
 
  - This lab includes **Best-Practice** that can be applied to basic **3-tier-web**.
- - When CloudFormation is deployed, basic 3-tier-web is deployed.
+ - This lab CloudFormation configuration for basic 3-tier-web is deploy.
  - If you complete the Well-Architeced Framework review and practice for each pillar, you can complete a 3-tier-web applying best practices for each pillar.
  - Finally, you can experience the mechanism by repeatedly by performing **Well-Architected Framework Review** again.
 

@@ -1,5 +1,5 @@
 ---
-title: "Register E-mail and mobile number"
+title: "Subscribe e-mail and mobile number"
 weight: 322
 pre: "<b>2. </b>"
 ---
@@ -7,7 +7,7 @@ pre: "<b>2. </b>"
 ### SNS e-mail Confirm
 ---
 
-Email attached SNS topic must be re-approved in the account to receive Alarm. Find the email from `ÀWS Notification` in the inbox of the email you entered when setting up the previous step.
+email attached SNS topic have to re-approved in the account to receive Alarm. Find the email from `ÀWS Notification` in the your inbox when setting up the previous step.
    ![CloudwatchAlarm](/images/war/cloudwatch-confirm.png#medium)
 
 Click **Confirm subription**. finished subscribe. 

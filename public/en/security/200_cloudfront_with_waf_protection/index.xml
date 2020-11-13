@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CloudFront with WAF Protection on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/</link>
+    <description>Recent content in CloudFront with WAF Protection on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS WAF Config</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/1_config_waf/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/1_config_waf/</guid>
+      <description>  Open the AWS WAF Console: https://console.aws.amazon.com/wafv2/homev2
+  From left menu, select Getting started, click Create web ACL.   first setting resource type to CloudFront distributions. and type value in each text bar like this.
+   Name : well-architected-cf-waf-acl Description : for well-architected CF WAF
+And click next, and click Create web ACL for finish configuration.  </description>
+    </item>
+    
+    <item>
+      <title>CloudFront Config - EC2 or Load Balancer</title>
+      <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/2_config_cloudfront/</link>
+      <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
+      
+      <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/2_config_cloudfront/</guid>
+      <description>Open AWS CloudFront Console: https://console.aws.amazon.com/cloudfront/home.
+  Click Create Distribution button.   in Web section, Click Get Started button.   Open new browser, open CloudFormation console: https://console.aws.amazon.com/cloudformation/ And click MasterAccount stack`s Output tab and copy value of ALBDNS
+  Enter the DNS address of the Application Load Balancer copied to Origin Domain Name in Origin Settings. Origin ID will be entered automatically.   If you scroll down, you can select the well-architected-cf-waf-acl you created earlier in the AWS WAF Web ACL in Distribution Setting.</description>
+    </item>
+    
+  </channel>
+</rss>

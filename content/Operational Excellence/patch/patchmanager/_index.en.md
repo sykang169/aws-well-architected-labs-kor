@@ -6,9 +6,10 @@ pre: "<b>1. </b>"
 weight: 531
 ---
 
-## Systems Manager: 패치 관리자(Patch Manager)
+## Systems Manager: Patch Manager
 
-AWS Systems Manager [패치 관리자](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html)는 보안 관련 및 기타 유형의 업데이트로 관리형 인스턴스에 패치를 적용하는 프로세스를 자동화합니다. 인스턴스를 스캔하여 누락된 패치에 대한 보고서만 보거나 누락된 모든 패치를 스캔하고 자동으로 설치할 수 있습니다. Amazon EC2 태그를 사용하여 인스턴스를 개별적으로 또는 대규모 그룹으로 패치를 수행할 수도 있습니다.
+AWS Systems Manager [Patch Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html) automates the process of patching managed instances with security related updates.
+
 <!--
 >**Note**<br> Linux 기반 인스턴스의 경우 non-security 업데이트 패치를 설치할 수 있습니다.
 !-->
@@ -18,15 +19,15 @@ AWS Systems Manager [패치 관리자](https://docs.aws.amazon.com/systems-manag
 
 
 > **Warnings**
->  * [패치 관리자가 지원하는 운영 체제](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-supported-oses.html)는 SSM 에이전트가 지원하는 운영 체제와 다를 수 있습니다.
->  * **패치 관리자**가 업데이트를 수행 시 패치 된 인스턴스는 **재부팅** 됩니다.
->  * **패치 관리자**를 통해 고객에게 패치를 제공하기 전 AWS는 별도로 Windows 또는 Linux 패치를 테스트하지 **않습니다**. 
->  * **프로덕션** 환경에 적용하기 전 철저히 패치를 **테스트** 해야 합니다.
+>  * The [operating systems supported by Patch Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-supported-oses.html) may vary from those supported by the SSM Agent.
+>  * **AWS does not test patches for Windows or Linux before making them available in Patch Manager** .
+>  * **If any updates are installed by Patch Manager the patched instance is rebooted**.
+>  * **Always test patches thoroughly before deploying to production environments**.
 
 
-### 패치 기준(Patch Baseline)
-Patch Manager는 **패치 기준(Patch Baseline)** 을 사용합니다. 패치 기준은 **인스턴스에 설치하도록 승인된 패치**를 규정합니다. 승인 또는 거부된 패치를 하나씩 지정할 수 있지만, 특정 유형의 업데이트(예: Critical 업데이트)는 **자동으로 승인**하는 등 규칙을 지정하실 수도 있습니다.
-패치 관리자가 제공하는 **미리 정의된 패치 기준(Predefined Baselines)** 을 활용하셔도 되며, 사용자가 **직접 작성(Custom Baseline)** 하실 수도 있습니다. 상세 내용은 다음 [링크](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-patch-baselines.html)를 참고합니다. 이번 실습에서는 커스템 베이스라인을 작성합니다. 
+## Patch Baselines
+
+Patch Manager uses **patch baselines**, which include rules for auto-approving patches within days of their release, as well as a list of approved and rejected patches. Later in this lab we will schedule patching to occur on a regular basis using a Systems Manager **Maintenance Window** task. Patch Manager integrates with AWS Identity and Access Management (IAM), AWS CloudTrail, and Amazon CloudWatch Events to provide a secure patching experience that includes event notifications and the ability to audit usage.
 
 <!-- 
 이 실습의 뒷부분에서 Systems Manager 유지 관리 기간 작업을 사용하여 정기적으로 패치를 적용하도록 예약합니다. Patch Manager는 AWS Identity and Access Management (IAM), AWS CloudTrail 및 Amazon CloudWatch Events와 통합되어 이벤트 알림 및 사용 감사 기능을 포함하는 안전한 패치 경험을 제공합니다.
@@ -41,59 +42,62 @@ Patch Manager는 **패치 기준(Patch Baseline)** 을 사용합니다. 패치 �
 --> 
 
 
-#### 패치 기준 생성하기
+### 5.1 Create a Patch Baseline
 
-1. **AWS Systems Manager**의 **Instances and Nodes**에서 **패치 관리자**를 클릭합니다.
-1. **Configure patching** 버튼 아래 **View predefined patch baseline** 버튼을 클릭합니다.
+1. Under **Instances and Nodes** in the **AWS Systems Manager** navigation bar, choose **Patch Manager**.
+1. Click the **View predefined patch baselines** link under the **Configure patching** button on the upper right.
    ![/images/operation/ssm-patch-start.png](/images/operation/ssm-patch-start.png)
-1. **Create patch baseline**를 클릭합니다.
+1. Choose **Create patch baseline**.
    ![/images/operation/ssm-patch-baseline.png](/images/operation/ssm-patch-baseline.png)
-1. **Create patch baseline**의 **Provide patch baseline details** 섹션은 아래와 같이 작업합니다:
-   1. **Name** 에 `AmazonLinuxSecAndNonSecBaseline`를 입력합니다.
-   1. **Description**은 `Amazon Linux patch baseline including security and non-security patches`를 입력합니다.
-   1. **Operation system**은 **Amazon Linux2**를 선택합니다.
+1. On the **Create patch baseline** page in the **Provide patch baseline details** section:
+   1. Enter a **Name** for your custom patch baseline, such as `AmazonLinuxSecAndNonSecBaseline`.
+   1. Optionally enter a description, such as `Amazon Linux patch baseline including security and non-security patches`.
+   1. Select **Amazon Linux2** to **Operation system**.
    ![/images/operation/ssm-patch-detail.png](/images/operation/ssm-patch-detail.png)
-1. **Approval rules** 섹션은 아래와 같이 작업합니다:
-   1. 옵션을 검토하고 **Product**, **Classification**, 그리고 **Severity** 가 **All**값을 갖는지 확인합니다.
-   1. **Auto approval delay**는 기본값인 **0 days**로 셋팅합니다.
-   1. **Compliance reporting - optional** 의 값을 **Critical**로 선택합니다.
+1. In the **Approval rules** section:
+   1. Examine the options in the lists and ensure that **Product**, **Classification**, and **Severity** have values of **All**.
+   1. Leave the **Auto approval delay** at its default of **0 days**.
+   1. Change the value of **Compliance reporting - optional** to **Critical**.
    ![/images/operation/ssm-patch-rule1.png](/images/operation/ssm-patch-rule1.png)
-   1. **Add rule**을 클릭하여 규칙을 하나 더 추가 합니다.
-   1. **Compliance reporting - optional** 의 값을 **Medium**로 선택합니다.
-   1. 모든 Amazon Linux 업데이트에 비보안 업데이트를 포함하려면 **Include non-security updates**를 체크합니다.
+   1. Choose **Add another rule**.
+   1. In the new rule, change the value of **Compliance reporting - optional** to **Medium**.
+   1. Check the box under **Include non-security updates** to include all Amazon Linux updates when patching.
    ![/images/operation/ssm-patch-rule2.png](/images/operation/ssm-patch-rule2.png)
-1. **Patch exceptions** 섹션에서 **Rejected patches - optional** 텍스트 박스에 `system-release.*`입력합니다. 이것은 새로운 Amazon Linux 배포될때,[패치 관리자가 지원하는 운영체제](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-supported-oses.html)가 관리할 수 있는 버전보다 앞선다면 새로운 릴리즈를 테스트하기 전까지 [패치를 거부합니다.](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
-1. Linux 운영 체제의 경우 [대체 patch source repository](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-how-it-works-alt-source-repository.html)를 선택적으로 정의 할 수 있습니다. 빈 patch source 정의를 제거하려면 **Patch sources** 영역에서 **X**를 선택하십시오. 이번 실습에서는 아무것도 선택하지 않습니다.
-**Create patch baseline**을 선택하면 AWS에서 제공 한 기본 **패치기준** 페이지로 이동합니다.
+
+
+1. In the **Patch exceptions** section in the **Rejected patches - optional** text box, enter `system-release.*` This will [reject patches](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) to new Amazon Linux releases that may advance you beyond the [Patch Manager supported operating systems](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-supported-oses.html) prior to your testing new releases.
+1. For Linux operating systems, you can optionally define an [alternative patch source repository](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-how-it-works-alt-source-repository.html). Choose the **X** in the **Patch sources** area to remove the empty patch source definition.
+Choose **Create patch baseline** and you will go to the **Patch Baselines** page where the AWS provided default patch baselines, and your custom baseline, are displayed.
 ![/images/operation/ssm-patch-exception.png](/images/operation/ssm-patch-exception.png)
-1. 하단의 **Create patch baseline**을 클릭하여 생성을 완료합니다.
-   승인된 패치가 누락 되면 **Compliance reporting**에서 선택한 옵션에 따라 `Critical` 또는 `Medium`의 컴플라이언스 위반의 심각도가 결정되며 System Manager **Compliance**로 보고됩니다.
+1. Click **Create patch baseline** button and finish.
+   If an approved patch is reported as missing, the option you choose in **Compliance reporting**, such as `Critical` or `Medium`, determines the severity of the compliance violation reported in System Manager **Compliance**.
+
+## Patch Groups
+
+A [patch group](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-patch-patchgroups.html) is an optional method to organize instances for patching. For example, you can create patch groups for different operating systems (Linux or Windows), different environments (Development, Test, and Production), or different server functions (web servers, file servers, databases). Patch groups can help you avoid deploying patches to the wrong set of instances. They can also help you avoid deploying patches before they have been adequately tested.
+
+You create a patch group by using Amazon EC2 tags. Unlike other tagging scenarios across Systems Manager, a patch group must be defined with the tag key: `Patch Group` (tag keys are case sensitive). You can specify any value (for example, `web servers`) but the key must be `Patch Group`.
+
+>**Note**<br>An instance can only be in one patch group.
+
+After you create a patch group and tag instances, you can register the patch group with a patch baseline. By registering the patch group with a patch baseline, you ensure that the correct patches are installed during the patching execution. When the system applies a patch baseline to an instance, the service checks if a patch group is defined for the instance.
+* If the instance is assigned to a patch group, the system checks to see which patch baseline is registered to that group.
+* If a patch baseline is found for that group, the system applies that patch baseline.
+* If an instance isn't assigned to a patch group, the system automatically uses the currently configured default patch baseline.
 
 
-### 패치 그룹
-[패치 그룹](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-patch-patchgroups.html)은 패치를 위해 인스턴스를 구성하는 방법중 하나입니다. 예를 들어, 다른 운영체제 (Linux 또는 Windows), 다른 환경(개발,테스트 및 프로덕션) 또는 서버별 기능(웹서버, 파일서버, 데이터베이스)에 대한 패치 그룹을 작성할 수 있습니다. 패치 그룹을 사용하면 잘못된 인스턴스 세트에 패치를 배포하지 않아도 됩니다. 그리고 테스트하기 전에 패치가 배포되는 것을 피할 수 있습니다.
- 
-Amazon EC2 태그를 사용하여 패치 그룹을 생성합니다. Systems Manager의 다른 태깅 시나리오와 달리 패치 그룹은 태그 키 `Patch Group`으로 정의해야합니다 (태그 키는 대소 문자를 구분 함). 임의의 값 (예 :`web servers`)을 지정할 수 있지만 키는`Patch Group`이어야합니다.
+#### Assign a Patch Group
 
->**Note**<br> 인스턴스는 하나의 패치 그룹에만 있을 수 있습니다.
-
-패치 그룹 및 태그 인스턴스를 생성 한 후 패치 기준에 패치 그룹을 등록할 수 있습니다. 패치 기준에 패치 그룹을 등록하면 패치를 실행할 때 올바른 패치를 실행할 수 있습니다. 
-* 인스턴스가 패치 그룹에 할당된 경우 시스템은 해당 그룹에 등록된 패치 기준을 확인합니다.
-* 해당 그룹에 대한 패치 기준이있는 경우 시스템은 해당 패치 기준을 적용합니다.
-* 인스턴스가 패치 그룹에 할당되지 않은 경우 시스템은 현재 구성된 default 패치 기준을 자동으로 사용합니다.
-
-#### 패치 그룹 할당하기
-
-1. 새로 생성된 baseline **Baseline ID**를 클릭하여 세부 정보 화면을 입력합니다.(Baseline ID가 보이지 않는다면 페이지를 넘겨보세요. 이 실습에서 만든 baseline name은 `AmazonLinuxSecAndNonSecBaseline`입니다.)
+1. Choose the **Baseline ID** of your newly created baseline to enter the details screen.(If you don't see the Baseline ID, turn the page. The baseline name created in this lab is `AmazonLinuxSecAndNonSecBaseline`.)
 ![/images/operation/ssm-patch-pg.png](/images/operation/ssm-patch-pg.png)
-1. **Actions**을 클릭하고 **Modify patch groups**를 클릭합니다.
+1. Choose **Actions** in the top right of the window and select **Modify patch groups**.
 ![/images/operation/ssm-patch-pg-set.png](/images/operation/ssm-patch-pg-set.png)
-1. **Modify patch groups** 아래 **Patch groups** 박스에, `Critical`를 입력하고 **Add**클릭합니다,
+1. In the **Modify patch groups** window under **Patch groups**, enter `Critical`, choose **Add**, and then choose **Close** to be returned to the **Patch Baseline** details screen.
 ![/images/operation/ssm-patch-pg-critical.png](/images/operation/ssm-patch-pg-critical.png)
-1. **Close**를 클릭하여 **Patch Baseline**으로 되돌아가 세부정보를 확인합니다.
+1. Click **Close**, and back to **Patch Baseline** page for check detail information.
 ![/images/operation/ssm-patch-fin.png](/images/operation/ssm-patch-fin.png)
 
 > **Note**
->  * 인스턴스가 **패치 그룹**에 할당된 경우 시스템은 **해당 그룹에 등록된 패치 기준**을 확인합니다. 
->  * 해당 그룹에 대한 패치 기준이 있는 경우 시스템은 해당 패치 기준을 적용합니다. Bastion Host를 제외한 2대 인스턴스는 **Critical**이라는 패치 그룹에 속해 있으므로 방금 생성한 **패치 기준**을 따릅니다.
->  * 인스턴스가 패치 그룹에 할당되지 **않은** 경우 시스템은 현재 구성된 **기본 패치 기준**을 **자동으로 사용**합니다.
+> * If an instance is assigned to a **patch group**, the system checks **based on the patch registered in that group**.
+> * If there is a patch criterion for that group, the system applies that patch criterion. Except for Bastion Host, the two instances belong to a patch group called **Critical**, so they follow the **patch criteria** you just created.
+> *If an instance is **not** assigned to a patch group, the system will **automatically** use the **default patch baseline** currently configured.
