@@ -12,7 +12,7 @@ tag:
 The AWS Well-Architected Framework is based on ﬁve pillars — operational excellence, security, reliability, performance efficiency, and cost optimization.
 
 
-|기반이름|설명|
+|Pillar|Description|
 |---|---|
 | **Operational Excellence** | The ability to support development and run workloads effectively, gain insight into their operations, and to continuously improve supporting processes and procedures to deliver business value.|
 | **Security** | The security pillar encompasses the ability to protect data, systems, and assets to take advantage of cloud technologies to improve your security. |

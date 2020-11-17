@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CloudFormation 배포 on AWS Well-Architected Labs</title>
+    <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/lab-setup-master/</link>
+    <description>Recent content in CloudFormation 배포 on AWS Well-Architected Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/lab-setup-master/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

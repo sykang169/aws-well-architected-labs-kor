@@ -15,5 +15,5 @@ You can create a CloudWatch alarm that sends an email message using Amazon SNS. 
 make alram and start Autoscaling when CPU usage over 90%.
 Sending e-mail to user when CPU usage is over 90%.
     
-[Let's start](/performanceefficiency/cloudwatcheventemail/setup)
+[Let's start](/en/performanceefficiency/cloudwatcheventemail/setup)
  

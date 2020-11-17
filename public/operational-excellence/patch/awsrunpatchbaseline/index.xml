@@ -5,7 +5,7 @@
     <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/awsrunpatchbaseline/</link>
     <description>Recent content in Run Command on AWS Well-Architected Labs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-KR</language>
+    <language>en-US</language>
     <lastBuildDate>Fri, 24 Apr 2020 11:16:09 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/awsrunpatchbaseline/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

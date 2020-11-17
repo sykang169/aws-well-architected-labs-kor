@@ -19,5 +19,5 @@ The skills you learn will help you secure your workloads in alignment with the [
 
 
  
-[Let's start!](/performanceefficiency/cloudwatchdashboards/default-dashboard)
+[Let's start!](/en/performanceefficiency/cloudwatchdashboards/default-dashboard)
  

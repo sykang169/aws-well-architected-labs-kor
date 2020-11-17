@@ -15,8 +15,8 @@ If you have performed HoL for each pillar, you can apply the following best prac
 
 | 필라| 이름 | 설명|
 |:---|:---|:---|
-|Performance Efficiency| **CloudWatch**를 사용한 **모니터링** | Use CloudWatch's dashboard to measure and monitor your current EC2 usage. |
-|Performance Efficiency| **CloudWatch**를 사용한 **경보** | When the CPU usage monitored by CloudWatch rises above a certain level, an alarm is sent to the user via e-mail.| 
+|Performance Efficiency| **Monitoring** with **CloudWatch** | Use CloudWatch's dashboard to measure and monitor your current EC2 usage. |
+|Performance Efficiency| **Alarm** with **CloudWatch** | When the CPU usage monitored by CloudWatch rises above a certain level, an alarm is sent to the user via e-mail.| 
 |Cost Optimization| **EC2**의 **Right Sizeing** | Activate Cost Explorer's Recommendation to find the appropriate size of the EC2 you are using. Recommend and change the appropriate EC2 for your usage.|
 |Cost Optimization| **Right Sizing** accuracy improvement through memory metric collection of **CloudWatch Agent**  | You can improve the accuracy of right sizing by collecting additional memory metrics.|
 |Operational Excellence| Resource Central Management with **System Manager** | Collects, monitors, and manages information on EC2 instances created through System Mangager's inventory. | 

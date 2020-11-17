@@ -3,876 +3,876 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/2_create_iamrole/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/2_create_iamrole/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/2_create_iamrole/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/2_create_iamrole/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/1_cloudwatch_intro/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/1_cloudwatch_intro/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/1_cloudwatch_intro/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/1_cloudwatch_intro/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/1_cloudwatch_intro/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/200_cloudfront_with_waf_protection/1_config_waf/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/security/200_cloudfront_with_waf_protection/1_config_waf/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/1_config_waf/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/200_cloudfront_with_waf_protection/1_config_waf/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/security/200_cloudfront_with_waf_protection/1_config_waf/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/review/1_reviewagine/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/review/1_reviewagine/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/review/1_reviewagine/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/review/1_reviewagine/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/review/1_reviewagine/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/2_create_workload/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/2_create_workload/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/2_create_workload/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/2_create_workload/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/2_create_workload/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/3_failure_injection_prep/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/3_failure_injection_prep/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/3_failure_injection_prep/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/3_failure_injection_prep/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/3_failure_injection_prep/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/2_resource_opt/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/2_resource_opt/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/2_resource_opt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/2_resource_opt/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/2_resource_opt/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/200_cloudfront_with_waf_protection/2_config_cloudfront/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/security/200_cloudfront_with_waf_protection/2_config_cloudfront/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/2_config_cloudfront/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/200_cloudfront_with_waf_protection/2_config_cloudfront/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/security/200_cloudfront_with_waf_protection/2_config_cloudfront/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/4_failure_injection_ec2/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/4_failure_injection_ec2/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/4_failure_injection_ec2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/4_failure_injection_ec2/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/4_failure_injection_ec2/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/3_attach_iamrole/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/3_attach_iamrole/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/3_attach_iamrole/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/3_attach_iamrole/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/3_perform_review/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/3_perform_review/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/3_perform_review/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/3_perform_review/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/3_perform_review/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/3_prio_resource_opt/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/3_prio_resource_opt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/3_prio_resource_opt/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/4_memory_plugin/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/4_memory_plugin/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/4_memory_plugin/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/4_memory_plugin/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/5_failure_injection_rds/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/5_failure_injection_rds/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/5_failure_injection_rds/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/5_failure_injection_rds/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/5_failure_injection_rds/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/4_save_milestone/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/4_save_milestone/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/4_save_milestone/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/4_save_milestone/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/4_save_milestone/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/6_failure_injection_az/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/6_failure_injection_az/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/6_failure_injection_az/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/6_failure_injection_az/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/6_failure_injection_az/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/4_act_resource_opt/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/4_act_resource_opt/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/4_act_resource_opt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/4_act_resource_opt/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/4_act_resource_opt/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/5_view_report/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/5_view_report/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/5_view_report/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/5_view_report/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/5_view_report/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/5_ec2_updated_rec/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/5_ec2_updated_rec/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/5_ec2_updated_rec/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/5_ec2_updated_rec/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/6_tear_down/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/6_tear_down/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/6_tear_down/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/6_tear_down/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/6_tear_down/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/7_tear_down/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/7_tear_down/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/7_tear_down/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/7_tear_down/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/200_aws_resource_optimization/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/200_aws_resource_optimization/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/200_aws_resource_optimization/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/200_cloudfront_with_waf_protection/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/security/200_cloudfront_with_waf_protection/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/200_cloudfront_with_waf_protection/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/200_cloudfront_with_waf_protection/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/introduction/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/security/200_cloudfront_with_waf_protection/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/introduction/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/framework/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/introduction/framework/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/introduction/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/introduction/framework/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/framework/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/pillar/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/introduction/pillar/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/introduction/framework/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/introduction/pillar/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/introduction/pillar/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/</loc>
-    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/introduction/pillar/"
                 />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/</loc>
     <lastmod>2020-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/cloud9/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/</loc>
+    <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/cloud9/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/cloud9/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/cloud9/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/lab-setup-master/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/lab-setup-master/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/cloud9/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/lab-setup-master/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/lab-setup-master/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/lab-setup-master/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/setup/wellarchitectedtools/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/setup/wellarchitectedtools/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatchdashboards/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatchdashboards/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatcheventemail/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatchdashboards/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatcheventemail/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatcheventemail/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/systemmanager/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/systemmanager/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/systemmanager/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/systemmanager/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/systemmanager/prepare/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/systemmanager/prepare/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/systemmanager/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/systemmanager/prepare/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/systemmanager/prepare/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/systemmanager/prepare/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/inventory/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/inventory/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/inventory/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/patch/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/patch/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/patch/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/security/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/security/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/security/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/security/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/review/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/review/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/review/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/review/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/default-dashboard/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatchdashboards/default-dashboard/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/review/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatchdashboards/default-dashboard/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/default-dashboard/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/setup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatchdashboards/setup/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatchdashboards/default-dashboard/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatchdashboards/setup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatchdashboards/setup/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatcheventemail/setup/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatchdashboards/setup/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatcheventemail/setup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/setup/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/snstopic/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatcheventemail/snstopic/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatcheventemail/setup/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatcheventemail/snstopic/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/snstopic/"
                 />
-  </url>
-  
-  <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/ec2/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/performanceefficiency/cloudwatcheventemail/ec2/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatcheventemail/snstopic/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatcheventemail/ec2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/performanceefficiency/cloudwatcheventemail/ec2/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/performanceefficiency/cloudwatcheventemail/ec2/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/inventorysetup/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/inventory/inventorysetup/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/inventory/inventorysetup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/inventorysetup/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/inventory/inventorysetup/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/statemanager/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/inventory/statemanager/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/inventory/statemanager/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/inventory/statemanager/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/inventory/statemanager/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/patchmanager/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/patch/patchmanager/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/patch/patchmanager/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/patchmanager/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/patch/patchmanager/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/awsrunpatchbaseline/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/patch/awsrunpatchbaseline/</loc>
     <lastmod>2020-04-24T11:16:09-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/operational-excellence/patch/awsrunpatchbaseline/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/operational-excellence/patch/awsrunpatchbaseline/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/operational-excellence/patch/awsrunpatchbaseline/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/tags/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
                 href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/tags/"
+                />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/test_resiliency/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/tags/test_resiliency/</loc>
     <lastmod>2020-04-24T11:16:08-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/tags/test_resiliency/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/test_resiliency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/tags/test_resiliency/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/tags/test_resiliency/"
                 />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/categories/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/"
+                href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/credits/</loc>
+    <loc>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/credits/</loc>
   </url>
   
 </urlset>

@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AWS Well-Architected Tool 리뷰 on AWS Well-Architected Labs</title>
+    <title>Start AWS Well-Architected Review using Well-Architected tool on AWS Well-Architected Labs</title>
     <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/</link>
-    <description>Recent content in AWS Well-Architected Tool 리뷰 on AWS Well-Architected Labs</description>
+    <description>Recent content in Start AWS Well-Architected Review using Well-Architected tool on AWS Well-Architected Labs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-KR</language>
+    <language>en-US</language>
     <lastBuildDate>Fri, 24 Apr 2020 11:16:08 -0400</lastBuildDate><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>워크로드 생성</title>
+      <title>Creating a workload</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/2_create_workload/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/2_create_workload/</guid>
-      <description>AWS 콘솔에 로그인 한 후 서비스 검색창에 Well-Architected Tools을 입력합니다. 링크를 통해 바로갈 수 있습니다. : https://console.aws.amazon.com/wellarchitected/.
-Well-Architected 리뷰는 워크로드단위로 생성합니다(워크로드는 비지니스 가치를 제공하는 단위로 식별됩니다.).
-  랜딩페이지 회면의 Define Workload 버튼을 클릭합니다:   만약 이미 생성한 워크로드가 있다면, 워크로드 리스트가 나올 것입니다. 동일하게 이 화면에서도 Define Workload 버튼을 클릭합니다.   워크로드 정의 인터페이스에서 필요한 정보를 입력하세요:
-  Name: Workload for AWS Workshop
-  Description: wellarchitectedlabs workshop</description>
+      <description>Log-in AWS console, typing Well-Architected Tools in service search bar. you can go to this link : https://console.aws.amazon.com/wellarchitected/.
+Well-Architected Reviews are conducted per workload. A workload identifies a set of components that deliver business value. The workload is usually the level of detail that business and technology leaders communicate about.
+  Click the Define Workload button on the landing page:   If you have already created a workload, a list of workloads will appear.</description>
     </item>
     
     <item>
-      <title>리뷰 진행</title>
+      <title>Performing a review</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/3_perform_review/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/3_perform_review/</guid>
-      <description>워크로드에 대한 세부 사항 페이지에서 Start review 버튼을 클릭합니다. 그리고 AWS Well-Architected Framework를 선택합니다.   Operation Excellence 질문의 왼쪽에 삼각형버튼을 클릭하여 질문창을 축소하면 다른 Pillar의 질문들도 확인할 수 있습니다. 물론 순차적으로 진행하면 자연스럽게 다음단계로 이동합니다.   예를들어 안정성의 리뷰를 진행하도록 하겠습니다. 안정성 메뉴의 삼각형을 클릭하면 세부적인 질문을 확인하실 수 있습니다.   첫번째 질문입니다: REL 1. 계정에 대한 AWS 서비스 한도를 어떻게 관리하고 있습니까?   현재 배포된 아키텍쳐를 생각하며 REL 1 에서 REL 9 질문에 답해보십시오.</description>
+      <description>From the detail page for the workload, click the Start review button. And click the AWS Well-Architected Framework.   In this walkthrough, we are only going to complete the Reliability Pillar questions. Collapse the Operational Excellence questions by selecting the collapsing icon on the left of the words Operation Excellence on the left:   Expand the Reliability Questions by selecting the expanding icon to the left of the word Reliability:   Select the first question: REL 1.</description>
     </item>
     
     <item>
-      <title>마일스톤 저장</title>
+      <title>Saving a milestone</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/4_save_milestone/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/4_save_milestone/</guid>
-      <description>  왼쪽 네비게이션 바에서 생성한 워크로드인 Workload for AWS Workshop을 클릭하고 워크로드의 세부사항 페이지에서 Save milestone을 클릭하세요.   마일스톤의 이름에 AWS Workshop Milestone를 입력하고 Save버튼을 클릭합니다.   Milestones 탭을 클릭합니다:   마일스톤과 관련 데이터가 표시됩니다:   이제 워크로드의 상태를 변경하겠습니다. 왼쪽 네비게이션 바에서 Workload for AWS Workshop 워크로드를 클릭한 후 ,Properties 탭을 선택합니다. 그리고 스크롤을 아래로 내리면 Workload status에서 Workload상태를 In Progress로 변경합니다.   </description>
+      <description>From the detail page for the workload, click the Save milestone button:   Enter a name for the milestone as AWS Workshop Milestone and click the Save button:   Click on the Milestones tab:   This will display the milestone and data about it:   Now let&amp;rsquo;s change the state of the workload. Click on the Workload for AWS Workshop workload in the left navigation bar, and select the Properties tab.</description>
     </item>
     
     <item>
-      <title>보고서 확인 및 저장</title>
+      <title>Viewing and downloading the report</title>
       <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/5_view_report/</link>
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/5_view_report/</guid>
-      <description>왼쪽 네비게이션 바에서 Workload for AWS Workshop 워크로드의 AWS Well-Architected Framework를 클릭한 후, Improvement Plan을 클릭합니다:   이러면 고위험 항목과 중간위험 항복의 수가 표시되고 개선상태를 업데이트 할 수 있습니다. 필터를 사용하여 위험요소들을 필터링 할 수도 있습니다:   Pillar priority을 편집할 수도 있습니다. 왼쪽 메뉴에서 Workload for AWS workshop을 클릭하고 스크롤을 내려 Pillar priority탭의 Edit 버튼을 클릭합니다:   리뷰를 수행한 Pillar의 위쪽 화살표를 클릭하여 Reliability: 의 우선순위를 위로 높힙니다.</description>
+      <description>From the detail page for the workload, click the Improvement Plan tab:   This will display the number of high and medium risk items and allow you to update the Improvement status:   You can also edit the Pillar priority configuration. Click Workload for AWS workshop in the left menu, scroll down and click the Edit button in the Pillar priority tab:   Move the Reliability Pillar up by clicking the up icon to the right of the word, Reliability:   Click the Save button to save this configuration:   Now let&amp;rsquo;s generate and download the report.</description>
     </item>
     
   </channel>

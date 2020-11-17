@@ -1,8 +1,8 @@
 baseURL = "http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/"
-languageCode = "ko-KR"
+languageCode = "en-US"
 title = "AWS Well-Architected Labs"
 theme = "learn"
-defaultContentLanguage = "ko"
+defaultContentLanguage = "en"
 
 [params]
     themeVariant = "walabs"
@@ -42,13 +42,14 @@ home = [ "HTML", "RSS", "JSON"]
 
 
 [Languages]
-    [Languages.ko]
+    [Languages.en]
         weight = 1
+        languageName = "English"
+
+    [Languages.ko]
+        weight = 2
         languageName = "한국어"
 
-    [Languages.en]
-        weight = 2
-        languageName = "English"
     # Menu shortcuts on left side
 
 [[menu.shortcuts]]

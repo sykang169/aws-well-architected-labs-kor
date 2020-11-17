@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>AZ 장애 주입을 사용하여 안정성 테스트 :: AWS Well-Architected Labs</title>
+    <title>Test Resiliency Using Availability Zone (AZ) Failure Injection :: AWS Well-Architected Labs</title>
 
     
-    <link href="/css/nucleus.css?1605237164" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1605237164" rel="stylesheet">
-    <link href="/css/hybrid.css?1605237164" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1605237164" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1605237164" rel="stylesheet">
-    <link href="/css/auto-complete.css?1605237164" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1605237164" rel="stylesheet">
-    <link href="/css/theme.css?1605237164" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1605237164" rel="stylesheet">
+    <link href="/css/nucleus.css?1605507626" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1605507626" rel="stylesheet">
+    <link href="/css/hybrid.css?1605507626" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1605507626" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1605507626" rel="stylesheet">
+    <link href="/css/auto-complete.css?1605507626" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1605507626" rel="stylesheet">
+    <link href="/css/theme.css?1605507626" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1605507626" rel="stylesheet">
     
-    <link href="/css/theme-walabs.css?1605237164" rel="stylesheet">
+    <link href="/css/theme-walabs.css?1605507626" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1605237164"></script>
+    <script src="/js/jquery-3.3.1.min.js?1605507626"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -51,18 +51,18 @@
     
         <div class="searchbox">
     <label for="search-by"><i class="fas fa-search"></i></label>
-    <input data-search-input id="search-by" type="search" placeholder="">
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1605237164"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1605237164"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1605507626"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1605507626"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1605237164"></script>
+<script type="text/javascript" src="/js/search.js?1605507626"></script>
 
     
   </div>
@@ -80,12 +80,12 @@
     
     
     
-    <li data-nav-id="/introduction/" title="소개" class="dd-item
+    <li data-nav-id="/introduction/" title="Introduce" class="dd-item
     
         
         ">
       <a href="/introduction/">
-          <b>1. </b>소개
+          <b>1. </b>Introduce
           
           
             <i class="fas read-icon"></i>
@@ -110,12 +110,12 @@
     
     
     
-    <li data-nav-id="/introduction/framework/" title="AWS-Well-Architected Framework란?" class="dd-item
+    <li data-nav-id="/introduction/framework/" title="Why AWS-Well-Architected Framework?" class="dd-item
     
         
         ">
       <a href="/introduction/framework/">
-          <b>1-1 </b>AWS-Well-Architected Framework란?
+          <b>1-1 </b>Why AWS-Well-Architected Framework?
           
           
             <i class="fas read-icon"></i>
@@ -137,12 +137,12 @@
     
     
     
-    <li data-nav-id="/introduction/pillar/" title="AWS Well-Architected의 기반" class="dd-item
+    <li data-nav-id="/introduction/pillar/" title="The Five Pillars of the Framework" class="dd-item
     
         
         ">
       <a href="/introduction/pillar/">
-          <b>1-2 </b>AWS Well-Architected의 기반
+          <b>1-2 </b>The Five Pillars of the Framework
           
           
             <i class="fas read-icon"></i>
@@ -171,12 +171,12 @@
     
     
     
-    <li data-nav-id="/setup/" title="실습 환경 셋업" class="dd-item
+    <li data-nav-id="/setup/" title="Setup" class="dd-item
     
         
         ">
       <a href="/setup/">
-          <b>2. </b>실습 환경 셋업
+          <b>2. </b>Setup
           
           
             <i class="fas read-icon"></i>
@@ -228,12 +228,12 @@
     
     
     
-    <li data-nav-id="/setup/lab-setup-master/" title="CloudFormation 배포" class="dd-item
+    <li data-nav-id="/setup/lab-setup-master/" title="CloudFormation Deploy" class="dd-item
     
         
         ">
       <a href="/setup/lab-setup-master/">
-          <b>2-2. </b>CloudFormation 배포
+          <b>2-2. </b>CloudFormation Deploy
           
           
             <i class="fas read-icon"></i>
@@ -255,12 +255,12 @@
     
     
     
-    <li data-nav-id="/setup/wellarchitectedtools/" title="AWS Well-Architected Tool 리뷰" class="dd-item
+    <li data-nav-id="/setup/wellarchitectedtools/" title="Start AWS Well-Architected Review using Well-Architected tool" class="dd-item
     
         
         ">
       <a href="/setup/wellarchitectedtools/">
-          <b>2-3. </b>AWS Well-Architected Tool 리뷰
+          <b>2-3. </b>Start AWS Well-Architected Review using Well-Architected tool
           
             
               <i class="fas fa-caret-right"></i>
@@ -285,9 +285,9 @@
  
   
     
-      <li data-nav-id="/setup/wellarchitectedtools/2_create_workload/" title="워크로드 생성" class="dd-item ">
+      <li data-nav-id="/setup/wellarchitectedtools/2_create_workload/" title="Creating a workload" class="dd-item ">
         <a href="/setup/wellarchitectedtools/2_create_workload/">
-        <b>1. </b>워크로드 생성
+        <b>1. </b>Creating a workload
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -304,9 +304,9 @@
  
   
     
-      <li data-nav-id="/setup/wellarchitectedtools/3_perform_review/" title="리뷰 진행" class="dd-item ">
+      <li data-nav-id="/setup/wellarchitectedtools/3_perform_review/" title="Performing a review" class="dd-item ">
         <a href="/setup/wellarchitectedtools/3_perform_review/">
-        <b>2. </b>리뷰 진행
+        <b>2. </b>Performing a review
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -323,9 +323,9 @@
  
   
     
-      <li data-nav-id="/setup/wellarchitectedtools/4_save_milestone/" title="마일스톤 저장" class="dd-item ">
+      <li data-nav-id="/setup/wellarchitectedtools/4_save_milestone/" title="Saving a milestone" class="dd-item ">
         <a href="/setup/wellarchitectedtools/4_save_milestone/">
-        <b>3. </b>마일스톤 저장
+        <b>3. </b>Saving a milestone
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -342,9 +342,9 @@
  
   
     
-      <li data-nav-id="/setup/wellarchitectedtools/5_view_report/" title="보고서 확인 및 저장" class="dd-item ">
+      <li data-nav-id="/setup/wellarchitectedtools/5_view_report/" title="Viewing and downloading the report" class="dd-item ">
         <a href="/setup/wellarchitectedtools/5_view_report/">
-        <b>4. </b>보고서 확인 및 저장
+        <b>4. </b>Viewing and downloading the report
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -379,12 +379,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/" title="성능효율성" class="dd-item
+    <li data-nav-id="/performanceefficiency/" title="Performance Efficiency" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/">
-          <b>3. </b>성능효율성
+          <b>3. </b>Performance Efficiency
           
           
             <i class="fas read-icon"></i>
@@ -409,12 +409,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/" title="CloudWatch 대시보드를 사용하여 모니터링 하기" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/" title="Monitoring using the CloudWatch dashboard" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatchdashboards/">
-          <b>3-1. </b>CloudWatch 대시보드를 사용하여 모니터링 하기
+          <b>3-1. </b>Monitoring using the CloudWatch dashboard
           
             
               <i class="fas fa-caret-right"></i>
@@ -443,12 +443,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/default-dashboard/" title="자동 대시보드 설정" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/default-dashboard/" title="View Amazon CloudWatch Automatic Dashboards" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatchdashboards/default-dashboard/">
-          <b>1. </b>자동 대시보드 설정
+          <b>1. </b>View Amazon CloudWatch Automatic Dashboards
           
           
             <i class="fas read-icon"></i>
@@ -470,12 +470,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/setup/" title="사용자 대시보드 설정" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/setup/" title="CloudWatch Custom Dashboard" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatchdashboards/setup/">
-          <b>2. </b>사용자 대시보드 설정
+          <b>2. </b>CloudWatch Custom Dashboard
           
           
             <i class="fas read-icon"></i>
@@ -506,12 +506,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CloudWatch를 사용한 CPU 경보 구성" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CPU Alram using the CloudWatch" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/">
-          <b>3-2. </b>CloudWatch를 사용한 CPU 경보 구성
+          <b>3-2. </b>CPU Alram using the CloudWatch
           
             
               <i class="fas fa-caret-right"></i>
@@ -540,12 +540,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/setup/" title="사용자 경보 설정" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/setup/" title="Custom Alram Configuration" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/setup/">
-          <b>1. </b>사용자 경보 설정
+          <b>1. </b>Custom Alram Configuration
           
           
             <i class="fas read-icon"></i>
@@ -567,12 +567,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/snstopic/" title="이메일 확인 및 전화번호 등록" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/snstopic/" title="Subscribe e-mail and mobile number" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/snstopic/">
-          <b>2. </b>이메일 확인 및 전화번호 등록
+          <b>2. </b>Subscribe e-mail and mobile number
           
           
             <i class="fas read-icon"></i>
@@ -594,12 +594,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/ec2/" title="EC2 Loadtest 진행" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/ec2/" title="EC2 Loadtest" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/ec2/">
-          <b>3. </b>EC2 Loadtest 진행
+          <b>3. </b>EC2 Loadtest
           
           
             <i class="fas read-icon"></i>
@@ -637,12 +637,12 @@
     
     
     
-    <li data-nav-id="/cost/" title="비용최적화" class="dd-item
+    <li data-nav-id="/cost/" title="Cost Optimization" class="dd-item
     
         
         ">
       <a href="/cost/">
-          <b>4. </b>비용최적화
+          <b>4. </b>Cost Optimization
           
           
             <i class="fas read-icon"></i>
@@ -667,12 +667,12 @@
     
     
     
-    <li data-nav-id="/cost/100_aws_resource_optimization/" title="EC2 적정크기 찾기" class="dd-item
+    <li data-nav-id="/cost/100_aws_resource_optimization/" title="EC2 Right Sizing" class="dd-item
     
         
         ">
       <a href="/cost/100_aws_resource_optimization/">
-          <b>4-1. </b>EC2 적정크기 찾기
+          <b>4-1. </b>EC2 Right Sizing
           
             
               <i class="fas fa-caret-right"></i>
@@ -697,9 +697,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/1_cloudwatch_intro/" title="Amazon Cloudwatch에 대하여 알아보기" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/1_cloudwatch_intro/" title="Getting to know Amazon Cloudwatch" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/1_cloudwatch_intro/">
-        <b>1. </b>Amazon Cloudwatch에 대하여 알아보기
+        <b>1. </b>Getting to know Amazon Cloudwatch
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -716,9 +716,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/2_resource_opt/" title="Amazon EC2 리소스 최적화 Recommendations 사용" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/2_resource_opt/" title="Using Amazon EC2 Resource Optimization Recommendations" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/2_resource_opt/">
-        <b>2. </b>Amazon EC2 리소스 최적화 Recommendations 사용
+        <b>2. </b>Using Amazon EC2 Resource Optimization Recommendations
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -735,9 +735,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/3_prio_resource_opt/" title="AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/3_prio_resource_opt/" title="Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/3_prio_resource_opt/">
-        <b>3. </b>AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기
+        <b>3. </b>Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -754,9 +754,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/4_act_resource_opt/" title="recommendations 조치" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/4_act_resource_opt/" title="Action the recommendations" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/4_act_resource_opt/">
-        <b>4. </b>recommendations 조치
+        <b>4. </b>Action the recommendations
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -773,9 +773,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/" title="Amazon EC2 올바른 크기를 위한 모범사례" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/" title="Amazon EC2 Right Sizing Best Practices" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/">
-        <b>5. </b>Amazon EC2 올바른 크기를 위한 모범사례
+        <b>5. </b>Amazon EC2 Right Sizing Best Practices
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -792,9 +792,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/6_tear_down/" title="실습 종료" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/6_tear_down/" title="Tear down" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/6_tear_down/">
-        <b>6. </b>실습 종료
+        <b>6. </b>Tear down
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -822,12 +822,12 @@
     
     
     
-    <li data-nav-id="/cost/200_aws_resource_optimization/" title="EC2 적정크기 찾기 (MEM)" class="dd-item
+    <li data-nav-id="/cost/200_aws_resource_optimization/" title="EC2 Right Sizing(MEM)" class="dd-item
     
         
         ">
       <a href="/cost/200_aws_resource_optimization/">
-          <b>4-2. </b>EC2 적정크기 찾기 (MEM)
+          <b>4-2. </b>EC2 Right Sizing(MEM)
           
             
               <i class="fas fa-caret-right"></i>
@@ -852,9 +852,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/2_create_iamrole/" title="AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/2_create_iamrole/" title="Getting to know Amazon Cloudwatch" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/2_create_iamrole/">
-        <b>1. </b>AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기
+        <b>1. </b>Getting to know Amazon Cloudwatch
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -871,9 +871,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/3_attach_iamrole/" title="EC2인스턴스에 CloudWatch IAM role 연결하기" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/3_attach_iamrole/" title="Attach CloudWatch IAM role to selected EC2 Instances" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/3_attach_iamrole/">
-        <b>2. </b>EC2인스턴스에 CloudWatch IAM role 연결하기
+        <b>2. </b>Attach CloudWatch IAM role to selected EC2 Instances
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -890,9 +890,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/4_memory_plugin/" title="Cloudwatch Agent 수동 설치" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/4_memory_plugin/" title="Cloudwatch Agent Manual Install" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/4_memory_plugin/">
-        <b>3. </b>Cloudwatch Agent 수동 설치
+        <b>3. </b>Cloudwatch Agent Manual Install
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -909,9 +909,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/5_ec2_updated_rec/" title="업데이트 된 Amazon EC2 리소스 최적화 권장 사항" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/5_ec2_updated_rec/" title="Updated Amazon EC2 Resource Optimization recommendations" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/5_ec2_updated_rec/">
-        <b>4. </b>업데이트 된 Amazon EC2 리소스 최적화 권장 사항
+        <b>4. </b>Updated Amazon EC2 Resource Optimization recommendations
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -928,9 +928,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/" title="AMAZON EC2 올바른 크기를 위한 모범사례" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/" title="Amazon EC2 Right Sizing Best Practices" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/">
-        <b>5. </b>AMAZON EC2 올바른 크기를 위한 모범사례
+        <b>5. </b>Amazon EC2 Right Sizing Best Practices
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -947,9 +947,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/7_tear_down/" title="실습 종료" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/7_tear_down/" title="Tear down" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/7_tear_down/">
-        <b>6. </b>실습 종료
+        <b>6. </b>Tear down
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -984,12 +984,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/" title="운영우수성" class="dd-item
+    <li data-nav-id="/operational-excellence/" title="Operation Excellence" class="dd-item
     
         
         ">
       <a href="/operational-excellence/">
-          <b>5. </b>운영우수성
+          <b>5. </b>Operation Excellence
           
           
             <i class="fas read-icon"></i>
@@ -1048,12 +1048,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/systemmanager/prepare/" title="사전 준비" class="dd-item
+    <li data-nav-id="/operational-excellence/systemmanager/prepare/" title="Prepare" class="dd-item
     
         
         ">
       <a href="/operational-excellence/systemmanager/prepare/">
-          <b>1. </b>사전 준비
+          <b>1. </b>Prepare
           
           
             <i class="fas read-icon"></i>
@@ -1084,12 +1084,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/" title="리소스 중앙 관리" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/" title="Resource Management" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/">
-          <b>5-2. </b>리소스 중앙 관리
+          <b>5-2. </b>Resource Management
           
             
               <i class="fas fa-caret-right"></i>
@@ -1118,12 +1118,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/inventorysetup/" title="인벤토리" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/inventorysetup/" title="Inventory" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/inventorysetup/">
-          <b>1. </b>인벤토리
+          <b>1. </b>Inventory
           
           
             <i class="fas read-icon"></i>
@@ -1145,12 +1145,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="상태 관리자" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="State Manager" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/statemanager/">
-          <b>2. </b>상태 관리자
+          <b>2. </b>State Manager
           
           
             <i class="fas read-icon"></i>
@@ -1181,12 +1181,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/patch/" title="패치 관리" class="dd-item
+    <li data-nav-id="/operational-excellence/patch/" title="Patch Management" class="dd-item
     
         
         ">
       <a href="/operational-excellence/patch/">
-          <b>5-3. </b>패치 관리
+          <b>5-3. </b>Patch Management
           
             
               <i class="fas fa-caret-right"></i>
@@ -1215,12 +1215,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/patch/patchmanager/" title="패치 관리자" class="dd-item
+    <li data-nav-id="/operational-excellence/patch/patchmanager/" title="Patch Manager" class="dd-item
     
         
         ">
       <a href="/operational-excellence/patch/patchmanager/">
-          <b>1. </b>패치 관리자
+          <b>1. </b>Patch Manager
           
           
             <i class="fas read-icon"></i>
@@ -1285,12 +1285,12 @@
     
     
     
-    <li data-nav-id="/reliability/" title="안정성" class="dd-item
+    <li data-nav-id="/reliability/" title="Reliability" class="dd-item
     parent
         
         ">
       <a href="/reliability/">
-          <b>6. </b>안정성
+          <b>6. </b>Reliability
           
           
             <i class="fas read-icon"></i>
@@ -1315,12 +1315,12 @@
     
     
     
-    <li data-nav-id="/reliability/test_resiliency/" title="EC2, RD와 AZ의 복원력 테스트" class="dd-item
+    <li data-nav-id="/reliability/test_resiliency/" title="Testing for Resiliency of EC2, RDS, and AZ" class="dd-item
     parent
         
         ">
       <a href="/reliability/test_resiliency/">
-          EC2, RD와 AZ의 복원력 테스트
+          Test Resiliency EC2, RDS, &amp; AZ
           
             
               <i class="fas fa-caret-down"></i>
@@ -1345,9 +1345,9 @@
  
   
     
-      <li data-nav-id="/reliability/test_resiliency/3_failure_injection_prep/" title="장애 주입 준비" class="dd-item ">
+      <li data-nav-id="/reliability/test_resiliency/3_failure_injection_prep/" title="Preparation for Failure Injection" class="dd-item ">
         <a href="/reliability/test_resiliency/3_failure_injection_prep/">
-        <b>1. </b>장애 주입 준비
+        <b>1. </b>Preparation for Failure Injection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1364,9 +1364,9 @@
  
   
     
-      <li data-nav-id="/reliability/test_resiliency/4_failure_injection_ec2/" title="EC2 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+      <li data-nav-id="/reliability/test_resiliency/4_failure_injection_ec2/" title="Test Resiliency Using EC2 Failure Injection" class="dd-item ">
         <a href="/reliability/test_resiliency/4_failure_injection_ec2/">
-        <b>2. </b>EC2 장애 주입
+        <b>2. </b>EC2 Failure Injection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1383,9 +1383,9 @@
  
   
     
-      <li data-nav-id="/reliability/test_resiliency/5_failure_injection_rds/" title="RDS 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+      <li data-nav-id="/reliability/test_resiliency/5_failure_injection_rds/" title="Test Resiliency Using RDS Failure Injection" class="dd-item ">
         <a href="/reliability/test_resiliency/5_failure_injection_rds/">
-        <b>3. </b>RDS 장애 주입
+        <b>3. </b>RDS Failure Injection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1402,9 +1402,9 @@
  
   
     
-      <li data-nav-id="/reliability/test_resiliency/6_failure_injection_az/" title="AZ 장애 주입을 사용하여 안정성 테스트" class="dd-item active">
+      <li data-nav-id="/reliability/test_resiliency/6_failure_injection_az/" title="Test Resiliency Using Availability Zone (AZ) Failure Injection" class="dd-item active">
         <a href="/reliability/test_resiliency/6_failure_injection_az/">
-        <b>4. </b>AZ 장애 주입
+        <b>4. </b>AZ Failure Injection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1439,12 +1439,12 @@
     
     
     
-    <li data-nav-id="/security/" title="보안" class="dd-item
+    <li data-nav-id="/security/" title="Security" class="dd-item
     
         
         ">
       <a href="/security/">
-          <b>7. </b>보안
+          <b>7. </b>Security
           
           
             <i class="fas read-icon"></i>
@@ -1469,12 +1469,12 @@
     
     
     
-    <li data-nav-id="/security/200_cloudfront_with_waf_protection/" title="WAF를 사용한 CloudFront 보호" class="dd-item
+    <li data-nav-id="/security/200_cloudfront_with_waf_protection/" title="CloudFront with WAF Protection" class="dd-item
     
         
         ">
       <a href="/security/200_cloudfront_with_waf_protection/">
-          WAF를 사용한 CloudFront 보호
+          CloudFront with WAF Protection
           
             
               <i class="fas fa-caret-right"></i>
@@ -1499,9 +1499,9 @@
  
   
     
-      <li data-nav-id="/security/200_cloudfront_with_waf_protection/1_config_waf/" title="AWS WAF 구성" class="dd-item ">
+      <li data-nav-id="/security/200_cloudfront_with_waf_protection/1_config_waf/" title="AWS WAF Config" class="dd-item ">
         <a href="/security/200_cloudfront_with_waf_protection/1_config_waf/">
-        <b>1. </b>AWS WAF 구성
+        <b>1. </b>AWS WAF Config
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1518,9 +1518,9 @@
  
   
     
-      <li data-nav-id="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/" title="CloudFront 구성 - EC2 또는 Load Balancer" class="dd-item ">
+      <li data-nav-id="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/" title="CloudFront Config - EC2 or Load Balancer" class="dd-item ">
         <a href="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/">
-        <b>2. </b>CloudFront 구성 - EC2 또는 Load Balancer
+        <b>2. </b>CloudFront Config - EC2 or Load Balancer
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1555,12 +1555,12 @@
     
     
     
-    <li data-nav-id="/review/" title="재검토" class="dd-item
+    <li data-nav-id="/review/" title="Review Again(Machanism)" class="dd-item
     
         
         ">
       <a href="/review/">
-          <b>8. </b>재검토
+          <b>8. </b>Review Again(Machanism)
           
           
             <i class="fas read-icon"></i>
@@ -1581,9 +1581,9 @@
  
   
     
-      <li data-nav-id="/review/1_reviewagine/" title="AWS Well-Architected Tool을 통한 재검토" class="dd-item ">
+      <li data-nav-id="/review/1_reviewagine/" title="Again AWS Well-Architected Review using Well-Architected tool" class="dd-item ">
         <a href="/review/1_reviewagine/">
-        AWS Well-Architected Tool을 통한 재검토
+        Again AWS Well-Architected Review using Well-Architected tool
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1636,7 +1636,7 @@
                   
                     
                     
-                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/6_failure_injection_az/" selected>한국어</option>
+                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/6_failure_injection_az/" selected>English</option>
                     
                   
               
@@ -1650,7 +1650,7 @@
                   
                     
                     
-                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/reliability/test_resiliency/6_failure_injection_az/">English</option>
+                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/6_failure_injection_az/">한국어</option>
                     
                   
               
@@ -1714,9 +1714,9 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/sykang169/aws-well-architected-labs-kor/reliability/test_resiliency/6_failure_injection_az.ko.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/sykang169/aws-well-architected-labs-kor/reliability/test_resiliency/6_failure_injection_az.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
-                      <span id="top-github-link-text"></span>
+                      <span id="top-github-link-text">Edit this page</span>
                     </a>
                   </div>
                   
@@ -1749,7 +1749,7 @@
             
           
           
-            <a href='/'>홈</a> > <a href='/reliability/'>안정성</a> > <a href='/reliability/test_resiliency/'>EC2, RD와 AZ의 복원력 테스트</a> > AZ 장애 주입을 사용하여 안정성 테스트
+            <a href='/'>Home</a> > <a href='/reliability/'>Reliability</a> > <a href='/reliability/test_resiliency/'>Testing for Resiliency of EC2, RDS, and AZ</a> > Test Resiliency Using Availability Zone (AZ) Failure Injection
           
         
           
@@ -1768,8 +1768,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#61-az-장애-주입">6.1 AZ 장애 주입</a></li>
-        <li><a href="#62-az-장애에-대한-시스템-응답">6.2 AZ 장애에 대한 시스템 응답</a></li>
+        <li><a href="#61-az-failure-injection">6.1 AZ failure injection</a></li>
+        <li><a href="#62-system-response-to-az-failure">6.2 System response to AZ failure</a></li>
       </ul>
     </li>
   </ul>
@@ -1789,88 +1789,97 @@
           
             <h1>
               
-              AZ 장애 주입을 사용하여 안정성 테스트
+              Test Resiliency Using Availability Zone (AZ) Failure Injection
             </h1>
           
 
         
 
 
-<h3 id="61-az-장애-주입">6.1 AZ 장애 주입</h3>
-<p>이 장애 주입은 서비스에서 사용하는 두가지 AWS 가용영역(AZ)중 하나가 문제가 생겼을 경우를 시뮬레이션합니다. AWS 가용영역은 고 가용성 애플리케이션을 구축하는 데 도움이되는 강력한 도구입니다. 애플리케이션이 AZ로 분할되면 기업은 낙뢰, 토네이도, 지진 등과 같은 문제로부터 격리되고 보호됩니다.</p>
+<h3 id="61-az-failure-injection">6.1 AZ failure injection</h3>
+<p>This failure injection will simulate a critical problem with one of the three AWS Availability Zones (AZs) used by your service. AWS Availability Zones are  powerful tools for helping build highly available applications. If an application is partitioned across AZs, companies are better isolated and protected from issues such as lightning strikes, tornadoes, earthquakes and more.</p>
+<ol>
+<li>Go to the RDS Dashboard in the AWS Console at <a href="http://console.aws.amazon.com/rds">http://console.aws.amazon.com/rds</a> and note which Availability Zone the AWS RDS <em>primary</em> DB instance is in.
+<ul>
+<li><strong>Note</strong>: If you previously ran the <strong>RDS Failure Injection test</strong>, you must wait until the console shows the AZs for the <em>primary</em> and <em>standby</em> instances as swapped, before running this test</li>
+<li>A good way to run the AZ failure injection is first in an AZ <em>other</em> than this - we&rsquo;ll call this <strong>Scenario 1</strong></li>
+<li>Then try it again in the <em>same</em> AZ as the AWS RDS <em>primary</em> DB instance - we&rsquo;ll call this <strong>Scenario 2</strong></li>
+<li>Taking down two out of the three AZs this way is an unlikely use case, however it will show how AWS systems work to maintain service integrity despite extreme circumstances.</li>
+<li>And executing this way illustrates the impact and response under the two different scenarios.</li>
+</ul>
+</li>
+</ol>
+
+<div class="notices note" ><p>This lab example is us-east-2, if you use another region, consider region and AZ name.</p>
+</div>
+
 <ol>
 <li>
-<p>AWS Console <a href="http://console.aws.amazon.com/rds">http://console.aws.amazon.com/rds</a>의 RDS 대쉬보드에서 <em>primary</em> DB 인스턴스가 어느 가용 영역에 있는지 확인하세요.</p>
+<p>To simulate failure of an AZ, select one of the Availability Zones used by your service (<code>us-east-2a</code>, <code>us-east-2b</code>, or <code>us-east-2c</code>) as <code>&lt;az&gt;</code></p>
 <ul>
-<li>이전에 <strong>RDS 장애주입 테스트</strong>를 실행 한 경우 콘솔에 <em>primary</em> 및 <em>standby</em> 인스턴스의 AZ가 스왑 된 것으로 표시 될 때까지 기다려야합니다.</li>
-<li>A good way to run the AZ failure injection is first in an AZ <em>other</em> than this - we&rsquo;ll call this <strong>Scenario 1</strong></li>
-<li>AZ 장애 주입을 실행하는 좋은 방법은 다른 AZ에서 먼저 실행하는 것입니다. 이 시나리오를 <strong>시나리오 1</strong>이라고합니다.</li>
-<li>그런 다음 AWS RDS 기본 DB 인스턴스와 동일한 AZ에서 다시 시도합니다.이 시나리오를 <strong>시나리오 2</strong>라고합니다.</li>
-<li>이러한 방식으로 3 개의 AZ 중 2 개를 제거하는 것은 가능성이 낮은 사용 사례이지만 극한 상황에서도 AWS 시스템이 서비스 무결성을 유지하기 위해 어떻게 작동하는지 보여줍니다.</li>
-<li>그리고 이러한 방식으로 실행하면 두 가지 다른 시나리오에서 영향과 대응을 알 수 있습니다.</li>
+<li>For <strong>scenario 1</strong> select an AZ that is neither <em>primary</em> nor <em>secondary</em> for your RDS DB instance. Given the following RDS console you would choose <code>us-east-2c</code></li>
+<li>For <strong>scenario 2</strong> select the AZ that is <em>primary</em> for your RDS DB instance. Given the following RDS console you would choose <code>us-east-2b</code></li>
 </ul>
+<p><img src="/Reliability/300_Testing_for_Resiliency_of_EC2_RDS_and_S3/Images/DBConfigurationShort.png" alt="DBConfigurationShort"></p>
 </li>
 <li>
-<p>AZ의 실패를 시뮬레이션하려면 서비스에서 사용하는 가용 영역 (<code>ap-northeast-2a</code>, <code>ap-northeast-2b</code> 또는 <code>ap-northeast-2c</code>) 중 하나를 <code>&lt;az&gt;</code>로 선택합니다.</p>
-<ul>
-<li><strong>시나리오 1</strong>의 경우 RDS DB 인스턴스에 대해 기본도 보조도 아닌 AZ를 선택합니다. 다음 RDS 콘솔이 주어지면 <code>ap-northeast-2c</code>를 선택합니다.</li>
-<li><strong>시나리오 2</strong>의 경우 RDS DB 인스턴스의 기본 AZ를 선택합니다. 다음 RDS 콘솔이 주어지면 <code>ap-northeast-2b</code>를 선택합니다.
-<img src="/Reliability/300_Testing_for_Resiliency_of_EC2_RDS_and_S3/Images/DBConfigurationShort.png" alt="DBConfigurationShort"></li>
-</ul>
-</li>
-<li>
-<p>아래 명령어를 입력합니다. VPC ID는 이전에 기록한 <code>&lt;vpc-id&gt;</code>를 사용합니다.</p>
+<p>To fail one of your AZ, run the script below using your VPC ID in Cloud9&rsquo;s terminal. Replace &lt;vpc-id&gt; with the VPC ID you copyed before.
+and replace &lt;az&gt; with the your az.</p>
 </li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./failover_az.sh &lt;az&gt; &lt;vpc-id&gt;
 </code></pre></div><ol>
-<li>RDS 장애 조치가 시작되었는지 확인합니다.(AWS RDS <em>primary</em> DB 인스턴스가 포함 된 AZ를 선택한 경우).</li>
+<li>The specific output will vary based on the command used.
+<ul>
+<li>Note whether an RDS failover was initiated.  This would be the case if you selected the AZ containing the AWS RDS <em>primary</em> DB instance</li>
+</ul>
+</li>
 </ol>
-<h3 id="62-az-장애에-대한-시스템-응답">6.2 AZ 장애에 대한 시스템 응답</h3>
-<p>서비스가 어떻게 반응하는지보십시오. AWS 시스템이 서비스 가용성을 유지하는 데 어떻게 도움이되는지 확인하십시오. 비가용성이 있는지 테스트하고 그렇다면 얼마나 오래 사용할 수 있는지 테스트하십시오.</p>
-<h4 id="621-시스템-가용성">6.2.1 시스템 가용성</h4>
-<p>서비스 웹 사이트를 여러 번 새로 고칩니다.</p>
+<h3 id="62-system-response-to-az-failure">6.2 System response to AZ failure</h3>
+<p>Watch how the service responds. Note how AWS systems help maintain service availability. Test if there is any non-availability, and if so then how long.</p>
+<h4 id="621-system-availability">6.2.1 System availability</h4>
+<p>Refresh the service website several times</p>
 <ul>
-<li><strong>시나리오 1</strong> : AWS RDS 기본 DB 인스턴스가 포함되지 않은 AZ를 선택한 경우 중단없는 가용성이 표시되어야합니다.</li>
-<li><strong>시나리오 2</strong>: AWS RDS 기본 DB 인스턴스가 포함 된 AZ를 선택한 경우 RDS 장애 주입 테스트에서 확인한 것과 유사한 가용성 손실이 발생합니다.</li>
+<li><strong>Scenario 1</strong>: If you selected an AZ <em>not</em> containing the AWS RDS <em>primary</em> DB instance then you should see uninterrupted availability</li>
+<li><strong>Scenario 2</strong>: If you selected the AZ containing the AWS RDS <em>primary</em> DB instance, then an availability loss similar to what you saw with RDS fault injection testing will occur.</li>
 </ul>
-<h4 id="622-시나리오-1---로드-밸런서-및-웹-서버-계층">6.2.2 시나리오 1 - 로드 밸런서 및 웹 서버 계층</h4>
-<p>이 시나리오는 아키텍처에서 AZ 당 하나의 EC2 서버 만 있기 때문에 EC2 장애 주입 테스트와 유사합니다. 해당 테스트와 동일한 대쉬보드와 화면을 관찰해보세요.</p>
+<h4 id="622-scenario-1---load-balancer-and-web-server-tiers">6.2.2 Scenario 1 - Load balancer and web server tiers</h4>
+<p>This scenario is similar to the EC2 failure injection test because there is only one EC2 server per AZ in our architecture. Look at the same screens you as for that test:</p>
 <ul>
-<li><a href="http://console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#Instances:">EC2 Instances</a></li>
-<li>Load Balancer <a href="http://console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#TargetGroups:">Target group</a></li>
-<li><a href="http://console.aws.amazon.com/ec2/autoscaling/home?region=ap-northeast-2#AutoScalingGroups:">Auto Scaling Groups</a></li>
+<li><a href="http://console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:">EC2 Instances</a></li>
+<li>Load Balancer <a href="http://console.aws.amazon.com/ec2/v2/home?region=us-east-2#TargetGroups:">Target group</a></li>
+<li><a href="http://console.aws.amazon.com/ec2/autoscaling/home?region=us-east-2#AutoScalingGroups:">Auto Scaling Groups</a></li>
 </ul>
-<p>관찰하게 될 EC2 장애 주입과의 차이점은 Auto Scaling이 나머지 AZ에서 요청 된 2 개의 EC2 인스턴스의 균형을 맞추려고 시도 할 때 이미 EC2 인스턴스가있는 AZ에서 교체 EC2 인스턴스를 가져온다는 것입니다.</p>
-<h4 id="623-시나리오-2---로드밸런서-웹-서버와-데이터-계층">6.2.3 시나리오 2 - 로드밸런서, 웹 서버와 데이터 계층</h4>
-<p>이 시나리오는 EC2 장애주입과 RDS 장애 주입조합의 유사합니다. EC2 관련 화면 외에도 <a href="http://console.aws.amazon.com/rds">Amazon RDS console</a>을보고 DB 화면으로 이동하여 다음 탭을 확인합니다.</p>
+<p>One difference from the EC2 failure test that you will observe is that auto scaling will bring up the replacement EC2 instance in an AZ that already has an EC2 instance as it attempts to balance the requested three EC2 instances across the remaining AZs.</p>
+<h4 id="623-scenario-2---load-balancer-web-server-and-data-tiers">6.2.3 Scenario 2 - Load balancer, web server, and data tiers</h4>
+<p>This scenario is similar to a combination of the RDS failure injection along with EC2 failure injection. In addition to the EC2 related screens look at the <a href="http://console.aws.amazon.com/rds">Amazon RDS console</a>, navigate to your DB screen and observe the following tabs:</p>
 <ul>
 <li>Configuration</li>
 <li>Monitoring</li>
 <li>Logs &amp; Events</li>
 </ul>
-<h4 id="624-az-장애-주입---결론">6.2.4 AZ 장애 주입 - 결론</h4>
-<p><strong>시나리오 1</strong>과 EC2 장애 테스트, 그리고 <strong>시나리오 2</strong>와 RDS 장애 테스트 간의 유사성은 AZ 장애가 시스템에 미치는 영향을 잘 보여줍니다. 해당 AZ의 리소스는 가용성이 없거나 제한됩니다. 그러나 가용 영역 간의 강력한 파티셔닝 및 격리를 통해 다른 AZ의 리소스는 필요한 기능을 계속해서 서비스에 제공합니다. <strong>시나리오 1</strong>은 하나의 AZ에서로드 밸런서 및 웹 서버 기능의 손실만 초래하는 반면 <strong>시나리오 2</strong>는 데이터 계층의 손실을 추가합니다. 시스템의 모든 계층이 여러 AZ에 있도록함으로써 장애에 대해 복원력이있는 분할 된 아키텍처를 생성합니다.</p>
-<h4 id="625-az-장애-복구">6.2.5 AZ 장애 복구</h4>
-<p>이 단계는 선택 사항입니다. AZ를 다시 정상으로 돌리려면 아래 내용을 수행하세요.</p>
+<h4 id="624-az-failure-injection---conclusion">6.2.4 AZ failure injection - conclusion</h4>
+<p>This similarity between <strong>scenario 1</strong> and the EC2 failure test, and between <strong>scenario 2</strong> and the RDS failure test is illustrative of how an AZ failure impacts your system. The resources in that AZ will have no or limited availability. With the strong partitioning and isolation between Availability Zones however, resources in the other AZs continue to provide your service with needed functionality. <strong>Scenario 1</strong> results in loss of the load balancer and web server capabilities in one AZ, while <strong>Scenario 2</strong> adds to that the additional loss of the data tier. By ensuring that every tier of your system is in multiple AZs, you create a partitioned architecture resilient to failure.</p>
+<h4 id="625-az-failure-recovery">6.2.5 AZ failure recovery</h4>
+<p>This step is optional. To simulate the AZ returning to health do the following:</p>
 <ol>
-<li><a href="http://console.aws.amazon.com/ec2/autoscaling/home?region=ap-northeast-2#AutoScalingGroups:">Auto Scaling Group console</a>으로 갑니다.</li>
-<li><strong>MasterAccount-ASG</strong>로 시작하는 Auto Scaling Group를 선택합니다.</li>
+<li>Go to the <a href="http://console.aws.amazon.com/ec2/autoscaling/home?region=us-east-2#AutoScalingGroups:">Auto Scaling Group console</a></li>
+<li>Select the <strong>WebServersforResiliencyTesting</strong> auto scaling group</li>
 <li>Actions &raquo; Edit</li>
-<li><strong>Subnet</strong>에 <strong>WellArchitectedLabsStack/VPC/PrivateSubnet</strong>중 없는 것을 추가합니다.(총 2개, PrivateSubnet1, PrivateSubnet2 ) 그리고 <strong>Save</strong>을 누릅니다.</li>
-<li><a href="https://ap-northeast-2.console.aws.amazon.com/vpc/home?region=ap-northeast-2#acls:">Network ACL console</a>로 갑니다.</li>
-<li><strong>WellArchitectedLabsStack/VPC</strong>의 NACL을 살펴봅니다.</li>
-<li><strong>Default</strong>가 아닌 값을 찾습니다.
+<li>In the <strong>Subnet</strong> field add any <strong>ResiliencyVPC-PrivateSubnet</strong>s that are missing (there should be three total) and <strong>Save</strong></li>
+<li>Go to the <a href="https://us-east-2.console.aws.amazon.com/vpc/home?region=us-east-2#acls:">Network ACL console</a></li>
+<li>Look at the NACL entries for the VPC called <strong>ResiliencyVPC</strong></li>
+<li>For any of these NACLs that are <em>not</em> <em>Default</em> do the following
 <ol>
-<li>NACL을 선택합니다.</li>
+<li>Select the NACL</li>
 <li><strong>Actions</strong> &raquo; <strong>Edit subnet associations</strong></li>
-<li>모든 선택을 해제하고 <strong>Edit</strong>를 클릭합니다.</li>
+<li>Uncheck all boxes and click <strong>Edit</strong></li>
 <li><strong>Actions</strong> &raquo; <strong>Delete network ACL</strong></li>
 </ol>
 </li>
 </ol>
 <ul>
-<li>Auto Scaling이 가용성 영역에서 EC2 서비스를 재배포하는 방법을 확인합니다.</li>
+<li>Note how the auto scaling redistributes the EC2 serves across the availability zones</li>
 </ul>
 
 
@@ -2835,19 +2844,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1605237164"></script>
-    <script src="/js/perfect-scrollbar.min.js?1605237164"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1605237164"></script>
-    <script src="/js/jquery.sticky.js?1605237164"></script>
-    <script src="/js/featherlight.min.js?1605237164"></script>
-    <script src="/js/highlight.pack.js?1605237164"></script>
+    <script src="/js/clipboard.min.js?1605507626"></script>
+    <script src="/js/perfect-scrollbar.min.js?1605507626"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1605507626"></script>
+    <script src="/js/jquery.sticky.js?1605507626"></script>
+    <script src="/js/featherlight.min.js?1605507626"></script>
+    <script src="/js/highlight.pack.js?1605507626"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1605237164"></script>
-    <script src="/js/learn.js?1605237164"></script>
-    <script src="/js/hugo-learn.js?1605237164"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1605507626"></script>
+    <script src="/js/learn.js?1605507626"></script>
+    <script src="/js/hugo-learn.js?1605507626"></script>
 
-    <link href="/mermaid/mermaid.css?1605237164" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1605237164"></script>
+    <link href="/mermaid/mermaid.css?1605507626" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1605507626"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

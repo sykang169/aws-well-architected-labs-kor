@@ -57,5 +57,5 @@ Let's measure CPU utilization and Instance Count attached ALB.
     ![CloudwatchDashboard](/images/war/cloudwatch-widget-fin.png#medium)
 
 
-[Now let's create a Cloudwatch alarm so users can immediately notice changes in CPU utilization.](/performanceefficiency/cloudwatcheventemail)
+[Now let's create a Cloudwatch alarm so users can immediately notice changes in CPU utilization.](/en/performanceefficiency/cloudwatcheventemail)
  

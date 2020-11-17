@@ -1,6 +1,6 @@
 ---
 title: "실습 환경 셋업"
-weight: 20
+weight: 21
 pre: "<b>2. </b>"
 ---
 

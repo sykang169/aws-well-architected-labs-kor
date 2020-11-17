@@ -1,6 +1,6 @@
 ---
 title: "Setup"
-weight: 20
+weight: 21
 pre: "<b>2. </b>"
 ---
 
@@ -16,7 +16,7 @@ This CloudFormation stack include all enviromnent each pillar`s hands on labs.
 ![AWS-Code-Cycle](/images/war/awsservice.svg)
 
 
-| 이름 | 설명|
+| Name | Description|
 |:---|:---|
 | **Amazon EC2** | Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment. |
 | **Application Load Balancer** | A load balancer serves as the single point of contact for clients. The load balancer distributes incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones. This increases the availability of your application. You add one or more listeners to your load balancer.|

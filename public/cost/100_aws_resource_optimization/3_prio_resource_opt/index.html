@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기 :: AWS Well-Architected Labs</title>
+    <title>Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins :: AWS Well-Architected Labs</title>
 
     
-    <link href="/css/nucleus.css?1605237164" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1605237164" rel="stylesheet">
-    <link href="/css/hybrid.css?1605237164" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1605237164" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1605237164" rel="stylesheet">
-    <link href="/css/auto-complete.css?1605237164" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1605237164" rel="stylesheet">
-    <link href="/css/theme.css?1605237164" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1605237164" rel="stylesheet">
+    <link href="/css/nucleus.css?1605507626" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1605507626" rel="stylesheet">
+    <link href="/css/hybrid.css?1605507626" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1605507626" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1605507626" rel="stylesheet">
+    <link href="/css/auto-complete.css?1605507626" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1605507626" rel="stylesheet">
+    <link href="/css/theme.css?1605507626" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1605507626" rel="stylesheet">
     
-    <link href="/css/theme-walabs.css?1605237164" rel="stylesheet">
+    <link href="/css/theme-walabs.css?1605507626" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1605237164"></script>
+    <script src="/js/jquery-3.3.1.min.js?1605507626"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -51,18 +51,18 @@
     
         <div class="searchbox">
     <label for="search-by"><i class="fas fa-search"></i></label>
-    <input data-search-input id="search-by" type="search" placeholder="">
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1605237164"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1605237164"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1605507626"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1605507626"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1605237164"></script>
+<script type="text/javascript" src="/js/search.js?1605507626"></script>
 
     
   </div>
@@ -80,12 +80,12 @@
     
     
     
-    <li data-nav-id="/introduction/" title="소개" class="dd-item
+    <li data-nav-id="/introduction/" title="Introduce" class="dd-item
     
         
         ">
       <a href="/introduction/">
-          <b>1. </b>소개
+          <b>1. </b>Introduce
           
           
             <i class="fas read-icon"></i>
@@ -110,12 +110,12 @@
     
     
     
-    <li data-nav-id="/introduction/framework/" title="AWS-Well-Architected Framework란?" class="dd-item
+    <li data-nav-id="/introduction/framework/" title="Why AWS-Well-Architected Framework?" class="dd-item
     
         
         ">
       <a href="/introduction/framework/">
-          <b>1-1 </b>AWS-Well-Architected Framework란?
+          <b>1-1 </b>Why AWS-Well-Architected Framework?
           
           
             <i class="fas read-icon"></i>
@@ -137,12 +137,12 @@
     
     
     
-    <li data-nav-id="/introduction/pillar/" title="AWS Well-Architected의 기반" class="dd-item
+    <li data-nav-id="/introduction/pillar/" title="The Five Pillars of the Framework" class="dd-item
     
         
         ">
       <a href="/introduction/pillar/">
-          <b>1-2 </b>AWS Well-Architected의 기반
+          <b>1-2 </b>The Five Pillars of the Framework
           
           
             <i class="fas read-icon"></i>
@@ -171,12 +171,12 @@
     
     
     
-    <li data-nav-id="/setup/" title="실습 환경 셋업" class="dd-item
+    <li data-nav-id="/setup/" title="Setup" class="dd-item
     
         
         ">
       <a href="/setup/">
-          <b>2. </b>실습 환경 셋업
+          <b>2. </b>Setup
           
           
             <i class="fas read-icon"></i>
@@ -228,12 +228,12 @@
     
     
     
-    <li data-nav-id="/setup/lab-setup-master/" title="CloudFormation 배포" class="dd-item
+    <li data-nav-id="/setup/lab-setup-master/" title="CloudFormation Deploy" class="dd-item
     
         
         ">
       <a href="/setup/lab-setup-master/">
-          <b>2-2. </b>CloudFormation 배포
+          <b>2-2. </b>CloudFormation Deploy
           
           
             <i class="fas read-icon"></i>
@@ -255,12 +255,12 @@
     
     
     
-    <li data-nav-id="/setup/wellarchitectedtools/" title="AWS Well-Architected Tool 리뷰" class="dd-item
+    <li data-nav-id="/setup/wellarchitectedtools/" title="Start AWS Well-Architected Review using Well-Architected tool" class="dd-item
     
         
         ">
       <a href="/setup/wellarchitectedtools/">
-          <b>2-3. </b>AWS Well-Architected Tool 리뷰
+          <b>2-3. </b>Start AWS Well-Architected Review using Well-Architected tool
           
             
               <i class="fas fa-caret-right"></i>
@@ -285,9 +285,9 @@
  
   
     
-      <li data-nav-id="/setup/wellarchitectedtools/2_create_workload/" title="워크로드 생성" class="dd-item ">
+      <li data-nav-id="/setup/wellarchitectedtools/2_create_workload/" title="Creating a workload" class="dd-item ">
         <a href="/setup/wellarchitectedtools/2_create_workload/">
-        <b>1. </b>워크로드 생성
+        <b>1. </b>Creating a workload
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -304,9 +304,9 @@
  
   
     
-      <li data-nav-id="/setup/wellarchitectedtools/3_perform_review/" title="리뷰 진행" class="dd-item ">
+      <li data-nav-id="/setup/wellarchitectedtools/3_perform_review/" title="Performing a review" class="dd-item ">
         <a href="/setup/wellarchitectedtools/3_perform_review/">
-        <b>2. </b>리뷰 진행
+        <b>2. </b>Performing a review
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -323,9 +323,9 @@
  
   
     
-      <li data-nav-id="/setup/wellarchitectedtools/4_save_milestone/" title="마일스톤 저장" class="dd-item ">
+      <li data-nav-id="/setup/wellarchitectedtools/4_save_milestone/" title="Saving a milestone" class="dd-item ">
         <a href="/setup/wellarchitectedtools/4_save_milestone/">
-        <b>3. </b>마일스톤 저장
+        <b>3. </b>Saving a milestone
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -342,9 +342,9 @@
  
   
     
-      <li data-nav-id="/setup/wellarchitectedtools/5_view_report/" title="보고서 확인 및 저장" class="dd-item ">
+      <li data-nav-id="/setup/wellarchitectedtools/5_view_report/" title="Viewing and downloading the report" class="dd-item ">
         <a href="/setup/wellarchitectedtools/5_view_report/">
-        <b>4. </b>보고서 확인 및 저장
+        <b>4. </b>Viewing and downloading the report
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -379,12 +379,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/" title="성능효율성" class="dd-item
+    <li data-nav-id="/performanceefficiency/" title="Performance Efficiency" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/">
-          <b>3. </b>성능효율성
+          <b>3. </b>Performance Efficiency
           
           
             <i class="fas read-icon"></i>
@@ -409,12 +409,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/" title="CloudWatch 대시보드를 사용하여 모니터링 하기" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/" title="Monitoring using the CloudWatch dashboard" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatchdashboards/">
-          <b>3-1. </b>CloudWatch 대시보드를 사용하여 모니터링 하기
+          <b>3-1. </b>Monitoring using the CloudWatch dashboard
           
             
               <i class="fas fa-caret-right"></i>
@@ -443,12 +443,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/default-dashboard/" title="자동 대시보드 설정" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/default-dashboard/" title="View Amazon CloudWatch Automatic Dashboards" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatchdashboards/default-dashboard/">
-          <b>1. </b>자동 대시보드 설정
+          <b>1. </b>View Amazon CloudWatch Automatic Dashboards
           
           
             <i class="fas read-icon"></i>
@@ -470,12 +470,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/setup/" title="사용자 대시보드 설정" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatchdashboards/setup/" title="CloudWatch Custom Dashboard" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatchdashboards/setup/">
-          <b>2. </b>사용자 대시보드 설정
+          <b>2. </b>CloudWatch Custom Dashboard
           
           
             <i class="fas read-icon"></i>
@@ -506,12 +506,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CloudWatch를 사용한 CPU 경보 구성" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/" title="CPU Alram using the CloudWatch" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/">
-          <b>3-2. </b>CloudWatch를 사용한 CPU 경보 구성
+          <b>3-2. </b>CPU Alram using the CloudWatch
           
             
               <i class="fas fa-caret-right"></i>
@@ -540,12 +540,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/setup/" title="사용자 경보 설정" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/setup/" title="Custom Alram Configuration" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/setup/">
-          <b>1. </b>사용자 경보 설정
+          <b>1. </b>Custom Alram Configuration
           
           
             <i class="fas read-icon"></i>
@@ -567,12 +567,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/snstopic/" title="이메일 확인 및 전화번호 등록" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/snstopic/" title="Subscribe e-mail and mobile number" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/snstopic/">
-          <b>2. </b>이메일 확인 및 전화번호 등록
+          <b>2. </b>Subscribe e-mail and mobile number
           
           
             <i class="fas read-icon"></i>
@@ -594,12 +594,12 @@
     
     
     
-    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/ec2/" title="EC2 Loadtest 진행" class="dd-item
+    <li data-nav-id="/performanceefficiency/cloudwatcheventemail/ec2/" title="EC2 Loadtest" class="dd-item
     
         
         ">
       <a href="/performanceefficiency/cloudwatcheventemail/ec2/">
-          <b>3. </b>EC2 Loadtest 진행
+          <b>3. </b>EC2 Loadtest
           
           
             <i class="fas read-icon"></i>
@@ -637,12 +637,12 @@
     
     
     
-    <li data-nav-id="/cost/" title="비용최적화" class="dd-item
+    <li data-nav-id="/cost/" title="Cost Optimization" class="dd-item
     parent
         
         ">
       <a href="/cost/">
-          <b>4. </b>비용최적화
+          <b>4. </b>Cost Optimization
           
           
             <i class="fas read-icon"></i>
@@ -667,12 +667,12 @@
     
     
     
-    <li data-nav-id="/cost/100_aws_resource_optimization/" title="EC2 적정크기 찾기" class="dd-item
+    <li data-nav-id="/cost/100_aws_resource_optimization/" title="EC2 Right Sizing" class="dd-item
     parent
         
         ">
       <a href="/cost/100_aws_resource_optimization/">
-          <b>4-1. </b>EC2 적정크기 찾기
+          <b>4-1. </b>EC2 Right Sizing
           
             
               <i class="fas fa-caret-down"></i>
@@ -697,9 +697,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/1_cloudwatch_intro/" title="Amazon Cloudwatch에 대하여 알아보기" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/1_cloudwatch_intro/" title="Getting to know Amazon Cloudwatch" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/1_cloudwatch_intro/">
-        <b>1. </b>Amazon Cloudwatch에 대하여 알아보기
+        <b>1. </b>Getting to know Amazon Cloudwatch
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -716,9 +716,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/2_resource_opt/" title="Amazon EC2 리소스 최적화 Recommendations 사용" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/2_resource_opt/" title="Using Amazon EC2 Resource Optimization Recommendations" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/2_resource_opt/">
-        <b>2. </b>Amazon EC2 리소스 최적화 Recommendations 사용
+        <b>2. </b>Using Amazon EC2 Resource Optimization Recommendations
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -735,9 +735,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/3_prio_resource_opt/" title="AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기" class="dd-item active">
+      <li data-nav-id="/cost/100_aws_resource_optimization/3_prio_resource_opt/" title="Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins" class="dd-item active">
         <a href="/cost/100_aws_resource_optimization/3_prio_resource_opt/">
-        <b>3. </b>AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기
+        <b>3. </b>Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -754,9 +754,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/4_act_resource_opt/" title="recommendations 조치" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/4_act_resource_opt/" title="Action the recommendations" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/4_act_resource_opt/">
-        <b>4. </b>recommendations 조치
+        <b>4. </b>Action the recommendations
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -773,9 +773,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/" title="Amazon EC2 올바른 크기를 위한 모범사례" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/" title="Amazon EC2 Right Sizing Best Practices" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/5_ec2_rs_best_practices/">
-        <b>5. </b>Amazon EC2 올바른 크기를 위한 모범사례
+        <b>5. </b>Amazon EC2 Right Sizing Best Practices
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -792,9 +792,9 @@
  
   
     
-      <li data-nav-id="/cost/100_aws_resource_optimization/6_tear_down/" title="실습 종료" class="dd-item ">
+      <li data-nav-id="/cost/100_aws_resource_optimization/6_tear_down/" title="Tear down" class="dd-item ">
         <a href="/cost/100_aws_resource_optimization/6_tear_down/">
-        <b>6. </b>실습 종료
+        <b>6. </b>Tear down
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -822,12 +822,12 @@
     
     
     
-    <li data-nav-id="/cost/200_aws_resource_optimization/" title="EC2 적정크기 찾기 (MEM)" class="dd-item
+    <li data-nav-id="/cost/200_aws_resource_optimization/" title="EC2 Right Sizing(MEM)" class="dd-item
     
         
         ">
       <a href="/cost/200_aws_resource_optimization/">
-          <b>4-2. </b>EC2 적정크기 찾기 (MEM)
+          <b>4-2. </b>EC2 Right Sizing(MEM)
           
             
               <i class="fas fa-caret-right"></i>
@@ -852,9 +852,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/2_create_iamrole/" title="AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/2_create_iamrole/" title="Getting to know Amazon Cloudwatch" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/2_create_iamrole/">
-        <b>1. </b>AMAZON CLOUDWATCH AGENT가 사용할 IAM 역할 만들기
+        <b>1. </b>Getting to know Amazon Cloudwatch
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -871,9 +871,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/3_attach_iamrole/" title="EC2인스턴스에 CloudWatch IAM role 연결하기" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/3_attach_iamrole/" title="Attach CloudWatch IAM role to selected EC2 Instances" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/3_attach_iamrole/">
-        <b>2. </b>EC2인스턴스에 CloudWatch IAM role 연결하기
+        <b>2. </b>Attach CloudWatch IAM role to selected EC2 Instances
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -890,9 +890,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/4_memory_plugin/" title="Cloudwatch Agent 수동 설치" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/4_memory_plugin/" title="Cloudwatch Agent Manual Install" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/4_memory_plugin/">
-        <b>3. </b>Cloudwatch Agent 수동 설치
+        <b>3. </b>Cloudwatch Agent Manual Install
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -909,9 +909,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/5_ec2_updated_rec/" title="업데이트 된 Amazon EC2 리소스 최적화 권장 사항" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/5_ec2_updated_rec/" title="Updated Amazon EC2 Resource Optimization recommendations" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/5_ec2_updated_rec/">
-        <b>4. </b>업데이트 된 Amazon EC2 리소스 최적화 권장 사항
+        <b>4. </b>Updated Amazon EC2 Resource Optimization recommendations
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -928,9 +928,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/" title="AMAZON EC2 올바른 크기를 위한 모범사례" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/" title="Amazon EC2 Right Sizing Best Practices" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/6_ec2_rs_best_practices/">
-        <b>5. </b>AMAZON EC2 올바른 크기를 위한 모범사례
+        <b>5. </b>Amazon EC2 Right Sizing Best Practices
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -947,9 +947,9 @@
  
   
     
-      <li data-nav-id="/cost/200_aws_resource_optimization/7_tear_down/" title="실습 종료" class="dd-item ">
+      <li data-nav-id="/cost/200_aws_resource_optimization/7_tear_down/" title="Tear down" class="dd-item ">
         <a href="/cost/200_aws_resource_optimization/7_tear_down/">
-        <b>6. </b>실습 종료
+        <b>6. </b>Tear down
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -984,12 +984,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/" title="운영우수성" class="dd-item
+    <li data-nav-id="/operational-excellence/" title="Operation Excellence" class="dd-item
     
         
         ">
       <a href="/operational-excellence/">
-          <b>5. </b>운영우수성
+          <b>5. </b>Operation Excellence
           
           
             <i class="fas read-icon"></i>
@@ -1048,12 +1048,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/systemmanager/prepare/" title="사전 준비" class="dd-item
+    <li data-nav-id="/operational-excellence/systemmanager/prepare/" title="Prepare" class="dd-item
     
         
         ">
       <a href="/operational-excellence/systemmanager/prepare/">
-          <b>1. </b>사전 준비
+          <b>1. </b>Prepare
           
           
             <i class="fas read-icon"></i>
@@ -1084,12 +1084,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/" title="리소스 중앙 관리" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/" title="Resource Management" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/">
-          <b>5-2. </b>리소스 중앙 관리
+          <b>5-2. </b>Resource Management
           
             
               <i class="fas fa-caret-right"></i>
@@ -1118,12 +1118,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/inventorysetup/" title="인벤토리" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/inventorysetup/" title="Inventory" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/inventorysetup/">
-          <b>1. </b>인벤토리
+          <b>1. </b>Inventory
           
           
             <i class="fas read-icon"></i>
@@ -1145,12 +1145,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="상태 관리자" class="dd-item
+    <li data-nav-id="/operational-excellence/inventory/statemanager/" title="State Manager" class="dd-item
     
         
         ">
       <a href="/operational-excellence/inventory/statemanager/">
-          <b>2. </b>상태 관리자
+          <b>2. </b>State Manager
           
           
             <i class="fas read-icon"></i>
@@ -1181,12 +1181,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/patch/" title="패치 관리" class="dd-item
+    <li data-nav-id="/operational-excellence/patch/" title="Patch Management" class="dd-item
     
         
         ">
       <a href="/operational-excellence/patch/">
-          <b>5-3. </b>패치 관리
+          <b>5-3. </b>Patch Management
           
             
               <i class="fas fa-caret-right"></i>
@@ -1215,12 +1215,12 @@
     
     
     
-    <li data-nav-id="/operational-excellence/patch/patchmanager/" title="패치 관리자" class="dd-item
+    <li data-nav-id="/operational-excellence/patch/patchmanager/" title="Patch Manager" class="dd-item
     
         
         ">
       <a href="/operational-excellence/patch/patchmanager/">
-          <b>1. </b>패치 관리자
+          <b>1. </b>Patch Manager
           
           
             <i class="fas read-icon"></i>
@@ -1285,12 +1285,12 @@
     
     
     
-    <li data-nav-id="/reliability/" title="안정성" class="dd-item
+    <li data-nav-id="/reliability/" title="Reliability" class="dd-item
     
         
         ">
       <a href="/reliability/">
-          <b>6. </b>안정성
+          <b>6. </b>Reliability
           
           
             <i class="fas read-icon"></i>
@@ -1315,12 +1315,12 @@
     
     
     
-    <li data-nav-id="/reliability/test_resiliency/" title="EC2, RD와 AZ의 복원력 테스트" class="dd-item
+    <li data-nav-id="/reliability/test_resiliency/" title="Testing for Resiliency of EC2, RDS, and AZ" class="dd-item
     
         
         ">
       <a href="/reliability/test_resiliency/">
-          EC2, RD와 AZ의 복원력 테스트
+          Test Resiliency EC2, RDS, &amp; AZ
           
             
               <i class="fas fa-caret-right"></i>
@@ -1345,9 +1345,9 @@
  
   
     
-      <li data-nav-id="/reliability/test_resiliency/3_failure_injection_prep/" title="장애 주입 준비" class="dd-item ">
+      <li data-nav-id="/reliability/test_resiliency/3_failure_injection_prep/" title="Preparation for Failure Injection" class="dd-item ">
         <a href="/reliability/test_resiliency/3_failure_injection_prep/">
-        <b>1. </b>장애 주입 준비
+        <b>1. </b>Preparation for Failure Injection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1364,9 +1364,9 @@
  
   
     
-      <li data-nav-id="/reliability/test_resiliency/4_failure_injection_ec2/" title="EC2 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+      <li data-nav-id="/reliability/test_resiliency/4_failure_injection_ec2/" title="Test Resiliency Using EC2 Failure Injection" class="dd-item ">
         <a href="/reliability/test_resiliency/4_failure_injection_ec2/">
-        <b>2. </b>EC2 장애 주입
+        <b>2. </b>EC2 Failure Injection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1383,9 +1383,9 @@
  
   
     
-      <li data-nav-id="/reliability/test_resiliency/5_failure_injection_rds/" title="RDS 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+      <li data-nav-id="/reliability/test_resiliency/5_failure_injection_rds/" title="Test Resiliency Using RDS Failure Injection" class="dd-item ">
         <a href="/reliability/test_resiliency/5_failure_injection_rds/">
-        <b>3. </b>RDS 장애 주입
+        <b>3. </b>RDS Failure Injection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1402,9 +1402,9 @@
  
   
     
-      <li data-nav-id="/reliability/test_resiliency/6_failure_injection_az/" title="AZ 장애 주입을 사용하여 안정성 테스트" class="dd-item ">
+      <li data-nav-id="/reliability/test_resiliency/6_failure_injection_az/" title="Test Resiliency Using Availability Zone (AZ) Failure Injection" class="dd-item ">
         <a href="/reliability/test_resiliency/6_failure_injection_az/">
-        <b>4. </b>AZ 장애 주입
+        <b>4. </b>AZ Failure Injection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1439,12 +1439,12 @@
     
     
     
-    <li data-nav-id="/security/" title="보안" class="dd-item
+    <li data-nav-id="/security/" title="Security" class="dd-item
     
         
         ">
       <a href="/security/">
-          <b>7. </b>보안
+          <b>7. </b>Security
           
           
             <i class="fas read-icon"></i>
@@ -1469,12 +1469,12 @@
     
     
     
-    <li data-nav-id="/security/200_cloudfront_with_waf_protection/" title="WAF를 사용한 CloudFront 보호" class="dd-item
+    <li data-nav-id="/security/200_cloudfront_with_waf_protection/" title="CloudFront with WAF Protection" class="dd-item
     
         
         ">
       <a href="/security/200_cloudfront_with_waf_protection/">
-          WAF를 사용한 CloudFront 보호
+          CloudFront with WAF Protection
           
             
               <i class="fas fa-caret-right"></i>
@@ -1499,9 +1499,9 @@
  
   
     
-      <li data-nav-id="/security/200_cloudfront_with_waf_protection/1_config_waf/" title="AWS WAF 구성" class="dd-item ">
+      <li data-nav-id="/security/200_cloudfront_with_waf_protection/1_config_waf/" title="AWS WAF Config" class="dd-item ">
         <a href="/security/200_cloudfront_with_waf_protection/1_config_waf/">
-        <b>1. </b>AWS WAF 구성
+        <b>1. </b>AWS WAF Config
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1518,9 +1518,9 @@
  
   
     
-      <li data-nav-id="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/" title="CloudFront 구성 - EC2 또는 Load Balancer" class="dd-item ">
+      <li data-nav-id="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/" title="CloudFront Config - EC2 or Load Balancer" class="dd-item ">
         <a href="/security/200_cloudfront_with_waf_protection/2_config_cloudfront/">
-        <b>2. </b>CloudFront 구성 - EC2 또는 Load Balancer
+        <b>2. </b>CloudFront Config - EC2 or Load Balancer
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1555,12 +1555,12 @@
     
     
     
-    <li data-nav-id="/review/" title="재검토" class="dd-item
+    <li data-nav-id="/review/" title="Review Again(Machanism)" class="dd-item
     
         
         ">
       <a href="/review/">
-          <b>8. </b>재검토
+          <b>8. </b>Review Again(Machanism)
           
           
             <i class="fas read-icon"></i>
@@ -1581,9 +1581,9 @@
  
   
     
-      <li data-nav-id="/review/1_reviewagine/" title="AWS Well-Architected Tool을 통한 재검토" class="dd-item ">
+      <li data-nav-id="/review/1_reviewagine/" title="Again AWS Well-Architected Review using Well-Architected tool" class="dd-item ">
         <a href="/review/1_reviewagine/">
-        AWS Well-Architected Tool을 통한 재검토
+        Again AWS Well-Architected Review using Well-Architected tool
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1636,7 +1636,7 @@
                   
                     
                     
-                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/" selected>한국어</option>
+                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/cost/100_aws_resource_optimization/3_prio_resource_opt/" selected>English</option>
                     
                   
               
@@ -1650,7 +1650,7 @@
                   
                     
                     
-                      <option id="en" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/en/cost/100_aws_resource_optimization/3_prio_resource_opt/">English</option>
+                      <option id="ko" value="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/cost/100_aws_resource_optimization/3_prio_resource_opt/">한국어</option>
                     
                   
               
@@ -1714,9 +1714,9 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/sykang169/aws-well-architected-labs-kor/Cost/100_aws_resource_optimization/3_prio_resource_opt.ko.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/sykang169/aws-well-architected-labs-kor/Cost/100_aws_resource_optimization/3_prio_resource_opt.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
-                      <span id="top-github-link-text"></span>
+                      <span id="top-github-link-text">Edit this page</span>
                     </a>
                   </div>
                   
@@ -1749,7 +1749,7 @@
             
           
           
-            <a href='/'>홈</a> > <a href='/cost/'>비용최적화</a> > <a href='/cost/100_aws_resource_optimization/'>EC2 적정크기 찾기</a> > AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기
+            <a href='/'>Home</a> > <a href='/cost/'>Cost Optimization</a> > <a href='/cost/100_aws_resource_optimization/'>EC2 Right Sizing</a> > Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins
           
         
           
@@ -1764,17 +1764,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#group-1-유휴-ec2-리소스"><strong>Group 1:</strong> 유휴 EC2 리소스</a></li>
-        <li><a href="#group-2-이전-세대-인스턴스"><strong>Group 2:</strong> 이전 세대 인스턴스</a></li>
-        <li><a href="#group-3-최신-세대-인스턴스"><strong>Group 3:</strong> 최신 세대 인스턴스</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1790,70 +1780,60 @@
           
             <h1>
               
-              AMAZON EC2 리소스 최적화 CSV 파일을 다운로드하고 검색하기
+              Download the Amazon EC2 Resource Optimization CSV File and sort it to find quick wins
             </h1>
           
 
         
 
 
-
-<div class="notices warning" ><p>이 실습은 실제 사용 계정에서 진행 해보세요. 만약 없다면 아래의 샘플 자료를 가지고 진행하실 수 있습니다.</p>
-</div>
-
-<p>이번 실습은 Cost Explorer에서 생성한 권장사항들을 가지고 어떻게 비용최적화를 진행할 수 있는지, 권장사항의 우선순위를 정해 실제 비용 최적화를 어떤 순서로 진행하는지를 알아봅니다.</p>
 <ol>
 <li>
-<p><strong>Amazon EC2 Resource Optimization</strong> 레포트를 다운로드합니다:
+<p>Download the <strong>Amazon EC2 Resource Optimization</strong> report:
 <img src="/cost/100_aws_resource_optimization/Images/ResourceOpt06b.png" alt="Images/ResourceOpt06b.png"></p>
 </li>
 <li>
-<p>Amazon EC2 리소스 최적화 권장 사항이없는 경우 아래 파일을 참조로 사용하십시오.
+<p>If you don’t have any Amazon EC2 Resource Optimization recommendation use the file below as a reference.
 <a href="/cost/100_aws_resource_optimization/code/ENT206-ec2-rightsizing-recommendations-sykang.xlsx">Sample Amazon EC2 Resource Optimization file (.xlsx)</a></p>
 </li>
 <li>
-<p>먼저 분석에서 너무 작거나 적은 시간 동안 만 실행 된 인스턴스를 제외하겠습니다.
+<p>First let’s exclude instances that are too small or were only running for a few hours from the analysis. By doing so, we minimize the time required to perform rightsizing modifications that would otherwise result in minimal savings.
 <img src="/cost/100_aws_resource_optimization/Images/ResourceOpt07.png" alt="Images/ResourceOpt07.png"></p>
 </li>
 </ol>
-
-<div class="notices info" ><p>계정에서 활성화 한 비용할당태그 수에 따라 아래 스크린 샷과 기본 열 이름, 수식을 일치시키려는 열이 예제와 다를 수 있습니다.</p>
-</div>
-
-<p><strong>Recommended Action</strong> 열 오른쪽에 새 열을 삽입하십시오. 첫 번째 행은 <code>TooSmall</code> 열의 레이블입니다. 레이블 아래의 각 행에 다음 수식을 붙여 넣습니다.</p>
+<p><strong>NOTE</strong>: Depending on how many cost allocation tags you have enabled on your account the columns may differ from the example, that said try to match the formulas using the screenshots below and the default column names.</p>
+<p>Insert a new column to the right of the <em>Recommended Action</em> column. The first row will be the label for the column “TooSmall”. In each row below the label, paste the following formula:</p>
 <pre><code>=IF(Q2&lt;25,1,0)
-</code></pre><p>이제 <em>열 Q는 Recommended Instance Type 1 Estimated Savings</em>이 됩니다.</p>
-<p>이 공식은 한 달에 $25(또는 $300/년) 이상을 제공하지 못하는 모든 EC2 인스턴스에 &ldquo;1&quot;을 표시합니다. 조직의 Recommended Instance Type 1 Estimated Savings에 대한 임계 값을 자유롭게 조정하십시오. 잠재적 절감 대신 인스턴스 제품군에 대해 분석을 수행하려는 경우 다음 공식(TooSmall에 적용)을 사용하여 권장 사항에서 더 작은 인스턴스를 제외 할 수도 있습니다.</p>
+</code></pre><p>Where <em>Column Q = Recommended Instance Type 1 Estimated Savings</em></p>
+<p>That formula will flag all EC2 instances with a “1” any instance that will fail to deliver more than $25/month in savings (or $300/year). Feel free to adjust the threshold for your organization own savings expectation. If you prefer to perform the analysis against instance families instead of potential savings you can use the following formula to exclude smaller instances from the recommendations as well.</p>
 <pre><code>=IF(N2=&quot;Modify&quot;,IF(SUMPRODUCT(--(NOT(ISERR(SEARCH({&quot;nano&quot;,&quot;micro&quot;,&quot;small&quot;,&quot;medium&quot;},D2)))))&gt;0,&quot;1&quot;,&quot;0&quot;),&quot;0&quot;)
-</code></pre><p><em>열 N은 Recommended Action</em> 그리고 <em>열 D는 Instance Type</em>가 되야합니다.</p>
+</code></pre><p>Where <em>Column N = Recommended Action</em> and <em>Column D = Instance Type</em></p>
 <ol start="4">
-<li>다음으로, 이전세대 (C4, M3 등)에 속하는 EC2 인스턴스에 플래그를 지정합니다. EC2의 적정크기 찾으면서도 사용가능한 최신세대의 타입을 쓸 수 있도록합니다. 새로운 EC2 세대는 성능이 우수하여 올바른 사이징 운동의 성공 변화를 증가 시키며 일반적으로 이전 세대보다 비용이 적게 들며 높은 비용대비 이점을 제공합니다.</li>
+<li>Next, let’s flag EC2 instances that belong to previous generations (C4, M3, etc), if you are investing engineer time on right sizing let&rsquo;s make sure you are also leveraging the newest technology available. Newer EC2 generations have a superior performance increasing the changes of success for the right sizing exercise, they also generally cost less than previous generations providing a higher cost vs benefit.</li>
 </ol>
 <p><img src="/cost/100_aws_resource_optimization/Images/ResourceOpt08.png" alt="Images/ResourceOpt08.png"></p>
-<p>새로운 열 <code>OldGen</code>을 <em>Instance Type</em> 열의 오른쪽에 넣고 아래 공식을 붙여넣습니다:</p>
+<p>Insert a new column <strong>Old Gen</strong> to the right of the <em>Instance Type</em> field, and paste the following formula:</p>
 <pre><code>=IF(SUMPRODUCT(--(NOT(ISERR(SEARCH({&quot;c4&quot;,&quot;c3&quot;,&quot;c1&quot;,&quot;m4&quot;,&quot;m3&quot;,&quot;m2&quot;,&quot;m1&quot;,&quot;r3&quot;,&quot;r4&quot;,&quot;i2&quot;,&quot;cr1&quot;,&quot;hs1&quot;,&quot;g2&quot;},D2)))))&gt;0,&quot;1&quot;,&quot;0&quot;)
-</code></pre><p><em>열 D = Instance Type</em></p>
+</code></pre><p><em>Column D = Instance Type</em></p>
 <ol start="5">
-<li>이제 recommendations을 복잡성 감소와 비용 절감을 기준으로 정렬 해 보겠습니다:</li>
+<li>Now let’s sort the recommendations by low complexity and higher savings:</li>
 </ol>
-<p><strong>Minimum Effort:</strong> 최소로 필요한 절약 설정</p>
-<p>먼저 우리는 절약할만한 가치가 있는 것에 집중하겠습니다. 기준을 $100로 합니다. 100$이상의 효과가 예상되는 것만 보도록 하겠습니다. <strong>Recommended Instance Type 1 Estimated Savings</strong>의  <strong>number filter</strong> 를 <strong>100보다</strong> 크게 맞춥니다.
-<img src="/images/war-cost/cost-xlsx-1.png#medium" alt="default-CloudwatchDashboard"></p>
-<h3 id="group-1-유휴-ec2-리소스"><strong>Group 1:</strong> 유휴 EC2 리소스</h3>
-<p>유휴리소스를 검색합니다. 종료가 권장되는 인스턴스들을 찾기위해 필터를 <strong>Recommended Action = &ldquo;Terminate&rdquo;</strong> 설정합니다.
-<img src="/images/war-cost/cost-xlsx-2.png#medium" alt="default-CloudwatchDashboard">
-데이타를 <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong>(내림차순)정렬합니다.</p>
-<p>CPU 사용률이 1 % 미만인 유휴리소스 또는 인스턴스를 필터링합니다. 이러한 인스턴스는 보통 시작된 후 잊어버린 것이므로 이런곳에서 전체 온디맨드의 잠재적인 비용 절감을 나타낼 수 있습니다.</p>
+<p><strong>Minimum Effort:</strong> Set the minimum savings required</p>
+<p>First we want to only focus on savings that are worth our effort, we will define this as $100. Apply a <strong>number filter</strong> on <strong>Recommended Instance Type 1 Estimated Savings</strong> that is <strong>Greater than 100</strong></p>
+<p><strong>Group 1:</strong> Idle EC2 resources</p>
+<p>Filter the data on <strong>Recommended Action = &ldquo;Terminate&rdquo;</strong></p>
+<p>Sort the data by <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong></p>
+<p>Start filtering the idle resources or instances where CPU utilization &lt;1%, it is likely these instances were launched and forgotten so the potential savings here may represent the entire On Demand cost.</p>
 <p><img src="/cost/100_aws_resource_optimization/Images/ResourceOpt09.png" alt="Images/ResourceOpt09.png"></p>
-<p>필터링된 결과들은 해당 인스턴스의 어플리케이션 관리자들과 적정 사이즈에대한 토론을 시작하십시오;이러한 인스턴스가 시작된 이유를 이해하기 위해 조사를 수행하고 자원 소유자와 함께 사용상태를 검증하십시오. 그리고 가능하면 종료하십시오.</p>
-<p>이 실습에서 제공하는 CSV 파일을 사용하는 경우, 2,534 recommendations을 16개로 필터링하여 매월 $3,458를 절약 할 수 있습니다. (결과를 SUM 해보시면 알 수 있습니다.)</p>
-<h3 id="group-2-이전-세대-인스턴스"><strong>Group 2:</strong> 이전 세대 인스턴스</h3>
-<p>최신세대 인스턴스가 나와 새로운 인스턴스 세대로 교체가 권장되는 인스턴스를 찾아보겠습니다. 위와 같이 엑셀 필터를 조정합니다. 데이터를 <strong>Recommended Actions = “Modify”</strong>, <strong>OldGen = “1”</strong> 과 <strong>TooSmall = “0”</strong> 필터링 합니다.
-데이터를 <strong>Recommended Instance Type 1 Projected CPU &lt; 40%</strong> 필터링합니다.
-데이터를 <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong> (내림차순)정렬합니다.</p>
-<p>이것은 이전 세대에 인스턴스 중 활용률이 낮은 리소스(&lt;40 % CPU)에 중점을 두고 동일한 제품군(P 열)내에서 인스턴스 크기를 축소하거나 최신 세대로 현대화 할 수 있습니다.</p>
+<p>The resulting filtered list should be where you start right sizing discussions with application owners; perform an investigation to understand why these instance were launched and validate their usage with the resource owner. If possible, terminate them.</p>
+<p>If you are using the Right Sizing CSV file provided in this lab exercise, you will notice that we filtered down from an original <em>2,534 recommendations to 16</em> and <em>identified $3,458 per month in potential savings</em>.</p>
+<p><strong>Group 2:</strong> Previous generation instances</p>
+<p>Filter the data on <strong>Recommended Actions = “Modify”</strong> AND <strong>OldGen = “1”</strong> AND <strong>TooSmall = “0”</strong></p>
+<p>Filter the data on <strong>Recommended Instance Type 1 Projected CPU &lt; 40%</strong></p>
+<p>Sort the data by <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong></p>
+<p>This will focus on the underutilized resources (&lt;40% CPU) that belongs to previous generations and can either be downsized within the same family (column P below) or modernized to the newest generation.</p>
 <p><img src="/cost/100_aws_resource_optimization/Images/ResourceOpt10.png" alt="Images/ResourceOpt10.png"></p>
-<p>최신세대로 전환하려면 그룹 1에서 식별 된 인스턴스와 비교하여 추가 테스트 시간이 필요할 수 있지만 경우에 따라 비용 절감 및 성능을 극대화 할 수 있습니다.</p>
+<p>Moving to a modern generation may require additional testing hours compared to instances identified on Group 1, but depending on the case it can maximize savings and performance.</p>
 <table>
 <thead>
 <tr>
@@ -1908,17 +1888,16 @@
 </tr>
 </tbody>
 </table>
-<p><em>미국-버지니아 기준 (2019 년 11 월)</em></p>
-<p>이 실습에서 제공하는 올바른 크기 조정 CSV 파일을 사용하는 경우 <em>2,534recomendations를 22개로</em>로 줄이고 잠재적 절감 효과는 매월 <em>6,362</em>입니다.</p>
-<h3 id="group-3-최신-세대-인스턴스"><strong>Group 3:</strong> 최신 세대 인스턴스</h3>
-<p>데이터를 <strong>Recommended Actions = “Modify”</strong> 과 <strong>OldGen = “0”</strong> 과 **TooSmall = “0”**로 필터링 하세요.
-<strong>Recommended Instance Type 1 Projected CPU &lt; 40%</strong> 로 필터링 하세요.
-데이터는 <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong>(내림차순)로 정렬합니다.</p>
-<p>현재 가장 최신세대에서 활용률이 낮은 자원을 선택합니다. 잠재적으로 절약 할 수있는 항목을 기준으로 정렬하여 더 큰 절약을 할 수 있는 인스턴스의 우선순위를 정하는 것이 좋습니다.</p>
+<p><em>prices are from US-Virginia (Nov 2019)</em></p>
+<p>If you are using the Right Sizing CSV file provided in this lab exercise, you will notice that we filtered down from originally <em>2,534 recommendations to 22</em> with <em>$6,362 per month in potential savings</em>.</p>
+<p><strong>Group 3:</strong> Current generation instances</p>
+<p>Filter the data on <strong>Recommended Actions = “Modify”</strong> AND <strong>OldGen = “0”</strong> AND <strong>TooSmall = “0”</strong></p>
+<p>The filter on <strong>Recommended Instance Type 1 Projected CPU &lt; 40%</strong> should still be in place.</p>
+<p>Sort the data by <strong>Recommended Instance Type 1 Estimated Savings = Largest to smallest</strong></p>
+<p>This will select underutilized resources from the current, most modern generation. We recommend sorting them by potential savings to make sure you are prioritizing the instances that will provide larger savings first.</p>
 <p><img src="/cost/100_aws_resource_optimization/Images/ResourceOpt11.png" alt="Images/ResourceOpt11.png"></p>
-<p>또한 다른 권장 인스턴스유형 (열 U에서 AD까지)을 확인하는 것을 잊지 마십시오:
-Amazon EC2 Resource Optimization은 각 권장사항 당 최대 3개의 인스턴스를 추천합니다. 먼저 보수적인 권장사항(첫번째), 그리고 그것보다 더 적극적이고 높은 절감 권장사항(두번째 및 세번째)입니다.</p>
-<p>이 실습에서 제공하는 <code>올바른 크기 조정 CSV 파일</code>을 사용하는 경우 <em>2,534 개의 권장 사항을 22개로</em> 잠재적 인 절감 효과를 <em>월별 $4,879.56</em>로 필터링됩니다.</p>
+<p>Also, do not forget to check the other recommended instance types (columns U to AD); Amazon EC2 Resource Optimization will recommend up to 3 instances for each resource moving from a more conservative recommendation (the first recommendation) to a more aggressive and higher savings recommendation (second and third recommendations).</p>
+<p>If you are using the Right Sizing CSV file provided in this lab exercise, you will notice that we filtered down from originally <em>2,534 recommendations to 22</em> with <em>$4,879.56 per month in potential savings</em>.</p>
 
 
 <footer class="footline">
@@ -2882,19 +2861,19 @@ Amazon EC2 Resource Optimization은 각 권장사항 당 최대 3개의 인스�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1605237164"></script>
-    <script src="/js/perfect-scrollbar.min.js?1605237164"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1605237164"></script>
-    <script src="/js/jquery.sticky.js?1605237164"></script>
-    <script src="/js/featherlight.min.js?1605237164"></script>
-    <script src="/js/highlight.pack.js?1605237164"></script>
+    <script src="/js/clipboard.min.js?1605507626"></script>
+    <script src="/js/perfect-scrollbar.min.js?1605507626"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1605507626"></script>
+    <script src="/js/jquery.sticky.js?1605507626"></script>
+    <script src="/js/featherlight.min.js?1605507626"></script>
+    <script src="/js/highlight.pack.js?1605507626"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1605237164"></script>
-    <script src="/js/learn.js?1605237164"></script>
-    <script src="/js/hugo-learn.js?1605237164"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1605507626"></script>
+    <script src="/js/learn.js?1605507626"></script>
+    <script src="/js/hugo-learn.js?1605507626"></script>
 
-    <link href="/mermaid/mermaid.css?1605237164" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1605237164"></script>
+    <link href="/mermaid/mermaid.css?1605507626" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1605507626"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

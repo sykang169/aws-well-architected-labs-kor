@@ -39,5 +39,5 @@ Amazon CloudWatch Automatic Dashboards allow you to easily monitor all AWS Resou
 
     In this example, we see both EC2 metrics as well as EBS volume metrics for the test machines that were created.
 
-[Let's make custom cloudwatch dashboard.](/performanceefficiency/cloudwatchdashboards/setup)
+[Let's make custom cloudwatch dashboard.](/en/performanceefficiency/cloudwatchdashboards/setup)
  

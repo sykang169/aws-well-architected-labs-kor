@@ -34,7 +34,7 @@ pre: "<b>1. </b>"
     - Industry Type: `InfoTech`(option) 
     - Industry: `Internet`(option)  
     ![DefineWorkload](/watool/100_Walkthrough_of_the_Well-Architected_Tool/Images/watools-workload2.png)
-    All clear, Click **Next** button:
+    All finished, Click **Next** button:
 
 1. in **Apply lenses** tab, Click checkbox **AWS Well-Architected Framework**. **AWS Well-Architected Framework** The AWS Well-Architected Tool helps you review the state of your workloads and compares them to the latest AWS architectural best practices.   You can also choose a other Lense for your workload which specific workload.:
     ![DefineWorkload](/watool/100_Walkthrough_of_the_Well-Architected_Tool/Images/watools-workload3.png)

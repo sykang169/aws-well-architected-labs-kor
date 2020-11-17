@@ -1,5 +1,5 @@
 ---
-title: "패치 관리자"
+title: "Patch Manager"
 date: 2020-04-24T11:16:09-04:00
 chapter: false
 pre: "<b>1. </b>"

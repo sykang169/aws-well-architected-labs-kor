@@ -5,6 +5,6 @@
     <link>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/</link>
     <description>Recent content in Categories on AWS Well-Architected Labs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-KR</language><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-US</language><atom:link href="http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

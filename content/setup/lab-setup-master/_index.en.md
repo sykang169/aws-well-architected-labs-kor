@@ -1,6 +1,6 @@
 ---
 title: "CloudFormation Deploy"
-weight: 22
+weight: 23
 pre: "<b>2-2. </b>"
 hide: true
 ---
@@ -72,7 +72,6 @@ In the stack creation step, enter a stack name and choose the EC2 key pair you c
 Check CloudFormation stack in **Outputs tab**, find **ALBAddress**, **DBDNS**.
 {{% /notice %}}
 
--[Let's review this enviroment from cloudformation deployed!](/en/setup/WellArchitectedTools) 
 
 
 
