@@ -19,16 +19,24 @@ defaultContentLanguage = "en"
         # 6000 - Well Architected Tool
     editURL = "https://github.com/sykang169/aws-well-architected-labs-kor/"
     description = "Hands on labs and real world design scenarios for Well-Architected workloads"
-    author = "Well-Architected Team"
+    author = "Seyong Kang"
     showVisitedLinks = true
     # Hide Next and Previous page buttons normally displayed full height beside content
-    disableNextPrev = true
+    disableNextPrev = false
     #AWS custom params
     base_github_url = "https://github.com/sykang169/aws-well-architected-labs-kor"
     base_raw_github_url = "https://raw.githubusercontent.com/awslabs/aws-well-architected-labs/master/"
     #{{% siteparam "base_github_url" %}}
 
+[[menu.shortcuts]] 
+  name = "<i class='fab fa-aws'></i> AWS Homepage"
+  url = "https://aws.amazon.com/"
+  weight = 1000
 
+[[menu.shortcuts]] 
+  name = "<i class='fab fa-aws'></i> AWS Well-Architected Framework"
+  url = "https://aws.amazon.com/architecture/well-architected/?nc1=h_ls&wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc"
+  weight = 1000
 
 # For search functionality
 [outputs]

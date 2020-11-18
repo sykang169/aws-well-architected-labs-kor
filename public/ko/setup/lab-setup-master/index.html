@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="generator" content="Hugo 0.78.2" />
     <meta name="description" content="Hands on labs and real world design scenarios for Well-Architected workloads">
-<meta name="author" content="Well-Architected Team">
+<meta name="author" content="Seyong Kang">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
     <title>CloudFormation 배포 :: AWS Well-Architected Labs</title>
 
     
-    <link href="/css/nucleus.css?1605507626" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1605507626" rel="stylesheet">
-    <link href="/css/hybrid.css?1605507626" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1605507626" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1605507626" rel="stylesheet">
-    <link href="/css/auto-complete.css?1605507626" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1605507626" rel="stylesheet">
-    <link href="/css/theme.css?1605507626" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1605507626" rel="stylesheet">
+    <link href="/css/nucleus.css?1605671887" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1605671887" rel="stylesheet">
+    <link href="/css/hybrid.css?1605671887" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1605671887" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1605671887" rel="stylesheet">
+    <link href="/css/auto-complete.css?1605671887" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1605671887" rel="stylesheet">
+    <link href="/css/theme.css?1605671887" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1605671887" rel="stylesheet">
     
-    <link href="/css/theme-walabs.css?1605507626" rel="stylesheet">
+    <link href="/css/theme-walabs.css?1605671887" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1605507626"></script>
+    <script src="/js/jquery-3.3.1.min.js?1605671887"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1605507626"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1605507626"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1605671887"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1605671887"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1605507626"></script>
+<script type="text/javascript" src="/js/search.js?1605671887"></script>
 
     
   </div>
@@ -1614,6 +1614,14 @@
                   <a class="padding" href="https://aws.amazon.com/free/"><i class='fas fa-bookmark'></i> Amazon Free Tier</a>
               </li>
           
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/"><i class='fab fa-aws'></i> AWS Homepage</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/architecture/well-architected/?nc1=h_ls&amp;wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&amp;wa-lens-whitepapers.sort-order=desc"><i class='fab fa-aws'></i> AWS Well-Architected Framework</a>
+              </li>
+          
         </ul>
       </section>
     
@@ -1802,10 +1810,6 @@ AWS 계정 생성 및 활성화 가이드는 다음 <a href="https://aws.amazon.
 
 <div class="notices info" ><p>모든 이미지는 클릭하여 확대가 가능합니다.스크린샷의 자세한 내용이 필요하시면 눌러서 확인해주세요.</p>
 </div>
-
-
-<div class="notices info" ><p>실습은 <strong>ap-northeast-2 (서울) 리전을 선택</strong>합니다.</p>
-</div>
 </p>
 <h2 id="iam-사용자">IAM 사용자</h2>
 <p>AWS 계정을 생성했지만 직접 IAM 사용자를 생성하지 않은 경우, IAM 콘솔을 사용하여 IAM 사용자를 생성 할 수 있습니다. 다음 스텝에 따라 Administrator (관리자) 사용자를 생성합니다. 이미 관리자 사용자가 있다면, 다음 IAM 사용자 생성 작업을 건너 뜁니다.</p>
@@ -1846,10 +1850,6 @@ AWS 계정 생성 및 활성화 가이드는 다음 <a href="https://aws.amazon.
 <p>AWS CloudFormation에서는 클라우드 환경에서 AWS 및 타사 애플리케이션 리소스를 모델링하고 프로비저닝할 수 있도록 공용 언어를 제공합니다. AWS CloudFormation을 사용하면 프로그래밍 언어 또는 간단한 텍스트 파일을 사용하여 자동화되고 안전한 방식으로 모든 지역과 계정에 걸쳐 애플리케이션에 필요한 모든 리소스를 모델링 및 프로비저닝할 수 있습니다.</p>
 <p>AWS CodeQuality 실습에 필요한 AWS 리소스를 사전에 생성하기 위해 제공된CloudFormation template을 사용하여 CloudFormation stack을 생성합니다.</p>
 <p>CloudFormation 스택을 시작하려면, <a href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&amp;templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml">Launch Stack 버튼</a>를 클릭해서 CloudFormation 콘솔로 이동합니다.</p>
-
-<div class="notices warning" ><p>중요: 이 탬플릿은 ap-northeast-2 (서울)을 위해 만들어졌습니다.</p>
-</div>
-
 
 <a  href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=MasterAccountStack&amp;templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml" target="_blank"  class="btn btn-default">
   
@@ -2829,6 +2829,13 @@ Workload Name에 <code>Prod</code>를 입력합니다.</p>
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="/ko/setup/cloud9/" title="Cloud9"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/ko/setup/wellarchitectedtools/" title="AWS Well-Architected Tool 리뷰" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
     </div>
 
     </section>
@@ -2836,19 +2843,19 @@ Workload Name에 <code>Prod</code>를 입력합니다.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1605507626"></script>
-    <script src="/js/perfect-scrollbar.min.js?1605507626"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1605507626"></script>
-    <script src="/js/jquery.sticky.js?1605507626"></script>
-    <script src="/js/featherlight.min.js?1605507626"></script>
-    <script src="/js/highlight.pack.js?1605507626"></script>
+    <script src="/js/clipboard.min.js?1605671887"></script>
+    <script src="/js/perfect-scrollbar.min.js?1605671887"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1605671887"></script>
+    <script src="/js/jquery.sticky.js?1605671887"></script>
+    <script src="/js/featherlight.min.js?1605671887"></script>
+    <script src="/js/highlight.pack.js?1605671887"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1605507626"></script>
-    <script src="/js/learn.js?1605507626"></script>
-    <script src="/js/hugo-learn.js?1605507626"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1605671887"></script>
+    <script src="/js/learn.js?1605671887"></script>
+    <script src="/js/hugo-learn.js?1605671887"></script>
 
-    <link href="/mermaid/mermaid.css?1605507626" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1605507626"></script>
+    <link href="/mermaid/mermaid.css?1605671887" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1605671887"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,7 +9,7 @@ pre: "<b>2-3. </b>"
 ---
 ## Authors
 - Rodney Lester, Reliability Lead, Well-Architected, AWS
-- Seyong Kang, Solutions Architect
+- +Seyong Kang, Solutions Architect
 
 ## 소개
 

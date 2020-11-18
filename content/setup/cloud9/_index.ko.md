@@ -12,9 +12,7 @@ AWS Cloud9은 브라우저만으로 코드를 작성, 실행 및 디버깅할 �
 Cloud9콘솔로 가기: https://console.aws.amazon.com/cloud9
 
 ### Workspace 만들기
-{{% notice info %}}
-실습은 **ap-northeast-2 (서울) 리전을 선택**합니다.  
-{{% /notice %}}
+
 1. 오른쪽 상단의 **Create Environment**를 선택합니다. 
 ![cloud902](/images/setup/cloud9-create-environment.png)
 

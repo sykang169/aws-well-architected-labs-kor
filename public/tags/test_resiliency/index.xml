@@ -13,7 +13,7 @@
       <pubDate>Fri, 24 Apr 2020 11:16:08 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/reliability/test_resiliency/</guid>
-      <description>Authors  Rodney Lester, Senior Solutions Architect Manager, AWS Well-Architected Adrian Hornsby, Principal Tech Evangelist, AWS Seth Eliot, Principal Reliability Solutions Architect, AWS Well-Architected Seyong Kang, Solutions Architect  Introduction The purpose if this lab is to teach you the fundamentals of using tests to ensure your implementation is resilient to failure by injecting failure modes into your application. This may be a familiar concept to companies that practice Failure Mode Engineering Analysis (FMEA).</description>
+      <description>Authors  Rodney Lester, Senior Solutions Architect Manager, AWS Well-Architected Adrian Hornsby, Principal Tech Evangelist, AWS Seth Eliot, Principal Reliability Solutions Architect, AWS Well-Architected +Seyong Kang, Solutions Architect  Introduction The purpose if this lab is to teach you the fundamentals of using tests to ensure your implementation is resilient to failure by injecting failure modes into your application. This may be a familiar concept to companies that practice Failure Mode Engineering Analysis (FMEA).</description>
     </item>
     
   </channel>

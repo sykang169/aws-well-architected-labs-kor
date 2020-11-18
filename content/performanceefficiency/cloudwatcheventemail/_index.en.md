@@ -5,7 +5,7 @@ pre: "<b>3-2. </b>"
 ---
 
 ## Authors
-- Seyong Kang, Solutions Architect
+- +Seyong Kang, Solutions Architect
 
 ### Introduce
 In this lab, you create a CPU usage alarm using the AWS Console.

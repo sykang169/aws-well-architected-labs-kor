@@ -18,8 +18,8 @@ Before testing, please prepare the following:
       * For these tests you will need to know the **VPC ID** of the VPC you created as part of deploying the service
       * Navigate to the VPC management console: <https://console.aws.amazon.com/vpc>
       * In the left pane, click **Your VPCs**
-      * 1 - Tick the checkbox next to **WellArchitectedLabsStack/VPC**
-      * 2 - Copy the **VPC ID**
+            * 1 - Tick the checkbox next to **WellArchitectedLabsStack/VPC**
+            * 2 - Copy the **VPC ID**
 
       ![setvpc](/images/reliability/reliability-vpc.png)      
 

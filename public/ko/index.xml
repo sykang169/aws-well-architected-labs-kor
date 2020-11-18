@@ -73,9 +73,8 @@ Well-Architected 리뷰는 워크로드단위로 생성합니다(워크로드는
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/reliability/test_resiliency/3_failure_injection_prep/</guid>
       <description>장애 주입 (chaos testing라고도 함)은 워크로드의 복원력을 검증하고 이해하는 효과적이고 필수적인 방법이며 AWS Well-Architected Reliability Pillar의 권장 사례입니다. 여기에서 다양한 장애 시나리오를 시작하고 시스템이 어떻게 반응하는지 평가합니다.
 준비 테스트 하기 전에 다음을 준비하세요.
-  서울리전에서 진행됩니다.
- AWS 콘솔을 사용하여 테스트의 영향을 평가할 것입니다. 이 실습 전체에서 귀하가 서울 지역에 있는지 확인하십시오.    VPC ID 가져오기
- VPC (Amazon Virtual Private Cloud)는 서비스에 대한 리소스를 배포 한 AWS 클라우드의 논리적으로 격리 된 섹션입니다.</description>
+  VPC ID 가져오기
+ VPC (Amazon Virtual Private Cloud)는 서비스에 대한 리소스를 배포 한 AWS 클라우드의 논리적으로 격리 된 섹션입니다. 테스트를 위해서는 VPC의 VPC ID를 알아야합니다. VPC 관리 콘솔로 이동합니다.: https://console.aws.amazon.com/vpc 왼쪽 패널에서 Your VPCs를 클릭합니다.</description>
     </item>
     
     <item>
@@ -261,7 +260,7 @@ Well-Architected 리뷰는 워크로드단위로 생성합니다(워크로드는
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/ko/credits/</guid>
-      <description>Sample  aws-samples  Tools  Hugo  제작: Seyong Kang</description>
+      <description>Sample  aws-samples  Tools  Hugo  제작: +Seyong Kang</description>
     </item>
     
   </channel>

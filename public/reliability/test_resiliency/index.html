@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="generator" content="Hugo 0.78.2" />
     <meta name="description" content="Use code to inject faults simulating EC2, RDS, and Availability Zone failures. These are used as part of Chaos Engineering to test workload resiliency">
-<meta name="author" content="Well-Architected Team">
+<meta name="author" content="Seyong Kang">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
     <title>Testing for Resiliency of EC2, RDS, and AZ :: AWS Well-Architected Labs</title>
 
     
-    <link href="/css/nucleus.css?1605507626" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1605507626" rel="stylesheet">
-    <link href="/css/hybrid.css?1605507626" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1605507626" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1605507626" rel="stylesheet">
-    <link href="/css/auto-complete.css?1605507626" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1605507626" rel="stylesheet">
-    <link href="/css/theme.css?1605507626" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1605507626" rel="stylesheet">
+    <link href="/css/nucleus.css?1605671887" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1605671887" rel="stylesheet">
+    <link href="/css/hybrid.css?1605671887" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1605671887" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1605671887" rel="stylesheet">
+    <link href="/css/auto-complete.css?1605671887" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1605671887" rel="stylesheet">
+    <link href="/css/theme.css?1605671887" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1605671887" rel="stylesheet">
     
-    <link href="/css/theme-walabs.css?1605507626" rel="stylesheet">
+    <link href="/css/theme-walabs.css?1605671887" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1605507626"></script>
+    <script src="/js/jquery-3.3.1.min.js?1605671887"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1605507626"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1605507626"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1605671887"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1605671887"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1605507626"></script>
+<script type="text/javascript" src="/js/search.js?1605671887"></script>
 
     
   </div>
@@ -1614,6 +1614,14 @@
                   <a class="padding" href="https://aws.amazon.com/free/"><i class='fas fa-bookmark'></i> Amazon Free Tier</a>
               </li>
           
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/"><i class='fab fa-aws'></i> AWS Homepage</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/architecture/well-architected/?nc1=h_ls&amp;wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&amp;wa-lens-whitepapers.sort-order=desc"><i class='fab fa-aws'></i> AWS Well-Architected Framework</a>
+              </li>
+          
         </ul>
       </section>
     
@@ -1809,7 +1817,7 @@
 <li>Rodney Lester, Senior Solutions Architect Manager, AWS Well-Architected</li>
 <li>Adrian Hornsby, Principal Tech Evangelist, AWS</li>
 <li>Seth Eliot, Principal Reliability Solutions Architect, AWS Well-Architected</li>
-<li>Seyong Kang, Solutions Architect</li>
+<li>+Seyong Kang, Solutions Architect</li>
 </ul>
 <h2 id="introduction">Introduction</h2>
 <p>The purpose if this lab is to teach you the fundamentals of using tests to ensure your implementation is resilient to failure by injecting failure modes into your application. This may be a familiar concept to companies that practice Failure Mode Engineering Analysis (FMEA). It is also a key component of Chaos Engineering, which uses such failure injection to test hypotheses about workload resiliency. One primary capability that AWS provides is the ability to test your systems at a production scale, under load.</p>
@@ -2861,6 +2869,13 @@
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="/reliability/" title="Reliability"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/reliability/test_resiliency/3_failure_injection_prep/" title="Preparation for Failure Injection" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
     </div>
 
     </section>
@@ -2868,19 +2883,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1605507626"></script>
-    <script src="/js/perfect-scrollbar.min.js?1605507626"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1605507626"></script>
-    <script src="/js/jquery.sticky.js?1605507626"></script>
-    <script src="/js/featherlight.min.js?1605507626"></script>
-    <script src="/js/highlight.pack.js?1605507626"></script>
+    <script src="/js/clipboard.min.js?1605671887"></script>
+    <script src="/js/perfect-scrollbar.min.js?1605671887"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1605671887"></script>
+    <script src="/js/jquery.sticky.js?1605671887"></script>
+    <script src="/js/featherlight.min.js?1605671887"></script>
+    <script src="/js/highlight.pack.js?1605671887"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1605507626"></script>
-    <script src="/js/learn.js?1605507626"></script>
-    <script src="/js/hugo-learn.js?1605507626"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1605671887"></script>
+    <script src="/js/learn.js?1605671887"></script>
+    <script src="/js/hugo-learn.js?1605671887"></script>
 
-    <link href="/mermaid/mermaid.css?1605507626" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1605507626"></script>
+    <link href="/mermaid/mermaid.css?1605671887" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1605671887"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

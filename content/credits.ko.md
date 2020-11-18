@@ -10,4 +10,4 @@ disableToc: true
 ## Tools
 * [Hugo](https://gohugo.io/)
 
-제작: Seyong Kang
+제작: +Seyong Kang

@@ -8,7 +8,7 @@ weight: 10
 ## Authors
 
 - Ben Potter, Security Lead, Well-Architected
-- Seyong Kang, Solutions Architect
+- +Seyong Kang, Solutions Architect
 
 ## Introduction
 

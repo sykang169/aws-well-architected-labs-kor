@@ -11,7 +11,7 @@ pre: "<b>5. </b>"
 ## Author
 * Mahanth Jayadeva, Solutions Architect, Well-Architected
 * +Seyong Knag, Solutions Architect
-* +Jimin Kim, Solutions Architect
+* ++Jimin kim, Solutions Architect
 
 {{% notice note %}}
 For more information about Operational Excellence on AWS visit the Well-Architected tool in the AWS console, and read the AWS [Well-Architected Operational Excellence](https://d1.awsstatic.com/whitepapers/architecture/AWS-Operational-Excellence-Pillar.pdf) whitepaper.

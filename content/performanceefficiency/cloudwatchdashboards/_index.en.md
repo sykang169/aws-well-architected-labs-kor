@@ -6,7 +6,7 @@ pre : "<b>3-1. </b>"
 
 ## Authors
 - Eric Pullen, Performance Efficiency Lead Well-Architected
-- Seyong Kang, Solutions Architect
+- +Seyong Kang, Solutions Architect
 
 ## Introduction
 

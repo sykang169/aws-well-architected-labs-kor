@@ -5,7 +5,7 @@ pre: "<b>3-2. </b>"
 ---
 
 ## Authors
-- Seyong Kang, Solutions Architect
+- +Seyong Kang, Solutions Architect
 
 ### 소개
 이 실습에서는 AWS Management 콘솔을 사용해 CPU 사용량 경보를 생성합니다.
