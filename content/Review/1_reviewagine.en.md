@@ -39,3 +39,5 @@ Review based on pillars with best practices applied.
 1. When finished, click **Save and exit** at the top.
 
 1. In this way, other pillars review again the question. To reduce the risk of the AWS Well-Architected Framework, it is necessary to apply a variety of best practices and repeat reviews. In real workloads, review periodically. It eliminates the risk of architecture and creates a scalable and secure architecture. If necessary, you can also conduct a review with a partner or SA.
+
+1. You can get more information at [https://wellarchitectedlabs.com/](https://wellarchitectedlabs.com/).

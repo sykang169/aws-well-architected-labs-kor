@@ -39,3 +39,5 @@ weight: 1
 1. 확인이 끝나면 상단의 **Save and exit**를 클릭합니다.
 
 1. 이런식으로 다른 필라도 질문을 재검토합니다. AWS Well-Architected Framework의 위험사항을 줄이기 위해선 다양한 모범사례를 적용하고 리뷰를 반복적으로 수행해야합니다. 실제 워크로드에선 **주기적으로 리뷰**를 진행하세요. 아키텍쳐의 위험요소를 제거하고 확장가능하고 안전한 아키텍쳐를 만들 수 있습니다. 필요한 경우 파트너 또는 SA와 함께 리뷰를 진행하실 수도 있습니다.
+
+1. [https://wellarchitectedlabs.com/](https://wellarchitectedlabs.com/)에서 더 많은 정보를 얻을 수 있습니다. 

@@ -24,4 +24,8 @@ pre: "<b>8. </b>"
 |운영우수성| **System Manager**를 사용한 패치관리 | System Manager의 패치관리자를 통해 보안 관련 및 업데이트를 인스턴스에 손쉽게 적용하고 자동화합니다. | 
 |안정성| **Chaos testing**을 통한 워크로드의 안정성 테스트 | EC2, RDS, AZ를 정지시키는 스크립트를 통해 해당 장애가 발생했을 시 워크로드의 복원력을 검증하고 다양한 장애 시나리오에 시스템이 어떻게 반응하는지 평가합니다. | 
 
+
+#### 첫번째 Well-Architected Framework Review 이후 환경
+![AWS-Code-Cycle](/images/war/awswellarchitected-after2.svg)
+
 이제 적용한 모범사례에 맞춰서 다시 Well-Architected tools의 워크로드 리뷰를 진행하겠습니다.
