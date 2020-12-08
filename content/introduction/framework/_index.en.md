@@ -6,7 +6,7 @@ tag:
   - aws-well-architected-framework
 ---
 
-#### AWS Well-Architected Framework has a advantages. 
+#### AWS Well-Architected Framework gives you these advantages:
 
 1. Build and deploy faster
 1. Lower or mitigate risks
@@ -17,20 +17,20 @@ tag:
 
 ---
 #### This framework is a mechanism.
-To drive better outcomes, you can build and operate workloads on the cloud. With Well-Architected built a mechanism:
+To drive better outcomes, you can build and operate workloads in the cloud. With Well-Architected is a built-in mechanism:
 
 Well-Architected-Framework asks questions and works with the intention of improving the architecture. It also means replacing it with a perfect mechanism to check for compliance with rules or processes.
 
  ![framework](/images/war/mechanism_en.png)
 
-it repeatable process that **learn** cloud service and best practice, **measure** architecture data, and **improve** architecture using it.
+it is a repeatable process of **learning** cloud service and the best practices, **measuring** architecture data, and **improving** the architecture using it.
 
 ---
-#### Configuration AWS Well-Architected Framework
+#### Configuring AWS Well-Architected Framework
 The AWS Well-Architected Framework consists of:
 
 ![framework](/images/war/framework_en.png)
-1. Based on five pillar. 
+1. The Five Pillars 
    - Creating a software system is a lot like constructing a building. If the foundation is not solid, structural problems can undermine the integrity and function of the building. When architecting technology solutions, if you neglect the ﬁve pillars of **operational excellence**, **security**, **reliability**, **performance efficiency**, and **cost optimization**, it can become challenging to build a system that delivers on your expectations and requirements. Incorporating these pillars into your architecture will help you produce stable and efficient systems. This will allow you to focus on the other aspects of design, such as functional requirements.
 
 1. General Design Principles
@@ -46,7 +46,7 @@ The AWS Well-Architected Framework consists of:
   
 
   
-- [ So let's take a look at the five pillar of AWS Well-Architected. ](/en/introduction/pillar)
+- [ So let's take a look at the five pillar of AWS Well-Architected. ](/introduction/pillar)
 
 
 

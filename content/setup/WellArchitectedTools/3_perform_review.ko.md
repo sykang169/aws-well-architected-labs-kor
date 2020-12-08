@@ -9,7 +9,7 @@ weight: 2
 1. 워크로드에 대한 세부 사항 페이지에서 **Start review** 버튼을 클릭합니다. 그리고 AWS Well-Architected Framework를 선택합니다. 
     ![StartingReview](/watool/100_Walkthrough_of_the_Well-Architected_Tool/Images/watools-review.png)  
 
-1. **Operation Excellence**  질문의 왼쪽에 **삼각형버튼**을 클릭하여 질문창을 축소하면 다른 Pillar의 질문들도 확인할 수 있습니다. 물론 순차적으로 진행하면 자연스럽게 다음단계로 이동합니다.
+1. **Operational Excellence**  질문의 왼쪽에 **삼각형버튼**을 클릭하여 질문창을 축소하면 다른 Pillar의 질문들도 확인할 수 있습니다. 물론 순차적으로 진행하면 자연스럽게 다음단계로 이동합니다.
     ![CollapseOE](/watool/100_Walkthrough_of_the_Well-Architected_Tool/Images/AWSWAT6.png)
 
 1. 예를들어 **안정성**의 리뷰를 진행하도록 하겠습니다. 안정성 메뉴의 삼각형을 클릭하면 세부적인 질문을 확인하실 수 있습니다.

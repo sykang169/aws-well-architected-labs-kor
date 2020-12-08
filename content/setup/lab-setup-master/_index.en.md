@@ -8,11 +8,11 @@ hide: true
 ## AWS Account
 
 {{% notice info %}}
-Important: if you useing EventEngine which provide AWS, you jump to **Cloudformation template** step. 
+Important: if you are using an EventEngine which was provided by AWS, skip to **Cloudformation template** step.
 {{% /notice %}}
 
 {{% notice warning %}}
-Already has AWS account, you can start now, but if you don`t have AWS account, first generate AWS account [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
+If you don`t have an AWS account, first create an AWS account [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
 {{% /notice %}}
 
 ## IAM User
@@ -34,12 +34,12 @@ If you have created an AWS account but have not created an IAM user, you can cre
 1. Now, **logout** the user **logout** and **login** as the newly created **Administrator** user. You can log in using the following URL:
 > `https://<your_aws_account_id>.signin.aws.amazon.com/console/`  
 {{% notice warning %}}
-<your_aws_account_id> is the unique ID of your AWS account. As a root user, an error may occur when performing this exercise.
+<your_aws_account_id> is the unique ID of your AWS account. Please use an IAM user you've created. Please note that an error may occur when performing this exercise if you use the root username.
 {{% /notice %}}
 
 ## EC2 Key Pair
-To configure the basic environment required for the lab using the CloudFormaton template, you must provide an Amazon EC2 key pair. If you already have an EC2 key pair, **skip the next task**.
-1. Sign in to the AWS console as a **Administrator** user, and then go to the EC2 Console (https://console.aws.amazon.com/ec2/).
+To configure the basic environment required for the lab using the CloudFormaton template, you must provide an Amazon EC2 key pair. If you already have an EC2 key pair, **skip to the next task**.
+1. Sign in to the AWS console as an **Administrator** user, and then go to the EC2 Console (https://console.aws.amazon.com/ec2/).
 1. In the navigation pane, select **Key Pairs** from **Network & Security**.
 1. Click **Create Key Pair**.
 1. Enter the name of the new key pair in **Key pair name**, then click **Create**.
@@ -51,9 +51,9 @@ You must download .pem key. Do not use EventEngine's default key.
 
 
 ## CloudFormation Template
-Create a CloudFormation stack using the CloudFormation-template provided to proactively create the AWS resources needed for the AWS AWS CodeQuality lab.
+Create a CloudFormation stack using the CloudFormation-template file provided to proactively create the AWS resources needed for the AWS AWS CodeQuality lab.
 
-Create EC2 and VPC for 3-tier-web. We adopt best practices each pillar to this web.
+Create EC2 and VPC for 3-tier-web. We have adopted the best practices of each pillar to this web application.
 
 To launch the CloudFormation stack, click the  [Launch Stack button](https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml) to go to the CloudFormation console.
  
@@ -61,10 +61,10 @@ To launch the CloudFormation stack, click the  [Launch Stack button](https://con
 {{% button href="https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=MasterAccountStack&templateURL=https://sykang-productionapp.s3-us-west-2.amazonaws.com/all-account-vpc-new.yaml" icon="fab fa-aws" icon-position="left" %}}&nbsp;Launch Stack{{% /button %}}
 
 
-Typing `MasterAccountStack` in Stackname.
-Typing `Prod` in Workload Name.
+Type `MasterAccountStack` in Stackname.
+Type `Prod` in Workload Name.
 
-In the stack creation step, enter a stack name and choose the EC2 key pair you created before. And in the final step, select **Acknowledge checkbox** and click **Create stack** so that CloudFormation can use a custom name when creating the IAM resource.
+In the stack creation step, enter a stack name and choose the EC2 key pair you've created before. And in the final step, select **Acknowledge checkbox** and click **Create stack** so that CloudFormation can use a custom name when creating the IAM resource.
 
 
 

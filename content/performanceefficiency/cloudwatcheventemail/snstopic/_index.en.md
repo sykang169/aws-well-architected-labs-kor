@@ -7,14 +7,14 @@ pre: "<b>2. </b>"
 ### SNS e-mail Confirm
 ---
 
-email attached SNS topic have to re-approved in the account to receive Alarm. Find the email from `ÀWS Notification` in the your inbox when setting up the previous step.
+SNS topic with email attached has to be re-approved in the account to receive Alarm. Find the email from `AWS Notification` in the your inbox when setting up the previous step.
    ![CloudwatchAlarm](/images/war/cloudwatch-confirm.png#medium)
 
-Click **Confirm subription**. finished subscribe. 
+Click **Confirm subription** to confirm subscription.
    ![CloudwatchAlarm](/images/war/cloudwatch-confirm-fin.png#medium)
 
 {{% notice info %}}
-The Step below are available in regions that provide SNS.(서울리전은 불가)
+The Step below are available in regions that provide SNS service.(서울리전은 불가)
 {{% /notice %}}
 
 Now, let's add a mobile phone number to the SNS topic so that we can send a mobile text message when an alarm occurs.

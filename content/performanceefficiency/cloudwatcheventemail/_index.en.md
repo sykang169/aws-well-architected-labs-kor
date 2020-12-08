@@ -8,12 +8,12 @@ pre: "<b>3-2. </b>"
 - +Seyong Kang, Solutions Architect
 
 ### Introduce
-In this lab, you create a CPU usage alarm using the AWS Console.
-You can create a CloudWatch alarm that sends an email message using Amazon SNS. The alarm state changes to when the average CPU utilization of the EC2 instance exceeds the specified threshold in succession over the specified period.
+In this lab, you will create a CPU usage alarm using the AWS Console.
+You can create a CloudWatch alarm that sends an email message using Amazon SNS. The alarm state will change when the average CPU utilization of the EC2 instance exceeds the specified threshold in succession over the specified period.
 
 ### Goals
-make alram and start Autoscaling when CPU usage over 90%.
-Sending e-mail to user when CPU usage is over 90%.
+Make an alram and start Autoscaling when CPU usage is over 90%.
+Sending an e-mail to user when CPU usage is over 90%.
     
 [Let's start](/en/performanceefficiency/cloudwatcheventemail/setup)
  

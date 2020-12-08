@@ -24,7 +24,7 @@ Well-Architected Reviews are conducted per workload. A workload identifies a set
       <pubDate>Fri, 24 Apr 2020 11:16:09 -0400</pubDate>
       
       <guid>http://wellarchitected.workshop.kr.s3-website-us-west-2.amazonaws.com/setup/wellarchitectedtools/3_perform_review/</guid>
-      <description>From the detail page for the workload, click the Start review button. And click the AWS Well-Architected Framework.   In this walkthrough, we are only going to complete the Reliability Pillar questions. Collapse the Operational Excellence questions by selecting the collapsing icon on the left of the words Operation Excellence on the left:   Expand the Reliability Questions by selecting the expanding icon to the left of the word Reliability:   Select the first question: REL 1.</description>
+      <description>From the detail page for the workload, click the Start review button. And click the AWS Well-Architected Framework.   In this walkthrough, we are only going to complete the Reliability Pillar questions. Collapse the Operational Excellence questions by selecting the collapsing icon on the left of the words Operational Excellence on the left:   Expand the Reliability Questions by selecting the expanding icon to the left of the word Reliability:   Select the first question: REL 1.</description>
     </item>
     
     <item>

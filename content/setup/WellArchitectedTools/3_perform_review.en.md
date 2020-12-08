@@ -9,7 +9,7 @@ weight: 2
 1. From the detail page for the workload, click the **Start review** button. And click the AWS Well-Architected Framework. 
     ![StartingReview](/watool/100_Walkthrough_of_the_Well-Architected_Tool/Images/watools-review.png)  
 
-1. In this walkthrough, we are only going to complete the Reliability Pillar questions. Collapse the Operational Excellence questions by selecting the **collapsing icon** on the left of the words **Operation Excellence** on the left:
+1. In this walkthrough, we are only going to complete the Reliability Pillar questions. Collapse the Operational Excellence questions by selecting the **collapsing icon** on the left of the words **Operational Excellence** on the left:
     ![CollapseOE](/watool/100_Walkthrough_of_the_Well-Architected_Tool/Images/AWSWAT6.png)
 
 1. Expand the Reliability Questions by selecting the **expanding icon** to the left of the word **Reliability**:

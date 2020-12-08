@@ -20,7 +20,7 @@ When the CPU usage increases, Autoscaling Group automatically increases the numb
 1. The `ALBDNS` in output is the DNS address of the Application Load Balancer. After selecting the output in the upper tab, copy the value of `ALBDNS` and put it in the address bar of your web browser.
     ![CloudwatchDashboard](/images/war/cloudwatch-albdns.png#medium)
 
-1. You can see the this screen.
+1. You can see this screen.
     ![CloudwatchDashboard](/images/war/cloudwatch-ec22.png#medium)
     The CPU usage of this web server is 0%. When you click the Load test button at the top, the screen changes and the CPU load of EC2 rises to 100%.
     ![CloudwatchDashboard](/images/war/cloudwatch-ec2-loadtest2.png#medium)

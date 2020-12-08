@@ -6,26 +6,26 @@ pre: "<b>1. </b>"
 
 ### CloudWatch Alram
 ---
-We will measure the CPU usage and number of instances in WellArchitectedFrameworkLabsStack which created in CloudFormation.
+We will measure the CPU usage and number of instances in WellArchitectedFrameworkLabsStack which is created in CloudFormation.
  
 Open CloudWatch : https://console.aws.amazon.com/cloudwatch/ 
 
-1. Left menu, select Alarms, and click **Create alarm**
+1. From the left menu, select Alarms, and click **Create alarm**
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm.png#medium)
 
-1. Click Select Metric.
+1. Click Select metric.
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm-metric.png#medium)
 
-1. Paste the valut of ASGName from the previously copied output into the All metrics search bar. Select `EC2 > By Auto Scaling group`.
+1. Paste the value of ASGName from the previously copied output into the All metrics search bar. Select `EC2 > By Auto Scaling group`.
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm-asg.png#medium)
 
 1. Find the  Metric **CPUUtilization**, and check the box, and click the **Select Metric** button.
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm-cpu.png#medium)
 
-1. Let`s configuration **Specify metric and conditions**. We make alram when CPUUtilization **metric** over 90%. Select **p90** in **Statistic**. **Period** select **1 minute**.
+1. Let`s configure **Specify metric and conditions**. We make alram when CPUUtilization **metric** is over 90%. Select **p90** in **Statistic**. For **Period,** select **1 minute**.
     ![CloudwatchAlarm](/images/war/cloudwatch-alarm-setting.png#medium)
 
-1. **Conditions** `s threshold type select **Static**. Whenever **CPUUtilization** is set **Greater**. and type in **than..** 95.
+1. For **Conditions**, select **Static** for a Threshold type. Select **Greater** for 'Whenever CPUUtilization is..' Lastly, type 95 for **than..**.
     ![CloudwatchAlarm](/images/war/cloudwatch-percent.png#medium)
 
 1. Click **Next**.
@@ -40,9 +40,9 @@ Open CloudWatch : https://console.aws.amazon.com/cloudwatch/
 
 1. Click **Create alram**. 
 
-[let's add my email and mobile to alram.](/en/performanceefficiency/cloudwatcheventemail/snstopic)
+[let's add an email and mobile to alram.](/en/performanceefficiency/cloudwatcheventemail/snstopic)
 
-[or you can start load test right now!](/en/performanceefficiency/cloudwatcheventemail/ec2)
+[or you can start load testing right now!](/en/performanceefficiency/cloudwatcheventemail/ec2)
 
 
  
